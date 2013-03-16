@@ -1,0 +1,185 @@
+defines = -DEXPAT_RELATIVE_PATH -DFEATURE_ENABLE_SSL -DGTEST_RELATIVE_PATH $
+    -DHAVE_SRTP -DHAVE_WEBRTC_VIDEO -DHAVE_WEBRTC_VOICE $
+    -DJSONCPP_RELATIVE_PATH -DLOGGING_INSIDE_LIBJINGLE $
+    -DNO_MAIN_THREAD_WRAPPING -DNO_SOUND_SYSTEM -DSRTP_RELATIVE_PATH $
+    -D_USE_32BIT_TIME_T -DUSE_WEBRTC_DEV_BRANCH -D_FILE_OFFSET_BITS=64 $
+    -DSSL_USE_NSS_RNG -DLINUX -DPOSIX -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DFEATURE_ENABLE_VOICEMAIL -DNDEBUG $
+    -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = -I../../third_party/libjingle/overrides $
+    -I../../third_party/libjingle/source -I../../testing/gtest/include $
+    -I../../third_party -I../../third_party/libyuv/include $
+    -I../../third_party/webrtc -I../.. -I../../net/third_party/nss/ssl $
+    -I../../third_party/jsoncpp/overrides/include $
+    -I../../third_party/jsoncpp/source/include
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gtk-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/gtk-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/atk-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gdk-pixbuf-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gio-unix-2.0/ $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/nss $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/nspr -Wno-format $
+    -Wno-unused-result -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard $
+    -mfpu=neon -O2 -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wno-deprecated -Wno-abi
+
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.constants.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/constants.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.dtlstransportchannel.o: $
+    cxx $
+    ../../third_party/libjingle/source/talk/p2p/base/dtlstransportchannel.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.p2ptransport.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/p2ptransport.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.p2ptransportchannel.o: $
+    cxx $
+    ../../third_party/libjingle/source/talk/p2p/base/p2ptransportchannel.cc
+build obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.port.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/port.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.portallocator.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/portallocator.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.portallocatorsessionproxy.o: $
+    cxx $
+    ../../third_party/libjingle/source/talk/p2p/base/portallocatorsessionproxy.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.portproxy.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/portproxy.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.pseudotcp.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/pseudotcp.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.rawtransport.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/rawtransport.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.rawtransportchannel.o: $
+    cxx $
+    ../../third_party/libjingle/source/talk/p2p/base/rawtransportchannel.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.relayport.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/relayport.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.session.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/session.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.sessiondescription.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/sessiondescription.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.sessionmanager.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/sessionmanager.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.sessionmessages.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/sessionmessages.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.parsing.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/parsing.cc
+build obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.stun.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/stun.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.stunport.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/stunport.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.stunrequest.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/stunrequest.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.tcpport.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/tcpport.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.transport.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/transport.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.transportchannel.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/transportchannel.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.transportchannelproxy.o: $
+    cxx $
+    ../../third_party/libjingle/source/talk/p2p/base/transportchannelproxy.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.transportdescriptionfactory.o: $
+    cxx $
+    ../../third_party/libjingle/source/talk/p2p/base/transportdescriptionfactory.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.turnport.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/base/turnport.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/client/libjingle_p2p.basicportallocator.o: $
+    cxx $
+    ../../third_party/libjingle/source/talk/p2p/client/basicportallocator.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/client/libjingle_p2p.httpportallocator.o: $
+    cxx $
+    ../../third_party/libjingle/source/talk/p2p/client/httpportallocator.cc
+build $
+    obj/third_party/libjingle/source/talk/p2p/client/libjingle_p2p.socketmonitor.o: $
+    cxx ../../third_party/libjingle/source/talk/p2p/client/socketmonitor.cc
+build $
+    obj/third_party/libjingle/source/talk/session/tunnel/libjingle_p2p.pseudotcpchannel.o: $
+    cxx $
+    ../../third_party/libjingle/source/talk/session/tunnel/pseudotcpchannel.cc
+build $
+    obj/third_party/libjingle/source/talk/session/tunnel/libjingle_p2p.tunnelsessionclient.o: $
+    cxx $
+    ../../third_party/libjingle/source/talk/session/tunnel/tunnelsessionclient.cc
+
+build obj/third_party/libjingle/libjingle_p2p.a: alink_thin $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.constants.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.dtlstransportchannel.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.p2ptransport.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.p2ptransportchannel.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.port.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.portallocator.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.portallocatorsessionproxy.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.portproxy.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.pseudotcp.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.rawtransport.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.rawtransportchannel.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.relayport.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.session.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.sessiondescription.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.sessionmanager.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.sessionmessages.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.parsing.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.stun.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.stunport.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.stunrequest.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.tcpport.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.transport.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.transportchannel.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.transportchannelproxy.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.transportdescriptionfactory.o $
+    obj/third_party/libjingle/source/talk/p2p/base/libjingle_p2p.turnport.o $
+    obj/third_party/libjingle/source/talk/p2p/client/libjingle_p2p.basicportallocator.o $
+    obj/third_party/libjingle/source/talk/p2p/client/libjingle_p2p.httpportallocator.o $
+    obj/third_party/libjingle/source/talk/p2p/client/libjingle_p2p.socketmonitor.o $
+    obj/third_party/libjingle/source/talk/session/tunnel/libjingle_p2p.pseudotcpchannel.o $
+    obj/third_party/libjingle/source/talk/session/tunnel/libjingle_p2p.tunnelsessionclient.o $
+    || obj/build/linux/ssl.actions_depends.stamp

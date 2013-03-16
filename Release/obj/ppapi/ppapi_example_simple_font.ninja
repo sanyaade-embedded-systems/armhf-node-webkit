@@ -1,0 +1,42 @@
+build obj/ppapi/ppapi_example_simple_font.actions_depends.stamp: stamp $
+    obj/ppapi/libppapi_cpp.a obj/ppapi/libppapi_cpp_objects.a
+
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT -D_FORTIFY_SOURCE=2
+includes = -I../..
+cflags = -fstack-protector --param=ssp-buffer-size=4 -Werror -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wall -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC -fPIC $
+    -fvisibility=hidden -fvisibility=hidden -march=armv7-a -mtune=cortex-a8 $
+    -mfloat-abi=hard -mfpu=neon -O2 -fno-ident -fdata-sections $
+    -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wsign-compare -Wno-abi
+
+build obj/ppapi/examples/font/ppapi_example_simple_font.simple_font.o: cxx $
+    ../../ppapi/examples/font/simple_font.cc
+
+ldflags = -Wl,-z,now -Wl,-z,relro -pthread -Wl,-z,noexecstack -fPIC $
+    -B../../third_party/gold -rdynamic -Wl,-O1 -Wl,--as-needed
+libs = 
+build lib/libppapi_example_simple_font.so $
+    lib/libppapi_example_simple_font.so.TOC: solink $
+    obj/ppapi/examples/font/ppapi_example_simple_font.simple_font.o $
+    obj/ppapi/libppapi_cpp_objects.a obj/ppapi/libppapi_cpp.a
+  postbuilds = 
+  soname = libppapi_example_simple_font.so
+  lib = lib/libppapi_example_simple_font.so

@@ -1,0 +1,139 @@
+build $
+    obj/chrome/app/policy/cloud_policy_backend_header_compile.actions_depends.stamp: $
+    stamp $
+    obj/chrome/app/policy/cloud_policy_code_generate.actions_rules_copies.stamp $
+    protoc
+
+rule $
+    cloud_policy_backend_header_compile_target_genproto_cf7a5b3a1c5e00e71d5836934a1c9c52
+  command = cd ../../chrome/app/policy; python $
+      ../../../tools/protoc_wrapper/protoc_wrapper.py --include "" $
+      --protobuf $
+      "../../../out/Release/gen/protoc_out/chrome/browser/policy/proto/${root}.pb.h" $
+      --proto-in-dir ../../../chrome/browser/policy/proto --proto-in-file $
+      "${root}${ext}" "--use-system-protobuf=0" -- $
+      ../../../out/Release/protoc --cpp_out $
+      ../../../out/Release/gen/protoc_out/chrome/browser/policy/proto $
+      --python_out ../../../out/Release/pyproto/chrome/browser/policy/proto
+  description = RULE Generating C++ and Python code from ${source}
+  restat = 1
+
+build pyproto/chrome/browser/policy/proto/chrome_device_policy_pb2.py $
+    gen/protoc_out/chrome/browser/policy/proto/chrome_device_policy.pb.cc $
+    gen/protoc_out/chrome/browser/policy/proto/chrome_device_policy.pb.h: $
+    cloud_policy_backend_header_compile_target_genproto_cf7a5b3a1c5e00e71d5836934a1c9c52 $
+    ../../chrome/browser/policy/proto/chrome_device_policy.proto | $
+    ../../tools/protoc_wrapper/protoc_wrapper.py protoc || $
+    obj/chrome/app/policy/cloud_policy_backend_header_compile.actions_depends.stamp
+  source = ../../../chrome/browser/policy/proto/chrome_device_policy.proto
+  ext = .proto
+  root = chrome_device_policy
+  unique_name = 02e0c17afb3c3a408bf09a98f0e4e053
+build pyproto/chrome/browser/policy/proto/device_management_backend_pb2.py $
+    gen/protoc_out/chrome/browser/policy/proto/device_management_backend.pb.cc $
+    gen/protoc_out/chrome/browser/policy/proto/device_management_backend.pb.h: $
+    cloud_policy_backend_header_compile_target_genproto_cf7a5b3a1c5e00e71d5836934a1c9c52 $
+    ../../chrome/browser/policy/proto/device_management_backend.proto | $
+    ../../tools/protoc_wrapper/protoc_wrapper.py protoc || $
+    obj/chrome/app/policy/cloud_policy_backend_header_compile.actions_depends.stamp
+  source = $
+      ../../../chrome/browser/policy/proto/device_management_backend.proto
+  ext = .proto
+  root = device_management_backend
+  unique_name = f504fbd2f16456dec0819743bcc0ddfc
+build pyproto/chrome/browser/policy/proto/device_management_local_pb2.py $
+    gen/protoc_out/chrome/browser/policy/proto/device_management_local.pb.cc $
+    gen/protoc_out/chrome/browser/policy/proto/device_management_local.pb.h: $
+    cloud_policy_backend_header_compile_target_genproto_cf7a5b3a1c5e00e71d5836934a1c9c52 $
+    ../../chrome/browser/policy/proto/device_management_local.proto | $
+    ../../tools/protoc_wrapper/protoc_wrapper.py protoc || $
+    obj/chrome/app/policy/cloud_policy_backend_header_compile.actions_depends.stamp
+  source = ../../../chrome/browser/policy/proto/device_management_local.proto
+  ext = .proto
+  root = device_management_local
+  unique_name = d94d87cabba9d6e576ef9533fabe5507
+build pyproto/chrome/browser/policy/proto/old_generic_format_pb2.py $
+    gen/protoc_out/chrome/browser/policy/proto/old_generic_format.pb.cc $
+    gen/protoc_out/chrome/browser/policy/proto/old_generic_format.pb.h: $
+    cloud_policy_backend_header_compile_target_genproto_cf7a5b3a1c5e00e71d5836934a1c9c52 $
+    ../../chrome/browser/policy/proto/old_generic_format.proto | $
+    ../../tools/protoc_wrapper/protoc_wrapper.py protoc || $
+    obj/chrome/app/policy/cloud_policy_backend_header_compile.actions_depends.stamp
+  source = ../../../chrome/browser/policy/proto/old_generic_format.proto
+  ext = .proto
+  root = old_generic_format
+  unique_name = 8692945780c023ed736c91429b7356f7
+build $
+    obj/chrome/app/policy/cloud_policy_backend_header_compile.actions_rules_copies.stamp: $
+    stamp pyproto/chrome/browser/policy/proto/chrome_device_policy_pb2.py $
+    gen/protoc_out/chrome/browser/policy/proto/chrome_device_policy.pb.cc $
+    gen/protoc_out/chrome/browser/policy/proto/chrome_device_policy.pb.h $
+    pyproto/chrome/browser/policy/proto/device_management_backend_pb2.py $
+    gen/protoc_out/chrome/browser/policy/proto/device_management_backend.pb.cc $
+    gen/protoc_out/chrome/browser/policy/proto/device_management_backend.pb.h $
+    pyproto/chrome/browser/policy/proto/device_management_local_pb2.py $
+    gen/protoc_out/chrome/browser/policy/proto/device_management_local.pb.cc $
+    gen/protoc_out/chrome/browser/policy/proto/device_management_local.pb.h $
+    pyproto/chrome/browser/policy/proto/old_generic_format_pb2.py $
+    gen/protoc_out/chrome/browser/policy/proto/old_generic_format.pb.cc $
+    gen/protoc_out/chrome/browser/policy/proto/old_generic_format.pb.h
+
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DGOOGLE_PROTOBUF_NO_RTTI $
+    -DGOOGLE_PROTOBUF_NO_STATIC_INITIALIZER -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT -D_FORTIFY_SOURCE=2
+includes = -Igen/protoc_out -I../.. -Igen/policy $
+    -I../../third_party/protobuf -I../../third_party/protobuf/src
+cflags = -fstack-protector --param=ssp-buffer-size=4 -Werror -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wall -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon -O2 $
+    -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wsign-compare -Wno-abi
+
+build $
+    obj/chrome/app/policy/gen/protoc_out/chrome/browser/policy/proto/cloud_policy_backend_header_compile.chrome_device_policy.pb.o: $
+    cxx $
+    gen/protoc_out/chrome/browser/policy/proto/chrome_device_policy.pb.cc $
+    || $
+    obj/chrome/app/policy/cloud_policy_backend_header_compile.actions_rules_copies.stamp
+build $
+    obj/chrome/app/policy/gen/protoc_out/chrome/browser/policy/proto/cloud_policy_backend_header_compile.device_management_backend.pb.o: $
+    cxx $
+    gen/protoc_out/chrome/browser/policy/proto/device_management_backend.pb.cc $
+    || $
+    obj/chrome/app/policy/cloud_policy_backend_header_compile.actions_rules_copies.stamp
+build $
+    obj/chrome/app/policy/gen/protoc_out/chrome/browser/policy/proto/cloud_policy_backend_header_compile.device_management_local.pb.o: $
+    cxx $
+    gen/protoc_out/chrome/browser/policy/proto/device_management_local.pb.cc $
+    || $
+    obj/chrome/app/policy/cloud_policy_backend_header_compile.actions_rules_copies.stamp
+build $
+    obj/chrome/app/policy/gen/protoc_out/chrome/browser/policy/proto/cloud_policy_backend_header_compile.old_generic_format.pb.o: $
+    cxx gen/protoc_out/chrome/browser/policy/proto/old_generic_format.pb.cc $
+    || $
+    obj/chrome/app/policy/cloud_policy_backend_header_compile.actions_rules_copies.stamp
+
+build obj/chrome/app/policy/libcloud_policy_backend_header_compile.a: $
+    alink_thin $
+    obj/chrome/app/policy/gen/protoc_out/chrome/browser/policy/proto/cloud_policy_backend_header_compile.chrome_device_policy.pb.o $
+    obj/chrome/app/policy/gen/protoc_out/chrome/browser/policy/proto/cloud_policy_backend_header_compile.device_management_backend.pb.o $
+    obj/chrome/app/policy/gen/protoc_out/chrome/browser/policy/proto/cloud_policy_backend_header_compile.device_management_local.pb.o $
+    obj/chrome/app/policy/gen/protoc_out/chrome/browser/policy/proto/cloud_policy_backend_header_compile.old_generic_format.pb.o $
+    || $
+    obj/chrome/app/policy/cloud_policy_backend_header_compile.actions_rules_copies.stamp

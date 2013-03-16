@@ -1,0 +1,32 @@
+rule $
+    concatenated_devtools_scripts_js_target_concatenate_devtools_scripts_js_cce8dd99c2f09305be0de20a53d4dcdb
+  command = cd ../../third_party/WebKit/Source/WebKit/chromium; python $
+      scripts/inline_js_imports.py $
+      ../../WebCore/inspector/front-end/ScriptsPanel.js $
+      ../../WebCore/inspector/front-end $
+      ../../../../../out/Release/resources/inspector/ScriptsPanel.js
+  description = ACTION concatenated_devtools_scripts_js: $
+      concatenate_devtools_scripts_js_cce8dd99c2f09305be0de20a53d4dcdb
+  restat = 1
+
+build resources/inspector/ScriptsPanel.js: $
+    concatenated_devtools_scripts_js_target_concatenate_devtools_scripts_js_cce8dd99c2f09305be0de20a53d4dcdb $
+    ../../third_party/WebKit/Source/WebKit/chromium/scripts/inline_js_imports.py $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/BreakpointsSidebarPane.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/CallStackSidebarPane.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/FilteredItemSelectionDialog.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/JavaScriptSourceFrame.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/NavigatorOverlayController.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/NavigatorView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/RevisionHistoryView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/ScopeChainSidebarPane.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/ScriptsNavigator.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/ScriptsPanel.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/ScriptsSearchScope.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/SnippetJavaScriptSourceFrame.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/StyleSheetOutlineDialog.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/TabbedEditorContainer.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/UISourceCodeFrame.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/WatchExpressionsSidebarPane.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/WorkersSidebarPane.js
+

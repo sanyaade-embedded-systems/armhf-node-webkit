@@ -1,0 +1,21 @@
+rule $
+    concatenated_devtools_timeline_js_target_concatenate_devtools_timeline_js_7380070b8b180d197de850c740fb332e
+  command = cd ../../third_party/WebKit/Source/WebKit/chromium; python $
+      scripts/inline_js_imports.py $
+      ../../WebCore/inspector/front-end/TimelinePanel.js $
+      ../../WebCore/inspector/front-end $
+      ../../../../../out/Release/resources/inspector/TimelinePanel.js
+  description = ACTION concatenated_devtools_timeline_js: $
+      concatenate_devtools_timeline_js_7380070b8b180d197de850c740fb332e
+  restat = 1
+
+build resources/inspector/TimelinePanel.js: $
+    concatenated_devtools_timeline_js_target_concatenate_devtools_timeline_js_7380070b8b180d197de850c740fb332e $
+    ../../third_party/WebKit/Source/WebKit/chromium/scripts/inline_js_imports.py $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/MemoryStatistics.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/TimelineFrameController.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/TimelineModel.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/TimelinePresentationModel.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/TimelineOverviewPane.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/TimelinePanel.js
+

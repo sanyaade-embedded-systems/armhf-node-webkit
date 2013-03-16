@@ -1,0 +1,1014 @@
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DGL_GLEXT_PROTOTYPES $
+    '-DWEBCORE_NAVIGATOR_VENDOR="Google Inc."' -DWEBKIT_IMPLEMENTATION=1 $
+    -DENABLE_3D_PLUGIN=1 -DENABLE_BATTERY_STATUS=0 -DENABLE_BLOB=1 $
+    -DENABLE_BLOB_SLICE=1 -DENABLE_CHANNEL_MESSAGING=1 -DENABLE_CSP_NEXT=1 $
+    -DENABLE_CSS3_CONDITIONAL_RULES=0 -DENABLE_CSS3_TEXT=0 $
+    -DENABLE_CSS_BOX_DECORATION_BREAK=1 -DENABLE_CSS_COMPOSITING=0 $
+    -DENABLE_CSS_DEVICE_ADAPTATION=0 -DENABLE_CSS_EXCLUSIONS=1 $
+    -DENABLE_CSS_FILTERS=1 -DENABLE_CSS_IMAGE_SET=1 $
+    -DENABLE_CSS_IMAGE_RESOLUTION=0 -DENABLE_CSS_REGIONS=1 $
+    -DENABLE_CSS_SHADERS=1 $
+    -DENABLE_CSS_TRANSFORMS_ANIMATIONS_TRANSITIONS_UNPREFIXED=0 $
+    -DENABLE_CSS_VARIABLES=1 -DENABLE_CSS_STICKY_POSITION=1 $
+    -DENABLE_CUSTOM_SCHEME_HANDLER=0 -DENABLE_DASHBOARD_SUPPORT=0 $
+    -DENABLE_DATA_TRANSFER_ITEMS=1 -DENABLE_DETAILS_ELEMENT=1 $
+    -DENABLE_DEVICE_ORIENTATION=1 -DENABLE_DIALOG_ELEMENT=1 $
+    -DENABLE_DIRECTORY_UPLOAD=1 -DENABLE_DOWNLOAD_ATTRIBUTE=1 $
+    -DENABLE_DRAGGABLE_REGION=1 -DENABLE_ENCRYPTED_MEDIA=1 $
+    -DENABLE_FILE_SYSTEM=1 -DENABLE_FILTERS=1 -DENABLE_FULLSCREEN_API=1 $
+    -DENABLE_GAMEPAD=1 -DENABLE_GEOLOCATION=1 -DENABLE_GESTURE_EVENTS=1 $
+    -DENABLE_ICONDATABASE=0 -DENABLE_IFRAME_SEAMLESS=1 $
+    -DENABLE_INDEXED_DATABASE=1 -DENABLE_INPUT_TYPE_DATE=1 $
+    -DENABLE_INPUT_TYPE_DATETIME=1 -DENABLE_INPUT_TYPE_DATETIMELOCAL=1 $
+    -DENABLE_INPUT_TYPE_MONTH=1 -DENABLE_INPUT_TYPE_TIME=1 $
+    -DENABLE_JAVASCRIPT_DEBUGGER=1 -DENABLE_JAVASCRIPT_I18N_API=1 $
+    -DENABLE_LEGACY_CSS_VENDOR_PREFIXES=0 $
+    -DENABLE_LEGACY_VIEWPORT_ADAPTION=1 -DENABLE_LEGACY_VENDOR_PREFIXES=0 $
+    -DENABLE_LEGACY_WEB_AUDIO=1 -DENABLE_LINK_PREFETCH=1 $
+    -DENABLE_LINK_PRERENDER=1 -DENABLE_MATHML=1 -DENABLE_MEDIA_SOURCE=1 $
+    -DENABLE_MEDIA_STATISTICS=1 -DENABLE_MEDIA_STREAM=1 $
+    -DENABLE_METER_ELEMENT=1 -DENABLE_MHTML=1 -DENABLE_MICRODATA=0 $
+    -DENABLE_MOUSE_CURSOR_SCALE=1 -DENABLE_NAVIGATOR_CONTENT_UTILS=1 $
+    -DENABLE_PAGE_VISIBILITY_API=1 -DENABLE_PERFORMANCE_TIMELINE=1 $
+    -DENABLE_POINTER_LOCK=1 -DENABLE_PROGRESS_ELEMENT=1 $
+    -DENABLE_PROXIMITY_EVENTS=0 -DENABLE_QUOTA=1 $
+    -DENABLE_REQUEST_ANIMATION_FRAME=1 -DENABLE_REQUEST_AUTOCOMPLETE=1 $
+    -DENABLE_RESOLUTION_MEDIA_QUERY=0 -DENABLE_RESOURCE_TIMING=1 $
+    -DENABLE_RUBY=1 -DENABLE_SANDBOX=1 -DENABLE_SCRIPTED_SPEECH=1 $
+    -DENABLE_SHADOW_DOM=1 -DENABLE_SMOOTH_SCROLLING=1 $
+    -DENABLE_SQL_DATABASE=1 -DENABLE_STYLE_SCOPED=1 -DENABLE_SVG=1 $
+    -DENABLE_SVG_FONTS=1 -DENABLE_TEMPLATE_ELEMENT=1 $
+    -DENABLE_TEXT_AUTOSIZING=1 -DENABLE_TOUCH_ADJUSTMENT=1 $
+    -DENABLE_TOUCH_EVENTS=1 -DENABLE_TOUCH_ICON_LOADING=0 $
+    -DENABLE_TOUCH_EVENT_TRACKING=1 -DENABLE_TOUCH_SLIDER=1 $
+    -DENABLE_USER_TIMING=1 -DENABLE_V8_SCRIPT_DEBUG_SERVER=1 $
+    -DENABLE_VIDEO=1 -DENABLE_VIDEO_TRACK=1 -DENABLE_VIEWPORT=1 $
+    -DENABLE_WEBGL=1 -DENABLE_WEB_SOCKETS=1 -DENABLE_WEB_TIMING=1 $
+    -DENABLE_WORKERS=1 -DENABLE_XHR_RESPONSE_BLOB=1 -DENABLE_XHR_TIMEOUT=0 $
+    -DENABLE_XSLT=1 -DWTF_USE_LEVELDB=1 -DWTF_USE_BUILTIN_UTF8_CODEC=1 $
+    -DWTF_USE_OPENTYPE_SANITIZER=1 -DWTF_USE_RTL_SCROLLBAR=1 $
+    -DWTF_USE_SKIA_TEXT=1 -DWTF_USE_WEBP=1 $
+    -DWTF_USE_WEBKIT_IMAGE_DECODERS=1 $
+    -DENABLE_ACCELERATED_OVERFLOW_SCROLLING=0 -DENABLE_CALENDAR_PICKER=1 $
+    -DENABLE_DATALIST_ELEMENT=1 -DENABLE_INPUT_SPEECH=1 $
+    -DENABLE_INPUT_TYPE_COLOR=1 -DENABLE_INPUT_TYPE_WEEK=1 $
+    -DENABLE_INPUT_MULTIPLE_FIELDS_UI=1 -DENABLE_LEGACY_NOTIFICATIONS=1 $
+    -DENABLE_MEDIA_CAPTURE=0 -DENABLE_NOTIFICATIONS=1 $
+    -DENABLE_ORIENTATION_EVENTS=0 -DENABLE_PAGE_POPUP=1 $
+    -DENABLE_SHARED_WORKERS=1 -DENABLE_WEB_AUDIO=1 -DENABLE_3D_RENDERING=1 $
+    -DENABLE_ACCELERATED_2D_CANVAS=1 -DWTF_USE_ACCELERATED_COMPOSITING=1 $
+    -DWTF_USE_WEBAUDIO_FFMPEG=1 -DENABLE_OPENTYPE_VERTICAL=1 $
+    -DWTF_USE_HARFBUZZ_NG=1 -DENABLE_DEFAULT_RENDER_THEME=1 $
+    -DBUILDING_CHROMIUM__=1 -DWTF_USE_PTHREADS=1 -DU_USING_ICU_NAMESPACE=0 $
+    -DU_STATIC_IMPLEMENTATION -DSK_BUILD_NO_IMAGE_ENCODE $
+    -DSK_DEFERRED_CANVAS_USES_GPIPE=1 $
+    '-DGR_GL_CUSTOM_SETUP_HEADER="GrGLConfig_chrome.h"' $
+    -DGR_AGGRESSIVE_SHADER_OPTS=1 -DSK_USE_POSIX_THREADS $
+    -DCHROME_PNG_WRITE_SUPPORT -DPNG_USER_CONFIG -DLIBXML_STATIC $
+    -DLIBXSLT_STATIC -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS $
+    -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 $
+    -DUSE_EABI_HARDFLOAT -D_FORTIFY_SOURCE=2
+includes = -I../../third_party/icu/public/common $
+    -I../../third_party/icu/public/i18n -I../../third_party/khronos $
+    -I../../gpu -I../.. -I../../third_party/WebKit/Source/Platform/chromium $
+    -Iobj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_dom.gen $
+    -I../../third_party/WebKit/Source/WebCore $
+    -I../../third_party/WebKit/Source $
+    -I../../third_party/WebKit/Source/WebCore/Modules/battery $
+    -I../../third_party/WebKit/Source/WebCore/Modules/filesystem $
+    -I../../third_party/WebKit/Source/WebCore/Modules/filesystem/chromium $
+    -I../../third_party/WebKit/Source/WebCore/Modules/gamepad $
+    -I../../third_party/WebKit/Source/WebCore/Modules/geolocation $
+    -I../../third_party/WebKit/Source/WebCore/Modules/intents $
+    -I../../third_party/WebKit/Source/WebCore/Modules/indexeddb $
+    -I../../third_party/WebKit/Source/WebCore/Modules/mediasource $
+    -I../../third_party/WebKit/Source/WebCore/Modules/mediastream $
+    -I../../third_party/WebKit/Source/WebCore/Modules/navigatorcontentutils $
+    -I../../third_party/WebKit/Source/WebCore/Modules/notifications $
+    -I../../third_party/WebKit/Source/WebCore/Modules/quota $
+    -I../../third_party/WebKit/Source/WebCore/Modules/speech $
+    -I../../third_party/WebKit/Source/WebCore/Modules/webaudio $
+    -I../../third_party/WebKit/Source/WebCore/Modules/webdatabase $
+    -I../../third_party/WebKit/Source/WebCore/Modules/webdatabase/chromium $
+    -I../../third_party/WebKit/Source/WebCore/Modules/websockets $
+    -I../../third_party/WebKit/Source/WebCore/accessibility $
+    -I../../third_party/WebKit/Source/WebCore/accessibility/chromium $
+    -I../../third_party/WebKit/Source/WebCore/bindings $
+    -I../../third_party/WebKit/Source/WebCore/bindings/generic $
+    -I../../third_party/WebKit/Source/WebCore/bindings/v8 $
+    -I../../third_party/WebKit/Source/WebCore/bindings/v8/custom $
+    -I../../third_party/WebKit/Source/WebCore/bridge $
+    -I../../third_party/WebKit/Source/WebCore/bridge/jni $
+    -I../../third_party/WebKit/Source/WebCore/bridge/jni/v8 $
+    -I../../third_party/WebKit/Source/WebCore/css $
+    -I../../third_party/WebKit/Source/WebCore/dom $
+    -I../../third_party/WebKit/Source/WebCore/dom/default $
+    -I../../third_party/WebKit/Source/WebCore/editing $
+    -I../../third_party/WebKit/Source/WebCore/fileapi $
+    -I../../third_party/WebKit/Source/WebCore/history $
+    -I../../third_party/WebKit/Source/WebCore/html $
+    -I../../third_party/WebKit/Source/WebCore/html/canvas $
+    -I../../third_party/WebKit/Source/WebCore/html/parser $
+    -I../../third_party/WebKit/Source/WebCore/html/shadow $
+    -I../../third_party/WebKit/Source/WebCore/html/track $
+    -I../../third_party/WebKit/Source/WebCore/inspector $
+    -I../../third_party/WebKit/Source/WebCore/loader $
+    -I../../third_party/WebKit/Source/WebCore/loader/appcache $
+    -I../../third_party/WebKit/Source/WebCore/loader/archive $
+    -I../../third_party/WebKit/Source/WebCore/loader/archive/cf $
+    -I../../third_party/WebKit/Source/WebCore/loader/archive/mhtml $
+    -I../../third_party/WebKit/Source/WebCore/loader/cache $
+    -I../../third_party/WebKit/Source/WebCore/loader/icon $
+    -I../../third_party/WebKit/Source/WebCore/mathml $
+    -I../../third_party/WebKit/Source/WebCore/page $
+    -I../../third_party/WebKit/Source/WebCore/page/animation $
+    -I../../third_party/WebKit/Source/WebCore/page/chromium $
+    -I../../third_party/WebKit/Source/WebCore/page/scrolling $
+    -I../../third_party/WebKit/Source/WebCore/page/scrolling/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform $
+    -I../../third_party/WebKit/Source/WebCore/platform/animation $
+    -I../../third_party/WebKit/Source/WebCore/platform/audio $
+    -I../../third_party/WebKit/Source/WebCore/platform/audio/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform/chromium/support $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/chromium/cc $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/cpu/arm $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/cpu/arm/filters $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/filters $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/filters/skia $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/gpu $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/opentype $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/skia $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/transforms $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/bmp $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/gif $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/ico $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/jpeg $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/png $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/skia $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/webp $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-encoders/skia $
+    -I../../third_party/WebKit/Source/WebCore/platform/leveldb $
+    -I../../third_party/WebKit/Source/WebCore/platform/mediastream $
+    -I../../third_party/WebKit/Source/WebCore/platform/mediastream/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform/mock $
+    -I../../third_party/WebKit/Source/WebCore/platform/network $
+    -I../../third_party/WebKit/Source/WebCore/platform/network/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform/sql $
+    -I../../third_party/WebKit/Source/WebCore/platform/text $
+    -I../../third_party/WebKit/Source/WebCore/platform/text/transcoder $
+    -I../../third_party/WebKit/Source/WebCore/plugins $
+    -I../../third_party/WebKit/Source/WebCore/plugins/chromium $
+    -I../../third_party/WebKit/Source/WebCore/rendering $
+    -I../../third_party/WebKit/Source/WebCore/rendering/mathml $
+    -I../../third_party/WebKit/Source/WebCore/rendering/style $
+    -I../../third_party/WebKit/Source/WebCore/rendering/svg $
+    -I../../third_party/WebKit/Source/WebCore/storage $
+    -I../../third_party/WebKit/Source/WebCore/svg $
+    -I../../third_party/WebKit/Source/WebCore/svg/animation $
+    -I../../third_party/WebKit/Source/WebCore/svg/graphics $
+    -I../../third_party/WebKit/Source/WebCore/svg/graphics/filters $
+    -I../../third_party/WebKit/Source/WebCore/svg/properties $
+    -I../../third_party/WebKit/Source/ThirdParty/glu $
+    -I../../third_party/WebKit/Source/WebCore/workers $
+    -I../../third_party/WebKit/Source/WebCore/xml $
+    -I../../third_party/WebKit/Source/WebCore/xml/parser $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/harfbuzz $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/harfbuzz/ng $
+    -I../../third_party/angle/include/GLSLANG -Igen/webkit $
+    -Igen/webkit/bindings -I../../third_party/ffmpeg $
+    -I../../third_party/WebKit/Source/WTF $
+    -I../../third_party/WebKit/Source/JavaScriptCore -I../../skia/config $
+    -I../../third_party/skia/src/core $
+    -I../../third_party/skia/include/config $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/gpu/gl $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils -I../../skia/ext $
+    -I../../third_party/iccjpeg -I../../third_party/libwebp $
+    -I../../third_party/libpng -I../../third_party/libxml/linux/include $
+    -I../../third_party/libxml/src/include -I../../third_party/libxslt $
+    -I../../third_party/npapi -I../../third_party/npapi/bindings $
+    -I../../third_party/ots/include -I../../third_party/qcms/src $
+    -I../../third_party/sqlite -I../../third_party/zlib -I../../v8/include $
+    -I../../third_party/libjpeg_turbo $
+    -I../../third_party/leveldatabase/src/include $
+    -I../../third_party/leveldatabase/src -I../../third_party/leveldatabase
+cflags = -Wno-uninitialized -fstack-protector --param=ssp-buffer-size=4 $
+    -Werror -pthread -fno-exceptions -fno-strict-aliasing -Wall $
+    -Wno-unused-parameter -Wno-missing-field-initializers $
+    -fvisibility=hidden -pipe -fPIC -fno-strict-aliasing -pthread $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gtk-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/gtk-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/atk-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gdk-pixbuf-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gio-unix-2.0/ $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 $
+    -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon -O2 $
+    -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -Wno-c++0x-compat -fno-rtti -fno-threadsafe-statics $
+    -fvisibility-inlines-hidden -Wsign-compare -Wno-abi
+
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.activedomobject.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ActiveDOMObject.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.attr.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/Attr.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.beforetextinsertedevent.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/BeforeTextInsertedEvent.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.beforeunloadevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/BeforeUnloadEvent.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.cdatasection.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/CDATASection.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.characterdata.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/CharacterData.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.checkedradiobuttons.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/CheckedRadioButtons.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.childlistmutationscope.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/ChildListMutationScope.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.childnodelist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ChildNodeList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.classnodelist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ClassNodeList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.clientrect.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ClientRect.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.clientrectlist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ClientRectList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.clipboard.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/Clipboard.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.clipboardevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ClipboardEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.comment.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/Comment.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.composedshadowtreewalker.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/ComposedShadowTreeWalker.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.compositionevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/CompositionEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.containernode.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ContainerNode.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.containernodealgorithms.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/ContainerNodeAlgorithms.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.contextdestructionobserver.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/ContextDestructionObserver.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.contextfeatures.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ContextFeatures.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.customevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/CustomEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.domcoreexception.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/DOMCoreException.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.domerror.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/DOMError.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.domimplementation.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/DOMImplementation.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.domnamedflowcollection.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/DOMNamedFlowCollection.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.domstringlist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/DOMStringList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.domstringmap.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/DOMStringMap.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.datatransferitem.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/DataTransferItem.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.datasetdomstringmap.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/DatasetDOMStringMap.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.decodeddatadocumentparser.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/DecodedDataDocumentParser.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.devicemotioncontroller.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/DeviceMotionController.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.devicemotiondata.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/DeviceMotionData.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.devicemotionevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/DeviceMotionEvent.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.deviceorientationcontroller.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/DeviceOrientationController.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.deviceorientationdata.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/DeviceOrientationData.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.deviceorientationevent.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/DeviceOrientationEvent.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.document.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/Document.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documenteventqueue.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/DocumentEventQueue.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documentfragment.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/DocumentFragment.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documentmarkercontroller.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/DocumentMarkerController.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documentmarker.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/DocumentMarker.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documentorderedmap.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/DocumentOrderedMap.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documentparser.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/DocumentParser.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documentsharedobjectpool.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/DocumentSharedObjectPool.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documentstylesheetcollection.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/DocumentStyleSheetCollection.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.documenttype.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/DocumentType.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.elementshadow.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ElementShadow.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.element.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/Element.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.elementattributedata.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/ElementAttributeData.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.elementraredata.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ElementRareData.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.entityreference.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/EntityReference.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.errorevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ErrorEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.event.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/Event.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.eventcontext.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/EventContext.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.eventdispatchmediator.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/EventDispatchMediator.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.eventdispatcher.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/EventDispatcher.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.eventexception.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/EventException.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.eventlistenermap.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/EventListenerMap.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.eventnames.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/EventNames.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.eventtarget.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/EventTarget.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.exceptionbase.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ExceptionBase.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.exceptioncodeplaceholder.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/ExceptionCodePlaceholder.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.genericeventqueue.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/GenericEventQueue.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.gestureevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/GestureEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.iconurl.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/IconURL.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.idtargetobserver.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/IdTargetObserver.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.idtargetobserverregistry.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/IdTargetObserverRegistry.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.keyboardevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/KeyboardEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.livenodelist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/LiveNodeList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.messagechannel.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/MessageChannel.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.messageevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/MessageEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.messageport.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/MessagePort.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.messageportchannel.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/MessagePortChannel.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.microdataitemlist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/MicroDataItemList.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.mouseevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/MouseEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.mouserelatedevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/MouseRelatedEvent.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.mutationevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/MutationEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.mutationobserver.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/MutationObserver.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.mutationobserverinterestgroup.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/MutationObserverInterestGroup.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.mutationobserverregistration.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/MutationObserverRegistration.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.mutationrecord.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/MutationRecord.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.namedflowcollection.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/NamedFlowCollection.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.namenodelist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/NameNodeList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.namednodemap.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/NamedNodeMap.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.node.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/Node.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.nodefilter.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/NodeFilter.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.nodefiltercondition.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/NodeFilterCondition.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.nodeiterator.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/NodeIterator.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.noderaredata.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/NodeRareData.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.noderenderingcontext.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/NodeRenderingContext.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.noderenderingtraversal.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/NodeRenderingTraversal.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.nodetraversal.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/NodeTraversal.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.notation.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/Notation.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.overflowevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/OverflowEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.pagetransitionevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/PageTransitionEvent.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.pendingscript.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/PendingScript.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.popstateevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/PopStateEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.position.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/Position.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.positioniterator.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/PositionIterator.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.processinginstruction.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/ProcessingInstruction.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.progressevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ProgressEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.propertynodelist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/PropertyNodeList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.pseudoelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/PseudoElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.qualifiedname.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/QualifiedName.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.range.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/Range.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.rangeexception.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/RangeException.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.registeredeventlistener.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/RegisteredEventListener.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.scopedeventqueue.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ScopedEventQueue.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.scriptelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ScriptElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.scriptexecutioncontext.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/ScriptExecutionContext.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.scriptrunner.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ScriptRunner.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.scriptabledocumentparser.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/ScriptableDocumentParser.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.scriptedanimationcontroller.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/ScriptedAnimationController.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.securitycontext.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/SecurityContext.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.selectorquery.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/SelectorQuery.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.shadowroot.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ShadowRoot.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.spacesplitstring.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/SpaceSplitString.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.statichashsetnodelist.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/StaticHashSetNodeList.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.staticnodelist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/StaticNodeList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.stringcallback.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/StringCallback.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.styleelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/StyleElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.styledelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/StyledElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.tagnodelist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/TagNodeList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.text.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/Text.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.textevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/TextEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.touch.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/Touch.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.touchevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/TouchEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.touchlist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/TouchList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.transformsourcelibxslt.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/TransformSourceLibxslt.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.traversal.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/Traversal.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.treescope.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/TreeScope.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.treescopeadopter.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/TreeScopeAdopter.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.treewalker.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/TreeWalker.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.uievent.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/UIEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.uieventwithkeystate.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/UIEventWithKeyState.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.useractionelementset.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/UserActionElementSet.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.usergestureindicator.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/UserGestureIndicator.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.usertypinggestureindicator.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/UserTypingGestureIndicator.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.viewportarguments.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/ViewportArguments.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.visitedlinkstate.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/VisitedLinkState.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.webcorememoryinstrumentation.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/WebCoreMemoryInstrumentation.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.webkitanimationevent.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/WebKitAnimationEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.webkitnamedflow.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/WebKitNamedFlow.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.webkittransitionevent.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/dom/WebKitTransitionEvent.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/dom/webcore_dom.wheelevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/WheelEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.windoweventcontext.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/dom/WindowEventContext.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+
+build obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_dom.a: $
+    alink_thin $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.activedomobject.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.attr.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.beforetextinsertedevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.beforeunloadevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.cdatasection.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.characterdata.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.checkedradiobuttons.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.childlistmutationscope.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.childnodelist.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.classnodelist.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.clientrect.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.clientrectlist.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.clipboard.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.clipboardevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.comment.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.composedshadowtreewalker.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.compositionevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.containernode.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.containernodealgorithms.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.contextdestructionobserver.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.contextfeatures.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.customevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.domcoreexception.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.domerror.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.domimplementation.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.domnamedflowcollection.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.domstringlist.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.domstringmap.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.datatransferitem.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.datasetdomstringmap.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.decodeddatadocumentparser.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.devicemotioncontroller.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.devicemotiondata.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.devicemotionevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.deviceorientationcontroller.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.deviceorientationdata.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.deviceorientationevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.document.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documenteventqueue.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documentfragment.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documentmarkercontroller.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documentmarker.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documentorderedmap.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documentparser.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documentsharedobjectpool.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documentstylesheetcollection.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.documenttype.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.elementshadow.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.element.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.elementattributedata.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.elementraredata.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.entityreference.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.errorevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.event.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.eventcontext.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.eventdispatchmediator.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.eventdispatcher.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.eventexception.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.eventlistenermap.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.eventnames.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.eventtarget.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.exceptionbase.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.exceptioncodeplaceholder.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.genericeventqueue.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.gestureevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.iconurl.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.idtargetobserver.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.idtargetobserverregistry.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.keyboardevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.livenodelist.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.messagechannel.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.messageevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.messageport.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.messageportchannel.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.microdataitemlist.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.mouseevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.mouserelatedevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.mutationevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.mutationobserver.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.mutationobserverinterestgroup.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.mutationobserverregistration.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.mutationrecord.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.namedflowcollection.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.namenodelist.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.namednodemap.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.node.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.nodefilter.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.nodefiltercondition.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.nodeiterator.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.noderaredata.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.noderenderingcontext.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.noderenderingtraversal.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.nodetraversal.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.notation.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.overflowevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.pagetransitionevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.pendingscript.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.popstateevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.position.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.positioniterator.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.processinginstruction.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.progressevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.propertynodelist.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.pseudoelement.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.qualifiedname.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.range.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.rangeexception.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.registeredeventlistener.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.scopedeventqueue.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.scriptelement.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.scriptexecutioncontext.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.scriptrunner.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.scriptabledocumentparser.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.scriptedanimationcontroller.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.securitycontext.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.selectorquery.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.shadowroot.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.spacesplitstring.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.statichashsetnodelist.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.staticnodelist.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.stringcallback.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.styleelement.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.styledelement.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.tagnodelist.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.text.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.textevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.touch.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.touchevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.touchlist.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.transformsourcelibxslt.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.traversal.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.treescope.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.treescopeadopter.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.treewalker.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.uievent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.uieventwithkeystate.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.useractionelementset.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.usergestureindicator.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.usertypinggestureindicator.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.viewportarguments.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.visitedlinkstate.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.webcorememoryinstrumentation.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.webkitanimationevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.webkitnamedflow.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.webkittransitionevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.wheelevent.o $
+    obj/third_party/webkit/source/webcore/dom/webcore_dom.windoweventcontext.o $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.actions_depends.stamp

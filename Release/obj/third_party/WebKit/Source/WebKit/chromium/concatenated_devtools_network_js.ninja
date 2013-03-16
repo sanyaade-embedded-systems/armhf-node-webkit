@@ -1,0 +1,26 @@
+rule $
+    concatenated_devtools_network_js_target_concatenate_devtools_network_js_49e02ed5534466f1ab9e6a3bf585e39b
+  command = cd ../../third_party/WebKit/Source/WebKit/chromium; python $
+      scripts/inline_js_imports.py $
+      ../../WebCore/inspector/front-end/NetworkPanel.js $
+      ../../WebCore/inspector/front-end $
+      ../../../../../out/Release/resources/inspector/NetworkPanel.js
+  description = ACTION concatenated_devtools_network_js: $
+      concatenate_devtools_network_js_49e02ed5534466f1ab9e6a3bf585e39b
+  restat = 1
+
+build resources/inspector/NetworkPanel.js: $
+    concatenated_devtools_network_js_target_concatenate_devtools_network_js_49e02ed5534466f1ab9e6a3bf585e39b $
+    ../../third_party/WebKit/Source/WebKit/chromium/scripts/inline_js_imports.py $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/NetworkItemView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/RequestCookiesView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/RequestHeadersView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/RequestHTMLView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/RequestJSONView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/RequestPreviewView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/RequestResponseView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/RequestTimingView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/RequestView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/ResourceWebSocketFrameView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/NetworkPanel.js
+

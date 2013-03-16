@@ -1,0 +1,28 @@
+obj/third_party/skia/src/sfnt/skia.skotutils.o: \
+ ../../third_party/skia/src/sfnt/SkOTUtils.cpp \
+ ../../third_party/skia/include/core/SkData.h \
+ ../../third_party/skia/include/core/SkFlattenable.h \
+ ../../third_party/skia/include/core/SkRefCnt.h \
+ ../../third_party/skia/include/core/SkThread.h \
+ ../../third_party/skia/include/core/SkTypes.h \
+ ../../third_party/skia/include/core/SkPreConfig.h \
+ ../../skia/config/SkUserConfig.h \
+ ../../third_party/skia/include/core/SkPostConfig.h \
+ ../../third_party/skia/include/core/SkThread_platform.h \
+ ../../third_party/skia/include/core/SkInstCnt.h \
+ ../../third_party/skia/include/core/SkTemplates.h \
+ ../../third_party/skia/include/core/SkEndian.h \
+ ../../third_party/skia/src/sfnt/SkSFNTHeader.h \
+ ../../third_party/skia/src/sfnt/SkOTTableTypes.h \
+ ../../third_party/skia/include/core/SkTypes.h \
+ ../../third_party/skia/include/core/SkStream.h \
+ ../../third_party/skia/include/core/SkScalar.h \
+ ../../third_party/skia/include/core/SkFixed.h \
+ ../../third_party/skia/include/core/SkFloatingPoint.h \
+ ../../third_party/skia/include/core/SkFloatBits.h \
+ ../../third_party/skia/include/core/SkString.h \
+ ../../third_party/skia/src/sfnt/SkOTTable_head.h \
+ ../../third_party/skia/src/sfnt/SkTypedEnum.h \
+ ../../third_party/skia/src/sfnt/SkPreprocessorSeq.h \
+ ../../third_party/skia/src/sfnt/SkOTTable_name.h \
+ ../../third_party/skia/src/sfnt/SkOTUtils.h

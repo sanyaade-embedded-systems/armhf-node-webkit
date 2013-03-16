@@ -1,0 +1,164 @@
+build obj/third_party/node/node.actions_depends.stamp: stamp $
+    gen/node_natives.h obj/v8/tools/gyp/v8.actions_depends.stamp
+
+build obj/third_party/node/node.compile_depends.stamp: stamp $
+    gen/node_natives.h obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DNODE_WANT_INTERNALS=1 $
+    '-DARCH="arm"' '-DPLATFORM="linux"' '-DNODE_TAG=""' -DHAVE_OPENSSL=1 $
+    -D__POSIX__ -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 $
+    -DUSE_EABI_HARDFLOAT
+includes = -I../.. -I../../third_party/node/src $
+    -I../../third_party/node/deps/uv/src/ares -Igen $
+    -I../../third_party/node/deps/http_parser $
+    -I../../third_party/node/deps/uv/include $
+    -I../../third_party/node/deps/openssl/openssl/include $
+    -I../../third_party/node/deps/openssl/config/android -I../../v8/include $
+    -I../../third_party/zlib
+cflags = -fstack-protector --param=ssp-buffer-size=4  -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -pipe -fPIC -Wno-format $
+    -Wno-unused-result -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard $
+    -mfpu=neon -O2 -fno-ident
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -Wno-deprecated -Wno-abi
+
+build obj/third_party/node/src/node.fs_event_wrap.o: cxx $
+    ../../third_party/node/src/fs_event_wrap.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.cares_wrap.o: cxx $
+    ../../third_party/node/src/cares_wrap.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.handle_wrap.o: cxx $
+    ../../third_party/node/src/handle_wrap.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node.o: cxx $
+    ../../third_party/node/src/node.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node_buffer.o: cxx $
+    ../../third_party/node/src/node_buffer.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node_constants.o: cxx $
+    ../../third_party/node/src/node_constants.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node_extensions.o: cxx $
+    ../../third_party/node/src/node_extensions.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node_file.o: cxx $
+    ../../third_party/node/src/node_file.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node_http_parser.o: cxx $
+    ../../third_party/node/src/node_http_parser.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node_javascript.o: cxx $
+    ../../third_party/node/src/node_javascript.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node_main.o: cxx $
+    ../../third_party/node/src/node_main.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node_os.o: cxx $
+    ../../third_party/node/src/node_os.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node_script.o: cxx $
+    ../../third_party/node/src/node_script.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node_stat_watcher.o: cxx $
+    ../../third_party/node/src/node_stat_watcher.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node_string.o: cxx $
+    ../../third_party/node/src/node_string.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node_zlib.o: cxx $
+    ../../third_party/node/src/node_zlib.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/nw/node.node_id_weak_map.o: cxx $
+    ../../third_party/node/src/nw/node_id_weak_map.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/nw/node.node_v8_util.o: cxx $
+    ../../third_party/node/src/nw/node_v8_util.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/nw/node.object_life_monitor.o: cxx $
+    ../../third_party/node/src/nw/object_life_monitor.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.pipe_wrap.o: cxx $
+    ../../third_party/node/src/pipe_wrap.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.stream_wrap.o: cxx $
+    ../../third_party/node/src/stream_wrap.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.slab_allocator.o: cxx $
+    ../../third_party/node/src/slab_allocator.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.tcp_wrap.o: cxx $
+    ../../third_party/node/src/tcp_wrap.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.timer_wrap.o: cxx $
+    ../../third_party/node/src/timer_wrap.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.tty_wrap.o: cxx $
+    ../../third_party/node/src/tty_wrap.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.process_wrap.o: cxx $
+    ../../third_party/node/src/process_wrap.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.v8_typed_array.o: cxx $
+    ../../third_party/node/src/v8_typed_array.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.udp_wrap.o: cxx $
+    ../../third_party/node/src/udp_wrap.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node_crypto.o: cxx $
+    ../../third_party/node/src/node_crypto.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node_signal_watcher.o: cxx $
+    ../../third_party/node/src/node_signal_watcher.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+build obj/third_party/node/src/node.node_io_watcher.o: cxx $
+    ../../third_party/node/src/node_io_watcher.cc || $
+    obj/third_party/node/node.compile_depends.stamp
+
+build obj/third_party/node/libnode.a: alink_thin $
+    obj/third_party/node/src/node.fs_event_wrap.o $
+    obj/third_party/node/src/node.cares_wrap.o $
+    obj/third_party/node/src/node.handle_wrap.o $
+    obj/third_party/node/src/node.node.o $
+    obj/third_party/node/src/node.node_buffer.o $
+    obj/third_party/node/src/node.node_constants.o $
+    obj/third_party/node/src/node.node_extensions.o $
+    obj/third_party/node/src/node.node_file.o $
+    obj/third_party/node/src/node.node_http_parser.o $
+    obj/third_party/node/src/node.node_javascript.o $
+    obj/third_party/node/src/node.node_main.o $
+    obj/third_party/node/src/node.node_os.o $
+    obj/third_party/node/src/node.node_script.o $
+    obj/third_party/node/src/node.node_stat_watcher.o $
+    obj/third_party/node/src/node.node_string.o $
+    obj/third_party/node/src/node.node_zlib.o $
+    obj/third_party/node/src/nw/node.node_id_weak_map.o $
+    obj/third_party/node/src/nw/node.node_v8_util.o $
+    obj/third_party/node/src/nw/node.object_life_monitor.o $
+    obj/third_party/node/src/node.pipe_wrap.o $
+    obj/third_party/node/src/node.stream_wrap.o $
+    obj/third_party/node/src/node.slab_allocator.o $
+    obj/third_party/node/src/node.tcp_wrap.o $
+    obj/third_party/node/src/node.timer_wrap.o $
+    obj/third_party/node/src/node.tty_wrap.o $
+    obj/third_party/node/src/node.process_wrap.o $
+    obj/third_party/node/src/node.v8_typed_array.o $
+    obj/third_party/node/src/node.udp_wrap.o $
+    obj/third_party/node/src/node.node_crypto.o $
+    obj/third_party/node/src/node.node_signal_watcher.o $
+    obj/third_party/node/src/node.node_io_watcher.o || $
+    obj/third_party/node/node.actions_depends.stamp

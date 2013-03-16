@@ -1,0 +1,11 @@
+rule $
+    nw_package_bin_target_package_nw_binaries_63bc8770953360e4aa6ce970c147679f
+  command = cd ../../content; python ../content/nw/tools/package_binaries.py
+  description = ACTION nw_package_bin: $
+      package_nw_binaries_63bc8770953360e4aa6ce970c147679f
+  restat = 1
+
+build new_package.re: $
+    nw_package_bin_target_package_nw_binaries_63bc8770953360e4aa6ce970c147679f $
+    ../../content/nw/tools/package_binaries.py
+

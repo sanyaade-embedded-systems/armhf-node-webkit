@@ -1,0 +1,17 @@
+rule $
+    concatenated_script_formatter_worker_js_target_concatenate_script_formatter_worker_js_c550eba3cc17be25c9b6d9b0789dfba8
+  command = cd ../../third_party/WebKit/Source/WebKit/chromium; python $
+      scripts/inline_js_imports.py $
+      ../../WebCore/inspector/front-end/ScriptFormatterWorker.js $
+      ../../WebCore/inspector/front-end $
+      ../../../../../out/Release/resources/inspector/ScriptFormatterWorker.js
+  description = ACTION concatenated_script_formatter_worker_js: $
+      concatenate_script_formatter_worker_js_c550eba3cc17be25c9b6d9b0789dfba8
+  restat = 1
+
+build resources/inspector/ScriptFormatterWorker.js: $
+    concatenated_script_formatter_worker_js_target_concatenate_script_formatter_worker_js_c550eba3cc17be25c9b6d9b0789dfba8 $
+    ../../third_party/WebKit/Source/WebKit/chromium/scripts/inline_js_imports.py $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/ScriptFormatterWorker.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/UglifyJS/parse-js.js
+

@@ -1,0 +1,74 @@
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DFEATURE_ENABLE_SSL $
+    -DFEATURE_ENABLE_VOICEMAIL -DEXPAT_RELATIVE_PATH -DGTEST_RELATIVE_PATH $
+    -DJSONCPP_RELATIVE_PATH -DNO_MAIN_THREAD_WRAPPING -DNO_SOUND_SYSTEM $
+    -DLINUX -DPOSIX -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS $
+    -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 $
+    -DUSE_EABI_HARDFLOAT -D_FORTIFY_SOURCE=2
+includes = -I../.. -I../../third_party/libjingle/overrides $
+    -I../../third_party/libjingle/source -I../../testing/gtest/include $
+    -I../../third_party -I../../third_party/webrtc $
+    -I../../third_party/jsoncpp/overrides/include $
+    -I../../third_party/jsoncpp/source/include
+cflags = -fstack-protector --param=ssp-buffer-size=4 -Werror -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wall -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gtk-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/gtk-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/atk-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gdk-pixbuf-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gio-unix-2.0/ $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 $
+    -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon -O2 $
+    -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wsign-compare -Wno-abi
+
+build obj/jingle/glue/jingle_glue.channel_socket_adapter.o: cxx $
+    ../../jingle/glue/channel_socket_adapter.cc
+build obj/jingle/glue/jingle_glue.chrome_async_socket.o: cxx $
+    ../../jingle/glue/chrome_async_socket.cc
+build obj/jingle/glue/jingle_glue.fake_ssl_client_socket.o: cxx $
+    ../../jingle/glue/fake_ssl_client_socket.cc
+build obj/jingle/glue/jingle_glue.proxy_resolving_client_socket.o: cxx $
+    ../../jingle/glue/proxy_resolving_client_socket.cc
+build obj/jingle/glue/jingle_glue.pseudotcp_adapter.o: cxx $
+    ../../jingle/glue/pseudotcp_adapter.cc
+build obj/jingle/glue/jingle_glue.task_pump.o: cxx $
+    ../../jingle/glue/task_pump.cc
+build obj/jingle/glue/jingle_glue.thread_wrapper.o: cxx $
+    ../../jingle/glue/thread_wrapper.cc
+build obj/jingle/glue/jingle_glue.utils.o: cxx ../../jingle/glue/utils.cc
+build obj/jingle/glue/jingle_glue.xmpp_client_socket_factory.o: cxx $
+    ../../jingle/glue/xmpp_client_socket_factory.cc
+
+build obj/jingle/libjingle_glue.a: alink_thin $
+    obj/jingle/glue/jingle_glue.channel_socket_adapter.o $
+    obj/jingle/glue/jingle_glue.chrome_async_socket.o $
+    obj/jingle/glue/jingle_glue.fake_ssl_client_socket.o $
+    obj/jingle/glue/jingle_glue.proxy_resolving_client_socket.o $
+    obj/jingle/glue/jingle_glue.pseudotcp_adapter.o $
+    obj/jingle/glue/jingle_glue.task_pump.o $
+    obj/jingle/glue/jingle_glue.thread_wrapper.o $
+    obj/jingle/glue/jingle_glue.utils.o $
+    obj/jingle/glue/jingle_glue.xmpp_client_socket_factory.o

@@ -1,0 +1,71 @@
+build obj/third_party/libvpx/gen_asm_offsets_vp9.actions_depends.stamp: $
+    stamp obj/third_party/libvpx/libvpx_asm_offsets_vp9.a $
+    libvpx_obj_int_extract
+
+rule $
+    gen_asm_offsets_vp9_target_unpack_lib_posix_2052550a3483bb26b155b6f6be27b654
+  command = cd ../../third_party/libvpx; $
+      ../../third_party/libvpx/unpack_lib_posix.sh -d $
+      ../../out/Release/obj/third_party/libvpx/gen_asm_offsets_vp9.gen -a $
+      ../../out/Release/obj/libvpx_asm_offsets_vp9.a -a $
+      ../../out/Release/obj/third_party/libvpx/libvpx_asm_offsets_vp9.a -f $
+      vp9_asm_enc_offsets.o
+  description = ACTION gen_asm_offsets_vp9: $
+      unpack_lib_posix_2052550a3483bb26b155b6f6be27b654
+  restat = 1
+
+build obj/third_party/libvpx/gen_asm_offsets_vp9.gen/vp9_asm_enc_offsets.o: $
+    gen_asm_offsets_vp9_target_unpack_lib_posix_2052550a3483bb26b155b6f6be27b654 $
+    ../../third_party/libvpx/unpack_lib_posix.sh || $
+    obj/third_party/libvpx/gen_asm_offsets_vp9.actions_depends.stamp
+
+rule $
+    gen_asm_offsets_vp9_target_obj_int_extract_2052550a3483bb26b155b6f6be27b654
+  command = cd ../../third_party/libvpx; $
+      ../../third_party/libvpx/obj_int_extract.sh -e $
+      ../../out/Release/libvpx_obj_int_extract -f gas -b "${source}" -o $
+      "../../out/Release/gen/third_party/libvpx/${root}.asm"
+  description = RULE Generate assembly offsets ${source}.
+  restat = 1
+
+build gen/third_party/libvpx/vp9_asm_enc_offsets.asm: $
+    gen_asm_offsets_vp9_target_obj_int_extract_2052550a3483bb26b155b6f6be27b654 $
+    obj/third_party/libvpx/gen_asm_offsets_vp9.gen/vp9_asm_enc_offsets.o | $
+    libvpx_obj_int_extract ../../third_party/libvpx/obj_int_extract.sh || $
+    obj/third_party/libvpx/gen_asm_offsets_vp9.actions_depends.stamp
+  source = $
+      ../../out/Release/obj/third_party/libvpx/gen_asm_offsets_vp9.gen/vp9_asm_enc_offsets.o
+  root = vp9_asm_enc_offsets
+  unique_name = 88ebc730658081e38c7fe778dc1c410f
+build $
+    obj/third_party/libvpx/gen_asm_offsets_vp9.actions_rules_copies.stamp: $
+    stamp $
+    obj/third_party/libvpx/gen_asm_offsets_vp9.gen/vp9_asm_enc_offsets.o $
+    gen/third_party/libvpx/vp9_asm_enc_offsets.asm
+
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = 
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -Wno-format -Wno-unused-result -march=armv7-a -mtune=cortex-a8 $
+    -mfloat-abi=hard -mfpu=neon -O2 -fno-ident -fdata-sections $
+    -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wno-deprecated -Wno-abi
+
+

@@ -1,0 +1,17 @@
+rule $
+    devtools_extension_api_target_devtools_html_a2e54e91a259c3068b4cebb59f7ef541
+  command = cd ../../third_party/WebKit/Source/WebKit/chromium; python $
+      scripts/generate_devtools_extension_api.py $
+      ../../../../../out/Release/resources/inspector/devtools_extension_api.js $
+      ../../WebCore/inspector/front-end/ExtensionAPI.js $
+      src/js/DevToolsExtensionAPI.js
+  description = ACTION devtools_extension_api: $
+      devtools_html_a2e54e91a259c3068b4cebb59f7ef541
+  restat = 1
+
+build resources/inspector/devtools_extension_api.js: $
+    devtools_extension_api_target_devtools_html_a2e54e91a259c3068b4cebb59f7ef541 $
+    ../../third_party/WebKit/Source/WebKit/chromium/scripts/generate_devtools_extension_api.py $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/ExtensionAPI.js $
+    ../../third_party/WebKit/Source/WebKit/chromium/src/js/DevToolsExtensionAPI.js
+

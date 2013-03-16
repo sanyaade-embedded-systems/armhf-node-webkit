@@ -1,0 +1,22 @@
+rule $
+    concatenated_devtools_codemirror_js_target_concatenate_devtools_codemirror_js_2c42819de0aac7458b5f321cfec56ac3
+  command = cd ../../third_party/WebKit/Source/WebKit/chromium; python $
+      scripts/inline_js_imports.py $
+      ../../WebCore/inspector/front-end/CodeMirrorTextEditor.js $
+      ../../WebCore/inspector/front-end $
+      ../../../../../out/Release/resources/inspector/CodeMirrorTextEditor.js $
+      true
+  description = ACTION concatenated_devtools_codemirror_js: $
+      concatenate_devtools_codemirror_js_2c42819de0aac7458b5f321cfec56ac3
+  restat = 1
+
+build resources/inspector/CodeMirrorTextEditor.js: $
+    concatenated_devtools_codemirror_js_target_concatenate_devtools_codemirror_js_2c42819de0aac7458b5f321cfec56ac3 $
+    ../../third_party/WebKit/Source/WebKit/chromium/scripts/inline_js_imports.py $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/CodeMirrorTextEditor.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/cm/codemirror.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/cm/css.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/cm/htmlmixed.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/cm/javascript.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/cm/xml.js
+

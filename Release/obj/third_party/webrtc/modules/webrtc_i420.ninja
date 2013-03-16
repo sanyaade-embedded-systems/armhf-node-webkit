@@ -1,0 +1,38 @@
+defines = '-DWEBRTC_SVNREVISION="Unavailable(issue687)"' $
+    -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD -DUSE_DEFAULT_RENDER_THEME=1 $
+    -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 -DENABLE_ONE_CLICK_SIGNIN $
+    -DGTK_DISABLE_SINGLE_INCLUDES=1 -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 $
+    -DUSE_PROPRIETARY_CODECS -DENABLE_PEPPER_THREADING $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_INPUT_SPEECH $
+    -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DWEBRTC_CHROMIUM_BUILD $
+    -DWEBRTC_ARCH_ARM -DWEBRTC_ARCH_ARM_V7 -DWEBRTC_ARCH_ARM_NEON $
+    -DWEBRTC_LINUX -DWEBRTC_THREAD_RR -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT -D_FORTIFY_SOURCE=2
+includes = -I../../third_party/webrtc -I../../third_party $
+    -I../../third_party/webrtc/modules/video_coding/codecs/i420/main/interface $
+    -I../../third_party/webrtc/modules/video_coding/codecs/interface $
+    -I../../third_party/webrtc/common_video/interface $
+    -I../../third_party/webrtc/system_wrappers/interface
+cflags = -fstack-protector --param=ssp-buffer-size=4 -Werror -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wall -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon -O2 $
+    -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wsign-compare -Wno-abi
+
+build $
+    obj/third_party/webrtc/modules/video_coding/codecs/i420/main/source/webrtc_i420.i420.o: $
+    cxx $
+    ../../third_party/webrtc/modules/video_coding/codecs/i420/main/source/i420.cc
+
+build obj/third_party/webrtc/modules/libwebrtc_i420.a: alink_thin $
+    obj/third_party/webrtc/modules/video_coding/codecs/i420/main/source/webrtc_i420.i420.o

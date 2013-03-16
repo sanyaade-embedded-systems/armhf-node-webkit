@@ -1,0 +1,21 @@
+rule $
+    concatenated_heap_snapshot_worker_js_target_concatenate_heap_snapshot_worker_js_03abcbc662c30d1572f1fd0db37f6d84
+  command = cd ../../third_party/WebKit/Source/WebKit/chromium; python $
+      scripts/inline_js_imports.py $
+      ../../WebCore/inspector/front-end/HeapSnapshotWorker.js $
+      ../../WebCore/inspector/front-end $
+      ../../../../../out/Release/resources/inspector/HeapSnapshotWorker.js
+  description = ACTION concatenated_heap_snapshot_worker_js: $
+      concatenate_heap_snapshot_worker_js_03abcbc662c30d1572f1fd0db37f6d84
+  restat = 1
+
+build resources/inspector/HeapSnapshotWorker.js: $
+    concatenated_heap_snapshot_worker_js_target_concatenate_heap_snapshot_worker_js_03abcbc662c30d1572f1fd0db37f6d84 $
+    ../../third_party/WebKit/Source/WebKit/chromium/scripts/inline_js_imports.py $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/HeapSnapshotWorker.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/HeapSnapshot.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/HeapSnapshotLoader.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/HeapSnapshotWorkerDispatcher.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/JSHeapSnapshot.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/utilities.js
+

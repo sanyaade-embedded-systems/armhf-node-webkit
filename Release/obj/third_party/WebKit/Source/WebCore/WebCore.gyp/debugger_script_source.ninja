@@ -1,0 +1,14 @@
+rule $
+    debugger_script_source_target_generateDebuggerScriptSource_21d23a96220bd983151d15840932aacb
+  command = cd ../../third_party/WebKit/Source/WebCore/WebCore.gyp; perl $
+      ../inspector/xxd.pl DebuggerScriptSource_js $
+      ../bindings/v8/DebuggerScript.js $
+      ../../../../../out/Release/gen/webkit/DebuggerScriptSource.h
+  description = ACTION Generating DebuggerScriptSource.h from $
+      DebuggerScript.js
+  restat = 1
+
+build gen/webkit/DebuggerScriptSource.h: $
+    debugger_script_source_target_generateDebuggerScriptSource_21d23a96220bd983151d15840932aacb $
+    ../../third_party/WebKit/Source/WebCore/bindings/v8/DebuggerScript.js
+

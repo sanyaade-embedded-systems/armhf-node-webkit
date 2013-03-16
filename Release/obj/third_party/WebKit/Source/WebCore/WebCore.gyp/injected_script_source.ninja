@@ -1,0 +1,14 @@
+rule $
+    injected_script_source_target_generateInjectedScriptSource_9afe6be03a4c73c3de730f4502e4420c
+  command = cd ../../third_party/WebKit/Source/WebCore/WebCore.gyp; perl $
+      ../inspector/xxd.pl InjectedScriptSource_js $
+      ../inspector/InjectedScriptSource.js $
+      ../../../../../out/Release/gen/webkit/InjectedScriptSource.h
+  description = ACTION Generating InjectedScriptSource.h from $
+      InjectedScriptSource.js
+  restat = 1
+
+build gen/webkit/InjectedScriptSource.h: $
+    injected_script_source_target_generateInjectedScriptSource_9afe6be03a4c73c3de730f4502e4420c $
+    ../../third_party/WebKit/Source/WebCore/inspector/InjectedScriptSource.js
+

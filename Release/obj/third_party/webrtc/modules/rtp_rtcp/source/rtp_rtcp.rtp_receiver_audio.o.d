@@ -1,0 +1,25 @@
+obj/third_party/webrtc/modules/rtp_rtcp/source/rtp_rtcp.rtp_receiver_audio.o: \
+ ../../third_party/webrtc/modules/rtp_rtcp/source/rtp_receiver_audio.cc \
+ ../../third_party/webrtc/modules/rtp_rtcp/source/rtp_receiver_audio.h \
+ ../../third_party/webrtc/modules/rtp_rtcp/interface/rtp_rtcp_defines.h \
+ ../../third_party/webrtc/typedefs.h \
+ ../../third_party/webrtc/modules/interface/module_common_types.h \
+ ../../third_party/webrtc/common_types.h \
+ ../../third_party/webrtc/typedefs.h \
+ ../../third_party/webrtc/system_wrappers/interface/constructor_magic.h \
+ ../../third_party/webrtc/typedefs.h \
+ ../../third_party/webrtc/modules/rtp_rtcp/source/rtp_utility.h \
+ ../../third_party/webrtc/modules/rtp_rtcp/source/rtp_header_extension.h \
+ ../../third_party/webrtc/modules/rtp_rtcp/interface/rtp_rtcp_defines.h \
+ ../../third_party/webrtc/modules/rtp_rtcp/source/rtp_rtcp_config.h \
+ ../../third_party/webrtc/system_wrappers/interface/scoped_ptr.h \
+ ../../third_party/webrtc/system_wrappers/interface/critical_section_wrapper.h \
+ ../../third_party/webrtc/modules/rtp_rtcp/source/rtp_receiver.h \
+ ../../third_party/webrtc/modules/rtp_rtcp/interface/rtp_rtcp.h \
+ ../../third_party/webrtc/modules/interface/module.h \
+ ../../third_party/webrtc/modules/rtp_rtcp/source/rtp_receiver_video.h \
+ ../../third_party/webrtc/modules/rtp_rtcp/source/Bitrate.h \
+ ../../third_party/webrtc/common_types.h \
+ ../../third_party/webrtc/modules/rtp_rtcp/source/rtcp_receiver_help.h \
+ ../../third_party/webrtc/modules/rtp_rtcp/source/rtcp_utility.h \
+ ../../third_party/webrtc/modules/rtp_rtcp/source/tmmbr_help.h

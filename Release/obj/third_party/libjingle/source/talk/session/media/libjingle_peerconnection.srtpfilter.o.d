@@ -1,0 +1,52 @@
+obj/third_party/libjingle/source/talk/session/media/libjingle_peerconnection.srtpfilter.o: \
+ ../../third_party/libjingle/source/talk/session/media/srtpfilter.cc \
+ ../../third_party/libjingle/source/talk/session/media/srtpfilter.h \
+ ../../third_party/libjingle/overrides/talk/base/basictypes.h \
+ ../../base/basictypes.h ../../base/port.h ../../build/build_config.h \
+ ../../third_party/libjingle/source/talk/base/scoped_ptr.h \
+ ../../third_party/libjingle/source/talk/base/common.h \
+ ../../third_party/libjingle/overrides/talk/base/constructormagic.h \
+ ../../third_party/libjingle/source/talk/base/sigslotrepeater.h \
+ ../../third_party/libjingle/source/talk/base/sigslot.h \
+ ../../third_party/libjingle/source/talk/media/base/cryptoparams.h \
+ ../../third_party/libjingle/source/talk/p2p/base/sessiondescription.h \
+ ../../third_party/libjingle/source/talk/p2p/base/transportinfo.h \
+ ../../third_party/libjingle/source/talk/base/helpers.h \
+ ../../third_party/libjingle/source/talk/p2p/base/candidate.h \
+ ../../third_party/libjingle/source/talk/base/socketaddress.h \
+ ../../third_party/libjingle/source/talk/base/ipaddress.h \
+ ../../third_party/libjingle/source/talk/base/byteorder.h \
+ ../../third_party/libjingle/source/talk/p2p/base/constants.h \
+ ../../third_party/libjingle/source/talk/xmllite/qname.h \
+ ../../third_party/libjingle/source/talk/p2p/base/transportdescription.h \
+ ../../third_party/libjingle/source/talk/base/sslfingerprint.h \
+ ../../third_party/libjingle/source/talk/base/buffer.h \
+ ../../third_party/libjingle/source/talk/base/messagedigest.h \
+ ../../third_party/libjingle/source/talk/base/sslidentity.h \
+ ../../third_party/libjingle/source/talk/base/stringencode.h \
+ ../../third_party/libjingle/source/talk/base/base64.h \
+ ../../third_party/libjingle/overrides/talk/base/logging.h \
+ ../../base/logging.h ../../base/base_export.h \
+ ../../base/debug/debugger.h \
+ ../../third_party/libjingle/source/talk/base/timeutils.h \
+ ../../third_party/libjingle/source/talk/media/base/rtputils.h \
+ ../../third_party/libsrtp/srtp/include/srtp.h \
+ ../../third_party/libsrtp/srtp/crypto/include/crypto_kernel.h \
+ ../../third_party/libsrtp/srtp/crypto/include/rand_source.h \
+ ../../third_party/libsrtp/srtp/crypto/include/err.h \
+ ../../third_party/libsrtp/srtp/crypto/include/datatypes.h \
+ ../../third_party/libsrtp/srtp/crypto/include/integers.h \
+ ../../third_party/libsrtp/config/config.h \
+ ../../third_party/libsrtp/srtp/crypto/include/alloc.h \
+ ../../third_party/libsrtp/srtp/crypto/include/prng.h \
+ ../../third_party/libsrtp/srtp/crypto/include/aes.h \
+ ../../third_party/libsrtp/srtp/crypto/include/gf2_8.h \
+ ../../third_party/libsrtp/srtp/crypto/include/aes_icm.h \
+ ../../third_party/libsrtp/srtp/crypto/include/cipher.h \
+ ../../third_party/libsrtp/srtp/crypto/include/rdbx.h \
+ ../../third_party/libsrtp/srtp/crypto/include/crypto.h \
+ ../../third_party/libsrtp/srtp/crypto/include/crypto_types.h \
+ ../../third_party/libsrtp/srtp/crypto/include/auth.h \
+ ../../third_party/libsrtp/srtp/crypto/include/cryptoalg.h \
+ ../../third_party/libsrtp/srtp/crypto/include/stat.h \
+ ../../third_party/libsrtp/srtp/crypto/include/key.h

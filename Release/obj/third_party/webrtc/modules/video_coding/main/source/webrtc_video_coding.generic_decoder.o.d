@@ -1,0 +1,31 @@
+obj/third_party/webrtc/modules/video_coding/main/source/webrtc_video_coding.generic_decoder.o: \
+ ../../third_party/webrtc/modules/video_coding/main/source/generic_decoder.cc \
+ ../../third_party/webrtc/modules/video_coding/main/interface/video_coding.h \
+ ../../third_party/webrtc/common_video/interface/i420_video_frame.h \
+ ../../third_party/webrtc/common_video/plane.h \
+ ../../third_party/webrtc/system_wrappers/interface/aligned_malloc.h \
+ ../../third_party/webrtc/system_wrappers/interface/scoped_ptr.h \
+ ../../third_party/webrtc/typedefs.h \
+ ../../third_party/webrtc/modules/interface/module.h \
+ ../../third_party/webrtc/modules/interface/module_common_types.h \
+ ../../third_party/webrtc/common_types.h \
+ ../../third_party/webrtc/typedefs.h \
+ ../../third_party/webrtc/system_wrappers/interface/constructor_magic.h \
+ ../../third_party/webrtc/typedefs.h \
+ ../../third_party/webrtc/modules/video_coding/main/interface/video_coding_defines.h \
+ ../../third_party/webrtc/system_wrappers/interface/trace.h \
+ ../../third_party/webrtc/common_types.h \
+ ../../third_party/webrtc/modules/video_coding/main/source/generic_decoder.h \
+ ../../third_party/webrtc/modules/video_coding/main/source/timing.h \
+ ../../third_party/webrtc/system_wrappers/interface/critical_section_wrapper.h \
+ ../../third_party/webrtc/modules/video_coding/main/source/codec_timer.h \
+ ../../third_party/webrtc/modules/interface/module_common_types.h \
+ ../../third_party/webrtc/modules/video_coding/main/source/timestamp_map.h \
+ ../../third_party/webrtc/modules/video_coding/codecs/interface/video_codec_interface.h \
+ ../../third_party/webrtc/modules/video_coding/codecs/interface/video_error_codes.h \
+ ../../third_party/webrtc/common_video/interface/video_image.h \
+ ../../third_party/webrtc/modules/video_coding/main/source/encoded_frame.h \
+ ../../third_party/webrtc/modules/video_coding/codecs/interface/video_codec_interface.h \
+ ../../third_party/webrtc/modules/video_coding/main/source/internal_defines.h \
+ ../../third_party/webrtc/modules/video_coding/main/source/tick_time_base.h \
+ ../../third_party/webrtc/system_wrappers/interface/tick_util.h

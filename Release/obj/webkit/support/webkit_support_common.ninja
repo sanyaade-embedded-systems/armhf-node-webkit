@@ -1,0 +1,131 @@
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DGL_GLEXT_PROTOTYPES $
+    -DSK_BUILD_NO_IMAGE_ENCODE -DSK_DEFERRED_CANVAS_USES_GPIPE=1 $
+    '-DGR_GL_CUSTOM_SETUP_HEADER="GrGLConfig_chrome.h"' $
+    -DGR_AGGRESSIVE_SHADER_OPTS=1 -DSK_USE_POSIX_THREADS $
+    -DU_USING_ICU_NAMESPACE=0 -DU_STATIC_IMPLEMENTATION $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT -D_FORTIFY_SOURCE=2
+includes = -I../../third_party/icu/public/common $
+    -I../../third_party/icu/public/i18n -I../../third_party/khronos $
+    -I../../gpu -I../.. -I../../third_party/WebKit/Source/Platform/chromium $
+    -I../../net/third_party/nss/ssl -I../../skia/config $
+    -I../../third_party/skia/src/core $
+    -I../../third_party/skia/include/config $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/gpu/gl $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils -I../../skia/ext $
+    -I../../third_party/zlib
+cflags = -Wno-narrowing -fstack-protector --param=ssp-buffer-size=4 -Werror $
+    -pthread -fno-exceptions -fno-strict-aliasing -Wall $
+    -Wno-unused-parameter -Wno-missing-field-initializers $
+    -fvisibility=hidden -pipe -fPIC -pthread $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gtk-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/gtk-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/atk-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gdk-pixbuf-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gio-unix-2.0/ $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/nss $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/nspr $
+    -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon -O2 $
+    -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -Wno-narrowing -fno-rtti -fno-threadsafe-statics $
+    -fvisibility-inlines-hidden -Wsign-compare -Wno-abi
+
+build $
+    obj/webkit/tools/test_shell/webkit_support_common.mock_webclipboard_impl.o: $
+    cxx ../../webkit/tools/test_shell/mock_webclipboard_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_appcache_system.o: $
+    cxx ../../webkit/tools/test_shell/simple_appcache_system.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_clipboard_impl.o: $
+    cxx ../../webkit/tools/test_shell/simple_clipboard_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_dom_storage_system.o: $
+    cxx ../../webkit/tools/test_shell/simple_dom_storage_system.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_file_system.o: $
+    cxx ../../webkit/tools/test_shell/simple_file_system.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_file_writer.o: $
+    cxx ../../webkit/tools/test_shell/simple_file_writer.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_resource_loader_bridge.o: $
+    cxx ../../webkit/tools/test_shell/simple_resource_loader_bridge.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_socket_stream_bridge.o: $
+    cxx ../../webkit/tools/test_shell/simple_socket_stream_bridge.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_webcookiejar_impl.o: $
+    cxx ../../webkit/tools/test_shell/simple_webcookiejar_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build $
+    obj/webkit/tools/test_shell/webkit_support_common.test_shell_request_context.o: $
+    cxx ../../webkit/tools/test_shell/test_shell_request_context.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build $
+    obj/webkit/tools/test_shell/webkit_support_common.test_shell_webblobregistry_impl.o: $
+    cxx ../../webkit/tools/test_shell/test_shell_webblobregistry_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build $
+    obj/webkit/tools/test_shell/webkit_support_common.test_shell_webmimeregistry_impl.o: $
+    cxx ../../webkit/tools/test_shell/test_shell_webmimeregistry_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/fileapi/webkit_support_common.mock_file_system_options.o: $
+    cxx ../../webkit/fileapi/mock_file_system_options.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/support/webkit_support_common.simple_database_system.o: $
+    cxx ../../webkit/support/simple_database_system.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+
+build obj/webkit/support/libwebkit_support_common.a: alink_thin $
+    obj/webkit/tools/test_shell/webkit_support_common.mock_webclipboard_impl.o $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_appcache_system.o $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_clipboard_impl.o $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_dom_storage_system.o $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_file_system.o $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_file_writer.o $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_resource_loader_bridge.o $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_socket_stream_bridge.o $
+    obj/webkit/tools/test_shell/webkit_support_common.simple_webcookiejar_impl.o $
+    obj/webkit/tools/test_shell/webkit_support_common.test_shell_request_context.o $
+    obj/webkit/tools/test_shell/webkit_support_common.test_shell_webblobregistry_impl.o $
+    obj/webkit/tools/test_shell/webkit_support_common.test_shell_webmimeregistry_impl.o $
+    obj/webkit/fileapi/webkit_support_common.mock_file_system_options.o $
+    obj/webkit/support/webkit_support_common.simple_database_system.o || $
+    obj/webkit/support/libglue.a

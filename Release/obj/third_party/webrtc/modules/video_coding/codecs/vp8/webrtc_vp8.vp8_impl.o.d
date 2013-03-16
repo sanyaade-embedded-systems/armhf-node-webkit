@@ -1,0 +1,35 @@
+obj/third_party/webrtc/modules/video_coding/codecs/vp8/webrtc_vp8.vp8_impl.o: \
+ ../../third_party/webrtc/modules/video_coding/codecs/vp8/vp8_impl.cc \
+ ../../third_party/webrtc/modules/video_coding/codecs/vp8/vp8_impl.h \
+ ../../third_party/webrtc/modules/video_coding/codecs/vp8/include/vp8.h \
+ ../../third_party/webrtc/modules/video_coding/codecs/interface/video_codec_interface.h \
+ ../../third_party/webrtc/common_types.h \
+ ../../third_party/webrtc/typedefs.h \
+ ../../third_party/webrtc/common_video/interface/i420_video_frame.h \
+ ../../third_party/webrtc/common_video/plane.h \
+ ../../third_party/webrtc/system_wrappers/interface/aligned_malloc.h \
+ ../../third_party/webrtc/system_wrappers/interface/scoped_ptr.h \
+ ../../third_party/webrtc/typedefs.h \
+ ../../third_party/webrtc/modules/interface/module_common_types.h \
+ ../../third_party/webrtc/common_types.h \
+ ../../third_party/webrtc/system_wrappers/interface/constructor_magic.h \
+ ../../third_party/webrtc/typedefs.h \
+ ../../third_party/webrtc/modules/video_coding/codecs/interface/video_error_codes.h \
+ ../../third_party/webrtc/common_video/interface/video_image.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vpx_encoder.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vpx_codec.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vpx_integer.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vpx_image.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vpx_decoder.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vp8cx.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vp8.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vpx_codec_impl_top.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vpx_codec_impl_bottom.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vp8dx.h \
+ ../../third_party/webrtc/common_video/libyuv/include/webrtc_libyuv.h \
+ ../../third_party/webrtc/modules/interface/module_common_types.h \
+ ../../third_party/webrtc/modules/video_coding/codecs/vp8/reference_picture_selection.h \
+ ../../third_party/webrtc/modules/video_coding/codecs/vp8/temporal_layers.h \
+ ../../third_party/webrtc/system_wrappers/interface/tick_util.h \
+ ../../third_party/webrtc/system_wrappers/interface/trace_event.h \
+ ../../third_party/webrtc/system_wrappers/interface/event_tracer.h

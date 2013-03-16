@@ -1,0 +1,95 @@
+build $
+    obj/third_party/leveldatabase/leveldb_filename_test.actions_depends.stamp: $
+    stamp obj/third_party/leveldatabase/libleveldb_testutil.a $
+    obj/base/libbase.a obj/base/libbase_static.a $
+    obj/base/allocator/liballocator_extension_thunks.a $
+    obj/third_party/modp_b64/libmodp_b64.a $
+    obj/base/third_party/dynamic_annotations/libdynamic_annotations.a $
+    obj/third_party/node/libnode.a $
+    obj/third_party/node/deps/http_parser/libhttp_parser.a $
+    obj/third_party/node/deps/uv/libuv.a gen/node_natives.h $
+    obj/third_party/node/deps/openssl/libopenssl.a $
+    obj/v8/tools/gyp/v8.actions_depends.stamp obj/v8/tools/gyp/libv8_base.a $
+    obj/v8/tools/gyp/libv8_snapshot.a $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    obj/third_party/zlib/libchrome_zlib.a obj/base/libsymbolize.a $
+    obj/base/libxdg_mime.a obj/third_party/libevent/libevent.a $
+    obj/third_party/leveldatabase/libleveldatabase.a
+
+build $
+    obj/third_party/leveldatabase/leveldb_filename_test.compile_depends.stamp: $
+    stamp obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc $
+    obj/third_party/node/node.compile_depends.stamp gen/node_natives.h $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp
+
+defines = -DLEVELDB_PLATFORM_CHROMIUM=1 -D_FILE_OFFSET_BITS=64 $
+    -DCHROMIUM_BUILD -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 $
+    -DUSE_NSS=1 -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = -I../../third_party/leveldatabase $
+    -I../../third_party/leveldatabase/src $
+    -I../../third_party/leveldatabase/src/include -I../..
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gtk-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/gtk-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/atk-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gdk-pixbuf-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gio-unix-2.0/ $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 $
+    -Wno-format -Wno-unused-result -march=armv7-a -mtune=cortex-a8 $
+    -mfloat-abi=hard -mfpu=neon -O2 -fno-ident -fdata-sections $
+    -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wno-deprecated -Wno-abi
+
+build $
+    obj/third_party/leveldatabase/src/db/leveldb_filename_test.filename_test.o: $
+    cxx ../../third_party/leveldatabase/src/db/filename_test.cc || $
+    obj/third_party/leveldatabase/leveldb_filename_test.compile_depends.stamp
+
+ldflags = -Wl,-z,now -Wl,-z,relro -pthread -Wl,-z,noexecstack -fPIC $
+    -B../../third_party/gold -rdynamic -Wl,-O1 -Wl,--as-needed
+libs =  -lrt -ldl -lm -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -lglib-2.0 $
+    -lX11 -lXi -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 $
+    -lpangoft2-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpango-1.0 $
+    -lfreetype -lfontconfig
+build leveldb_filename_test: link $
+    obj/third_party/leveldatabase/src/db/leveldb_filename_test.filename_test.o $
+    obj/third_party/node/deps/openssl/libopenssl.a $
+    obj/v8/tools/gyp/libv8_snapshot.a $
+    obj/base/allocator/liballocator_extension_thunks.a $
+    obj/third_party/node/deps/http_parser/libhttp_parser.a $
+    obj/third_party/leveldatabase/libleveldb_testutil.a $
+    obj/base/libbase_static.a obj/third_party/modp_b64/libmodp_b64.a $
+    obj/third_party/node/deps/uv/libuv.a obj/third_party/node/libnode.a $
+    obj/base/libbase.a obj/base/libxdg_mime.a obj/base/libsymbolize.a $
+    obj/base/third_party/dynamic_annotations/libdynamic_annotations.a $
+    obj/third_party/zlib/libchrome_zlib.a obj/v8/tools/gyp/libv8_base.a $
+    obj/third_party/libevent/libevent.a $
+    obj/third_party/leveldatabase/libleveldatabase.a | gen/node_natives.h $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    obj/v8/tools/gyp/v8.actions_depends.stamp
+  postbuilds = 

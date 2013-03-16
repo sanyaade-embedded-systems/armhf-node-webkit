@@ -1,0 +1,433 @@
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DCC_IMPLEMENTATION=1 $
+    -DGL_GLEXT_PROTOTYPES -DSK_BUILD_NO_IMAGE_ENCODE $
+    -DSK_DEFERRED_CANVAS_USES_GPIPE=1 $
+    '-DGR_GL_CUSTOM_SETUP_HEADER="GrGLConfig_chrome.h"' $
+    -DGR_AGGRESSIVE_SHADER_OPTS=1 -DSK_USE_POSIX_THREADS $
+    -DU_USING_ICU_NAMESPACE=0 -DU_STATIC_IMPLEMENTATION -DNDEBUG $
+    -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = -I../../third_party/icu/public/common $
+    -I../../third_party/icu/public/i18n -I../../third_party/khronos $
+    -I../../gpu -I../.. -I../../skia/config $
+    -I../../third_party/skia/src/core $
+    -I../../third_party/skia/include/config $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/gpu/gl $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils -I../../skia/ext -Igen/ui/gl $
+    -I../../third_party/mesa/MesaLib/include $
+    -I../../third_party/WebKit/Source/Platform/chromium $
+    -I../../third_party/WebKit/Source/Platform/chromium $
+    -Igen/webcore_headers -I../../third_party/npapi $
+    -I../../third_party/npapi/bindings -I../../v8/include
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gtk-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/gtk-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/atk-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gdk-pixbuf-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gio-unix-2.0/ $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 $
+    -Wno-format -Wno-unused-result -march=armv7-a -mtune=cortex-a8 $
+    -mfloat-abi=hard -mfpu=neon -O2 -fno-ident -fdata-sections $
+    -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wno-deprecated -Wno-abi
+
+build obj/cc/cc.animation.o: cxx ../../cc/animation.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.animation_curve.o: cxx ../../cc/animation_curve.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.animation_registrar.o: cxx ../../cc/animation_registrar.cc $
+    || obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.bitmap_content_layer_updater.o: cxx $
+    ../../cc/bitmap_content_layer_updater.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.bitmap_skpicture_content_layer_updater.o: cxx $
+    ../../cc/bitmap_skpicture_content_layer_updater.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.caching_bitmap_content_layer_updater.o: cxx $
+    ../../cc/caching_bitmap_content_layer_updater.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.checkerboard_draw_quad.o: cxx $
+    ../../cc/checkerboard_draw_quad.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.compositor_frame.o: cxx ../../cc/compositor_frame.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.compositor_frame_ack.o: cxx $
+    ../../cc/compositor_frame_ack.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.compositor_frame_metadata.o: cxx $
+    ../../cc/compositor_frame_metadata.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.content_layer.o: cxx ../../cc/content_layer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.content_layer_updater.o: cxx $
+    ../../cc/content_layer_updater.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.contents_scaling_layer.o: cxx $
+    ../../cc/contents_scaling_layer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.damage_tracker.o: cxx ../../cc/damage_tracker.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.debug_border_draw_quad.o: cxx $
+    ../../cc/debug_border_draw_quad.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.debug_colors.o: cxx ../../cc/debug_colors.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.debug_rect_history.o: cxx ../../cc/debug_rect_history.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.delay_based_time_source.o: cxx $
+    ../../cc/delay_based_time_source.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.delegated_frame_data.o: cxx $
+    ../../cc/delegated_frame_data.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.delegated_renderer_layer.o: cxx $
+    ../../cc/delegated_renderer_layer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.delegated_renderer_layer_impl.o: cxx $
+    ../../cc/delegated_renderer_layer_impl.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.delegating_renderer.o: cxx ../../cc/delegating_renderer.cc $
+    || obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.direct_renderer.o: cxx ../../cc/direct_renderer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.draw_quad.o: cxx ../../cc/draw_quad.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.font_atlas.o: cxx ../../cc/font_atlas.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.frame_rate_controller.o: cxx $
+    ../../cc/frame_rate_controller.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.frame_rate_counter.o: cxx ../../cc/frame_rate_counter.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.geometry_binding.o: cxx ../../cc/geometry_binding.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.gl_frame_data.o: cxx ../../cc/gl_frame_data.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.gl_renderer.o: cxx ../../cc/gl_renderer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.gl_renderer_draw_cache.o: cxx $
+    ../../cc/gl_renderer_draw_cache.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.heads_up_display_layer.o: cxx $
+    ../../cc/heads_up_display_layer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.heads_up_display_layer_impl.o: cxx $
+    ../../cc/heads_up_display_layer_impl.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.image_layer_updater.o: cxx ../../cc/image_layer_updater.cc $
+    || obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.image_layer.o: cxx ../../cc/image_layer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.io_surface_draw_quad.o: cxx $
+    ../../cc/io_surface_draw_quad.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.io_surface_layer.o: cxx ../../cc/io_surface_layer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.io_surface_layer_impl.o: cxx $
+    ../../cc/io_surface_layer_impl.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.keyframed_animation_curve.o: cxx $
+    ../../cc/keyframed_animation_curve.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.layer.o: cxx ../../cc/layer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.layer_animation_controller.o: cxx $
+    ../../cc/layer_animation_controller.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.layer_impl.o: cxx ../../cc/layer_impl.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.layer_iterator.o: cxx ../../cc/layer_iterator.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.layer_quad.o: cxx ../../cc/layer_quad.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.layer_sorter.o: cxx ../../cc/layer_sorter.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.layer_tiling_data.o: cxx ../../cc/layer_tiling_data.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.layer_tree_debug_state.o: cxx $
+    ../../cc/layer_tree_debug_state.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.layer_tree_host.o: cxx ../../cc/layer_tree_host.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.layer_tree_host_common.o: cxx $
+    ../../cc/layer_tree_host_common.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.layer_tree_host_impl.o: cxx $
+    ../../cc/layer_tree_host_impl.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.layer_tree_impl.o: cxx ../../cc/layer_tree_impl.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.layer_tree_settings.o: cxx ../../cc/layer_tree_settings.cc $
+    || obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.layer_updater.o: cxx ../../cc/layer_updater.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.managed_memory_policy.o: cxx $
+    ../../cc/managed_memory_policy.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.math_util.o: cxx ../../cc/math_util.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.nine_patch_layer.o: cxx ../../cc/nine_patch_layer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.nine_patch_layer_impl.o: cxx $
+    ../../cc/nine_patch_layer_impl.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.occlusion_tracker.o: cxx ../../cc/occlusion_tracker.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.overdraw_metrics.o: cxx ../../cc/overdraw_metrics.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.page_scale_animation.o: cxx $
+    ../../cc/page_scale_animation.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.picture.o: cxx ../../cc/picture.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.picture_image_layer.o: cxx ../../cc/picture_image_layer.cc $
+    || obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.picture_layer.o: cxx ../../cc/picture_layer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.picture_layer_impl.o: cxx ../../cc/picture_layer_impl.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.picture_layer_tiling.o: cxx $
+    ../../cc/picture_layer_tiling.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.picture_layer_tiling_set.o: cxx $
+    ../../cc/picture_layer_tiling_set.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.picture_pile.o: cxx ../../cc/picture_pile.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.picture_pile_impl.o: cxx ../../cc/picture_pile_impl.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.prioritized_resource.o: cxx $
+    ../../cc/prioritized_resource.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.prioritized_resource_manager.o: cxx $
+    ../../cc/prioritized_resource_manager.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.priority_calculator.o: cxx ../../cc/priority_calculator.cc $
+    || obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.program_binding.o: cxx ../../cc/program_binding.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.proxy.o: cxx ../../cc/proxy.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.quad_culler.o: cxx ../../cc/quad_culler.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.rate_limiter.o: cxx ../../cc/rate_limiter.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.region.o: cxx ../../cc/region.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.render_pass.o: cxx ../../cc/render_pass.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.render_pass_draw_quad.o: cxx $
+    ../../cc/render_pass_draw_quad.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.render_surface.o: cxx ../../cc/render_surface.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.render_surface_filters.o: cxx $
+    ../../cc/render_surface_filters.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.render_surface_impl.o: cxx ../../cc/render_surface_impl.cc $
+    || obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.renderer.o: cxx ../../cc/renderer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.rendering_stats.o: cxx ../../cc/rendering_stats.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.resource.o: cxx ../../cc/resource.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.resource_pool.o: cxx ../../cc/resource_pool.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.resource_provider.o: cxx ../../cc/resource_provider.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.resource_update.o: cxx ../../cc/resource_update.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.resource_update_controller.o: cxx $
+    ../../cc/resource_update_controller.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.resource_update_queue.o: cxx $
+    ../../cc/resource_update_queue.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.scheduler.o: cxx ../../cc/scheduler.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.scheduler_state_machine.o: cxx $
+    ../../cc/scheduler_state_machine.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.scoped_resource.o: cxx ../../cc/scoped_resource.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.scrollbar_animation_controller.o: cxx $
+    ../../cc/scrollbar_animation_controller.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.scrollbar_animation_controller_linear_fade.o: cxx $
+    ../../cc/scrollbar_animation_controller_linear_fade.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.scrollbar_geometry_fixed_thumb.o: cxx $
+    ../../cc/scrollbar_geometry_fixed_thumb.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.scrollbar_geometry_stub.o: cxx $
+    ../../cc/scrollbar_geometry_stub.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.scrollbar_layer.o: cxx ../../cc/scrollbar_layer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.scrollbar_layer_impl.o: cxx $
+    ../../cc/scrollbar_layer_impl.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.shader.o: cxx ../../cc/shader.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.shared_quad_state.o: cxx ../../cc/shared_quad_state.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.single_thread_proxy.o: cxx ../../cc/single_thread_proxy.cc $
+    || obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.skpicture_content_layer_updater.o: cxx $
+    ../../cc/skpicture_content_layer_updater.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.software_renderer.o: cxx ../../cc/software_renderer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.solid_color_draw_quad.o: cxx $
+    ../../cc/solid_color_draw_quad.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.solid_color_layer.o: cxx ../../cc/solid_color_layer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.solid_color_layer_impl.o: cxx $
+    ../../cc/solid_color_layer_impl.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.stream_video_draw_quad.o: cxx $
+    ../../cc/stream_video_draw_quad.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.switches.o: cxx ../../cc/switches.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.texture_copier.o: cxx ../../cc/texture_copier.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.texture_draw_quad.o: cxx ../../cc/texture_draw_quad.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.texture_layer.o: cxx ../../cc/texture_layer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.texture_layer_impl.o: cxx ../../cc/texture_layer_impl.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.texture_uploader.o: cxx ../../cc/texture_uploader.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.thread_impl.o: cxx ../../cc/thread_impl.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.thread_proxy.o: cxx ../../cc/thread_proxy.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.tile.o: cxx ../../cc/tile.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.tile_draw_quad.o: cxx ../../cc/tile_draw_quad.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.tile_manager.o: cxx ../../cc/tile_manager.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.tile_priority.o: cxx ../../cc/tile_priority.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.tiled_layer.o: cxx ../../cc/tiled_layer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.tiled_layer_impl.o: cxx ../../cc/tiled_layer_impl.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.tiling_data.o: cxx ../../cc/tiling_data.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.timing_function.o: cxx ../../cc/timing_function.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.transferable_resource.o: cxx $
+    ../../cc/transferable_resource.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.tree_synchronizer.o: cxx ../../cc/tree_synchronizer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.video_layer.o: cxx ../../cc/video_layer.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.video_layer_impl.o: cxx ../../cc/video_layer_impl.cc || $
+    obj/ui/gl/gl.actions_rules_copies.stamp
+build obj/cc/cc.yuv_video_draw_quad.o: cxx ../../cc/yuv_video_draw_quad.cc $
+    || obj/ui/gl/gl.actions_rules_copies.stamp
+
+build obj/cc/libcc.a: alink_thin obj/cc/cc.animation.o $
+    obj/cc/cc.animation_curve.o obj/cc/cc.animation_registrar.o $
+    obj/cc/cc.bitmap_content_layer_updater.o $
+    obj/cc/cc.bitmap_skpicture_content_layer_updater.o $
+    obj/cc/cc.caching_bitmap_content_layer_updater.o $
+    obj/cc/cc.checkerboard_draw_quad.o obj/cc/cc.compositor_frame.o $
+    obj/cc/cc.compositor_frame_ack.o obj/cc/cc.compositor_frame_metadata.o $
+    obj/cc/cc.content_layer.o obj/cc/cc.content_layer_updater.o $
+    obj/cc/cc.contents_scaling_layer.o obj/cc/cc.damage_tracker.o $
+    obj/cc/cc.debug_border_draw_quad.o obj/cc/cc.debug_colors.o $
+    obj/cc/cc.debug_rect_history.o obj/cc/cc.delay_based_time_source.o $
+    obj/cc/cc.delegated_frame_data.o obj/cc/cc.delegated_renderer_layer.o $
+    obj/cc/cc.delegated_renderer_layer_impl.o $
+    obj/cc/cc.delegating_renderer.o obj/cc/cc.direct_renderer.o $
+    obj/cc/cc.draw_quad.o obj/cc/cc.font_atlas.o $
+    obj/cc/cc.frame_rate_controller.o obj/cc/cc.frame_rate_counter.o $
+    obj/cc/cc.geometry_binding.o obj/cc/cc.gl_frame_data.o $
+    obj/cc/cc.gl_renderer.o obj/cc/cc.gl_renderer_draw_cache.o $
+    obj/cc/cc.heads_up_display_layer.o $
+    obj/cc/cc.heads_up_display_layer_impl.o obj/cc/cc.image_layer_updater.o $
+    obj/cc/cc.image_layer.o obj/cc/cc.io_surface_draw_quad.o $
+    obj/cc/cc.io_surface_layer.o obj/cc/cc.io_surface_layer_impl.o $
+    obj/cc/cc.keyframed_animation_curve.o obj/cc/cc.layer.o $
+    obj/cc/cc.layer_animation_controller.o obj/cc/cc.layer_impl.o $
+    obj/cc/cc.layer_iterator.o obj/cc/cc.layer_quad.o $
+    obj/cc/cc.layer_sorter.o obj/cc/cc.layer_tiling_data.o $
+    obj/cc/cc.layer_tree_debug_state.o obj/cc/cc.layer_tree_host.o $
+    obj/cc/cc.layer_tree_host_common.o obj/cc/cc.layer_tree_host_impl.o $
+    obj/cc/cc.layer_tree_impl.o obj/cc/cc.layer_tree_settings.o $
+    obj/cc/cc.layer_updater.o obj/cc/cc.managed_memory_policy.o $
+    obj/cc/cc.math_util.o obj/cc/cc.nine_patch_layer.o $
+    obj/cc/cc.nine_patch_layer_impl.o obj/cc/cc.occlusion_tracker.o $
+    obj/cc/cc.overdraw_metrics.o obj/cc/cc.page_scale_animation.o $
+    obj/cc/cc.picture.o obj/cc/cc.picture_image_layer.o $
+    obj/cc/cc.picture_layer.o obj/cc/cc.picture_layer_impl.o $
+    obj/cc/cc.picture_layer_tiling.o obj/cc/cc.picture_layer_tiling_set.o $
+    obj/cc/cc.picture_pile.o obj/cc/cc.picture_pile_impl.o $
+    obj/cc/cc.prioritized_resource.o $
+    obj/cc/cc.prioritized_resource_manager.o $
+    obj/cc/cc.priority_calculator.o obj/cc/cc.program_binding.o $
+    obj/cc/cc.proxy.o obj/cc/cc.quad_culler.o obj/cc/cc.rate_limiter.o $
+    obj/cc/cc.region.o obj/cc/cc.render_pass.o $
+    obj/cc/cc.render_pass_draw_quad.o obj/cc/cc.render_surface.o $
+    obj/cc/cc.render_surface_filters.o obj/cc/cc.render_surface_impl.o $
+    obj/cc/cc.renderer.o obj/cc/cc.rendering_stats.o obj/cc/cc.resource.o $
+    obj/cc/cc.resource_pool.o obj/cc/cc.resource_provider.o $
+    obj/cc/cc.resource_update.o obj/cc/cc.resource_update_controller.o $
+    obj/cc/cc.resource_update_queue.o obj/cc/cc.scheduler.o $
+    obj/cc/cc.scheduler_state_machine.o obj/cc/cc.scoped_resource.o $
+    obj/cc/cc.scrollbar_animation_controller.o $
+    obj/cc/cc.scrollbar_animation_controller_linear_fade.o $
+    obj/cc/cc.scrollbar_geometry_fixed_thumb.o $
+    obj/cc/cc.scrollbar_geometry_stub.o obj/cc/cc.scrollbar_layer.o $
+    obj/cc/cc.scrollbar_layer_impl.o obj/cc/cc.shader.o $
+    obj/cc/cc.shared_quad_state.o obj/cc/cc.single_thread_proxy.o $
+    obj/cc/cc.skpicture_content_layer_updater.o $
+    obj/cc/cc.software_renderer.o obj/cc/cc.solid_color_draw_quad.o $
+    obj/cc/cc.solid_color_layer.o obj/cc/cc.solid_color_layer_impl.o $
+    obj/cc/cc.stream_video_draw_quad.o obj/cc/cc.switches.o $
+    obj/cc/cc.texture_copier.o obj/cc/cc.texture_draw_quad.o $
+    obj/cc/cc.texture_layer.o obj/cc/cc.texture_layer_impl.o $
+    obj/cc/cc.texture_uploader.o obj/cc/cc.thread_impl.o $
+    obj/cc/cc.thread_proxy.o obj/cc/cc.tile.o obj/cc/cc.tile_draw_quad.o $
+    obj/cc/cc.tile_manager.o obj/cc/cc.tile_priority.o $
+    obj/cc/cc.tiled_layer.o obj/cc/cc.tiled_layer_impl.o $
+    obj/cc/cc.tiling_data.o obj/cc/cc.timing_function.o $
+    obj/cc/cc.transferable_resource.o obj/cc/cc.tree_synchronizer.o $
+    obj/cc/cc.video_layer.o obj/cc/cc.video_layer_impl.o $
+    obj/cc/cc.yuv_video_draw_quad.o || obj/ui/gl/libgl_wrapper.a

@@ -1,0 +1,20 @@
+obj/third_party/libwebp/dsp/libwebp_dsp.dec.o: \
+ ../../third_party/libwebp/dsp/dec.c \
+ ../../third_party/libwebp/dsp/./dsp.h \
+ ../../third_party/libwebp/dsp/./../webp/types.h \
+ ../../third_party/libwebp/dsp/../dec/vp8i.h \
+ ../../third_party/libwebp/dsp/../dec/./vp8li.h \
+ ../../third_party/libwebp/dsp/../dec/././webpi.h \
+ ../../third_party/libwebp/dsp/../dec/././../utils/rescaler.h \
+ ../../third_party/libwebp/dsp/../dec/././../utils/../webp/types.h \
+ ../../third_party/libwebp/dsp/../dec/./././decode_vp8.h \
+ ../../third_party/libwebp/dsp/../dec/./././../webp/decode.h \
+ ../../third_party/libwebp/dsp/../dec/./././../webp/./types.h \
+ ../../third_party/libwebp/dsp/../dec/./../utils/bit_reader.h \
+ ../../third_party/libwebp/dsp/../dec/./../utils/../webp/types.h \
+ ../../third_party/libwebp/dsp/../dec/./../utils/color_cache.h \
+ ../../third_party/libwebp/dsp/../dec/./../utils/huffman.h \
+ ../../third_party/libwebp/dsp/../dec/./../webp/format_constants.h \
+ ../../third_party/libwebp/dsp/../dec/../utils/bit_reader.h \
+ ../../third_party/libwebp/dsp/../dec/../utils/thread.h \
+ ../../third_party/libwebp/dsp/../dec/../dsp/dsp.h

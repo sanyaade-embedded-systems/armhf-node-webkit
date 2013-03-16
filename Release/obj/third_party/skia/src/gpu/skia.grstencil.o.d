@@ -1,0 +1,21 @@
+obj/third_party/skia/src/gpu/skia.grstencil.o: \
+ ../../third_party/skia/src/gpu/GrStencil.cpp \
+ ../../third_party/skia/src/gpu/GrStencil.h \
+ ../../third_party/skia/include/gpu/GrTypes.h \
+ ../../third_party/skia/include/core/SkTypes.h \
+ ../../third_party/skia/include/core/SkPreConfig.h \
+ ../../skia/config/SkUserConfig.h \
+ ../../third_party/skia/include/core/SkPostConfig.h \
+ ../../third_party/skia/include/gpu/GrConfig.h \
+ ../../third_party/skia/include/gpu/GrUserConfig.h \
+ ../../third_party/skia/include/core/SkMath.h \
+ ../../third_party/skia/include/core/SkTypes.h \
+ ../../third_party/skia/include/core/SkRegion.h \
+ ../../third_party/skia/include/core/SkRect.h \
+ ../../third_party/skia/include/core/SkPoint.h \
+ ../../third_party/skia/include/core/SkMath.h \
+ ../../third_party/skia/include/core/SkScalar.h \
+ ../../third_party/skia/include/core/SkFixed.h \
+ ../../third_party/skia/include/core/SkFloatingPoint.h \
+ ../../third_party/skia/include/core/SkFloatBits.h \
+ ../../third_party/skia/include/core/SkSize.h

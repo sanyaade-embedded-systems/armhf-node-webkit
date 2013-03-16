@@ -1,0 +1,14 @@
+rule $
+    injected_canvas_script_source_target_generateInjectedScriptCanvasModuleSource_4317b806cfedc617607e1f45c2acee84
+  command = cd ../../third_party/WebKit/Source/WebCore/WebCore.gyp; perl $
+      ../inspector/xxd.pl InjectedScriptCanvasModuleSource_js $
+      ../inspector/InjectedScriptCanvasModuleSource.js $
+      ../../../../../out/Release/gen/webkit/InjectedScriptCanvasModuleSource.h
+  description = ACTION Generating InjectedScriptCanvasModuleSource.h from $
+      InjectedScriptCanvasModuleSource.js
+  restat = 1
+
+build gen/webkit/InjectedScriptCanvasModuleSource.h: $
+    injected_canvas_script_source_target_generateInjectedScriptCanvasModuleSource_4317b806cfedc617607e1f45c2acee84 $
+    ../../third_party/WebKit/Source/WebCore/inspector/InjectedScriptCanvasModuleSource.js
+

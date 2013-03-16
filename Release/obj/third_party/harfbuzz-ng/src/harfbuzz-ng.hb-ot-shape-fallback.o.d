@@ -1,0 +1,30 @@
+obj/third_party/harfbuzz-ng/src/harfbuzz-ng.hb-ot-shape-fallback.o: \
+ ../../third_party/harfbuzz-ng/src/hb-ot-shape-fallback.cc \
+ ../../third_party/harfbuzz-ng/src/hb-ot-shape-fallback-private.hh \
+ ../../third_party/harfbuzz-ng/src/hb-private.hh \
+ ../../third_party/harfbuzz-ng/src/hb.h \
+ ../../third_party/harfbuzz-ng/src/hb-blob.h \
+ ../../third_party/harfbuzz-ng/src/hb-common.h \
+ ../../third_party/harfbuzz-ng/src/hb-buffer.h \
+ ../../third_party/harfbuzz-ng/src/hb-unicode.h \
+ ../../third_party/harfbuzz-ng/src/hb-font.h \
+ ../../third_party/harfbuzz-ng/src/hb-set.h \
+ ../../third_party/harfbuzz-ng/src/hb-shape.h \
+ ../../third_party/harfbuzz-ng/src/hb-version.h \
+ ../../third_party/harfbuzz-ng/src/hb-ot.h \
+ ../../third_party/harfbuzz-ng/src/hb-ot-layout.h \
+ ../../third_party/harfbuzz-ng/src/hb-ot-tag.h \
+ ../../third_party/harfbuzz-ng/src/hb-ot-shape-private.hh \
+ ../../third_party/harfbuzz-ng/src/hb-ot-map-private.hh \
+ ../../third_party/harfbuzz-ng/src/hb-buffer-private.hh \
+ ../../third_party/harfbuzz-ng/src/hb-object-private.hh \
+ ../../third_party/harfbuzz-ng/src/hb-atomic-private.hh \
+ ../../third_party/harfbuzz-ng/src/hb-mutex-private.hh \
+ ../../third_party/harfbuzz-ng/src/hb-unicode-private.hh \
+ ../../third_party/harfbuzz-ng/src/hb-ot-layout-private.hh \
+ ../../third_party/harfbuzz-ng/src/hb-font-private.hh \
+ ../../third_party/harfbuzz-ng/src/hb-shaper-private.hh \
+ ../../third_party/harfbuzz-ng/src/hb-shape-plan.h \
+ ../../third_party/harfbuzz-ng/src/hb-shaper-list.hh \
+ ../../third_party/harfbuzz-ng/src/hb-shape-plan-private.hh \
+ ../../third_party/harfbuzz-ng/src/hb-set-private.hh

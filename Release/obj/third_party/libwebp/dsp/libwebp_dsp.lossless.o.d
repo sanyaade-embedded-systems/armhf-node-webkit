@@ -1,0 +1,27 @@
+obj/third_party/libwebp/dsp/libwebp_dsp.lossless.o: \
+ ../../third_party/libwebp/dsp/lossless.c \
+ ../../third_party/libwebp/dsp/./lossless.h \
+ ../../third_party/libwebp/dsp/./../webp/types.h \
+ ../../third_party/libwebp/dsp/./../webp/decode.h \
+ ../../third_party/libwebp/dsp/./../webp/./types.h \
+ ../../third_party/libwebp/dsp/../dec/vp8li.h \
+ ../../third_party/libwebp/dsp/../dec/./webpi.h \
+ ../../third_party/libwebp/dsp/../dec/./../utils/rescaler.h \
+ ../../third_party/libwebp/dsp/../dec/./../utils/../webp/types.h \
+ ../../third_party/libwebp/dsp/../dec/././decode_vp8.h \
+ ../../third_party/libwebp/dsp/../dec/././../webp/decode.h \
+ ../../third_party/libwebp/dsp/../dec/../utils/bit_reader.h \
+ ../../third_party/libwebp/dsp/../dec/../utils/../webp/types.h \
+ ../../third_party/libwebp/dsp/../dec/../utils/color_cache.h \
+ ../../third_party/libwebp/dsp/../dec/../utils/huffman.h \
+ ../../third_party/libwebp/dsp/../dec/../webp/format_constants.h \
+ ../../third_party/libwebp/dsp/../dsp/yuv.h \
+ ../../third_party/libwebp/dsp/../dsp/../dec/decode_vp8.h \
+ ../../third_party/libwebp/dsp/../dsp/dsp.h \
+ ../../third_party/libwebp/dsp/../dsp/../webp/types.h \
+ ../../third_party/libwebp/dsp/../enc/histogram.h \
+ ../../third_party/libwebp/dsp/../enc/./backward_references.h \
+ ../../third_party/libwebp/dsp/../enc/./../webp/types.h \
+ ../../third_party/libwebp/dsp/../enc/./../webp/format_constants.h \
+ ../../third_party/libwebp/dsp/../enc/../webp/format_constants.h \
+ ../../third_party/libwebp/dsp/../enc/../webp/types.h

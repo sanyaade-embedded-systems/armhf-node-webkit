@@ -1,0 +1,548 @@
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DUSE_SYMBOLIZE $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -DBASE_IMPLEMENTATION $
+    -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 $
+    -DUSE_EABI_HARDFLOAT -D_FORTIFY_SOURCE=2
+includes = -I../../third_party/node/deps/uv/include -I../../v8/include -I../..
+cflags = -fstack-protector --param=ssp-buffer-size=4 -Werror -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wall -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -Wno-write-strings -pthread $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gtk-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/gtk-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/atk-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gdk-pixbuf-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gio-unix-2.0/ $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 $
+    -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon -O2 $
+    -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wsign-compare -Wno-abi
+
+build obj/base/third_party/xdg_user_dirs/base.xdg_user_dir_lookup.o: cxx $
+    ../../base/third_party/xdg_user_dirs/xdg_user_dir_lookup.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.event_recorder_stubs.o: cxx $
+    ../../base/event_recorder_stubs.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.linux_util.o: cxx ../../base/linux_util.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.md5.o: cxx ../../base/md5.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.message_pump_glib.o: cxx $
+    ../../base/message_pump_glib.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.message_pump_gtk.o: cxx ../../base/message_pump_gtk.cc $
+    || obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.message_pump_libevent.o: cxx $
+    ../../base/message_pump_libevent.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.message_pump_uv.o: cxx ../../base/message_pump_uv.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/metrics/base.field_trial.o: cxx $
+    ../../base/metrics/field_trial.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/posix/base.file_descriptor_shuffle.o: cxx $
+    ../../base/posix/file_descriptor_shuffle.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.sync_socket_posix.o: cxx $
+    ../../base/sync_socket_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/third_party/dmg_fp/base.g_fmt.o: cxx $
+    ../../base/third_party/dmg_fp/g_fmt.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/third_party/dmg_fp/base.dtoa_wrapper.o: cxx $
+    ../../base/third_party/dmg_fp/dtoa_wrapper.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/third_party/icu/base.icu_utf.o: cxx $
+    ../../base/third_party/icu/icu_utf.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/third_party/nspr/base.prtime.o: cxx $
+    ../../base/third_party/nspr/prtime.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/allocator/base.allocator_extension.o: cxx $
+    ../../base/allocator/allocator_extension.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/allocator/base.type_profiler_control.o: cxx $
+    ../../base/allocator/type_profiler_control.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.at_exit.o: cxx ../../base/at_exit.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.atomicops_internals_x86_gcc.o: cxx $
+    ../../base/atomicops_internals_x86_gcc.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.base_paths.o: cxx ../../base/base_paths.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.base_paths_posix.o: cxx ../../base/base_paths_posix.cc $
+    || obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.base64.o: cxx ../../base/base64.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.bind_helpers.o: cxx ../../base/bind_helpers.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.build_time.o: cxx ../../base/build_time.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.callback_internal.o: cxx $
+    ../../base/callback_internal.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.command_line.o: cxx ../../base/command_line.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.cpu.o: cxx ../../base/cpu.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/debug/base.alias.o: cxx ../../base/debug/alias.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/debug/base.crash_logging.o: cxx $
+    ../../base/debug/crash_logging.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/debug/base.debugger.o: cxx ../../base/debug/debugger.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/debug/base.debugger_posix.o: cxx $
+    ../../base/debug/debugger_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/debug/base.profiler.o: cxx ../../base/debug/profiler.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/debug/base.stack_trace.o: cxx $
+    ../../base/debug/stack_trace.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/debug/base.stack_trace_posix.o: cxx $
+    ../../base/debug/stack_trace_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/debug/base.trace_event.o: cxx $
+    ../../base/debug/trace_event.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/debug/base.trace_event_impl.o: cxx $
+    ../../base/debug/trace_event_impl.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.environment.o: cxx ../../base/environment.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.file_path.o: cxx ../../base/file_path.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.file_util.o: cxx ../../base/file_util.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.file_util_linux.o: cxx ../../base/file_util_linux.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.file_util_posix.o: cxx ../../base/file_util_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.file_util_proxy.o: cxx ../../base/file_util_proxy.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/files/base.file_path_watcher.o: cxx $
+    ../../base/files/file_path_watcher.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/files/base.file_path_watcher_linux.o: cxx $
+    ../../base/files/file_path_watcher_linux.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/files/base.important_file_writer.o: cxx $
+    ../../base/files/important_file_writer.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/files/base.scoped_temp_dir.o: cxx $
+    ../../base/files/scoped_temp_dir.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.guid.o: cxx ../../base/guid.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.guid_posix.o: cxx ../../base/guid_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.hash.o: cxx ../../base/hash.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.hi_res_timer_manager_posix.o: cxx $
+    ../../base/hi_res_timer_manager_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/json/base.json_file_value_serializer.o: cxx $
+    ../../base/json/json_file_value_serializer.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/json/base.json_parser.o: cxx ../../base/json/json_parser.cc $
+    || obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/json/base.json_reader.o: cxx ../../base/json/json_reader.cc $
+    || obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/json/base.json_string_value_serializer.o: cxx $
+    ../../base/json/json_string_value_serializer.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/json/base.json_writer.o: cxx ../../base/json/json_writer.cc $
+    || obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/json/base.string_escape.o: cxx $
+    ../../base/json/string_escape.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.lazy_instance.o: cxx ../../base/lazy_instance.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.location.o: cxx ../../base/location.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.logging.o: cxx ../../base/logging.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/memory/base.aligned_memory.o: cxx $
+    ../../base/memory/aligned_memory.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/memory/base.ref_counted.o: cxx $
+    ../../base/memory/ref_counted.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/memory/base.ref_counted_memory.o: cxx $
+    ../../base/memory/ref_counted_memory.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/memory/base.singleton.o: cxx ../../base/memory/singleton.cc $
+    || obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/memory/base.weak_ptr.o: cxx ../../base/memory/weak_ptr.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.message_loop.o: cxx ../../base/message_loop.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.message_loop_proxy.o: cxx $
+    ../../base/message_loop_proxy.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.message_loop_proxy_impl.o: cxx $
+    ../../base/message_loop_proxy_impl.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.message_pump.o: cxx ../../base/message_pump.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.message_pump_default.o: cxx $
+    ../../base/message_pump_default.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/metrics/base.sample_map.o: cxx $
+    ../../base/metrics/sample_map.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/metrics/base.sample_vector.o: cxx $
+    ../../base/metrics/sample_vector.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/metrics/base.bucket_ranges.o: cxx $
+    ../../base/metrics/bucket_ranges.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/metrics/base.histogram.o: cxx $
+    ../../base/metrics/histogram.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/metrics/base.histogram_base.o: cxx $
+    ../../base/metrics/histogram_base.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/metrics/base.histogram_samples.o: cxx $
+    ../../base/metrics/histogram_samples.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/metrics/base.histogram_snapshot_manager.o: cxx $
+    ../../base/metrics/histogram_snapshot_manager.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/metrics/base.sparse_histogram.o: cxx $
+    ../../base/metrics/sparse_histogram.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/metrics/base.statistics_recorder.o: cxx $
+    ../../base/metrics/statistics_recorder.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/metrics/base.stats_counters.o: cxx $
+    ../../base/metrics/stats_counters.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/metrics/base.stats_table.o: cxx $
+    ../../base/metrics/stats_table.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.native_library_posix.o: cxx $
+    ../../base/native_library_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.path_service.o: cxx ../../base/path_service.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.pending_task.o: cxx ../../base/pending_task.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.pickle.o: cxx ../../base/pickle.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.platform_file.o: cxx ../../base/platform_file.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.platform_file_posix.o: cxx $
+    ../../base/platform_file_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/posix/base.global_descriptors.o: cxx $
+    ../../base/posix/global_descriptors.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/posix/base.unix_domain_socket.o: cxx $
+    ../../base/posix/unix_domain_socket.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.process_linux.o: cxx ../../base/process_linux.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.process_posix.o: cxx ../../base/process_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.process_util.o: cxx ../../base/process_util.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.process_util_linux.o: cxx $
+    ../../base/process_util_linux.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.process_util_posix.o: cxx $
+    ../../base/process_util_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/profiler/base.scoped_profile.o: cxx $
+    ../../base/profiler/scoped_profile.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/profiler/base.alternate_timer.o: cxx $
+    ../../base/profiler/alternate_timer.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/profiler/base.tracked_time.o: cxx $
+    ../../base/profiler/tracked_time.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.rand_util.o: cxx ../../base/rand_util.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.rand_util_posix.o: cxx ../../base/rand_util_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.run_loop.o: cxx ../../base/run_loop.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.safe_strerror_posix.o: cxx $
+    ../../base/safe_strerror_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.scoped_native_library.o: cxx $
+    ../../base/scoped_native_library.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.sequence_checker_impl.o: cxx $
+    ../../base/sequence_checker_impl.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.sequenced_task_runner.o: cxx $
+    ../../base/sequenced_task_runner.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.sha1_portable.o: cxx ../../base/sha1_portable.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.shared_memory_posix.o: cxx $
+    ../../base/shared_memory_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.string_number_conversions.o: cxx $
+    ../../base/string_number_conversions.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.string_piece.o: cxx ../../base/string_piece.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.string_split.o: cxx ../../base/string_split.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.string_util.o: cxx ../../base/string_util.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.string16.o: cxx ../../base/string16.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.stringprintf.o: cxx ../../base/stringprintf.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.supports_user_data.o: cxx $
+    ../../base/supports_user_data.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/synchronization/base.cancellation_flag.o: cxx $
+    ../../base/synchronization/cancellation_flag.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/synchronization/base.condition_variable_posix.o: cxx $
+    ../../base/synchronization/condition_variable_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/synchronization/base.lock.o: cxx $
+    ../../base/synchronization/lock.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/synchronization/base.lock_impl_posix.o: cxx $
+    ../../base/synchronization/lock_impl_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/synchronization/base.waitable_event_posix.o: cxx $
+    ../../base/synchronization/waitable_event_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/synchronization/base.waitable_event_watcher_posix.o: cxx $
+    ../../base/synchronization/waitable_event_watcher_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/system_monitor/base.system_monitor.o: cxx $
+    ../../base/system_monitor/system_monitor.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/system_monitor/base.system_monitor_posix.o: cxx $
+    ../../base/system_monitor/system_monitor_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.sys_info.o: cxx ../../base/sys_info.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.sys_info_linux.o: cxx ../../base/sys_info_linux.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.sys_info_posix.o: cxx ../../base/sys_info_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.sys_string_conversions_posix.o: cxx $
+    ../../base/sys_string_conversions_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.task_runner.o: cxx ../../base/task_runner.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.thread_task_runner_handle.o: cxx $
+    ../../base/thread_task_runner_handle.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/threading/base.non_thread_safe_impl.o: cxx $
+    ../../base/threading/non_thread_safe_impl.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/threading/base.platform_thread_posix.o: cxx $
+    ../../base/threading/platform_thread_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/threading/base.post_task_and_reply_impl.o: cxx $
+    ../../base/threading/post_task_and_reply_impl.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/threading/base.sequenced_worker_pool.o: cxx $
+    ../../base/threading/sequenced_worker_pool.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/threading/base.simple_thread.o: cxx $
+    ../../base/threading/simple_thread.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/threading/base.thread.o: cxx ../../base/threading/thread.cc $
+    || obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/threading/base.thread_checker_impl.o: cxx $
+    ../../base/threading/thread_checker_impl.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/threading/base.thread_collision_warner.o: cxx $
+    ../../base/threading/thread_collision_warner.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/threading/base.thread_local_posix.o: cxx $
+    ../../base/threading/thread_local_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/threading/base.thread_local_storage_posix.o: cxx $
+    ../../base/threading/thread_local_storage_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/threading/base.thread_restrictions.o: cxx $
+    ../../base/threading/thread_restrictions.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/threading/base.watchdog.o: cxx $
+    ../../base/threading/watchdog.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/threading/base.worker_pool.o: cxx $
+    ../../base/threading/worker_pool.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/threading/base.worker_pool_posix.o: cxx $
+    ../../base/threading/worker_pool_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.time.o: cxx ../../base/time.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.time_posix.o: cxx ../../base/time_posix.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.timer.o: cxx ../../base/timer.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.tracked_objects.o: cxx ../../base/tracked_objects.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.tracking_info.o: cxx ../../base/tracking_info.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.utf_offset_string_conversions.o: cxx $
+    ../../base/utf_offset_string_conversions.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.utf_string_conversion_utils.o: cxx $
+    ../../base/utf_string_conversion_utils.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.utf_string_conversions.o: cxx $
+    ../../base/utf_string_conversions.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.values.o: cxx ../../base/values.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.value_conversions.o: cxx $
+    ../../base/value_conversions.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.version.o: cxx ../../base/version.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/base.vlog.o: cxx ../../base/vlog.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/nix/base.mime_util_xdg.o: cxx $
+    ../../base/nix/mime_util_xdg.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+build obj/base/nix/base.xdg_util.o: cxx ../../base/nix/xdg_util.cc || $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc
+
+build obj/base/libbase.a: alink_thin $
+    obj/base/third_party/xdg_user_dirs/base.xdg_user_dir_lookup.o $
+    obj/base/base.event_recorder_stubs.o obj/base/base.linux_util.o $
+    obj/base/base.md5.o obj/base/base.message_pump_glib.o $
+    obj/base/base.message_pump_gtk.o obj/base/base.message_pump_libevent.o $
+    obj/base/base.message_pump_uv.o obj/base/metrics/base.field_trial.o $
+    obj/base/posix/base.file_descriptor_shuffle.o $
+    obj/base/base.sync_socket_posix.o $
+    obj/base/third_party/dmg_fp/base.g_fmt.o $
+    obj/base/third_party/dmg_fp/base.dtoa_wrapper.o $
+    obj/base/third_party/icu/base.icu_utf.o $
+    obj/base/third_party/nspr/base.prtime.o $
+    obj/base/allocator/base.allocator_extension.o $
+    obj/base/allocator/base.type_profiler_control.o obj/base/base.at_exit.o $
+    obj/base/base.atomicops_internals_x86_gcc.o obj/base/base.base_paths.o $
+    obj/base/base.base_paths_posix.o obj/base/base.base64.o $
+    obj/base/base.bind_helpers.o obj/base/base.build_time.o $
+    obj/base/base.callback_internal.o obj/base/base.command_line.o $
+    obj/base/base.cpu.o obj/base/debug/base.alias.o $
+    obj/base/debug/base.crash_logging.o obj/base/debug/base.debugger.o $
+    obj/base/debug/base.debugger_posix.o obj/base/debug/base.profiler.o $
+    obj/base/debug/base.stack_trace.o $
+    obj/base/debug/base.stack_trace_posix.o $
+    obj/base/debug/base.trace_event.o $
+    obj/base/debug/base.trace_event_impl.o obj/base/base.environment.o $
+    obj/base/base.file_path.o obj/base/base.file_util.o $
+    obj/base/base.file_util_linux.o obj/base/base.file_util_posix.o $
+    obj/base/base.file_util_proxy.o obj/base/files/base.file_path_watcher.o $
+    obj/base/files/base.file_path_watcher_linux.o $
+    obj/base/files/base.important_file_writer.o $
+    obj/base/files/base.scoped_temp_dir.o obj/base/base.guid.o $
+    obj/base/base.guid_posix.o obj/base/base.hash.o $
+    obj/base/base.hi_res_timer_manager_posix.o $
+    obj/base/json/base.json_file_value_serializer.o $
+    obj/base/json/base.json_parser.o obj/base/json/base.json_reader.o $
+    obj/base/json/base.json_string_value_serializer.o $
+    obj/base/json/base.json_writer.o obj/base/json/base.string_escape.o $
+    obj/base/base.lazy_instance.o obj/base/base.location.o $
+    obj/base/base.logging.o obj/base/memory/base.aligned_memory.o $
+    obj/base/memory/base.ref_counted.o $
+    obj/base/memory/base.ref_counted_memory.o $
+    obj/base/memory/base.singleton.o obj/base/memory/base.weak_ptr.o $
+    obj/base/base.message_loop.o obj/base/base.message_loop_proxy.o $
+    obj/base/base.message_loop_proxy_impl.o obj/base/base.message_pump.o $
+    obj/base/base.message_pump_default.o obj/base/metrics/base.sample_map.o $
+    obj/base/metrics/base.sample_vector.o $
+    obj/base/metrics/base.bucket_ranges.o obj/base/metrics/base.histogram.o $
+    obj/base/metrics/base.histogram_base.o $
+    obj/base/metrics/base.histogram_samples.o $
+    obj/base/metrics/base.histogram_snapshot_manager.o $
+    obj/base/metrics/base.sparse_histogram.o $
+    obj/base/metrics/base.statistics_recorder.o $
+    obj/base/metrics/base.stats_counters.o $
+    obj/base/metrics/base.stats_table.o $
+    obj/base/base.native_library_posix.o obj/base/base.path_service.o $
+    obj/base/base.pending_task.o obj/base/base.pickle.o $
+    obj/base/base.platform_file.o obj/base/base.platform_file_posix.o $
+    obj/base/posix/base.global_descriptors.o $
+    obj/base/posix/base.unix_domain_socket.o obj/base/base.process_linux.o $
+    obj/base/base.process_posix.o obj/base/base.process_util.o $
+    obj/base/base.process_util_linux.o obj/base/base.process_util_posix.o $
+    obj/base/profiler/base.scoped_profile.o $
+    obj/base/profiler/base.alternate_timer.o $
+    obj/base/profiler/base.tracked_time.o obj/base/base.rand_util.o $
+    obj/base/base.rand_util_posix.o obj/base/base.run_loop.o $
+    obj/base/base.safe_strerror_posix.o $
+    obj/base/base.scoped_native_library.o $
+    obj/base/base.sequence_checker_impl.o $
+    obj/base/base.sequenced_task_runner.o obj/base/base.sha1_portable.o $
+    obj/base/base.shared_memory_posix.o $
+    obj/base/base.string_number_conversions.o obj/base/base.string_piece.o $
+    obj/base/base.string_split.o obj/base/base.string_util.o $
+    obj/base/base.string16.o obj/base/base.stringprintf.o $
+    obj/base/base.supports_user_data.o $
+    obj/base/synchronization/base.cancellation_flag.o $
+    obj/base/synchronization/base.condition_variable_posix.o $
+    obj/base/synchronization/base.lock.o $
+    obj/base/synchronization/base.lock_impl_posix.o $
+    obj/base/synchronization/base.waitable_event_posix.o $
+    obj/base/synchronization/base.waitable_event_watcher_posix.o $
+    obj/base/system_monitor/base.system_monitor.o $
+    obj/base/system_monitor/base.system_monitor_posix.o $
+    obj/base/base.sys_info.o obj/base/base.sys_info_linux.o $
+    obj/base/base.sys_info_posix.o $
+    obj/base/base.sys_string_conversions_posix.o $
+    obj/base/base.task_runner.o obj/base/base.thread_task_runner_handle.o $
+    obj/base/threading/base.non_thread_safe_impl.o $
+    obj/base/threading/base.platform_thread_posix.o $
+    obj/base/threading/base.post_task_and_reply_impl.o $
+    obj/base/threading/base.sequenced_worker_pool.o $
+    obj/base/threading/base.simple_thread.o $
+    obj/base/threading/base.thread.o $
+    obj/base/threading/base.thread_checker_impl.o $
+    obj/base/threading/base.thread_collision_warner.o $
+    obj/base/threading/base.thread_local_posix.o $
+    obj/base/threading/base.thread_local_storage_posix.o $
+    obj/base/threading/base.thread_restrictions.o $
+    obj/base/threading/base.watchdog.o $
+    obj/base/threading/base.worker_pool.o $
+    obj/base/threading/base.worker_pool_posix.o obj/base/base.time.o $
+    obj/base/base.time_posix.o obj/base/base.timer.o $
+    obj/base/base.tracked_objects.o obj/base/base.tracking_info.o $
+    obj/base/base.utf_offset_string_conversions.o $
+    obj/base/base.utf_string_conversion_utils.o $
+    obj/base/base.utf_string_conversions.o obj/base/base.values.o $
+    obj/base/base.value_conversions.o obj/base/base.version.o $
+    obj/base/base.vlog.o obj/base/nix/base.mime_util_xdg.o $
+    obj/base/nix/base.xdg_util.o || obj/v8/tools/gyp/v8.actions_depends.stamp

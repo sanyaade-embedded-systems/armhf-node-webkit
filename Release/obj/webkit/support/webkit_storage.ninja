@@ -1,0 +1,376 @@
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DWEBKIT_STORAGE_IMPLEMENTATION $
+    -DGL_GLEXT_PROTOTYPES -DSK_BUILD_NO_IMAGE_ENCODE $
+    -DSK_DEFERRED_CANVAS_USES_GPIPE=1 $
+    '-DGR_GL_CUSTOM_SETUP_HEADER="GrGLConfig_chrome.h"' $
+    -DGR_AGGRESSIVE_SHADER_OPTS=1 -DSK_USE_POSIX_THREADS $
+    -DU_USING_ICU_NAMESPACE=0 -DU_STATIC_IMPLEMENTATION $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT -D_FORTIFY_SOURCE=2
+includes = -I../../third_party/icu/public/common $
+    -I../../third_party/khronos -I../../gpu -I../.. $
+    -I../../third_party/leveldatabase/src/include $
+    -I../../third_party/leveldatabase/src -I../../third_party/leveldatabase $
+    -I../../third_party/sqlite $
+    -I../../third_party/WebKit/Source/Platform/chromium $
+    -I../../third_party/WebKit/Source/Platform/chromium $
+    -Igen/webcore_headers -I../../skia/config $
+    -I../../third_party/skia/src/core $
+    -I../../third_party/skia/include/config $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/gpu/gl $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils -I../../skia/ext $
+    -I../../third_party/npapi -I../../third_party/npapi/bindings $
+    -I../../v8/include
+cflags = -Wno-narrowing -fstack-protector --param=ssp-buffer-size=4 -Werror $
+    -pthread -fno-exceptions -fno-strict-aliasing -Wall $
+    -Wno-unused-parameter -Wno-missing-field-initializers $
+    -fvisibility=hidden -pipe -fPIC -pthread $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gtk-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/gtk-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/atk-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gdk-pixbuf-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gio-unix-2.0/ $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 $
+    -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon -O2 $
+    -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -Wno-narrowing -fno-rtti -fno-threadsafe-statics $
+    -fvisibility-inlines-hidden -Wsign-compare -Wno-abi
+
+build obj/webkit/appcache/webkit_storage.appcache.o: cxx $
+    ../../webkit/appcache/appcache.cc
+build obj/webkit/appcache/webkit_storage.appcache_backend_impl.o: cxx $
+    ../../webkit/appcache/appcache_backend_impl.cc
+build obj/webkit/appcache/webkit_storage.appcache_database.o: cxx $
+    ../../webkit/appcache/appcache_database.cc
+build obj/webkit/appcache/webkit_storage.appcache_disk_cache.o: cxx $
+    ../../webkit/appcache/appcache_disk_cache.cc
+build obj/webkit/appcache/webkit_storage.appcache_frontend_impl.o: cxx $
+    ../../webkit/appcache/appcache_frontend_impl.cc
+build obj/webkit/appcache/webkit_storage.appcache_group.o: cxx $
+    ../../webkit/appcache/appcache_group.cc
+build obj/webkit/appcache/webkit_storage.appcache_histograms.o: cxx $
+    ../../webkit/appcache/appcache_histograms.cc
+build obj/webkit/appcache/webkit_storage.appcache_host.o: cxx $
+    ../../webkit/appcache/appcache_host.cc
+build obj/webkit/appcache/webkit_storage.appcache_interceptor.o: cxx $
+    ../../webkit/appcache/appcache_interceptor.cc
+build obj/webkit/appcache/webkit_storage.appcache_interfaces.o: cxx $
+    ../../webkit/appcache/appcache_interfaces.cc
+build obj/webkit/appcache/webkit_storage.appcache_quota_client.o: cxx $
+    ../../webkit/appcache/appcache_quota_client.cc
+build obj/webkit/appcache/webkit_storage.appcache_request_handler.o: cxx $
+    ../../webkit/appcache/appcache_request_handler.cc
+build obj/webkit/appcache/webkit_storage.appcache_response.o: cxx $
+    ../../webkit/appcache/appcache_response.cc
+build obj/webkit/appcache/webkit_storage.appcache_service.o: cxx $
+    ../../webkit/appcache/appcache_service.cc
+build obj/webkit/appcache/webkit_storage.appcache_storage.o: cxx $
+    ../../webkit/appcache/appcache_storage.cc
+build obj/webkit/appcache/webkit_storage.appcache_storage_impl.o: cxx $
+    ../../webkit/appcache/appcache_storage_impl.cc
+build obj/webkit/appcache/webkit_storage.appcache_working_set.o: cxx $
+    ../../webkit/appcache/appcache_working_set.cc
+build obj/webkit/appcache/webkit_storage.appcache_update_job.o: cxx $
+    ../../webkit/appcache/appcache_update_job.cc
+build obj/webkit/appcache/webkit_storage.appcache_url_request_job.o: cxx $
+    ../../webkit/appcache/appcache_url_request_job.cc
+build obj/webkit/appcache/webkit_storage.manifest_parser.o: cxx $
+    ../../webkit/appcache/manifest_parser.cc
+build obj/webkit/appcache/webkit_storage.view_appcache_internals_job.o: cxx $
+    ../../webkit/appcache/view_appcache_internals_job.cc
+build obj/webkit/appcache/webkit_storage.web_application_cache_host_impl.o: $
+    cxx ../../webkit/appcache/web_application_cache_host_impl.cc
+build obj/webkit/blob/webkit_storage.blob_data.o: cxx $
+    ../../webkit/blob/blob_data.cc
+build obj/webkit/blob/webkit_storage.blob_storage_controller.o: cxx $
+    ../../webkit/blob/blob_storage_controller.cc
+build obj/webkit/blob/webkit_storage.blob_url_request_job.o: cxx $
+    ../../webkit/blob/blob_url_request_job.cc
+build obj/webkit/blob/webkit_storage.blob_url_request_job_factory.o: cxx $
+    ../../webkit/blob/blob_url_request_job_factory.cc
+build obj/webkit/blob/webkit_storage.local_file_stream_reader.o: cxx $
+    ../../webkit/blob/local_file_stream_reader.cc
+build obj/webkit/blob/webkit_storage.shareable_file_reference.o: cxx $
+    ../../webkit/blob/shareable_file_reference.cc
+build obj/webkit/blob/webkit_storage.view_blob_internals_job.o: cxx $
+    ../../webkit/blob/view_blob_internals_job.cc
+build obj/webkit/database/webkit_storage.databases_table.o: cxx $
+    ../../webkit/database/databases_table.cc
+build obj/webkit/database/webkit_storage.database_connections.o: cxx $
+    ../../webkit/database/database_connections.cc
+build obj/webkit/database/webkit_storage.database_quota_client.o: cxx $
+    ../../webkit/database/database_quota_client.cc
+build obj/webkit/database/webkit_storage.database_tracker.o: cxx $
+    ../../webkit/database/database_tracker.cc
+build obj/webkit/database/webkit_storage.database_util.o: cxx $
+    ../../webkit/database/database_util.cc
+build obj/webkit/database/webkit_storage.vfs_backend.o: cxx $
+    ../../webkit/database/vfs_backend.cc
+build obj/webkit/dom_storage/webkit_storage.dom_storage_area.o: cxx $
+    ../../webkit/dom_storage/dom_storage_area.cc
+build obj/webkit/dom_storage/webkit_storage.dom_storage_cached_area.o: cxx $
+    ../../webkit/dom_storage/dom_storage_cached_area.cc
+build obj/webkit/dom_storage/webkit_storage.dom_storage_context.o: cxx $
+    ../../webkit/dom_storage/dom_storage_context.cc
+build obj/webkit/dom_storage/webkit_storage.dom_storage_database.o: cxx $
+    ../../webkit/dom_storage/dom_storage_database.cc
+build obj/webkit/dom_storage/webkit_storage.dom_storage_host.o: cxx $
+    ../../webkit/dom_storage/dom_storage_host.cc
+build obj/webkit/dom_storage/webkit_storage.dom_storage_map.o: cxx $
+    ../../webkit/dom_storage/dom_storage_map.cc
+build obj/webkit/dom_storage/webkit_storage.dom_storage_namespace.o: cxx $
+    ../../webkit/dom_storage/dom_storage_namespace.cc
+build obj/webkit/dom_storage/webkit_storage.dom_storage_session.o: cxx $
+    ../../webkit/dom_storage/dom_storage_session.cc
+build obj/webkit/dom_storage/webkit_storage.dom_storage_task_runner.o: cxx $
+    ../../webkit/dom_storage/dom_storage_task_runner.cc
+build obj/webkit/dom_storage/webkit_storage.dom_storage_types.o: cxx $
+    ../../webkit/dom_storage/dom_storage_types.cc
+build $
+    obj/webkit/dom_storage/webkit_storage.local_storage_database_adapter.o: $
+    cxx ../../webkit/dom_storage/local_storage_database_adapter.cc
+build obj/webkit/dom_storage/webkit_storage.session_storage_database.o: cxx $
+    ../../webkit/dom_storage/session_storage_database.cc
+build $
+    obj/webkit/dom_storage/webkit_storage.session_storage_database_adapter.o: $
+    cxx ../../webkit/dom_storage/session_storage_database_adapter.cc
+build obj/webkit/fileapi/webkit_storage.file_system_callback_dispatcher.o: $
+    cxx ../../webkit/fileapi/file_system_callback_dispatcher.cc
+build obj/webkit/fileapi/webkit_storage.file_system_context.o: cxx $
+    ../../webkit/fileapi/file_system_context.cc
+build obj/webkit/fileapi/webkit_storage.file_system_dir_url_request_job.o: $
+    cxx ../../webkit/fileapi/file_system_dir_url_request_job.cc
+build obj/webkit/fileapi/webkit_storage.file_system_directory_database.o: $
+    cxx ../../webkit/fileapi/file_system_directory_database.cc
+build obj/webkit/fileapi/webkit_storage.file_system_file_stream_reader.o: $
+    cxx ../../webkit/fileapi/file_system_file_stream_reader.cc
+build obj/webkit/fileapi/webkit_storage.file_system_file_util.o: cxx $
+    ../../webkit/fileapi/file_system_file_util.cc
+build obj/webkit/fileapi/webkit_storage.file_system_file_util_proxy.o: cxx $
+    ../../webkit/fileapi/file_system_file_util_proxy.cc
+build obj/webkit/fileapi/webkit_storage.file_system_operation_context.o: $
+    cxx ../../webkit/fileapi/file_system_operation_context.cc
+build obj/webkit/fileapi/webkit_storage.file_system_options.o: cxx $
+    ../../webkit/fileapi/file_system_options.cc
+build obj/webkit/fileapi/webkit_storage.file_system_origin_database.o: cxx $
+    ../../webkit/fileapi/file_system_origin_database.cc
+build obj/webkit/fileapi/webkit_storage.file_system_quota_client.o: cxx $
+    ../../webkit/fileapi/file_system_quota_client.cc
+build obj/webkit/fileapi/webkit_storage.file_system_task_runners.o: cxx $
+    ../../webkit/fileapi/file_system_task_runners.cc
+build obj/webkit/fileapi/webkit_storage.file_system_url.o: cxx $
+    ../../webkit/fileapi/file_system_url.cc
+build obj/webkit/fileapi/webkit_storage.file_system_url_request_job.o: cxx $
+    ../../webkit/fileapi/file_system_url_request_job.cc
+build $
+    obj/webkit/fileapi/webkit_storage.file_system_url_request_job_factory.o: $
+    cxx ../../webkit/fileapi/file_system_url_request_job_factory.cc
+build obj/webkit/fileapi/webkit_storage.file_system_usage_cache.o: cxx $
+    ../../webkit/fileapi/file_system_usage_cache.cc
+build obj/webkit/fileapi/webkit_storage.file_system_util.o: cxx $
+    ../../webkit/fileapi/file_system_util.cc
+build obj/webkit/fileapi/webkit_storage.file_util_helper.o: cxx $
+    ../../webkit/fileapi/file_util_helper.cc
+build obj/webkit/fileapi/webkit_storage.file_writer_delegate.o: cxx $
+    ../../webkit/fileapi/file_writer_delegate.cc
+build obj/webkit/fileapi/webkit_storage.isolated_context.o: cxx $
+    ../../webkit/fileapi/isolated_context.cc
+build obj/webkit/fileapi/webkit_storage.isolated_file_util.o: cxx $
+    ../../webkit/fileapi/isolated_file_util.cc
+build obj/webkit/fileapi/webkit_storage.isolated_mount_point_provider.o: $
+    cxx ../../webkit/fileapi/isolated_mount_point_provider.cc
+build obj/webkit/fileapi/webkit_storage.local_file_stream_writer.o: cxx $
+    ../../webkit/fileapi/local_file_stream_writer.cc
+build obj/webkit/fileapi/webkit_storage.local_file_system_operation.o: cxx $
+    ../../webkit/fileapi/local_file_system_operation.cc
+build obj/webkit/fileapi/webkit_storage.local_file_util.o: cxx $
+    ../../webkit/fileapi/local_file_util.cc
+build obj/webkit/fileapi/media/webkit_storage.filtering_file_enumerator.o: $
+    cxx ../../webkit/fileapi/media/filtering_file_enumerator.cc
+build obj/webkit/fileapi/media/webkit_storage.media_path_filter.o: cxx $
+    ../../webkit/fileapi/media/media_path_filter.cc
+build obj/webkit/fileapi/media/webkit_storage.native_media_file_util.o: cxx $
+    ../../webkit/fileapi/media/native_media_file_util.cc
+build obj/webkit/fileapi/webkit_storage.native_file_util.o: cxx $
+    ../../webkit/fileapi/native_file_util.cc
+build obj/webkit/fileapi/webkit_storage.obfuscated_file_util.o: cxx $
+    ../../webkit/fileapi/obfuscated_file_util.cc
+build obj/webkit/fileapi/webkit_storage.sandbox_file_stream_writer.o: cxx $
+    ../../webkit/fileapi/sandbox_file_stream_writer.cc
+build obj/webkit/fileapi/webkit_storage.sandbox_mount_point_provider.o: cxx $
+    ../../webkit/fileapi/sandbox_mount_point_provider.cc
+build obj/webkit/fileapi/webkit_storage.sandbox_quota_observer.o: cxx $
+    ../../webkit/fileapi/sandbox_quota_observer.cc
+build obj/webkit/fileapi/syncable/webkit_storage.file_change.o: cxx $
+    ../../webkit/fileapi/syncable/file_change.cc
+build $
+    obj/webkit/fileapi/syncable/webkit_storage.local_file_change_tracker.o: $
+    cxx ../../webkit/fileapi/syncable/local_file_change_tracker.cc
+build obj/webkit/fileapi/syncable/webkit_storage.local_file_sync_context.o: $
+    cxx ../../webkit/fileapi/syncable/local_file_sync_context.cc
+build obj/webkit/fileapi/syncable/webkit_storage.local_file_sync_status.o: $
+    cxx ../../webkit/fileapi/syncable/local_file_sync_status.cc
+build obj/webkit/fileapi/syncable/webkit_storage.sync_file_metadata.o: cxx $
+    ../../webkit/fileapi/syncable/sync_file_metadata.cc
+build obj/webkit/fileapi/syncable/webkit_storage.sync_status_code.o: cxx $
+    ../../webkit/fileapi/syncable/sync_status_code.cc
+build $
+    obj/webkit/fileapi/syncable/webkit_storage.syncable_file_operation_runner.o: $
+    cxx ../../webkit/fileapi/syncable/syncable_file_operation_runner.cc
+build $
+    obj/webkit/fileapi/syncable/webkit_storage.syncable_file_system_operation.o: $
+    cxx ../../webkit/fileapi/syncable/syncable_file_system_operation.cc
+build $
+    obj/webkit/fileapi/syncable/webkit_storage.syncable_file_system_util.o: $
+    cxx ../../webkit/fileapi/syncable/syncable_file_system_util.cc
+build obj/webkit/fileapi/webkit_storage.test_mount_point_provider.o: cxx $
+    ../../webkit/fileapi/test_mount_point_provider.cc
+build obj/webkit/fileapi/webkit_storage.webfilewriter_base.o: cxx $
+    ../../webkit/fileapi/webfilewriter_base.cc
+build obj/webkit/quota/webkit_storage.quota_database.o: cxx $
+    ../../webkit/quota/quota_database.cc
+build obj/webkit/quota/webkit_storage.quota_manager.o: cxx $
+    ../../webkit/quota/quota_manager.cc
+build obj/webkit/quota/webkit_storage.quota_status_code.o: cxx $
+    ../../webkit/quota/quota_status_code.cc
+build obj/webkit/quota/webkit_storage.quota_task.o: cxx $
+    ../../webkit/quota/quota_task.cc
+build obj/webkit/quota/webkit_storage.quota_temporary_storage_evictor.o: $
+    cxx ../../webkit/quota/quota_temporary_storage_evictor.cc
+build obj/webkit/quota/webkit_storage.special_storage_policy.o: cxx $
+    ../../webkit/quota/special_storage_policy.cc
+build obj/webkit/quota/webkit_storage.usage_tracker.o: cxx $
+    ../../webkit/quota/usage_tracker.cc
+build obj/webkit/fileapi/media/webkit_storage.device_media_file_util.o: cxx $
+    ../../webkit/fileapi/media/device_media_file_util.cc
+build obj/webkit/fileapi/media/webkit_storage.mtp_device_map_service.o: cxx $
+    ../../webkit/fileapi/media/mtp_device_map_service.cc
+
+build obj/webkit/support/libwebkit_storage.a: alink_thin $
+    obj/webkit/appcache/webkit_storage.appcache.o $
+    obj/webkit/appcache/webkit_storage.appcache_backend_impl.o $
+    obj/webkit/appcache/webkit_storage.appcache_database.o $
+    obj/webkit/appcache/webkit_storage.appcache_disk_cache.o $
+    obj/webkit/appcache/webkit_storage.appcache_frontend_impl.o $
+    obj/webkit/appcache/webkit_storage.appcache_group.o $
+    obj/webkit/appcache/webkit_storage.appcache_histograms.o $
+    obj/webkit/appcache/webkit_storage.appcache_host.o $
+    obj/webkit/appcache/webkit_storage.appcache_interceptor.o $
+    obj/webkit/appcache/webkit_storage.appcache_interfaces.o $
+    obj/webkit/appcache/webkit_storage.appcache_quota_client.o $
+    obj/webkit/appcache/webkit_storage.appcache_request_handler.o $
+    obj/webkit/appcache/webkit_storage.appcache_response.o $
+    obj/webkit/appcache/webkit_storage.appcache_service.o $
+    obj/webkit/appcache/webkit_storage.appcache_storage.o $
+    obj/webkit/appcache/webkit_storage.appcache_storage_impl.o $
+    obj/webkit/appcache/webkit_storage.appcache_working_set.o $
+    obj/webkit/appcache/webkit_storage.appcache_update_job.o $
+    obj/webkit/appcache/webkit_storage.appcache_url_request_job.o $
+    obj/webkit/appcache/webkit_storage.manifest_parser.o $
+    obj/webkit/appcache/webkit_storage.view_appcache_internals_job.o $
+    obj/webkit/appcache/webkit_storage.web_application_cache_host_impl.o $
+    obj/webkit/blob/webkit_storage.blob_data.o $
+    obj/webkit/blob/webkit_storage.blob_storage_controller.o $
+    obj/webkit/blob/webkit_storage.blob_url_request_job.o $
+    obj/webkit/blob/webkit_storage.blob_url_request_job_factory.o $
+    obj/webkit/blob/webkit_storage.local_file_stream_reader.o $
+    obj/webkit/blob/webkit_storage.shareable_file_reference.o $
+    obj/webkit/blob/webkit_storage.view_blob_internals_job.o $
+    obj/webkit/database/webkit_storage.databases_table.o $
+    obj/webkit/database/webkit_storage.database_connections.o $
+    obj/webkit/database/webkit_storage.database_quota_client.o $
+    obj/webkit/database/webkit_storage.database_tracker.o $
+    obj/webkit/database/webkit_storage.database_util.o $
+    obj/webkit/database/webkit_storage.vfs_backend.o $
+    obj/webkit/dom_storage/webkit_storage.dom_storage_area.o $
+    obj/webkit/dom_storage/webkit_storage.dom_storage_cached_area.o $
+    obj/webkit/dom_storage/webkit_storage.dom_storage_context.o $
+    obj/webkit/dom_storage/webkit_storage.dom_storage_database.o $
+    obj/webkit/dom_storage/webkit_storage.dom_storage_host.o $
+    obj/webkit/dom_storage/webkit_storage.dom_storage_map.o $
+    obj/webkit/dom_storage/webkit_storage.dom_storage_namespace.o $
+    obj/webkit/dom_storage/webkit_storage.dom_storage_session.o $
+    obj/webkit/dom_storage/webkit_storage.dom_storage_task_runner.o $
+    obj/webkit/dom_storage/webkit_storage.dom_storage_types.o $
+    obj/webkit/dom_storage/webkit_storage.local_storage_database_adapter.o $
+    obj/webkit/dom_storage/webkit_storage.session_storage_database.o $
+    obj/webkit/dom_storage/webkit_storage.session_storage_database_adapter.o $
+    obj/webkit/fileapi/webkit_storage.file_system_callback_dispatcher.o $
+    obj/webkit/fileapi/webkit_storage.file_system_context.o $
+    obj/webkit/fileapi/webkit_storage.file_system_dir_url_request_job.o $
+    obj/webkit/fileapi/webkit_storage.file_system_directory_database.o $
+    obj/webkit/fileapi/webkit_storage.file_system_file_stream_reader.o $
+    obj/webkit/fileapi/webkit_storage.file_system_file_util.o $
+    obj/webkit/fileapi/webkit_storage.file_system_file_util_proxy.o $
+    obj/webkit/fileapi/webkit_storage.file_system_operation_context.o $
+    obj/webkit/fileapi/webkit_storage.file_system_options.o $
+    obj/webkit/fileapi/webkit_storage.file_system_origin_database.o $
+    obj/webkit/fileapi/webkit_storage.file_system_quota_client.o $
+    obj/webkit/fileapi/webkit_storage.file_system_task_runners.o $
+    obj/webkit/fileapi/webkit_storage.file_system_url.o $
+    obj/webkit/fileapi/webkit_storage.file_system_url_request_job.o $
+    obj/webkit/fileapi/webkit_storage.file_system_url_request_job_factory.o $
+    obj/webkit/fileapi/webkit_storage.file_system_usage_cache.o $
+    obj/webkit/fileapi/webkit_storage.file_system_util.o $
+    obj/webkit/fileapi/webkit_storage.file_util_helper.o $
+    obj/webkit/fileapi/webkit_storage.file_writer_delegate.o $
+    obj/webkit/fileapi/webkit_storage.isolated_context.o $
+    obj/webkit/fileapi/webkit_storage.isolated_file_util.o $
+    obj/webkit/fileapi/webkit_storage.isolated_mount_point_provider.o $
+    obj/webkit/fileapi/webkit_storage.local_file_stream_writer.o $
+    obj/webkit/fileapi/webkit_storage.local_file_system_operation.o $
+    obj/webkit/fileapi/webkit_storage.local_file_util.o $
+    obj/webkit/fileapi/media/webkit_storage.filtering_file_enumerator.o $
+    obj/webkit/fileapi/media/webkit_storage.media_path_filter.o $
+    obj/webkit/fileapi/media/webkit_storage.native_media_file_util.o $
+    obj/webkit/fileapi/webkit_storage.native_file_util.o $
+    obj/webkit/fileapi/webkit_storage.obfuscated_file_util.o $
+    obj/webkit/fileapi/webkit_storage.sandbox_file_stream_writer.o $
+    obj/webkit/fileapi/webkit_storage.sandbox_mount_point_provider.o $
+    obj/webkit/fileapi/webkit_storage.sandbox_quota_observer.o $
+    obj/webkit/fileapi/syncable/webkit_storage.file_change.o $
+    obj/webkit/fileapi/syncable/webkit_storage.local_file_change_tracker.o $
+    obj/webkit/fileapi/syncable/webkit_storage.local_file_sync_context.o $
+    obj/webkit/fileapi/syncable/webkit_storage.local_file_sync_status.o $
+    obj/webkit/fileapi/syncable/webkit_storage.sync_file_metadata.o $
+    obj/webkit/fileapi/syncable/webkit_storage.sync_status_code.o $
+    obj/webkit/fileapi/syncable/webkit_storage.syncable_file_operation_runner.o $
+    obj/webkit/fileapi/syncable/webkit_storage.syncable_file_system_operation.o $
+    obj/webkit/fileapi/syncable/webkit_storage.syncable_file_system_util.o $
+    obj/webkit/fileapi/webkit_storage.test_mount_point_provider.o $
+    obj/webkit/fileapi/webkit_storage.webfilewriter_base.o $
+    obj/webkit/quota/webkit_storage.quota_database.o $
+    obj/webkit/quota/webkit_storage.quota_manager.o $
+    obj/webkit/quota/webkit_storage.quota_status_code.o $
+    obj/webkit/quota/webkit_storage.quota_task.o $
+    obj/webkit/quota/webkit_storage.quota_temporary_storage_evictor.o $
+    obj/webkit/quota/webkit_storage.special_storage_policy.o $
+    obj/webkit/quota/webkit_storage.usage_tracker.o $
+    obj/webkit/fileapi/media/webkit_storage.device_media_file_util.o $
+    obj/webkit/fileapi/media/webkit_storage.mtp_device_map_service.o

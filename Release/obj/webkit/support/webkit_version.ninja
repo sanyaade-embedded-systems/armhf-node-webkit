@@ -1,0 +1,14 @@
+rule webkit_version_target_webkit_version_ca4b99075247119fb283354291bc40c3
+  command = cd ../../webkit/support; python ../build/webkit_version.py $
+      ../../third_party/WebKit $
+      /Source/WebCore/Configurations/Version.xcconfig ../../out/Release/gen
+  description = ACTION webkit_version: $
+      webkit_version_ca4b99075247119fb283354291bc40c3
+  restat = 1
+
+build gen/webkit_version.h: $
+    webkit_version_target_webkit_version_ca4b99075247119fb283354291bc40c3 $
+    ../../webkit/build/webkit_version.py $
+    ../../third_party/WebKit/Source/WebCore/Configurations/Version.xcconfig $
+    ../../build/util/lastchange.py
+

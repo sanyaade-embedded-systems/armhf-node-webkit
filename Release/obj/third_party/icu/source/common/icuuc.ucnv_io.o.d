@@ -1,0 +1,29 @@
+obj/third_party/icu/source/common/icuuc.ucnv_io.o: \
+ ../../third_party/icu/source/common/ucnv_io.c \
+ ../../third_party/icu/public/common/unicode/utypes.h \
+ ../../third_party/icu/public/common/unicode/umachine.h \
+ ../../third_party/icu/public/common/unicode/ptypes.h \
+ ../../third_party/icu/public/common/unicode/plinux.h \
+ ../../third_party/icu/public/common/unicode/urename.h \
+ ../../third_party/icu/public/common/unicode/uvernum.h \
+ ../../third_party/icu/public/common/unicode/utf.h \
+ ../../third_party/icu/public/common/unicode/utf8.h \
+ ../../third_party/icu/public/common/unicode/utf16.h \
+ ../../third_party/icu/public/common/unicode/utf_old.h \
+ ../../third_party/icu/public/common/unicode/uversion.h \
+ ../../third_party/icu/public/common/unicode/uconfig.h \
+ ../../third_party/icu/public/common/unicode/ucnv.h \
+ ../../third_party/icu/public/common/unicode/ucnv_err.h \
+ ../../third_party/icu/public/common/unicode/uenum.h \
+ ../../third_party/icu/public/common/unicode/localpointer.h \
+ ../../third_party/icu/public/common/unicode/udata.h \
+ ../../third_party/icu/source/common/umutex.h \
+ ../../third_party/icu/public/common/unicode/uclean.h \
+ ../../third_party/icu/source/common/uarrsort.h \
+ ../../third_party/icu/source/common/udataswp.h \
+ ../../third_party/icu/source/common/cstring.h \
+ ../../third_party/icu/source/common/cmemory.h \
+ ../../third_party/icu/source/common/ucnv_io.h \
+ ../../third_party/icu/source/common/uenumimp.h \
+ ../../third_party/icu/source/common/ucln_cmn.h \
+ ../../third_party/icu/source/common/ucln.h

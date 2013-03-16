@@ -1,0 +1,24 @@
+rule $
+    concatenated_devtools_resources_js_target_concatenate_devtools_resources_js_2b46a91e540241fa5fe158e0bfbb82d7
+  command = cd ../../third_party/WebKit/Source/WebKit/chromium; python $
+      scripts/inline_js_imports.py $
+      ../../WebCore/inspector/front-end/ResourcesPanel.js $
+      ../../WebCore/inspector/front-end $
+      ../../../../../out/Release/resources/inspector/ResourcesPanel.js
+  description = ACTION concatenated_devtools_resources_js: $
+      concatenate_devtools_resources_js_2b46a91e540241fa5fe158e0bfbb82d7
+  restat = 1
+
+build resources/inspector/ResourcesPanel.js: $
+    concatenated_devtools_resources_js_target_concatenate_devtools_resources_js_2b46a91e540241fa5fe158e0bfbb82d7 $
+    ../../third_party/WebKit/Source/WebKit/chromium/scripts/inline_js_imports.py $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/ApplicationCacheItemsView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/DOMStorageItemsView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/DatabaseQueryView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/DatabaseTableView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/DirectoryContentView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/FileContentView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/FileSystemView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/IndexedDBViews.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/ResourcesPanel.js
+

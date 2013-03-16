@@ -1,0 +1,45 @@
+rule node_js2c_target_node_js2c_eaf7dcfd54387e53fc03adc80d82e103
+  command = cd ../../third_party/node; python tools/js2c.py $
+      ../../out/Release/gen/node_natives.h src/node.js lib/_debugger.js $
+      lib/_linklist.js lib/assert.js lib/buffer.js lib/buffer_ieee754.js $
+      lib/child_process.js lib/console.js lib/constants.js lib/crypto.js $
+      lib/cluster.js lib/dgram.js lib/dns.js lib/domain.js lib/events.js $
+      lib/freelist.js lib/fs.js lib/http.js lib/https.js lib/module.js $
+      lib/net.js lib/os.js lib/path.js lib/punycode.js lib/querystring.js $
+      lib/readline.js lib/repl.js lib/stream.js lib/string_decoder.js $
+      lib/sys.js lib/timers.js lib/tls.js lib/tty.js lib/url.js lib/util.js $
+      lib/vm.js lib/zlib.js ./config.gypi src/macros.py
+  description = ACTION node_js2c: node_js2c_eaf7dcfd54387e53fc03adc80d82e103
+  restat = 1
+
+build gen/node_natives.h: $
+    node_js2c_target_node_js2c_eaf7dcfd54387e53fc03adc80d82e103 $
+    ../../third_party/node/src/node.js $
+    ../../third_party/node/lib/_debugger.js $
+    ../../third_party/node/lib/_linklist.js $
+    ../../third_party/node/lib/assert.js $
+    ../../third_party/node/lib/buffer.js $
+    ../../third_party/node/lib/buffer_ieee754.js $
+    ../../third_party/node/lib/child_process.js $
+    ../../third_party/node/lib/console.js $
+    ../../third_party/node/lib/constants.js $
+    ../../third_party/node/lib/crypto.js $
+    ../../third_party/node/lib/cluster.js $
+    ../../third_party/node/lib/dgram.js ../../third_party/node/lib/dns.js $
+    ../../third_party/node/lib/domain.js $
+    ../../third_party/node/lib/events.js $
+    ../../third_party/node/lib/freelist.js ../../third_party/node/lib/fs.js $
+    ../../third_party/node/lib/http.js ../../third_party/node/lib/https.js $
+    ../../third_party/node/lib/module.js ../../third_party/node/lib/net.js $
+    ../../third_party/node/lib/os.js ../../third_party/node/lib/path.js $
+    ../../third_party/node/lib/punycode.js $
+    ../../third_party/node/lib/querystring.js $
+    ../../third_party/node/lib/readline.js $
+    ../../third_party/node/lib/repl.js ../../third_party/node/lib/stream.js $
+    ../../third_party/node/lib/string_decoder.js $
+    ../../third_party/node/lib/sys.js ../../third_party/node/lib/timers.js $
+    ../../third_party/node/lib/tls.js ../../third_party/node/lib/tty.js $
+    ../../third_party/node/lib/url.js ../../third_party/node/lib/util.js $
+    ../../third_party/node/lib/vm.js ../../third_party/node/lib/zlib.js $
+    ../../third_party/node/config.gypi
+

@@ -1,0 +1,19 @@
+obj/third_party/webrtc/modules/audio_coding/codecs/ilbc/ilbc.decode.o: \
+ ../../third_party/webrtc/modules/audio_coding/codecs/ilbc/decode.c \
+ ../../third_party/webrtc/modules/audio_coding/codecs/ilbc/defines.h \
+ ../../third_party/webrtc/typedefs.h \
+ ../../third_party/webrtc/common_audio/signal_processing/include/signal_processing_library.h \
+ ../../third_party/webrtc/common_audio/signal_processing/include/spl_inl.h \
+ ../../third_party/webrtc/common_audio/signal_processing/include/spl_inl_armv7.h \
+ ../../third_party/webrtc/modules/audio_coding/codecs/ilbc/simple_lsf_dequant.h \
+ ../../third_party/webrtc/modules/audio_coding/codecs/ilbc/decoder_interpolate_lsf.h \
+ ../../third_party/webrtc/modules/audio_coding/codecs/ilbc/index_conv_dec.h \
+ ../../third_party/webrtc/modules/audio_coding/codecs/ilbc/do_plc.h \
+ ../../third_party/webrtc/modules/audio_coding/codecs/ilbc/constants.h \
+ ../../third_party/webrtc/modules/audio_coding/codecs/ilbc/enhancer_interface.h \
+ ../../third_party/webrtc/modules/audio_coding/codecs/ilbc/xcorr_coef.h \
+ ../../third_party/webrtc/modules/audio_coding/codecs/ilbc/lsf_check.h \
+ ../../third_party/webrtc/modules/audio_coding/codecs/ilbc/decode_residual.h \
+ ../../third_party/webrtc/modules/audio_coding/codecs/ilbc/unpack_bits.h \
+ ../../third_party/webrtc/modules/audio_coding/codecs/ilbc/hp_output.h \
+ ../../third_party/webrtc/modules/audio_coding/codecs/ilbc/swap_bytes.h

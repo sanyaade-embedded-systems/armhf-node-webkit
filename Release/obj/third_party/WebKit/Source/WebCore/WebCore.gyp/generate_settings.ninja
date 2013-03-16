@@ -1,0 +1,26 @@
+rule generate_settings_target_Settings_4a9267e3faea556b5541cf74b42ed1d0
+  command = cd ../../third_party/WebKit/Source/WebCore/WebCore.gyp; python $
+      scripts/action_makenames.py $
+      ../../../../../out/Release/gen/webkit/SettingsMacros.h $
+      ../../../../../out/Release/gen/webkit/InternalSettingsGenerated.idl $
+      ../../../../../out/Release/gen/webkit/InternalSettingsGenerated.cpp $
+      ../../../../../out/Release/gen/webkit/InternalSettingsGenerated.h -- $
+      ../page/make_settings.pl ../page/Settings.in
+  description = ACTION generate_settings: $
+      Settings_4a9267e3faea556b5541cf74b42ed1d0
+  restat = 1
+
+build gen/webkit/SettingsMacros.h gen/webkit/InternalSettingsGenerated.idl $
+    gen/webkit/InternalSettingsGenerated.cpp $
+    gen/webkit/InternalSettingsGenerated.h: $
+    generate_settings_target_Settings_4a9267e3faea556b5541cf74b42ed1d0 $
+    ../../third_party/WebKit/Source/WebCore/page/make_settings.pl $
+    ../../third_party/WebKit/Source/WebCore/page/Settings.in
+
+build $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/generate_settings.actions_rules_copies.stamp: $
+    stamp gen/webkit/SettingsMacros.h $
+    gen/webkit/InternalSettingsGenerated.idl $
+    gen/webkit/InternalSettingsGenerated.cpp $
+    gen/webkit/InternalSettingsGenerated.h
+

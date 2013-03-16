@@ -1,0 +1,112 @@
+rule ffmpeg_yasm_target_assemble_0e7c357cbd4da6a91e9b60305e71c941
+  command = cd ../../third_party/ffmpeg; ../../out/Release/yasm -DPIC $
+      -DARCH_X86_64 -I chromium/config/Chromium/linux/arm-neon -I $
+      libavcodec/x86/ -I libavutil/x86/ -I . -w -P config.asm -o $
+      "../../out/Release/gen/third_party/ffmpeg/yasm/${root}.o" "${source}"
+  description = RULE Compile assembly ${source}.
+  restat = 1
+
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = 
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -Wno-format -Wno-unused-result -march=armv7-a -mtune=cortex-a8 $
+    -mfloat-abi=hard -mfpu=neon -O2 -fno-ident -fdata-sections $
+    -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wno-deprecated -Wno-abi
+
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.dsputil_neon.o: cc $
+    ../../third_party/ffmpeg/libavcodec/arm/dsputil_neon.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.fft_fixed_neon.o: $
+    cc ../../third_party/ffmpeg/libavcodec/arm/fft_fixed_neon.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.fft_neon.o: cc $
+    ../../third_party/ffmpeg/libavcodec/arm/fft_neon.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.fmtconvert_neon.o: $
+    cc ../../third_party/ffmpeg/libavcodec/arm/fmtconvert_neon.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.h264pred_neon.o: cc $
+    ../../third_party/ffmpeg/libavcodec/arm/h264pred_neon.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.int_neon.o: cc $
+    ../../third_party/ffmpeg/libavcodec/arm/int_neon.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.mdct_fixed_neon.o: $
+    cc ../../third_party/ffmpeg/libavcodec/arm/mdct_fixed_neon.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.mdct_neon.o: cc $
+    ../../third_party/ffmpeg/libavcodec/arm/mdct_neon.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.rdft_neon.o: cc $
+    ../../third_party/ffmpeg/libavcodec/arm/rdft_neon.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.simple_idct_neon.o: $
+    cc ../../third_party/ffmpeg/libavcodec/arm/simple_idct_neon.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.vp3dsp_neon.o: cc $
+    ../../third_party/ffmpeg/libavcodec/arm/vp3dsp_neon.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.vp8dsp_neon.o: cc $
+    ../../third_party/ffmpeg/libavcodec/arm/vp8dsp_neon.S
+build obj/third_party/ffmpeg/libavutil/arm/ffmpeg_yasm.float_dsp_neon.o: cc $
+    ../../third_party/ffmpeg/libavutil/arm/float_dsp_neon.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.dsputil_arm.o: cc $
+    ../../third_party/ffmpeg/libavcodec/arm/dsputil_arm.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.dsputil_armv6.o: cc $
+    ../../third_party/ffmpeg/libavcodec/arm/dsputil_armv6.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.dsputil_vfp.o: cc $
+    ../../third_party/ffmpeg/libavcodec/arm/dsputil_vfp.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.fmtconvert_vfp.o: $
+    cc ../../third_party/ffmpeg/libavcodec/arm/fmtconvert_vfp.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.jrevdct_arm.o: cc $
+    ../../third_party/ffmpeg/libavcodec/arm/jrevdct_arm.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.simple_idct_arm.o: $
+    cc ../../third_party/ffmpeg/libavcodec/arm/simple_idct_arm.S
+build $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.simple_idct_armv5te.o: $
+    cc ../../third_party/ffmpeg/libavcodec/arm/simple_idct_armv5te.S
+build $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.simple_idct_armv6.o: $
+    cc ../../third_party/ffmpeg/libavcodec/arm/simple_idct_armv6.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.vp8_armv6.o: cc $
+    ../../third_party/ffmpeg/libavcodec/arm/vp8_armv6.S
+build obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.vp8dsp_armv6.o: cc $
+    ../../third_party/ffmpeg/libavcodec/arm/vp8dsp_armv6.S
+build obj/third_party/ffmpeg/libavutil/arm/ffmpeg_yasm.float_dsp_vfp.o: cc $
+    ../../third_party/ffmpeg/libavutil/arm/float_dsp_vfp.S
+build obj/third_party/ffmpeg/ffmpeg_yasm.xcode_hack.o: cc $
+    ../../third_party/ffmpeg/xcode_hack.c
+
+build obj/third_party/ffmpeg/libffmpeg_yasm.a: alink_thin $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.dsputil_neon.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.fft_fixed_neon.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.fft_neon.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.fmtconvert_neon.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.h264pred_neon.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.int_neon.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.mdct_fixed_neon.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.mdct_neon.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.rdft_neon.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.simple_idct_neon.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.vp3dsp_neon.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.vp8dsp_neon.o $
+    obj/third_party/ffmpeg/libavutil/arm/ffmpeg_yasm.float_dsp_neon.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.dsputil_arm.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.dsputil_armv6.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.dsputil_vfp.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.fmtconvert_vfp.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.jrevdct_arm.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.simple_idct_arm.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.simple_idct_armv5te.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.simple_idct_armv6.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.vp8_armv6.o $
+    obj/third_party/ffmpeg/libavcodec/arm/ffmpeg_yasm.vp8dsp_armv6.o $
+    obj/third_party/ffmpeg/libavutil/arm/ffmpeg_yasm.float_dsp_vfp.o $
+    obj/third_party/ffmpeg/ffmpeg_yasm.xcode_hack.o

@@ -1,0 +1,15 @@
+rule $
+    generate_inspector_protocol_version_target_generateInspectorProtocolVersion_d97e9e00d7fea1ec2a8352153c1b9454
+  command = cd ../../third_party/WebKit/Source/WebCore/WebCore.gyp; python $
+      ../inspector/generate-inspector-protocol-version -o $
+      ../../../../../out/Release/gen/webkit/InspectorProtocolVersion.h $
+      ../inspector/Inspector.json
+  description = ACTION Validate inspector protocol for backwards $
+      compatibility and generate version file
+  restat = 1
+
+build gen/webkit/InspectorProtocolVersion.h: $
+    generate_inspector_protocol_version_target_generateInspectorProtocolVersion_d97e9e00d7fea1ec2a8352153c1b9454 $
+    ../../third_party/WebKit/Source/WebCore/inspector/generate-inspector-protocol-version $
+    ../../third_party/WebKit/Source/WebCore/inspector/Inspector.json
+

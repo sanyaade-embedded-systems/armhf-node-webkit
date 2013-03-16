@@ -1,0 +1,1578 @@
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DGL_GLEXT_PROTOTYPES $
+    '-DWEBCORE_NAVIGATOR_VENDOR="Google Inc."' -DWEBKIT_IMPLEMENTATION=1 $
+    -DENABLE_3D_PLUGIN=1 -DENABLE_BATTERY_STATUS=0 -DENABLE_BLOB=1 $
+    -DENABLE_BLOB_SLICE=1 -DENABLE_CHANNEL_MESSAGING=1 -DENABLE_CSP_NEXT=1 $
+    -DENABLE_CSS3_CONDITIONAL_RULES=0 -DENABLE_CSS3_TEXT=0 $
+    -DENABLE_CSS_BOX_DECORATION_BREAK=1 -DENABLE_CSS_COMPOSITING=0 $
+    -DENABLE_CSS_DEVICE_ADAPTATION=0 -DENABLE_CSS_EXCLUSIONS=1 $
+    -DENABLE_CSS_FILTERS=1 -DENABLE_CSS_IMAGE_SET=1 $
+    -DENABLE_CSS_IMAGE_RESOLUTION=0 -DENABLE_CSS_REGIONS=1 $
+    -DENABLE_CSS_SHADERS=1 $
+    -DENABLE_CSS_TRANSFORMS_ANIMATIONS_TRANSITIONS_UNPREFIXED=0 $
+    -DENABLE_CSS_VARIABLES=1 -DENABLE_CSS_STICKY_POSITION=1 $
+    -DENABLE_CUSTOM_SCHEME_HANDLER=0 -DENABLE_DASHBOARD_SUPPORT=0 $
+    -DENABLE_DATA_TRANSFER_ITEMS=1 -DENABLE_DETAILS_ELEMENT=1 $
+    -DENABLE_DEVICE_ORIENTATION=1 -DENABLE_DIALOG_ELEMENT=1 $
+    -DENABLE_DIRECTORY_UPLOAD=1 -DENABLE_DOWNLOAD_ATTRIBUTE=1 $
+    -DENABLE_DRAGGABLE_REGION=1 -DENABLE_ENCRYPTED_MEDIA=1 $
+    -DENABLE_FILE_SYSTEM=1 -DENABLE_FILTERS=1 -DENABLE_FULLSCREEN_API=1 $
+    -DENABLE_GAMEPAD=1 -DENABLE_GEOLOCATION=1 -DENABLE_GESTURE_EVENTS=1 $
+    -DENABLE_ICONDATABASE=0 -DENABLE_IFRAME_SEAMLESS=1 $
+    -DENABLE_INDEXED_DATABASE=1 -DENABLE_INPUT_TYPE_DATE=1 $
+    -DENABLE_INPUT_TYPE_DATETIME=1 -DENABLE_INPUT_TYPE_DATETIMELOCAL=1 $
+    -DENABLE_INPUT_TYPE_MONTH=1 -DENABLE_INPUT_TYPE_TIME=1 $
+    -DENABLE_JAVASCRIPT_DEBUGGER=1 -DENABLE_JAVASCRIPT_I18N_API=1 $
+    -DENABLE_LEGACY_CSS_VENDOR_PREFIXES=0 $
+    -DENABLE_LEGACY_VIEWPORT_ADAPTION=1 -DENABLE_LEGACY_VENDOR_PREFIXES=0 $
+    -DENABLE_LEGACY_WEB_AUDIO=1 -DENABLE_LINK_PREFETCH=1 $
+    -DENABLE_LINK_PRERENDER=1 -DENABLE_MATHML=1 -DENABLE_MEDIA_SOURCE=1 $
+    -DENABLE_MEDIA_STATISTICS=1 -DENABLE_MEDIA_STREAM=1 $
+    -DENABLE_METER_ELEMENT=1 -DENABLE_MHTML=1 -DENABLE_MICRODATA=0 $
+    -DENABLE_MOUSE_CURSOR_SCALE=1 -DENABLE_NAVIGATOR_CONTENT_UTILS=1 $
+    -DENABLE_PAGE_VISIBILITY_API=1 -DENABLE_PERFORMANCE_TIMELINE=1 $
+    -DENABLE_POINTER_LOCK=1 -DENABLE_PROGRESS_ELEMENT=1 $
+    -DENABLE_PROXIMITY_EVENTS=0 -DENABLE_QUOTA=1 $
+    -DENABLE_REQUEST_ANIMATION_FRAME=1 -DENABLE_REQUEST_AUTOCOMPLETE=1 $
+    -DENABLE_RESOLUTION_MEDIA_QUERY=0 -DENABLE_RESOURCE_TIMING=1 $
+    -DENABLE_RUBY=1 -DENABLE_SANDBOX=1 -DENABLE_SCRIPTED_SPEECH=1 $
+    -DENABLE_SHADOW_DOM=1 -DENABLE_SMOOTH_SCROLLING=1 $
+    -DENABLE_SQL_DATABASE=1 -DENABLE_STYLE_SCOPED=1 -DENABLE_SVG=1 $
+    -DENABLE_SVG_FONTS=1 -DENABLE_TEMPLATE_ELEMENT=1 $
+    -DENABLE_TEXT_AUTOSIZING=1 -DENABLE_TOUCH_ADJUSTMENT=1 $
+    -DENABLE_TOUCH_EVENTS=1 -DENABLE_TOUCH_ICON_LOADING=0 $
+    -DENABLE_TOUCH_EVENT_TRACKING=1 -DENABLE_TOUCH_SLIDER=1 $
+    -DENABLE_USER_TIMING=1 -DENABLE_V8_SCRIPT_DEBUG_SERVER=1 $
+    -DENABLE_VIDEO=1 -DENABLE_VIDEO_TRACK=1 -DENABLE_VIEWPORT=1 $
+    -DENABLE_WEBGL=1 -DENABLE_WEB_SOCKETS=1 -DENABLE_WEB_TIMING=1 $
+    -DENABLE_WORKERS=1 -DENABLE_XHR_RESPONSE_BLOB=1 -DENABLE_XHR_TIMEOUT=0 $
+    -DENABLE_XSLT=1 -DWTF_USE_LEVELDB=1 -DWTF_USE_BUILTIN_UTF8_CODEC=1 $
+    -DWTF_USE_OPENTYPE_SANITIZER=1 -DWTF_USE_RTL_SCROLLBAR=1 $
+    -DWTF_USE_SKIA_TEXT=1 -DWTF_USE_WEBP=1 $
+    -DWTF_USE_WEBKIT_IMAGE_DECODERS=1 $
+    -DENABLE_ACCELERATED_OVERFLOW_SCROLLING=0 -DENABLE_CALENDAR_PICKER=1 $
+    -DENABLE_DATALIST_ELEMENT=1 -DENABLE_INPUT_SPEECH=1 $
+    -DENABLE_INPUT_TYPE_COLOR=1 -DENABLE_INPUT_TYPE_WEEK=1 $
+    -DENABLE_INPUT_MULTIPLE_FIELDS_UI=1 -DENABLE_LEGACY_NOTIFICATIONS=1 $
+    -DENABLE_MEDIA_CAPTURE=0 -DENABLE_NOTIFICATIONS=1 $
+    -DENABLE_ORIENTATION_EVENTS=0 -DENABLE_PAGE_POPUP=1 $
+    -DENABLE_SHARED_WORKERS=1 -DENABLE_WEB_AUDIO=1 -DENABLE_3D_RENDERING=1 $
+    -DENABLE_ACCELERATED_2D_CANVAS=1 -DWTF_USE_ACCELERATED_COMPOSITING=1 $
+    -DWTF_USE_WEBAUDIO_FFMPEG=1 -DENABLE_OPENTYPE_VERTICAL=1 $
+    -DWTF_USE_HARFBUZZ_NG=1 -DENABLE_DEFAULT_RENDER_THEME=1 $
+    -DBUILDING_CHROMIUM__=1 -DWTF_USE_PTHREADS=1 -DU_USING_ICU_NAMESPACE=0 $
+    -DU_STATIC_IMPLEMENTATION -DSK_BUILD_NO_IMAGE_ENCODE $
+    -DSK_DEFERRED_CANVAS_USES_GPIPE=1 $
+    '-DGR_GL_CUSTOM_SETUP_HEADER="GrGLConfig_chrome.h"' $
+    -DGR_AGGRESSIVE_SHADER_OPTS=1 -DSK_USE_POSIX_THREADS $
+    -DCHROME_PNG_WRITE_SUPPORT -DPNG_USER_CONFIG -DLIBXML_STATIC $
+    -DLIBXSLT_STATIC -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS $
+    -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 $
+    -DUSE_EABI_HARDFLOAT -D_FORTIFY_SOURCE=2
+includes = -I../../third_party/icu/public/common $
+    -I../../third_party/icu/public/i18n -I../../third_party/khronos $
+    -I../../gpu -I../.. -I../../third_party/WebKit/Source/Platform/chromium $
+    -Iobj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_svg.gen $
+    -I../../third_party/WebKit/Source/WebCore $
+    -I../../third_party/WebKit/Source $
+    -I../../third_party/WebKit/Source/WebCore/Modules/battery $
+    -I../../third_party/WebKit/Source/WebCore/Modules/filesystem $
+    -I../../third_party/WebKit/Source/WebCore/Modules/filesystem/chromium $
+    -I../../third_party/WebKit/Source/WebCore/Modules/gamepad $
+    -I../../third_party/WebKit/Source/WebCore/Modules/geolocation $
+    -I../../third_party/WebKit/Source/WebCore/Modules/intents $
+    -I../../third_party/WebKit/Source/WebCore/Modules/indexeddb $
+    -I../../third_party/WebKit/Source/WebCore/Modules/mediasource $
+    -I../../third_party/WebKit/Source/WebCore/Modules/mediastream $
+    -I../../third_party/WebKit/Source/WebCore/Modules/navigatorcontentutils $
+    -I../../third_party/WebKit/Source/WebCore/Modules/notifications $
+    -I../../third_party/WebKit/Source/WebCore/Modules/quota $
+    -I../../third_party/WebKit/Source/WebCore/Modules/speech $
+    -I../../third_party/WebKit/Source/WebCore/Modules/webaudio $
+    -I../../third_party/WebKit/Source/WebCore/Modules/webdatabase $
+    -I../../third_party/WebKit/Source/WebCore/Modules/webdatabase/chromium $
+    -I../../third_party/WebKit/Source/WebCore/Modules/websockets $
+    -I../../third_party/WebKit/Source/WebCore/accessibility $
+    -I../../third_party/WebKit/Source/WebCore/accessibility/chromium $
+    -I../../third_party/WebKit/Source/WebCore/bindings $
+    -I../../third_party/WebKit/Source/WebCore/bindings/generic $
+    -I../../third_party/WebKit/Source/WebCore/bindings/v8 $
+    -I../../third_party/WebKit/Source/WebCore/bindings/v8/custom $
+    -I../../third_party/WebKit/Source/WebCore/bridge $
+    -I../../third_party/WebKit/Source/WebCore/bridge/jni $
+    -I../../third_party/WebKit/Source/WebCore/bridge/jni/v8 $
+    -I../../third_party/WebKit/Source/WebCore/css $
+    -I../../third_party/WebKit/Source/WebCore/dom $
+    -I../../third_party/WebKit/Source/WebCore/dom/default $
+    -I../../third_party/WebKit/Source/WebCore/editing $
+    -I../../third_party/WebKit/Source/WebCore/fileapi $
+    -I../../third_party/WebKit/Source/WebCore/history $
+    -I../../third_party/WebKit/Source/WebCore/html $
+    -I../../third_party/WebKit/Source/WebCore/html/canvas $
+    -I../../third_party/WebKit/Source/WebCore/html/parser $
+    -I../../third_party/WebKit/Source/WebCore/html/shadow $
+    -I../../third_party/WebKit/Source/WebCore/html/track $
+    -I../../third_party/WebKit/Source/WebCore/inspector $
+    -I../../third_party/WebKit/Source/WebCore/loader $
+    -I../../third_party/WebKit/Source/WebCore/loader/appcache $
+    -I../../third_party/WebKit/Source/WebCore/loader/archive $
+    -I../../third_party/WebKit/Source/WebCore/loader/archive/cf $
+    -I../../third_party/WebKit/Source/WebCore/loader/archive/mhtml $
+    -I../../third_party/WebKit/Source/WebCore/loader/cache $
+    -I../../third_party/WebKit/Source/WebCore/loader/icon $
+    -I../../third_party/WebKit/Source/WebCore/mathml $
+    -I../../third_party/WebKit/Source/WebCore/page $
+    -I../../third_party/WebKit/Source/WebCore/page/animation $
+    -I../../third_party/WebKit/Source/WebCore/page/chromium $
+    -I../../third_party/WebKit/Source/WebCore/page/scrolling $
+    -I../../third_party/WebKit/Source/WebCore/page/scrolling/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform $
+    -I../../third_party/WebKit/Source/WebCore/platform/animation $
+    -I../../third_party/WebKit/Source/WebCore/platform/audio $
+    -I../../third_party/WebKit/Source/WebCore/platform/audio/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform/chromium/support $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/chromium/cc $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/cpu/arm $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/cpu/arm/filters $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/filters $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/filters/skia $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/gpu $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/opentype $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/skia $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/transforms $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/bmp $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/gif $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/ico $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/jpeg $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/png $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/skia $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/webp $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-encoders/skia $
+    -I../../third_party/WebKit/Source/WebCore/platform/leveldb $
+    -I../../third_party/WebKit/Source/WebCore/platform/mediastream $
+    -I../../third_party/WebKit/Source/WebCore/platform/mediastream/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform/mock $
+    -I../../third_party/WebKit/Source/WebCore/platform/network $
+    -I../../third_party/WebKit/Source/WebCore/platform/network/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform/sql $
+    -I../../third_party/WebKit/Source/WebCore/platform/text $
+    -I../../third_party/WebKit/Source/WebCore/platform/text/transcoder $
+    -I../../third_party/WebKit/Source/WebCore/plugins $
+    -I../../third_party/WebKit/Source/WebCore/plugins/chromium $
+    -I../../third_party/WebKit/Source/WebCore/rendering $
+    -I../../third_party/WebKit/Source/WebCore/rendering/mathml $
+    -I../../third_party/WebKit/Source/WebCore/rendering/style $
+    -I../../third_party/WebKit/Source/WebCore/rendering/svg $
+    -I../../third_party/WebKit/Source/WebCore/storage $
+    -I../../third_party/WebKit/Source/WebCore/svg $
+    -I../../third_party/WebKit/Source/WebCore/svg/animation $
+    -I../../third_party/WebKit/Source/WebCore/svg/graphics $
+    -I../../third_party/WebKit/Source/WebCore/svg/graphics/filters $
+    -I../../third_party/WebKit/Source/WebCore/svg/properties $
+    -I../../third_party/WebKit/Source/ThirdParty/glu $
+    -I../../third_party/WebKit/Source/WebCore/workers $
+    -I../../third_party/WebKit/Source/WebCore/xml $
+    -I../../third_party/WebKit/Source/WebCore/xml/parser $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/harfbuzz $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/harfbuzz/ng $
+    -I../../third_party/angle/include/GLSLANG -Igen/webkit $
+    -Igen/webkit/bindings -I../../third_party/ffmpeg $
+    -I../../third_party/WebKit/Source/WTF $
+    -I../../third_party/WebKit/Source/JavaScriptCore -I../../skia/config $
+    -I../../third_party/skia/src/core $
+    -I../../third_party/skia/include/config $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/gpu/gl $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils -I../../skia/ext $
+    -I../../third_party/iccjpeg -I../../third_party/libwebp $
+    -I../../third_party/libpng -I../../third_party/libxml/linux/include $
+    -I../../third_party/libxml/src/include -I../../third_party/libxslt $
+    -I../../third_party/npapi -I../../third_party/npapi/bindings $
+    -I../../third_party/ots/include -I../../third_party/qcms/src $
+    -I../../third_party/sqlite -I../../third_party/zlib -I../../v8/include $
+    -I../../third_party/libjpeg_turbo $
+    -I../../third_party/leveldatabase/src/include $
+    -I../../third_party/leveldatabase/src -I../../third_party/leveldatabase
+cflags = -Wno-uninitialized -fstack-protector --param=ssp-buffer-size=4 $
+    -Werror -pthread -fno-exceptions -fno-strict-aliasing -Wall $
+    -Wno-unused-parameter -Wno-missing-field-initializers $
+    -fvisibility=hidden -pipe -fPIC -fno-strict-aliasing -pthread $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gtk-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/gtk-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/atk-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gdk-pixbuf-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gio-unix-2.0/ $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 $
+    -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon -O2 $
+    -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -Wno-c++0x-compat -fno-rtti -fno-threadsafe-statics $
+    -fvisibility-inlines-hidden -Wsign-compare -Wno-abi
+
+build $
+    obj/third_party/webkit/source/webcore/rendering/style/webcore_svg.svgrenderstyle.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/style/SVGRenderStyle.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/style/webcore_svg.svgrenderstyledefs.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/style/SVGRenderStyleDefs.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgblock.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGBlock.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgcontainer.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGContainer.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgellipse.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGEllipse.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgforeignobject.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGForeignObject.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvggradientstop.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGGradientStop.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvghiddencontainer.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGHiddenContainer.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgimage.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGImage.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvginline.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGInline.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvginlinetext.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGInlineText.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgmodelobject.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGModelObject.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgpath.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGPath.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgrect.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGRect.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresource.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGResource.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourceclipper.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGResourceClipper.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcecontainer.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGResourceContainer.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcefilter.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGResourceFilter.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcefilterprimitive.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGResourceFilterPrimitive.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcegradient.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGResourceGradient.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcelineargradient.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGResourceLinearGradient.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcemarker.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGResourceMarker.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcemasker.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGResourceMasker.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcepattern.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGResourcePattern.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourceradialgradient.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGResourceRadialGradient.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcesolidcolor.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGResourceSolidColor.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgroot.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGRoot.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgshape.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGShape.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgtspan.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGTSpan.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgtext.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGText.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgtextpath.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGTextPath.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgtransformablecontainer.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGTransformableContainer.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgviewportcontainer.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/RenderSVGViewportContainer.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svginlineflowbox.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGInlineFlowBox.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svginlinetextbox.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGInlineTextBox.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgpathdata.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGPathData.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgrendersupport.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGRenderSupport.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgrendertreeastext.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGRenderTreeAsText.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgrenderingcontext.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGRenderingContext.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgresources.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGResources.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgresourcescache.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGResourcesCache.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgresourcescyclesolver.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGResourcesCycleSolver.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgrootinlinebox.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGRootInlineBox.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextchunk.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGTextChunk.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextchunkbuilder.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGTextChunkBuilder.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextlayoutattributes.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGTextLayoutAttributes.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextlayoutattributesbuilder.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGTextLayoutAttributesBuilder.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextlayoutengine.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGTextLayoutEngine.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextlayoutenginebaseline.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGTextLayoutEngineBaseline.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextlayoutenginespacing.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGTextLayoutEngineSpacing.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextmetrics.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGTextMetrics.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextmetricsbuilder.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGTextMetricsBuilder.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextquery.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGTextQuery.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextrunrenderingcontext.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/rendering/svg/SVGTextRunRenderingContext.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.colordistance.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/ColorDistance.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svgaelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGAElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgaltglyphdefelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGAltGlyphDefElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgaltglyphelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGAltGlyphElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgaltglyphitemelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGAltGlyphItemElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svgangle.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGAngle.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatecolorelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGAnimateColorElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedangle.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedAngle.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedboolean.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedBoolean.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedcolor.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedColor.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedenumeration.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedEnumeration.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedinteger.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedInteger.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedintegeroptionalinteger.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedIntegerOptionalInteger.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedlength.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedLength.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedlengthlist.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedLengthList.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatednumber.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedNumber.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatednumberlist.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedNumberList.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatednumberoptionalnumber.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedNumberOptionalNumber.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedpath.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedPath.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedpointlist.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedPointList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedpreserveaspectratio.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedPreserveAspectRatio.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedrect.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedRect.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedstring.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedString.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedtransformlist.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedTransformList.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedtype.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGAnimatedType.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimateelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGAnimateElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatemotionelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGAnimateMotionElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatetransformelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGAnimateTransformElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimationelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGAnimationElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgcircleelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGCircleElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgclippathelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGClipPathElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svgcolor.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGColor.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgcomponenttransferfunctionelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGComponentTransferFunctionElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgcursorelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGCursorElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgdefselement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGDefsElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgdescelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGDescElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svgdocument.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGDocument.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgdocumentextensions.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGDocumentExtensions.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svgelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgelementinstance.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGElementInstance.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgelementinstancelist.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGElementInstanceList.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgellipseelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGEllipseElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svgexception.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGException.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgexternalresourcesrequired.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGExternalResourcesRequired.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfeblendelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFEBlendElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfecolormatrixelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFEColorMatrixElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfecomponenttransferelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFEComponentTransferElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfecompositeelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFECompositeElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfeconvolvematrixelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFEConvolveMatrixElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfediffuselightingelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFEDiffuseLightingElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfedisplacementmapelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFEDisplacementMapElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfedistantlightelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFEDistantLightElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfedropshadowelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFEDropShadowElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfefloodelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFEFloodElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfefuncaelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFEFuncAElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfefuncbelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFEFuncBElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfefuncgelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFEFuncGElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfefuncrelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFEFuncRElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfegaussianblurelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFEGaussianBlurElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfeimageelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFEImageElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfelightelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFELightElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfemergeelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFEMergeElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfemergenodeelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFEMergeNodeElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfemorphologyelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFEMorphologyElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfeoffsetelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFEOffsetElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfepointlightelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFEPointLightElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfespecularlightingelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFESpecularLightingElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfespotlightelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFESpotLightElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfetileelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFETileElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfeturbulenceelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFETurbulenceElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfilterelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFilterElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfilterprimitivestandardattributes.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFilterPrimitiveStandardAttributes.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfittoviewbox.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFitToViewBox.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfontdata.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFontData.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfontelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFontElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfontfaceelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGFontFaceElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfontfaceformatelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFontFaceFormatElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfontfacenameelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFontFaceNameElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfontfacesrcelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFontFaceSrcElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfontfaceurielement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGFontFaceUriElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgforeignobjectelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGForeignObjectElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svggelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGGElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgglyphelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGGlyphElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgglyphrefelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGGlyphRefElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svggradientelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGGradientElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svghkernelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGHKernElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgimageelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGImageElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgimageloader.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGImageLoader.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svglangspace.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGLangSpace.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svglength.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGLength.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svglengthcontext.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGLengthContext.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svglengthlist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGLengthList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svglineelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGLineElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svglineargradientelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGLinearGradientElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svglocatable.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGLocatable.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgmpathelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGMPathElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgmarkerelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGMarkerElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgmaskelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGMaskElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgmetadataelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGMetadataElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgmissingglyphelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGMissingGlyphElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgnumberlist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGNumberList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpaint.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGPaint.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgparserutilities.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGParserUtilities.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathblender.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGPathBlender.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathbuilder.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGPathBuilder.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathbytestreambuilder.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGPathByteStreamBuilder.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathbytestreamsource.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGPathByteStreamSource.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGPathElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathparser.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGPathParser.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathseglist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGPathSegList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathseglistbuilder.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGPathSegListBuilder.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathseglistsource.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGPathSegListSource.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathstringbuilder.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGPathStringBuilder.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathstringsource.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGPathStringSource.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathtraversalstatebuilder.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGPathTraversalStateBuilder.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathutilities.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGPathUtilities.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpatternelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGPatternElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpointlist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGPointList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpolyelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGPolyElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpolygonelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGPolygonElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpolylineelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGPolylineElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpreserveaspectratio.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGPreserveAspectRatio.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgradialgradientelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGRadialGradientElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgrectelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGRectElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgsvgelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGSVGElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgscriptelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGScriptElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgsetelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGSetElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgstopelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGStopElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgstringlist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGStringList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svgstylable.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGStylable.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgstyleelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGStyleElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgstyledelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGStyledElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgstyledlocatableelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGStyledLocatableElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgstyledtransformableelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGStyledTransformableElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgswitchelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGSwitchElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgsymbolelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGSymbolElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtrefelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGTRefElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtspanelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGTSpanElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtests.o: cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGTests.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtextcontentelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGTextContentElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtextelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGTextElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtextpathelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGTextPathElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtextpositioningelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGTextPositioningElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtitleelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGTitleElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtransform.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGTransform.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtransformdistance.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/SVGTransformDistance.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtransformlist.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGTransformList.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtransformable.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGTransformable.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgurireference.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGURIReference.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svguseelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGUseElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgvkernelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGVKernElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgviewelement.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGViewElement.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svgviewspec.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGViewSpec.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgzoomandpan.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGZoomAndPan.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build obj/third_party/webkit/source/webcore/svg/webcore_svg.svgzoomevent.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/SVGZoomEvent.cpp || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/animation/webcore_svg.smiltime.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/animation/SMILTime.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/animation/webcore_svg.smiltimecontainer.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/animation/SMILTimeContainer.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/animation/webcore_svg.svgsmilelement.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/animation/SVGSMILElement.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/graphics/webcore_svg.svgimagecache.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/graphics/SVGImageCache.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/graphics/webcore_svg.svgimage.o: $
+    cxx ../../third_party/WebKit/Source/WebCore/svg/graphics/SVGImage.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/graphics/filters/webcore_svg.svgfeimage.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/graphics/filters/SVGFEImage.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/graphics/filters/webcore_svg.svgfilter.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/graphics/filters/SVGFilter.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/graphics/filters/webcore_svg.svgfilterbuilder.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/graphics/filters/SVGFilterBuilder.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/properties/webcore_svg.svgattributetopropertymap.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/properties/SVGAttributeToPropertyMap.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webcore/svg/properties/webcore_svg.svgpathseglistpropertytearoff.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebCore/svg/properties/SVGPathSegListPropertyTearOff.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+
+build obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_svg.a: $
+    alink_thin $
+    obj/third_party/webkit/source/webcore/rendering/style/webcore_svg.svgrenderstyle.o $
+    obj/third_party/webkit/source/webcore/rendering/style/webcore_svg.svgrenderstyledefs.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgblock.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgcontainer.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgellipse.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgforeignobject.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvggradientstop.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvghiddencontainer.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgimage.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvginline.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvginlinetext.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgmodelobject.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgpath.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgrect.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresource.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourceclipper.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcecontainer.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcefilter.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcefilterprimitive.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcegradient.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcelineargradient.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcemarker.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcemasker.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcepattern.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourceradialgradient.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgresourcesolidcolor.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgroot.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgshape.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgtspan.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgtext.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgtextpath.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgtransformablecontainer.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.rendersvgviewportcontainer.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svginlineflowbox.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svginlinetextbox.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgpathdata.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgrendersupport.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgrendertreeastext.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgrenderingcontext.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgresources.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgresourcescache.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgresourcescyclesolver.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgrootinlinebox.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextchunk.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextchunkbuilder.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextlayoutattributes.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextlayoutattributesbuilder.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextlayoutengine.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextlayoutenginebaseline.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextlayoutenginespacing.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextmetrics.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextmetricsbuilder.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextquery.o $
+    obj/third_party/webkit/source/webcore/rendering/svg/webcore_svg.svgtextrunrenderingcontext.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.colordistance.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgaelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgaltglyphdefelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgaltglyphelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgaltglyphitemelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgangle.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatecolorelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedangle.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedboolean.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedcolor.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedenumeration.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedinteger.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedintegeroptionalinteger.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedlength.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedlengthlist.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatednumber.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatednumberlist.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatednumberoptionalnumber.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedpath.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedpointlist.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedpreserveaspectratio.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedrect.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedstring.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedtransformlist.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatedtype.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimateelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatemotionelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimatetransformelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svganimationelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgcircleelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgclippathelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgcolor.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgcomponenttransferfunctionelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgcursorelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgdefselement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgdescelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgdocument.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgdocumentextensions.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgelementinstance.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgelementinstancelist.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgellipseelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgexception.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgexternalresourcesrequired.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfeblendelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfecolormatrixelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfecomponenttransferelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfecompositeelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfeconvolvematrixelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfediffuselightingelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfedisplacementmapelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfedistantlightelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfedropshadowelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfefloodelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfefuncaelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfefuncbelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfefuncgelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfefuncrelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfegaussianblurelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfeimageelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfelightelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfemergeelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfemergenodeelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfemorphologyelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfeoffsetelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfepointlightelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfespecularlightingelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfespotlightelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfetileelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfeturbulenceelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfilterelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfilterprimitivestandardattributes.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfittoviewbox.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfontdata.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfontelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfontfaceelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfontfaceformatelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfontfacenameelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfontfacesrcelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgfontfaceurielement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgforeignobjectelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svggelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgglyphelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgglyphrefelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svggradientelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svghkernelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgimageelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgimageloader.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svglangspace.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svglength.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svglengthcontext.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svglengthlist.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svglineelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svglineargradientelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svglocatable.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgmpathelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgmarkerelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgmaskelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgmetadataelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgmissingglyphelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgnumberlist.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpaint.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgparserutilities.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathblender.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathbuilder.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathbytestreambuilder.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathbytestreamsource.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathparser.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathseglist.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathseglistbuilder.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathseglistsource.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathstringbuilder.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathstringsource.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathtraversalstatebuilder.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpathutilities.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpatternelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpointlist.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpolyelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpolygonelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpolylineelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgpreserveaspectratio.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgradialgradientelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgrectelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgsvgelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgscriptelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgsetelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgstopelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgstringlist.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgstylable.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgstyleelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgstyledelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgstyledlocatableelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgstyledtransformableelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgswitchelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgsymbolelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtrefelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtspanelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtests.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtextcontentelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtextelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtextpathelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtextpositioningelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtitleelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtransform.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtransformdistance.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtransformlist.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgtransformable.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgurireference.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svguseelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgvkernelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgviewelement.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgviewspec.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgzoomandpan.o $
+    obj/third_party/webkit/source/webcore/svg/webcore_svg.svgzoomevent.o $
+    obj/third_party/webkit/source/webcore/svg/animation/webcore_svg.smiltime.o $
+    obj/third_party/webkit/source/webcore/svg/animation/webcore_svg.smiltimecontainer.o $
+    obj/third_party/webkit/source/webcore/svg/animation/webcore_svg.svgsmilelement.o $
+    obj/third_party/webkit/source/webcore/svg/graphics/webcore_svg.svgimagecache.o $
+    obj/third_party/webkit/source/webcore/svg/graphics/webcore_svg.svgimage.o $
+    obj/third_party/webkit/source/webcore/svg/graphics/filters/webcore_svg.svgfeimage.o $
+    obj/third_party/webkit/source/webcore/svg/graphics/filters/webcore_svg.svgfilter.o $
+    obj/third_party/webkit/source/webcore/svg/graphics/filters/webcore_svg.svgfilterbuilder.o $
+    obj/third_party/webkit/source/webcore/svg/properties/webcore_svg.svgattributetopropertymap.o $
+    obj/third_party/webkit/source/webcore/svg/properties/webcore_svg.svgpathseglistpropertytearoff.o $
+    || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.actions_depends.stamp

@@ -1,0 +1,77 @@
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DFLAC__NO_DLL $
+    -DFLAC__OVERFLOW_DETECT '-DVERSION="1.2.1"' -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = -I../../third_party/flac/include $
+    -I../../third_party/flac/src/libFLAC/include
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -Wno-format -Wno-unused-result -march=armv7-a -mtune=cortex-a8 $
+    -mfloat-abi=hard -mfpu=neon -O2 -fno-ident -fdata-sections $
+    -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wno-deprecated -Wno-abi
+
+build obj/third_party/flac/src/libflac/libflac.alloc.o: cc $
+    ../../third_party/flac/src/libFLAC/alloc.c
+build obj/third_party/flac/src/libflac/libflac.bitmath.o: cc $
+    ../../third_party/flac/src/libFLAC/bitmath.c
+build obj/third_party/flac/src/libflac/libflac.bitreader.o: cc $
+    ../../third_party/flac/src/libFLAC/bitreader.c
+build obj/third_party/flac/src/libflac/libflac.bitwriter.o: cc $
+    ../../third_party/flac/src/libFLAC/bitwriter.c
+build obj/third_party/flac/src/libflac/libflac.cpu.o: cc $
+    ../../third_party/flac/src/libFLAC/cpu.c
+build obj/third_party/flac/src/libflac/libflac.crc.o: cc $
+    ../../third_party/flac/src/libFLAC/crc.c
+build obj/third_party/flac/src/libflac/libflac.fixed.o: cc $
+    ../../third_party/flac/src/libFLAC/fixed.c
+build obj/third_party/flac/src/libflac/libflac.float.o: cc $
+    ../../third_party/flac/src/libFLAC/float.c
+build obj/third_party/flac/src/libflac/libflac.format.o: cc $
+    ../../third_party/flac/src/libFLAC/format.c
+build obj/third_party/flac/src/libflac/libflac.lpc.o: cc $
+    ../../third_party/flac/src/libFLAC/lpc.c
+build obj/third_party/flac/src/libflac/libflac.md5.o: cc $
+    ../../third_party/flac/src/libFLAC/md5.c
+build obj/third_party/flac/src/libflac/libflac.memory.o: cc $
+    ../../third_party/flac/src/libFLAC/memory.c
+build obj/third_party/flac/src/libflac/libflac.stream_decoder.o: cc $
+    ../../third_party/flac/src/libFLAC/stream_decoder.c
+build obj/third_party/flac/src/libflac/libflac.stream_encoder.o: cc $
+    ../../third_party/flac/src/libFLAC/stream_encoder.c
+build obj/third_party/flac/src/libflac/libflac.stream_encoder_framing.o: cc $
+    ../../third_party/flac/src/libFLAC/stream_encoder_framing.c
+build obj/third_party/flac/src/libflac/libflac.window.o: cc $
+    ../../third_party/flac/src/libFLAC/window.c
+
+build obj/third_party/flac/libflac.a: alink_thin $
+    obj/third_party/flac/src/libflac/libflac.alloc.o $
+    obj/third_party/flac/src/libflac/libflac.bitmath.o $
+    obj/third_party/flac/src/libflac/libflac.bitreader.o $
+    obj/third_party/flac/src/libflac/libflac.bitwriter.o $
+    obj/third_party/flac/src/libflac/libflac.cpu.o $
+    obj/third_party/flac/src/libflac/libflac.crc.o $
+    obj/third_party/flac/src/libflac/libflac.fixed.o $
+    obj/third_party/flac/src/libflac/libflac.float.o $
+    obj/third_party/flac/src/libflac/libflac.format.o $
+    obj/third_party/flac/src/libflac/libflac.lpc.o $
+    obj/third_party/flac/src/libflac/libflac.md5.o $
+    obj/third_party/flac/src/libflac/libflac.memory.o $
+    obj/third_party/flac/src/libflac/libflac.stream_decoder.o $
+    obj/third_party/flac/src/libflac/libflac.stream_encoder.o $
+    obj/third_party/flac/src/libflac/libflac.stream_encoder_framing.o $
+    obj/third_party/flac/src/libflac/libflac.window.o

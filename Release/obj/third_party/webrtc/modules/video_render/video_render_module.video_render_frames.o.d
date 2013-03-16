@@ -1,0 +1,20 @@
+obj/third_party/webrtc/modules/video_render/video_render_module.video_render_frames.o: \
+ ../../third_party/webrtc/modules/video_render/video_render_frames.cc \
+ ../../third_party/webrtc/modules/video_render//video_render_frames.h \
+ ../../third_party/webrtc/modules/video_render/include/video_render.h \
+ ../../third_party/webrtc/modules/interface/module.h \
+ ../../third_party/webrtc/typedefs.h \
+ ../../third_party/webrtc/modules/video_render/include/video_render_defines.h \
+ ../../third_party/webrtc/common_types.h \
+ ../../third_party/webrtc/typedefs.h \
+ ../../third_party/webrtc/common_video/interface/i420_video_frame.h \
+ ../../third_party/webrtc/common_video/plane.h \
+ ../../third_party/webrtc/system_wrappers/interface/aligned_malloc.h \
+ ../../third_party/webrtc/system_wrappers/interface/scoped_ptr.h \
+ ../../third_party/webrtc/modules/interface/module_common_types.h \
+ ../../third_party/webrtc/common_types.h \
+ ../../third_party/webrtc/system_wrappers/interface/constructor_magic.h \
+ ../../third_party/webrtc/typedefs.h \
+ ../../third_party/webrtc/system_wrappers/interface/list_wrapper.h \
+ ../../third_party/webrtc/system_wrappers/interface/tick_util.h \
+ ../../third_party/webrtc/system_wrappers/interface/trace.h

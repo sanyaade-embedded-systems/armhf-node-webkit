@@ -1,0 +1,23 @@
+obj/third_party/libwebp/enc/libwebp_enc.alpha.o: \
+ ../../third_party/libwebp/enc/alpha.c \
+ ../../third_party/libwebp/enc/./vp8enci.h \
+ ../../third_party/libwebp/enc/./../webp/encode.h \
+ ../../third_party/libwebp/enc/./../webp/./types.h \
+ ../../third_party/libwebp/enc/./../dsp/dsp.h \
+ ../../third_party/libwebp/enc/./../dsp/../webp/types.h \
+ ../../third_party/libwebp/enc/./../utils/bit_writer.h \
+ ../../third_party/libwebp/enc/./../utils/../webp/types.h \
+ ../../third_party/libwebp/enc/../utils/filters.h \
+ ../../third_party/libwebp/enc/../utils/../webp/types.h \
+ ../../third_party/libwebp/enc/../utils/quant_levels.h \
+ ../../third_party/libwebp/enc/../webp/format_constants.h \
+ ../../third_party/libwebp/enc/../enc/vp8li.h \
+ ../../third_party/libwebp/enc/../enc/./histogram.h \
+ ../../third_party/libwebp/enc/../enc/././backward_references.h \
+ ../../third_party/libwebp/enc/../enc/././../webp/types.h \
+ ../../third_party/libwebp/enc/../enc/././../webp/format_constants.h \
+ ../../third_party/libwebp/enc/../enc/./../webp/format_constants.h \
+ ../../third_party/libwebp/enc/../enc/./../webp/types.h \
+ ../../third_party/libwebp/enc/../enc/../utils/bit_writer.h \
+ ../../third_party/libwebp/enc/../enc/../webp/encode.h \
+ ../../third_party/libwebp/enc/../enc/../webp/format_constants.h

@@ -1,0 +1,68 @@
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DENABLE_DEBUGGER_SUPPORT $
+    -DV8_TARGET_ARCH_ARM -DCAN_USE_ARMV7_INSTRUCTIONS=1 $
+    -DCAN_USE_VFP2_INSTRUCTIONS -DCAN_USE_VFP3_INSTRUCTIONS $
+    -DUSE_EABI_HARDFLOAT=0 -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = -I../../v8/src
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -Wno-format -Wno-unused-result -march=armv7-a -mtune=cortex-a8 $
+    -mfloat-abi=hard -mfpu=neon  -fno-ident -fdata-sections $
+    -ffunction-sections -fdata-sections -ffunction-sections -O3
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wno-deprecated -Wno-abi
+
+build obj/v8/src/preparser_lib.allocation.o: cxx ../../v8/src/allocation.cc
+build obj/v8/src/preparser_lib.atomicops_internals_x86_gcc.o: cxx $
+    ../../v8/src/atomicops_internals_x86_gcc.cc
+build obj/v8/src/preparser_lib.bignum.o: cxx ../../v8/src/bignum.cc
+build obj/v8/src/preparser_lib.bignum-dtoa.o: cxx ../../v8/src/bignum-dtoa.cc
+build obj/v8/src/preparser_lib.cached-powers.o: cxx $
+    ../../v8/src/cached-powers.cc
+build obj/v8/src/preparser_lib.conversions.o: cxx ../../v8/src/conversions.cc
+build obj/v8/src/preparser_lib.diy-fp.o: cxx ../../v8/src/diy-fp.cc
+build obj/v8/src/preparser_lib.dtoa.o: cxx ../../v8/src/dtoa.cc
+build obj/v8/src/preparser_lib.fast-dtoa.o: cxx ../../v8/src/fast-dtoa.cc
+build obj/v8/src/preparser_lib.fixed-dtoa.o: cxx ../../v8/src/fixed-dtoa.cc
+build obj/v8/src/preparser_lib.once.o: cxx ../../v8/src/once.cc
+build obj/v8/src/preparser_lib.preparse-data.o: cxx $
+    ../../v8/src/preparse-data.cc
+build obj/v8/src/preparser_lib.preparser.o: cxx ../../v8/src/preparser.cc
+build obj/v8/src/preparser_lib.preparser-api.o: cxx $
+    ../../v8/src/preparser-api.cc
+build obj/v8/src/preparser_lib.scanner.o: cxx ../../v8/src/scanner.cc
+build obj/v8/src/preparser_lib.strtod.o: cxx ../../v8/src/strtod.cc
+build obj/v8/src/preparser_lib.token.o: cxx ../../v8/src/token.cc
+build obj/v8/src/preparser_lib.unicode.o: cxx ../../v8/src/unicode.cc
+build obj/v8/src/preparser_lib.utils.o: cxx ../../v8/src/utils.cc
+
+build obj/v8/tools/gyp/libpreparser_lib.a: alink_thin $
+    obj/v8/src/preparser_lib.allocation.o $
+    obj/v8/src/preparser_lib.atomicops_internals_x86_gcc.o $
+    obj/v8/src/preparser_lib.bignum.o $
+    obj/v8/src/preparser_lib.bignum-dtoa.o $
+    obj/v8/src/preparser_lib.cached-powers.o $
+    obj/v8/src/preparser_lib.conversions.o $
+    obj/v8/src/preparser_lib.diy-fp.o obj/v8/src/preparser_lib.dtoa.o $
+    obj/v8/src/preparser_lib.fast-dtoa.o $
+    obj/v8/src/preparser_lib.fixed-dtoa.o obj/v8/src/preparser_lib.once.o $
+    obj/v8/src/preparser_lib.preparse-data.o $
+    obj/v8/src/preparser_lib.preparser.o $
+    obj/v8/src/preparser_lib.preparser-api.o $
+    obj/v8/src/preparser_lib.scanner.o obj/v8/src/preparser_lib.strtod.o $
+    obj/v8/src/preparser_lib.token.o obj/v8/src/preparser_lib.unicode.o $
+    obj/v8/src/preparser_lib.utils.o

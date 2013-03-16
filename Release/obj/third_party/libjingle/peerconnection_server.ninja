@@ -1,0 +1,144 @@
+build $
+    obj/third_party/libjingle/peerconnection_server.actions_depends.stamp: $
+    stamp obj/base/libbase.a obj/net/libnet.a $
+    obj/build/linux/ssl.actions_depends.stamp $
+    obj/third_party/libjingle/libjingle.a obj/base/libbase_static.a $
+    obj/base/allocator/liballocator_extension_thunks.a $
+    obj/third_party/modp_b64/libmodp_b64.a $
+    obj/base/third_party/dynamic_annotations/libdynamic_annotations.a $
+    obj/third_party/node/libnode.a $
+    obj/third_party/node/deps/http_parser/libhttp_parser.a $
+    obj/third_party/node/deps/uv/libuv.a gen/node_natives.h $
+    obj/third_party/node/deps/openssl/libopenssl.a $
+    obj/v8/tools/gyp/v8.actions_depends.stamp obj/v8/tools/gyp/libv8_base.a $
+    obj/v8/tools/gyp/libv8_snapshot.a $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    obj/third_party/zlib/libchrome_zlib.a obj/base/libsymbolize.a $
+    obj/base/libxdg_mime.a obj/third_party/libevent/libevent.a $
+    obj/base/libbase_i18n.a obj/third_party/icu/libicui18n.a $
+    obj/third_party/icu/libicuuc.a obj/third_party/icu/libicudata.a $
+    obj/build/temp_gyp/libgoogleurl.a obj/crypto/libcrcrypto.a $
+    obj/net/third_party/nss/libssl.a obj/sdch/libsdch.a $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/build/linux/libgio.a obj/dbus/libdbus.a $
+    obj/third_party/protobuf/libprotobuf_lite.a $
+    obj/third_party/jsoncpp/libjsoncpp.a
+
+build $
+    obj/third_party/libjingle/peerconnection_server.compile_depends.stamp: $
+    stamp obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc $
+    obj/net/net.compile_depends.stamp $
+    obj/third_party/node/node.compile_depends.stamp gen/node_natives.h $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/build/linux/gio.actions_rules_copies.stamp
+
+defines = -DEXPAT_RELATIVE_PATH -DFEATURE_ENABLE_SSL -DGTEST_RELATIVE_PATH $
+    -DHAVE_SRTP -DHAVE_WEBRTC_VIDEO -DHAVE_WEBRTC_VOICE $
+    -DJSONCPP_RELATIVE_PATH -DLOGGING_INSIDE_LIBJINGLE $
+    -DNO_MAIN_THREAD_WRAPPING -DNO_SOUND_SYSTEM -DSRTP_RELATIVE_PATH $
+    -D_USE_32BIT_TIME_T -DUSE_WEBRTC_DEV_BRANCH -D_FILE_OFFSET_BITS=64 $
+    -DSSL_USE_NSS_RNG -DLINUX -DPOSIX -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DFEATURE_ENABLE_VOICEMAIL -DNDEBUG $
+    -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = -I../../third_party/libjingle/overrides $
+    -I../../third_party/libjingle/source -I../../testing/gtest/include $
+    -I../../third_party -I../../third_party/libyuv/include $
+    -I../../third_party/webrtc -I../../third_party/libjingle/source -I../.. $
+    -I../../net/third_party/nss/ssl $
+    -I../../third_party/jsoncpp/overrides/include $
+    -I../../third_party/jsoncpp/source/include
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gtk-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/gtk-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/atk-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gdk-pixbuf-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gio-unix-2.0/ $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/nss $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/nspr -Wno-format $
+    -Wno-unused-result -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard $
+    -mfpu=neon -O2 -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wno-deprecated -Wno-abi
+
+build $
+    obj/third_party/libjingle/source/talk/examples/peerconnection/server/peerconnection_server.data_socket.o: $
+    cxx $
+    ../../third_party/libjingle/source/talk/examples/peerconnection/server/data_socket.cc $
+    || obj/third_party/libjingle/peerconnection_server.compile_depends.stamp
+build $
+    obj/third_party/libjingle/source/talk/examples/peerconnection/server/peerconnection_server.main.o: $
+    cxx $
+    ../../third_party/libjingle/source/talk/examples/peerconnection/server/main.cc $
+    || obj/third_party/libjingle/peerconnection_server.compile_depends.stamp
+build $
+    obj/third_party/libjingle/source/talk/examples/peerconnection/server/peerconnection_server.peer_channel.o: $
+    cxx $
+    ../../third_party/libjingle/source/talk/examples/peerconnection/server/peer_channel.cc $
+    || obj/third_party/libjingle/peerconnection_server.compile_depends.stamp
+build $
+    obj/third_party/libjingle/source/talk/examples/peerconnection/server/peerconnection_server.utils.o: $
+    cxx $
+    ../../third_party/libjingle/source/talk/examples/peerconnection/server/utils.cc $
+    || obj/third_party/libjingle/peerconnection_server.compile_depends.stamp
+
+ldflags = -Wl,-z,now -Wl,-z,relro -pthread -Wl,-z,noexecstack -fPIC $
+    -B../../third_party/gold -rdynamic -Wl,-O1 -Wl,--as-needed
+libs =  -lrt -ldl -lm -lgmodule-2.0 -lgobject-2.0 -lgthread-2.0 -lglib-2.0 $
+    -lX11 -lXi -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgio-2.0 $
+    -lpangoft2-1.0 -lpangocairo-1.0 -lgdk_pixbuf-2.0 -lcairo -lpango-1.0 $
+    -lfreetype -lfontconfig -lnss3 -lnssutil3 -lsmime3 -lplds4 -lplc4 $
+    -lnspr4 -lgconf-2 -lresolv -ldbus-1 -lpthread -lexpat
+build peerconnection_server: link $
+    obj/third_party/libjingle/source/talk/examples/peerconnection/server/peerconnection_server.data_socket.o $
+    obj/third_party/libjingle/source/talk/examples/peerconnection/server/peerconnection_server.main.o $
+    obj/third_party/libjingle/source/talk/examples/peerconnection/server/peerconnection_server.peer_channel.o $
+    obj/third_party/libjingle/source/talk/examples/peerconnection/server/peerconnection_server.utils.o $
+    obj/third_party/icu/libicuuc.a obj/third_party/libjingle/libjingle.a $
+    obj/build/temp_gyp/libgoogleurl.a obj/third_party/icu/libicudata.a $
+    obj/base/libxdg_mime.a obj/third_party/node/libnode.a $
+    obj/net/third_party/nss/libssl.a $
+    obj/base/third_party/dynamic_annotations/libdynamic_annotations.a $
+    obj/build/linux/libgio.a obj/crypto/libcrcrypto.a $
+    obj/base/allocator/liballocator_extension_thunks.a $
+    obj/third_party/icu/libicui18n.a obj/third_party/node/deps/uv/libuv.a $
+    obj/base/libsymbolize.a $
+    obj/third_party/node/deps/http_parser/libhttp_parser.a $
+    obj/third_party/modp_b64/libmodp_b64.a $
+    obj/third_party/protobuf/libprotobuf_lite.a obj/net/libnet.a $
+    obj/third_party/jsoncpp/libjsoncpp.a obj/v8/tools/gyp/libv8_base.a $
+    obj/third_party/node/deps/openssl/libopenssl.a obj/dbus/libdbus.a $
+    obj/v8/tools/gyp/libv8_snapshot.a obj/base/libbase_static.a $
+    obj/base/libbase_i18n.a obj/base/libbase.a obj/sdch/libsdch.a $
+    obj/third_party/zlib/libchrome_zlib.a $
+    obj/third_party/libevent/libevent.a | gen/node_natives.h $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    obj/v8/tools/gyp/v8.actions_depends.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/build/linux/ssl.actions_depends.stamp
+  postbuilds = 

@@ -1,0 +1,967 @@
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DSK_USE_POSIX_THREADS $
+    -DSK_BUILD_NO_IMAGE_ENCODE $
+    '-DGR_GL_CUSTOM_SETUP_HEADER="GrGLConfig_chrome.h"' $
+    -DGR_STATIC_RECT_VB=1 -DGR_AGGRESSIVE_SHADER_OPTS=1 $
+    -DSK_DEFERRED_CANVAS_USES_GPIPE=1 -DSK_ALLOW_OVER_32K_BITMAPS $
+    -DSK_ALLOW_STATIC_GLOBAL_INITIALIZERS=0 $
+    -DSK_SUPPORT_INT_SRCRECT_DRAWBITMAPRECT -DSK_IGNORE_QUAD_STROKE_FIX $
+    -DSK_IGNORE_TREAT_AS_SPRITE -DSK_IGNORE_TRANS_CLAMP_FIX $
+    -DSK_IGNORE_FAST_SCALEMATRIX_INVERT -DSK_GAMMA_EXPONENT=1.2 $
+    -DSK_GAMMA_CONTRAST=0.2 '-DSK_DEFAULT_FONT_CACHE_LIMIT=(20*1024*1024)' $
+    -D__ARM_ARCH__=7 -D__ARM_HAVE_NEON -DSK_DISABLE_DITHER_32BIT_GRADIENT $
+    -DSK_DISABLE_DASHING_OPTIMIZATION -DU_USING_ICU_NAMESPACE=0 $
+    -DU_STATIC_IMPLEMENTATION -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = -I../../third_party/icu/public/common -I../.. $
+    -I../../skia/config -I../../third_party/skia/include/config $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/images $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils $
+    -I../../third_party/skia/src/core -I../../third_party/skia/src/image $
+    -I../../third_party/skia/src/sfnt -I../../third_party/skia/src/utils $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/gpu/gl $
+    -I../../third_party/skia/src/gpu -I../../third_party/zlib
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -Wno-unused -Wno-unused-function $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -pthread $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 -pthread $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gtk-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/gtk-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gio-unix-2.0/ $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gdk-pixbuf-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 $
+    -Wno-format -Wno-unused-result -march=armv7-a -mtune=cortex-a8 $
+    -mfloat-abi=hard -mfpu=neon -O2 -fno-ident -fdata-sections $
+    -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wno-deprecated -Wno-abi
+
+build obj/third_party/skia/src/core/skia.skflate.o: cxx $
+    ../../third_party/skia/src/core/SkFlate.cpp
+build obj/third_party/skia/src/images/skia.bmpdecoderhelper.o: cxx $
+    ../../third_party/skia/src/images/bmpdecoderhelper.cpp
+build obj/third_party/skia/src/images/skia.skimagedecoder.o: cxx $
+    ../../third_party/skia/src/images/SkImageDecoder.cpp
+build obj/third_party/skia/src/images/skia.skimagedecoder_factory.o: cxx $
+    ../../third_party/skia/src/images/SkImageDecoder_Factory.cpp
+build obj/third_party/skia/src/images/skia.skscaledbitmapsampler.o: cxx $
+    ../../third_party/skia/src/images/SkScaledBitmapSampler.cpp
+build obj/third_party/skia/src/pdf/skia.skpdfcatalog.o: cxx $
+    ../../third_party/skia/src/pdf/SkPDFCatalog.cpp
+build obj/third_party/skia/src/pdf/skia.skpdfdevice.o: cxx $
+    ../../third_party/skia/src/pdf/SkPDFDevice.cpp
+build obj/third_party/skia/src/pdf/skia.skpdfdocument.o: cxx $
+    ../../third_party/skia/src/pdf/SkPDFDocument.cpp
+build obj/third_party/skia/src/pdf/skia.skpdffont.o: cxx $
+    ../../third_party/skia/src/pdf/SkPDFFont.cpp
+build obj/third_party/skia/src/pdf/skia.skpdfformxobject.o: cxx $
+    ../../third_party/skia/src/pdf/SkPDFFormXObject.cpp
+build obj/third_party/skia/src/pdf/skia.skpdfgraphicstate.o: cxx $
+    ../../third_party/skia/src/pdf/SkPDFGraphicState.cpp
+build obj/third_party/skia/src/pdf/skia.skpdfimage.o: cxx $
+    ../../third_party/skia/src/pdf/SkPDFImage.cpp
+build obj/third_party/skia/src/pdf/skia.skpdfpage.o: cxx $
+    ../../third_party/skia/src/pdf/SkPDFPage.cpp
+build obj/third_party/skia/src/pdf/skia.skpdfshader.o: cxx $
+    ../../third_party/skia/src/pdf/SkPDFShader.cpp
+build obj/third_party/skia/src/pdf/skia.skpdfstream.o: cxx $
+    ../../third_party/skia/src/pdf/SkPDFStream.cpp
+build obj/third_party/skia/src/pdf/skia.skpdftypes.o: cxx $
+    ../../third_party/skia/src/pdf/SkPDFTypes.cpp
+build obj/third_party/skia/src/pdf/skia.skpdfutils.o: cxx $
+    ../../third_party/skia/src/pdf/SkPDFUtils.cpp
+build obj/third_party/skia/src/ports/skia.skfontdescriptor.o: cxx $
+    ../../third_party/skia/src/ports/SkFontDescriptor.cpp
+build obj/third_party/skia/src/ports/skia.skfonthost_freetype.o: cxx $
+    ../../third_party/skia/src/ports/SkFontHost_FreeType.cpp
+build obj/third_party/skia/src/ports/skia.skfonthost_freetype_common.o: cxx $
+    ../../third_party/skia/src/ports/SkFontHost_FreeType_common.cpp
+build obj/third_party/skia/src/ports/skia.skfonthost_tables.o: cxx $
+    ../../third_party/skia/src/ports/SkFontHost_tables.cpp
+build obj/third_party/skia/src/ports/skia.skfonthost_sandbox_none.o: cxx $
+    ../../third_party/skia/src/ports/SkFontHost_sandbox_none.cpp
+build $
+    obj/third_party/skia/src/ports/skia.skglobalinitialization_chromium.o: $
+    cxx ../../third_party/skia/src/ports/SkGlobalInitialization_chromium.cpp
+build obj/third_party/skia/src/ports/skia.skosfile_stdio.o: cxx $
+    ../../third_party/skia/src/ports/SkOSFile_stdio.cpp
+build obj/third_party/skia/src/ports/skia.skthread_pthread.o: cxx $
+    ../../third_party/skia/src/ports/SkThread_pthread.cpp
+build obj/third_party/skia/src/ports/skia.sktime_unix.o: cxx $
+    ../../third_party/skia/src/ports/SkTime_Unix.cpp
+build obj/third_party/skia/src/sfnt/skia.skotutils.o: cxx $
+    ../../third_party/skia/src/sfnt/SkOTUtils.cpp
+build obj/third_party/skia/src/utils/skia.skbase64.o: cxx $
+    ../../third_party/skia/src/utils/SkBase64.cpp
+build obj/third_party/skia/src/utils/skia.skbitset.o: cxx $
+    ../../third_party/skia/src/utils/SkBitSet.cpp
+build obj/third_party/skia/src/utils/skia.skdeferredcanvas.o: cxx $
+    ../../third_party/skia/src/utils/SkDeferredCanvas.cpp
+build obj/third_party/skia/src/utils/skia.skmatrix44.o: cxx $
+    ../../third_party/skia/src/utils/SkMatrix44.cpp
+build obj/third_party/skia/src/utils/skia.sknullcanvas.o: cxx $
+    ../../third_party/skia/src/utils/SkNullCanvas.cpp
+build obj/third_party/skia/src/utils/skia.sknwaycanvas.o: cxx $
+    ../../third_party/skia/src/utils/SkNWayCanvas.cpp
+build obj/third_party/skia/src/utils/skia.skpictureutils.o: cxx $
+    ../../third_party/skia/src/utils/SkPictureUtils.cpp
+build obj/skia/ext/skia.bitmap_platform_device_linux.o: cxx $
+    ../../skia/ext/bitmap_platform_device_linux.cc
+build obj/skia/ext/skia.convolver.o: cxx ../../skia/ext/convolver.cc
+build obj/skia/ext/skia.google_logging.o: cxx ../../skia/ext/google_logging.cc
+build obj/skia/ext/skia.image_operations.o: cxx $
+    ../../skia/ext/image_operations.cc
+build obj/skia/ext/skia.lazy_pixel_ref.o: cxx ../../skia/ext/lazy_pixel_ref.cc
+build obj/skia/ext/skia.platform_canvas.o: cxx $
+    ../../skia/ext/platform_canvas.cc
+build obj/skia/ext/skia.platform_device.o: cxx $
+    ../../skia/ext/platform_device.cc
+build obj/skia/ext/skia.platform_device_linux.o: cxx $
+    ../../skia/ext/platform_device_linux.cc
+build obj/skia/ext/skia.skmemory_new_handler.o: cxx $
+    ../../skia/ext/SkMemory_new_handler.cpp
+build obj/skia/ext/skia.vector_canvas.o: cxx ../../skia/ext/vector_canvas.cc
+build obj/skia/ext/skia.vector_platform_device_skia.o: cxx $
+    ../../skia/ext/vector_platform_device_skia.cc
+build obj/third_party/skia/src/core/skia.sk64.o: cxx $
+    ../../third_party/skia/src/core/Sk64.cpp
+build obj/third_party/skia/src/core/skia.skaaclip.o: cxx $
+    ../../third_party/skia/src/core/SkAAClip.cpp
+build obj/third_party/skia/src/core/skia.skannotation.o: cxx $
+    ../../third_party/skia/src/core/SkAnnotation.cpp
+build obj/third_party/skia/src/core/skia.skadvancedtypefacemetrics.o: cxx $
+    ../../third_party/skia/src/core/SkAdvancedTypefaceMetrics.cpp
+build obj/third_party/skia/src/core/skia.skalpharuns.o: cxx $
+    ../../third_party/skia/src/core/SkAlphaRuns.cpp
+build obj/third_party/skia/src/core/skia.skbboxhierarchy.o: cxx $
+    ../../third_party/skia/src/core/SkBBoxHierarchy.cpp
+build obj/third_party/skia/src/core/skia.skbboxrecord.o: cxx $
+    ../../third_party/skia/src/core/SkBBoxRecord.cpp
+build obj/third_party/skia/src/core/skia.skbboxhierarchyrecord.o: cxx $
+    ../../third_party/skia/src/core/SkBBoxHierarchyRecord.cpp
+build obj/third_party/skia/src/core/skia.skbitmap.o: cxx $
+    ../../third_party/skia/src/core/SkBitmap.cpp
+build obj/third_party/skia/src/core/skia.skbitmapheap.o: cxx $
+    ../../third_party/skia/src/core/SkBitmapHeap.cpp
+build obj/third_party/skia/src/core/skia.skbitmapprocshader.o: cxx $
+    ../../third_party/skia/src/core/SkBitmapProcShader.cpp
+build obj/third_party/skia/src/core/skia.skbitmapprocstate.o: cxx $
+    ../../third_party/skia/src/core/SkBitmapProcState.cpp
+build obj/third_party/skia/src/core/skia.skbitmapprocstate_matrixprocs.o: $
+    cxx ../../third_party/skia/src/core/SkBitmapProcState_matrixProcs.cpp
+build obj/third_party/skia/src/core/skia.skbitmapsampler.o: cxx $
+    ../../third_party/skia/src/core/SkBitmapSampler.cpp
+build obj/third_party/skia/src/core/skia.skbitmap_scroll.o: cxx $
+    ../../third_party/skia/src/core/SkBitmap_scroll.cpp
+build obj/third_party/skia/src/core/skia.skblitmask_d32.o: cxx $
+    ../../third_party/skia/src/core/SkBlitMask_D32.cpp
+build obj/third_party/skia/src/core/skia.skblitrow_d16.o: cxx $
+    ../../third_party/skia/src/core/SkBlitRow_D16.cpp
+build obj/third_party/skia/src/core/skia.skblitrow_d32.o: cxx $
+    ../../third_party/skia/src/core/SkBlitRow_D32.cpp
+build obj/third_party/skia/src/core/skia.skblitrow_d4444.o: cxx $
+    ../../third_party/skia/src/core/SkBlitRow_D4444.cpp
+build obj/third_party/skia/src/core/skia.skblitter.o: cxx $
+    ../../third_party/skia/src/core/SkBlitter.cpp
+build obj/third_party/skia/src/core/skia.skblitter_4444.o: cxx $
+    ../../third_party/skia/src/core/SkBlitter_4444.cpp
+build obj/third_party/skia/src/core/skia.skblitter_a1.o: cxx $
+    ../../third_party/skia/src/core/SkBlitter_A1.cpp
+build obj/third_party/skia/src/core/skia.skblitter_a8.o: cxx $
+    ../../third_party/skia/src/core/SkBlitter_A8.cpp
+build obj/third_party/skia/src/core/skia.skblitter_argb32.o: cxx $
+    ../../third_party/skia/src/core/SkBlitter_ARGB32.cpp
+build obj/third_party/skia/src/core/skia.skblitter_rgb16.o: cxx $
+    ../../third_party/skia/src/core/SkBlitter_RGB16.cpp
+build obj/third_party/skia/src/core/skia.skblitter_sprite.o: cxx $
+    ../../third_party/skia/src/core/SkBlitter_Sprite.cpp
+build obj/third_party/skia/src/core/skia.skbuffer.o: cxx $
+    ../../third_party/skia/src/core/SkBuffer.cpp
+build obj/third_party/skia/src/core/skia.skcanvas.o: cxx $
+    ../../third_party/skia/src/core/SkCanvas.cpp
+build obj/third_party/skia/src/core/skia.skchunkalloc.o: cxx $
+    ../../third_party/skia/src/core/SkChunkAlloc.cpp
+build obj/third_party/skia/src/core/skia.skclipstack.o: cxx $
+    ../../third_party/skia/src/core/SkClipStack.cpp
+build obj/third_party/skia/src/core/skia.skcolor.o: cxx $
+    ../../third_party/skia/src/core/SkColor.cpp
+build obj/third_party/skia/src/core/skia.skcolorfilter.o: cxx $
+    ../../third_party/skia/src/core/SkColorFilter.cpp
+build obj/third_party/skia/src/core/skia.skcolortable.o: cxx $
+    ../../third_party/skia/src/core/SkColorTable.cpp
+build obj/third_party/skia/src/core/skia.skcomposeshader.o: cxx $
+    ../../third_party/skia/src/core/SkComposeShader.cpp
+build obj/third_party/skia/src/core/skia.skconcavetotriangles.o: cxx $
+    ../../third_party/skia/src/core/SkConcaveToTriangles.cpp
+build obj/third_party/skia/src/core/skia.skconfig8888.o: cxx $
+    ../../third_party/skia/src/core/SkConfig8888.cpp
+build obj/third_party/skia/src/core/skia.skcordic.o: cxx $
+    ../../third_party/skia/src/core/SkCordic.cpp
+build obj/third_party/skia/src/core/skia.skcubicclipper.o: cxx $
+    ../../third_party/skia/src/core/SkCubicClipper.cpp
+build obj/third_party/skia/src/core/skia.skdata.o: cxx $
+    ../../third_party/skia/src/core/SkData.cpp
+build obj/third_party/skia/src/core/skia.skdebug.o: cxx $
+    ../../third_party/skia/src/core/SkDebug.cpp
+build obj/third_party/skia/src/core/skia.skdeque.o: cxx $
+    ../../third_party/skia/src/core/SkDeque.cpp
+build obj/third_party/skia/src/core/skia.skdevice.o: cxx $
+    ../../third_party/skia/src/core/SkDevice.cpp
+build obj/third_party/skia/src/core/skia.skdeviceprofile.o: cxx $
+    ../../third_party/skia/src/core/SkDeviceProfile.cpp
+build obj/third_party/skia/src/core/skia.skdither.o: cxx $
+    ../../third_party/skia/src/core/SkDither.cpp
+build obj/third_party/skia/src/core/skia.skdraw.o: cxx $
+    ../../third_party/skia/src/core/SkDraw.cpp
+build obj/third_party/skia/src/core/skia.skedgebuilder.o: cxx $
+    ../../third_party/skia/src/core/SkEdgeBuilder.cpp
+build obj/third_party/skia/src/core/skia.skedgeclipper.o: cxx $
+    ../../third_party/skia/src/core/SkEdgeClipper.cpp
+build obj/third_party/skia/src/core/skia.skedge.o: cxx $
+    ../../third_party/skia/src/core/SkEdge.cpp
+build obj/third_party/skia/src/core/skia.skfilterproc.o: cxx $
+    ../../third_party/skia/src/core/SkFilterProc.cpp
+build obj/third_party/skia/src/core/skia.skflattenable.o: cxx $
+    ../../third_party/skia/src/core/SkFlattenable.cpp
+build obj/third_party/skia/src/core/skia.skflattenablebuffers.o: cxx $
+    ../../third_party/skia/src/core/SkFlattenableBuffers.cpp
+build obj/third_party/skia/src/core/skia.skfloat.o: cxx $
+    ../../third_party/skia/src/core/SkFloat.cpp
+build obj/third_party/skia/src/core/skia.skfloatbits.o: cxx $
+    ../../third_party/skia/src/core/SkFloatBits.cpp
+build obj/third_party/skia/src/core/skia.skfonthost.o: cxx $
+    ../../third_party/skia/src/core/SkFontHost.cpp
+build obj/third_party/skia/src/core/skia.skgeometry.o: cxx $
+    ../../third_party/skia/src/core/SkGeometry.cpp
+build obj/third_party/skia/src/core/skia.skglyphcache.o: cxx $
+    ../../third_party/skia/src/core/SkGlyphCache.cpp
+build obj/third_party/skia/src/core/skia.skgraphics.o: cxx $
+    ../../third_party/skia/src/core/SkGraphics.cpp
+build obj/third_party/skia/src/core/skia.skinstcnt.o: cxx $
+    ../../third_party/skia/src/core/SkInstCnt.cpp
+build obj/third_party/skia/src/core/skia.skimagefilter.o: cxx $
+    ../../third_party/skia/src/core/SkImageFilter.cpp
+build obj/third_party/skia/src/core/skia.sklineclipper.o: cxx $
+    ../../third_party/skia/src/core/SkLineClipper.cpp
+build obj/third_party/skia/src/core/skia.skmallocpixelref.o: cxx $
+    ../../third_party/skia/src/core/SkMallocPixelRef.cpp
+build obj/third_party/skia/src/core/skia.skmask.o: cxx $
+    ../../third_party/skia/src/core/SkMask.cpp
+build obj/third_party/skia/src/core/skia.skmaskfilter.o: cxx $
+    ../../third_party/skia/src/core/SkMaskFilter.cpp
+build obj/third_party/skia/src/core/skia.skmaskgamma.o: cxx $
+    ../../third_party/skia/src/core/SkMaskGamma.cpp
+build obj/third_party/skia/src/core/skia.skmath.o: cxx $
+    ../../third_party/skia/src/core/SkMath.cpp
+build obj/third_party/skia/src/core/skia.skmatrix.o: cxx $
+    ../../third_party/skia/src/core/SkMatrix.cpp
+build obj/third_party/skia/src/core/skia.skmetadata.o: cxx $
+    ../../third_party/skia/src/core/SkMetaData.cpp
+build obj/third_party/skia/src/core/skia.skmmapstream.o: cxx $
+    ../../third_party/skia/src/core/SkMMapStream.cpp
+build obj/third_party/skia/src/core/skia.skorderedreadbuffer.o: cxx $
+    ../../third_party/skia/src/core/SkOrderedReadBuffer.cpp
+build obj/third_party/skia/src/core/skia.skorderedwritebuffer.o: cxx $
+    ../../third_party/skia/src/core/SkOrderedWriteBuffer.cpp
+build obj/third_party/skia/src/core/skia.skpackbits.o: cxx $
+    ../../third_party/skia/src/core/SkPackBits.cpp
+build obj/third_party/skia/src/core/skia.skpaint.o: cxx $
+    ../../third_party/skia/src/core/SkPaint.cpp
+build obj/third_party/skia/src/core/skia.skpath.o: cxx $
+    ../../third_party/skia/src/core/SkPath.cpp
+build obj/third_party/skia/src/core/skia.skpatheffect.o: cxx $
+    ../../third_party/skia/src/core/SkPathEffect.cpp
+build obj/third_party/skia/src/core/skia.skpathheap.o: cxx $
+    ../../third_party/skia/src/core/SkPathHeap.cpp
+build obj/third_party/skia/src/core/skia.skpathmeasure.o: cxx $
+    ../../third_party/skia/src/core/SkPathMeasure.cpp
+build obj/third_party/skia/src/core/skia.skpicture.o: cxx $
+    ../../third_party/skia/src/core/SkPicture.cpp
+build obj/third_party/skia/src/core/skia.skpictureflat.o: cxx $
+    ../../third_party/skia/src/core/SkPictureFlat.cpp
+build obj/third_party/skia/src/core/skia.skpictureplayback.o: cxx $
+    ../../third_party/skia/src/core/SkPicturePlayback.cpp
+build obj/third_party/skia/src/core/skia.skpicturerecord.o: cxx $
+    ../../third_party/skia/src/core/SkPictureRecord.cpp
+build obj/third_party/skia/src/core/skia.skpicturestatetree.o: cxx $
+    ../../third_party/skia/src/core/SkPictureStateTree.cpp
+build obj/third_party/skia/src/core/skia.skpixelref.o: cxx $
+    ../../third_party/skia/src/core/SkPixelRef.cpp
+build obj/third_party/skia/src/core/skia.skpoint.o: cxx $
+    ../../third_party/skia/src/core/SkPoint.cpp
+build obj/third_party/skia/src/core/skia.skprocspriteblitter.o: cxx $
+    ../../third_party/skia/src/core/SkProcSpriteBlitter.cpp
+build obj/third_party/skia/src/core/skia.skptrrecorder.o: cxx $
+    ../../third_party/skia/src/core/SkPtrRecorder.cpp
+build obj/third_party/skia/src/core/skia.skquadclipper.o: cxx $
+    ../../third_party/skia/src/core/SkQuadClipper.cpp
+build obj/third_party/skia/src/core/skia.skrasterclip.o: cxx $
+    ../../third_party/skia/src/core/SkRasterClip.cpp
+build obj/third_party/skia/src/core/skia.skrasterizer.o: cxx $
+    ../../third_party/skia/src/core/SkRasterizer.cpp
+build obj/third_party/skia/src/core/skia.skrect.o: cxx $
+    ../../third_party/skia/src/core/SkRect.cpp
+build obj/third_party/skia/src/core/skia.skrefcnt.o: cxx $
+    ../../third_party/skia/src/core/SkRefCnt.cpp
+build obj/third_party/skia/src/core/skia.skrefdict.o: cxx $
+    ../../third_party/skia/src/core/SkRefDict.cpp
+build obj/third_party/skia/src/core/skia.skregion.o: cxx $
+    ../../third_party/skia/src/core/SkRegion.cpp
+build obj/third_party/skia/src/core/skia.skregion_path.o: cxx $
+    ../../third_party/skia/src/core/SkRegion_path.cpp
+build obj/third_party/skia/src/core/skia.skrrect.o: cxx $
+    ../../third_party/skia/src/core/SkRRect.cpp
+build obj/third_party/skia/src/core/skia.skrtree.o: cxx $
+    ../../third_party/skia/src/core/SkRTree.cpp
+build obj/third_party/skia/src/core/skia.skscalar.o: cxx $
+    ../../third_party/skia/src/core/SkScalar.cpp
+build obj/third_party/skia/src/core/skia.skscalercontext.o: cxx $
+    ../../third_party/skia/src/core/SkScalerContext.cpp
+build obj/third_party/skia/src/core/skia.skscan.o: cxx $
+    ../../third_party/skia/src/core/SkScan.cpp
+build obj/third_party/skia/src/core/skia.skscan_antipath.o: cxx $
+    ../../third_party/skia/src/core/SkScan_AntiPath.cpp
+build obj/third_party/skia/src/core/skia.skscan_antihair.o: cxx $
+    ../../third_party/skia/src/core/SkScan_Antihair.cpp
+build obj/third_party/skia/src/core/skia.skscan_hairline.o: cxx $
+    ../../third_party/skia/src/core/SkScan_Hairline.cpp
+build obj/third_party/skia/src/core/skia.skscan_path.o: cxx $
+    ../../third_party/skia/src/core/SkScan_Path.cpp
+build obj/third_party/skia/src/core/skia.skshader.o: cxx $
+    ../../third_party/skia/src/core/SkShader.cpp
+build obj/third_party/skia/src/core/skia.skspriteblitter_argb32.o: cxx $
+    ../../third_party/skia/src/core/SkSpriteBlitter_ARGB32.cpp
+build obj/third_party/skia/src/core/skia.skspriteblitter_rgb16.o: cxx $
+    ../../third_party/skia/src/core/SkSpriteBlitter_RGB16.cpp
+build obj/third_party/skia/src/core/skia.skstream.o: cxx $
+    ../../third_party/skia/src/core/SkStream.cpp
+build obj/third_party/skia/src/core/skia.skstring.o: cxx $
+    ../../third_party/skia/src/core/SkString.cpp
+build obj/third_party/skia/src/core/skia.skstroke.o: cxx $
+    ../../third_party/skia/src/core/SkStroke.cpp
+build obj/third_party/skia/src/core/skia.skstrokerec.o: cxx $
+    ../../third_party/skia/src/core/SkStrokeRec.cpp
+build obj/third_party/skia/src/core/skia.skstrokerpriv.o: cxx $
+    ../../third_party/skia/src/core/SkStrokerPriv.cpp
+build obj/third_party/skia/src/core/skia.sktilegrid.o: cxx $
+    ../../third_party/skia/src/core/SkTileGrid.cpp
+build obj/third_party/skia/src/core/skia.sktilegridpicture.o: cxx $
+    ../../third_party/skia/src/core/SkTileGridPicture.cpp
+build obj/third_party/skia/src/core/skia.sktls.o: cxx $
+    ../../third_party/skia/src/core/SkTLS.cpp
+build obj/third_party/skia/src/core/skia.sktsearch.o: cxx $
+    ../../third_party/skia/src/core/SkTSearch.cpp
+build obj/third_party/skia/src/core/skia.sktypeface.o: cxx $
+    ../../third_party/skia/src/core/SkTypeface.cpp
+build obj/third_party/skia/src/core/skia.sktypefacecache.o: cxx $
+    ../../third_party/skia/src/core/SkTypefaceCache.cpp
+build obj/third_party/skia/src/core/skia.skunpremultiply.o: cxx $
+    ../../third_party/skia/src/core/SkUnPreMultiply.cpp
+build obj/third_party/skia/src/core/skia.skutils.o: cxx $
+    ../../third_party/skia/src/core/SkUtils.cpp
+build obj/third_party/skia/src/core/skia.skwriter32.o: cxx $
+    ../../third_party/skia/src/core/SkWriter32.cpp
+build obj/third_party/skia/src/core/skia.skxfermode.o: cxx $
+    ../../third_party/skia/src/core/SkXfermode.cpp
+build obj/third_party/skia/src/image/skia.skdatapixelref.o: cxx $
+    ../../third_party/skia/src/image/SkDataPixelRef.cpp
+build obj/third_party/skia/src/image/skia.skimage.o: cxx $
+    ../../third_party/skia/src/image/SkImage.cpp
+build obj/third_party/skia/src/image/skia.skimagepriv.o: cxx $
+    ../../third_party/skia/src/image/SkImagePriv.cpp
+build obj/third_party/skia/src/image/skia.skimage_codec.o: cxx $
+    ../../third_party/skia/src/image/SkImage_Codec.cpp
+build obj/third_party/skia/src/image/skia.skimage_picture.o: cxx $
+    ../../third_party/skia/src/image/SkImage_Picture.cpp
+build obj/third_party/skia/src/image/skia.skimage_raster.o: cxx $
+    ../../third_party/skia/src/image/SkImage_Raster.cpp
+build obj/third_party/skia/src/image/skia.sksurface.o: cxx $
+    ../../third_party/skia/src/image/SkSurface.cpp
+build obj/third_party/skia/src/image/skia.sksurface_picture.o: cxx $
+    ../../third_party/skia/src/image/SkSurface_Picture.cpp
+build obj/third_party/skia/src/image/skia.sksurface_raster.o: cxx $
+    ../../third_party/skia/src/image/SkSurface_Raster.cpp
+build obj/third_party/skia/src/pipe/skia.skgpiperead.o: cxx $
+    ../../third_party/skia/src/pipe/SkGPipeRead.cpp
+build obj/third_party/skia/src/pipe/skia.skgpipewrite.o: cxx $
+    ../../third_party/skia/src/pipe/SkGPipeWrite.cpp
+build obj/third_party/skia/src/effects/skia.sk1dpatheffect.o: cxx $
+    ../../third_party/skia/src/effects/Sk1DPathEffect.cpp
+build obj/third_party/skia/src/effects/skia.sk2dpatheffect.o: cxx $
+    ../../third_party/skia/src/effects/Sk2DPathEffect.cpp
+build obj/third_party/skia/src/effects/skia.skavoidxfermode.o: cxx $
+    ../../third_party/skia/src/effects/SkAvoidXfermode.cpp
+build obj/third_party/skia/src/effects/skia.skarithmeticmode.o: cxx $
+    ../../third_party/skia/src/effects/SkArithmeticMode.cpp
+build obj/third_party/skia/src/effects/skia.skbitmapsource.o: cxx $
+    ../../third_party/skia/src/effects/SkBitmapSource.cpp
+build obj/third_party/skia/src/effects/skia.skblendimagefilter.o: cxx $
+    ../../third_party/skia/src/effects/SkBlendImageFilter.cpp
+build obj/third_party/skia/src/effects/skia.skblurdrawlooper.o: cxx $
+    ../../third_party/skia/src/effects/SkBlurDrawLooper.cpp
+build obj/third_party/skia/src/effects/skia.skblurmask.o: cxx $
+    ../../third_party/skia/src/effects/SkBlurMask.cpp
+build obj/third_party/skia/src/effects/skia.skblurimagefilter.o: cxx $
+    ../../third_party/skia/src/effects/SkBlurImageFilter.cpp
+build obj/third_party/skia/src/effects/skia.skblurmaskfilter.o: cxx $
+    ../../third_party/skia/src/effects/SkBlurMaskFilter.cpp
+build obj/third_party/skia/src/effects/skia.skcolorfilters.o: cxx $
+    ../../third_party/skia/src/effects/SkColorFilters.cpp
+build obj/third_party/skia/src/effects/skia.skcolorfilterimagefilter.o: cxx $
+    ../../third_party/skia/src/effects/SkColorFilterImageFilter.cpp
+build obj/third_party/skia/src/effects/skia.skcolormatrix.o: cxx $
+    ../../third_party/skia/src/effects/SkColorMatrix.cpp
+build obj/third_party/skia/src/effects/skia.skcolormatrixfilter.o: cxx $
+    ../../third_party/skia/src/effects/SkColorMatrixFilter.cpp
+build obj/third_party/skia/src/effects/skia.skcornerpatheffect.o: cxx $
+    ../../third_party/skia/src/effects/SkCornerPathEffect.cpp
+build obj/third_party/skia/src/effects/skia.skdashpatheffect.o: cxx $
+    ../../third_party/skia/src/effects/SkDashPathEffect.cpp
+build obj/third_party/skia/src/effects/skia.skdiscretepatheffect.o: cxx $
+    ../../third_party/skia/src/effects/SkDiscretePathEffect.cpp
+build obj/third_party/skia/src/effects/skia.skembossmask.o: cxx $
+    ../../third_party/skia/src/effects/SkEmbossMask.cpp
+build obj/third_party/skia/src/effects/skia.skembossmaskfilter.o: cxx $
+    ../../third_party/skia/src/effects/SkEmbossMaskFilter.cpp
+build obj/third_party/skia/src/effects/skia.skkernel33maskfilter.o: cxx $
+    ../../third_party/skia/src/effects/SkKernel33MaskFilter.cpp
+build obj/third_party/skia/src/effects/skia.sklayerdrawlooper.o: cxx $
+    ../../third_party/skia/src/effects/SkLayerDrawLooper.cpp
+build obj/third_party/skia/src/effects/skia.sklayerrasterizer.o: cxx $
+    ../../third_party/skia/src/effects/SkLayerRasterizer.cpp
+build obj/third_party/skia/src/effects/skia.sklightingimagefilter.o: cxx $
+    ../../third_party/skia/src/effects/SkLightingImageFilter.cpp
+build $
+    obj/third_party/skia/src/effects/skia.skmatrixconvolutionimagefilter.o: $
+    cxx ../../third_party/skia/src/effects/SkMatrixConvolutionImageFilter.cpp
+build obj/third_party/skia/src/effects/skia.skmergeimagefilter.o: cxx $
+    ../../third_party/skia/src/effects/SkMergeImageFilter.cpp
+build obj/third_party/skia/src/effects/skia.skmorphologyimagefilter.o: cxx $
+    ../../third_party/skia/src/effects/SkMorphologyImageFilter.cpp
+build obj/third_party/skia/src/effects/skia.skoffsetimagefilter.o: cxx $
+    ../../third_party/skia/src/effects/SkOffsetImageFilter.cpp
+build obj/third_party/skia/src/effects/skia.skpaintflagsdrawfilter.o: cxx $
+    ../../third_party/skia/src/effects/SkPaintFlagsDrawFilter.cpp
+build obj/third_party/skia/src/effects/skia.skpixelxorxfermode.o: cxx $
+    ../../third_party/skia/src/effects/SkPixelXorXfermode.cpp
+build obj/third_party/skia/src/effects/skia.skporterduff.o: cxx $
+    ../../third_party/skia/src/effects/SkPorterDuff.cpp
+build obj/third_party/skia/src/effects/skia.sksingleinputimagefilter.o: cxx $
+    ../../third_party/skia/src/effects/SkSingleInputImageFilter.cpp
+build obj/third_party/skia/src/effects/skia.skstipplemaskfilter.o: cxx $
+    ../../third_party/skia/src/effects/SkStippleMaskFilter.cpp
+build obj/third_party/skia/src/effects/skia.sktablecolorfilter.o: cxx $
+    ../../third_party/skia/src/effects/SkTableColorFilter.cpp
+build obj/third_party/skia/src/effects/skia.sktablemaskfilter.o: cxx $
+    ../../third_party/skia/src/effects/SkTableMaskFilter.cpp
+build obj/third_party/skia/src/effects/skia.sktestimagefilters.o: cxx $
+    ../../third_party/skia/src/effects/SkTestImageFilters.cpp
+build obj/third_party/skia/src/effects/skia.sktransparentshader.o: cxx $
+    ../../third_party/skia/src/effects/SkTransparentShader.cpp
+build obj/third_party/skia/src/effects/skia.skmagnifierimagefilter.o: cxx $
+    ../../third_party/skia/src/effects/SkMagnifierImageFilter.cpp
+build obj/third_party/skia/src/effects/gradients/skia.skbitmapcache.o: cxx $
+    ../../third_party/skia/src/effects/gradients/SkBitmapCache.cpp
+build obj/third_party/skia/src/effects/gradients/skia.skclamprange.o: cxx $
+    ../../third_party/skia/src/effects/gradients/SkClampRange.cpp
+build obj/third_party/skia/src/effects/gradients/skia.skgradientshader.o: $
+    cxx ../../third_party/skia/src/effects/gradients/SkGradientShader.cpp
+build obj/third_party/skia/src/effects/gradients/skia.sklineargradient.o: $
+    cxx ../../third_party/skia/src/effects/gradients/SkLinearGradient.cpp
+build obj/third_party/skia/src/effects/gradients/skia.skradialgradient.o: $
+    cxx ../../third_party/skia/src/effects/gradients/SkRadialGradient.cpp
+build $
+    obj/third_party/skia/src/effects/gradients/skia.sktwopointradialgradient.o: $
+    cxx $
+    ../../third_party/skia/src/effects/gradients/SkTwoPointRadialGradient.cpp
+build $
+    obj/third_party/skia/src/effects/gradients/skia.sktwopointconicalgradient.o: $
+    cxx $
+    ../../third_party/skia/src/effects/gradients/SkTwoPointConicalGradient.cpp
+build obj/third_party/skia/src/effects/gradients/skia.sksweepgradient.o: $
+    cxx ../../third_party/skia/src/effects/gradients/SkSweepGradient.cpp
+build obj/third_party/skia/src/gpu/skia.graahairlinepathrenderer.o: cxx $
+    ../../third_party/skia/src/gpu/GrAAHairLinePathRenderer.cpp
+build obj/third_party/skia/src/gpu/skia.graaconvexpathrenderer.o: cxx $
+    ../../third_party/skia/src/gpu/GrAAConvexPathRenderer.cpp
+build obj/third_party/skia/src/gpu/skia.graarectrenderer.o: cxx $
+    ../../third_party/skia/src/gpu/GrAARectRenderer.cpp
+build obj/third_party/skia/src/gpu/skia.graddpathrenderers_default.o: cxx $
+    ../../third_party/skia/src/gpu/GrAddPathRenderers_default.cpp
+build obj/third_party/skia/src/gpu/skia.grallocpool.o: cxx $
+    ../../third_party/skia/src/gpu/GrAllocPool.cpp
+build obj/third_party/skia/src/gpu/skia.gratlas.o: cxx $
+    ../../third_party/skia/src/gpu/GrAtlas.cpp
+build obj/third_party/skia/src/gpu/skia.grbufferallocpool.o: cxx $
+    ../../third_party/skia/src/gpu/GrBufferAllocPool.cpp
+build obj/third_party/skia/src/gpu/skia.grcacheid.o: cxx $
+    ../../third_party/skia/src/gpu/GrCacheID.cpp
+build obj/third_party/skia/src/gpu/skia.grclipdata.o: cxx $
+    ../../third_party/skia/src/gpu/GrClipData.cpp
+build obj/third_party/skia/src/gpu/skia.grcontext.o: cxx $
+    ../../third_party/skia/src/gpu/GrContext.cpp
+build obj/third_party/skia/src/gpu/skia.grdefaultpathrenderer.o: cxx $
+    ../../third_party/skia/src/gpu/GrDefaultPathRenderer.cpp
+build obj/third_party/skia/src/gpu/skia.grdrawstate.o: cxx $
+    ../../third_party/skia/src/gpu/GrDrawState.cpp
+build obj/third_party/skia/src/gpu/skia.grdrawtarget.o: cxx $
+    ../../third_party/skia/src/gpu/GrDrawTarget.cpp
+build obj/third_party/skia/src/gpu/skia.greffect.o: cxx $
+    ../../third_party/skia/src/gpu/GrEffect.cpp
+build obj/third_party/skia/src/gpu/skia.grgeometrybuffer.o: cxx $
+    ../../third_party/skia/src/gpu/GrGeometryBuffer.cpp
+build obj/third_party/skia/src/gpu/skia.grclipmaskcache.o: cxx $
+    ../../third_party/skia/src/gpu/GrClipMaskCache.cpp
+build obj/third_party/skia/src/gpu/skia.grclipmaskmanager.o: cxx $
+    ../../third_party/skia/src/gpu/GrClipMaskManager.cpp
+build obj/third_party/skia/src/gpu/skia.grgpu.o: cxx $
+    ../../third_party/skia/src/gpu/GrGpu.cpp
+build obj/third_party/skia/src/gpu/skia.grgpufactory.o: cxx $
+    ../../third_party/skia/src/gpu/GrGpuFactory.cpp
+build obj/third_party/skia/src/gpu/skia.grinorderdrawbuffer.o: cxx $
+    ../../third_party/skia/src/gpu/GrInOrderDrawBuffer.cpp
+build obj/third_party/skia/src/gpu/skia.grmemory.o: cxx $
+    ../../third_party/skia/src/gpu/GrMemory.cpp
+build obj/third_party/skia/src/gpu/skia.grmemorypool.o: cxx $
+    ../../third_party/skia/src/gpu/GrMemoryPool.cpp
+build obj/third_party/skia/src/gpu/skia.grpath.o: cxx $
+    ../../third_party/skia/src/gpu/GrPath.cpp
+build obj/third_party/skia/src/gpu/skia.grpathrendererchain.o: cxx $
+    ../../third_party/skia/src/gpu/GrPathRendererChain.cpp
+build obj/third_party/skia/src/gpu/skia.grpathrenderer.o: cxx $
+    ../../third_party/skia/src/gpu/GrPathRenderer.cpp
+build obj/third_party/skia/src/gpu/skia.grpathutils.o: cxx $
+    ../../third_party/skia/src/gpu/GrPathUtils.cpp
+build obj/third_party/skia/src/gpu/skia.grrectanizer.o: cxx $
+    ../../third_party/skia/src/gpu/GrRectanizer.cpp
+build obj/third_party/skia/src/gpu/skia.grrendertarget.o: cxx $
+    ../../third_party/skia/src/gpu/GrRenderTarget.cpp
+build obj/third_party/skia/src/gpu/skia.grreducedclip.o: cxx $
+    ../../third_party/skia/src/gpu/GrReducedClip.cpp
+build obj/third_party/skia/src/gpu/skia.grresource.o: cxx $
+    ../../third_party/skia/src/gpu/GrResource.cpp
+build obj/third_party/skia/src/gpu/skia.grresourcecache.o: cxx $
+    ../../third_party/skia/src/gpu/GrResourceCache.cpp
+build obj/third_party/skia/src/gpu/skia.grstencil.o: cxx $
+    ../../third_party/skia/src/gpu/GrStencil.cpp
+build obj/third_party/skia/src/gpu/skia.grstencilandcoverpathrenderer.o: $
+    cxx ../../third_party/skia/src/gpu/GrStencilAndCoverPathRenderer.cpp
+build obj/third_party/skia/src/gpu/skia.grstencilbuffer.o: cxx $
+    ../../third_party/skia/src/gpu/GrStencilBuffer.cpp
+build obj/third_party/skia/src/gpu/skia.grswmaskhelper.o: cxx $
+    ../../third_party/skia/src/gpu/GrSWMaskHelper.cpp
+build obj/third_party/skia/src/gpu/skia.grsoftwarepathrenderer.o: cxx $
+    ../../third_party/skia/src/gpu/GrSoftwarePathRenderer.cpp
+build obj/third_party/skia/src/gpu/skia.grsurface.o: cxx $
+    ../../third_party/skia/src/gpu/GrSurface.cpp
+build obj/third_party/skia/src/gpu/skia.grtextcontext.o: cxx $
+    ../../third_party/skia/src/gpu/GrTextContext.cpp
+build obj/third_party/skia/src/gpu/skia.grtextstrike.o: cxx $
+    ../../third_party/skia/src/gpu/GrTextStrike.cpp
+build obj/third_party/skia/src/gpu/skia.grtexture.o: cxx $
+    ../../third_party/skia/src/gpu/GrTexture.cpp
+build obj/third_party/skia/src/gpu/skia.grtextureaccess.o: cxx $
+    ../../third_party/skia/src/gpu/GrTextureAccess.cpp
+build obj/third_party/skia/src/gpu/skia.gr_unittests.o: cxx $
+    ../../third_party/skia/src/gpu/gr_unittests.cpp
+build obj/third_party/skia/src/gpu/effects/skia.grtexturestripatlas.o: cxx $
+    ../../third_party/skia/src/gpu/effects/GrTextureStripAtlas.cpp
+build obj/third_party/skia/src/gpu/effects/skia.grconfigconversioneffect.o: $
+    cxx ../../third_party/skia/src/gpu/effects/GrConfigConversionEffect.cpp
+build obj/third_party/skia/src/gpu/effects/skia.grconvolutioneffect.o: cxx $
+    ../../third_party/skia/src/gpu/effects/GrConvolutionEffect.cpp
+build obj/third_party/skia/src/gpu/effects/skia.grsingletextureeffect.o: $
+    cxx ../../third_party/skia/src/gpu/effects/GrSingleTextureEffect.cpp
+build obj/third_party/skia/src/gpu/effects/skia.grtexturedomaineffect.o: $
+    cxx ../../third_party/skia/src/gpu/effects/GrTextureDomainEffect.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grglcaps.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLCaps.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grglcontextinfo.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLContextInfo.cpp
+build $
+    obj/third_party/skia/src/gpu/gl/skia.grglcreatenativeinterface_none.o: $
+    cxx ../../third_party/skia/src/gpu/gl/GrGLCreateNativeInterface_none.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grgldefaultinterface_none.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLDefaultInterface_none.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grgleffect.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLEffect.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grgleffectmatrix.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLEffectMatrix.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grglindexbuffer.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLIndexBuffer.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grglinterface.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLInterface.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grglpath.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLPath.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grglprogram.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLProgram.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grglrendertarget.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLRenderTarget.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grglshaderbuilder.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLShaderBuilder.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grglsl.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLSL.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grglstencilbuffer.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLStencilBuffer.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grgltexture.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLTexture.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grglutil.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLUtil.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grgluniformmanager.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLUniformManager.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grglvertexbuffer.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGLVertexBuffer.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grgpugl.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGpuGL.cpp
+build obj/third_party/skia/src/gpu/gl/skia.grgpugl_program.o: cxx $
+    ../../third_party/skia/src/gpu/gl/GrGpuGL_program.cpp
+build obj/third_party/skia/src/gpu/skia.skgpudevice.o: cxx $
+    ../../third_party/skia/src/gpu/SkGpuDevice.cpp
+build obj/third_party/skia/src/gpu/skia.skgr.o: cxx $
+    ../../third_party/skia/src/gpu/SkGr.cpp
+build obj/third_party/skia/src/gpu/skia.skgrfontscaler.o: cxx $
+    ../../third_party/skia/src/gpu/SkGrFontScaler.cpp
+build obj/third_party/skia/src/gpu/skia.skgrpixelref.o: cxx $
+    ../../third_party/skia/src/gpu/SkGrPixelRef.cpp
+build obj/third_party/skia/src/gpu/skia.skgrtexturepixelref.o: cxx $
+    ../../third_party/skia/src/gpu/SkGrTexturePixelRef.cpp
+build obj/third_party/skia/src/image/skia.skimage_gpu.o: cxx $
+    ../../third_party/skia/src/image/SkImage_Gpu.cpp
+build obj/third_party/skia/src/image/skia.sksurface_gpu.o: cxx $
+    ../../third_party/skia/src/image/SkSurface_Gpu.cpp
+build obj/third_party/skia/src/gpu/gl/skia.skglcontext.o: cxx $
+    ../../third_party/skia/src/gpu/gl/SkGLContext.cpp
+build obj/skia/ext/skia.skfonthost_fontconfig.o: cxx $
+    ../../skia/ext/SkFontHost_fontconfig.cpp
+build obj/skia/ext/skia.skfonthost_fontconfig_direct.o: cxx $
+    ../../skia/ext/SkFontHost_fontconfig_direct.cpp
+
+build obj/skia/libskia.a: alink_thin $
+    obj/third_party/skia/src/core/skia.skflate.o $
+    obj/third_party/skia/src/images/skia.bmpdecoderhelper.o $
+    obj/third_party/skia/src/images/skia.skimagedecoder.o $
+    obj/third_party/skia/src/images/skia.skimagedecoder_factory.o $
+    obj/third_party/skia/src/images/skia.skscaledbitmapsampler.o $
+    obj/third_party/skia/src/pdf/skia.skpdfcatalog.o $
+    obj/third_party/skia/src/pdf/skia.skpdfdevice.o $
+    obj/third_party/skia/src/pdf/skia.skpdfdocument.o $
+    obj/third_party/skia/src/pdf/skia.skpdffont.o $
+    obj/third_party/skia/src/pdf/skia.skpdfformxobject.o $
+    obj/third_party/skia/src/pdf/skia.skpdfgraphicstate.o $
+    obj/third_party/skia/src/pdf/skia.skpdfimage.o $
+    obj/third_party/skia/src/pdf/skia.skpdfpage.o $
+    obj/third_party/skia/src/pdf/skia.skpdfshader.o $
+    obj/third_party/skia/src/pdf/skia.skpdfstream.o $
+    obj/third_party/skia/src/pdf/skia.skpdftypes.o $
+    obj/third_party/skia/src/pdf/skia.skpdfutils.o $
+    obj/third_party/skia/src/ports/skia.skfontdescriptor.o $
+    obj/third_party/skia/src/ports/skia.skfonthost_freetype.o $
+    obj/third_party/skia/src/ports/skia.skfonthost_freetype_common.o $
+    obj/third_party/skia/src/ports/skia.skfonthost_tables.o $
+    obj/third_party/skia/src/ports/skia.skfonthost_sandbox_none.o $
+    obj/third_party/skia/src/ports/skia.skglobalinitialization_chromium.o $
+    obj/third_party/skia/src/ports/skia.skosfile_stdio.o $
+    obj/third_party/skia/src/ports/skia.skthread_pthread.o $
+    obj/third_party/skia/src/ports/skia.sktime_unix.o $
+    obj/third_party/skia/src/sfnt/skia.skotutils.o $
+    obj/third_party/skia/src/utils/skia.skbase64.o $
+    obj/third_party/skia/src/utils/skia.skbitset.o $
+    obj/third_party/skia/src/utils/skia.skdeferredcanvas.o $
+    obj/third_party/skia/src/utils/skia.skmatrix44.o $
+    obj/third_party/skia/src/utils/skia.sknullcanvas.o $
+    obj/third_party/skia/src/utils/skia.sknwaycanvas.o $
+    obj/third_party/skia/src/utils/skia.skpictureutils.o $
+    obj/skia/ext/skia.bitmap_platform_device_linux.o $
+    obj/skia/ext/skia.convolver.o obj/skia/ext/skia.google_logging.o $
+    obj/skia/ext/skia.image_operations.o obj/skia/ext/skia.lazy_pixel_ref.o $
+    obj/skia/ext/skia.platform_canvas.o obj/skia/ext/skia.platform_device.o $
+    obj/skia/ext/skia.platform_device_linux.o $
+    obj/skia/ext/skia.skmemory_new_handler.o $
+    obj/skia/ext/skia.vector_canvas.o $
+    obj/skia/ext/skia.vector_platform_device_skia.o $
+    obj/third_party/skia/src/core/skia.sk64.o $
+    obj/third_party/skia/src/core/skia.skaaclip.o $
+    obj/third_party/skia/src/core/skia.skannotation.o $
+    obj/third_party/skia/src/core/skia.skadvancedtypefacemetrics.o $
+    obj/third_party/skia/src/core/skia.skalpharuns.o $
+    obj/third_party/skia/src/core/skia.skbboxhierarchy.o $
+    obj/third_party/skia/src/core/skia.skbboxrecord.o $
+    obj/third_party/skia/src/core/skia.skbboxhierarchyrecord.o $
+    obj/third_party/skia/src/core/skia.skbitmap.o $
+    obj/third_party/skia/src/core/skia.skbitmapheap.o $
+    obj/third_party/skia/src/core/skia.skbitmapprocshader.o $
+    obj/third_party/skia/src/core/skia.skbitmapprocstate.o $
+    obj/third_party/skia/src/core/skia.skbitmapprocstate_matrixprocs.o $
+    obj/third_party/skia/src/core/skia.skbitmapsampler.o $
+    obj/third_party/skia/src/core/skia.skbitmap_scroll.o $
+    obj/third_party/skia/src/core/skia.skblitmask_d32.o $
+    obj/third_party/skia/src/core/skia.skblitrow_d16.o $
+    obj/third_party/skia/src/core/skia.skblitrow_d32.o $
+    obj/third_party/skia/src/core/skia.skblitrow_d4444.o $
+    obj/third_party/skia/src/core/skia.skblitter.o $
+    obj/third_party/skia/src/core/skia.skblitter_4444.o $
+    obj/third_party/skia/src/core/skia.skblitter_a1.o $
+    obj/third_party/skia/src/core/skia.skblitter_a8.o $
+    obj/third_party/skia/src/core/skia.skblitter_argb32.o $
+    obj/third_party/skia/src/core/skia.skblitter_rgb16.o $
+    obj/third_party/skia/src/core/skia.skblitter_sprite.o $
+    obj/third_party/skia/src/core/skia.skbuffer.o $
+    obj/third_party/skia/src/core/skia.skcanvas.o $
+    obj/third_party/skia/src/core/skia.skchunkalloc.o $
+    obj/third_party/skia/src/core/skia.skclipstack.o $
+    obj/third_party/skia/src/core/skia.skcolor.o $
+    obj/third_party/skia/src/core/skia.skcolorfilter.o $
+    obj/third_party/skia/src/core/skia.skcolortable.o $
+    obj/third_party/skia/src/core/skia.skcomposeshader.o $
+    obj/third_party/skia/src/core/skia.skconcavetotriangles.o $
+    obj/third_party/skia/src/core/skia.skconfig8888.o $
+    obj/third_party/skia/src/core/skia.skcordic.o $
+    obj/third_party/skia/src/core/skia.skcubicclipper.o $
+    obj/third_party/skia/src/core/skia.skdata.o $
+    obj/third_party/skia/src/core/skia.skdebug.o $
+    obj/third_party/skia/src/core/skia.skdeque.o $
+    obj/third_party/skia/src/core/skia.skdevice.o $
+    obj/third_party/skia/src/core/skia.skdeviceprofile.o $
+    obj/third_party/skia/src/core/skia.skdither.o $
+    obj/third_party/skia/src/core/skia.skdraw.o $
+    obj/third_party/skia/src/core/skia.skedgebuilder.o $
+    obj/third_party/skia/src/core/skia.skedgeclipper.o $
+    obj/third_party/skia/src/core/skia.skedge.o $
+    obj/third_party/skia/src/core/skia.skfilterproc.o $
+    obj/third_party/skia/src/core/skia.skflattenable.o $
+    obj/third_party/skia/src/core/skia.skflattenablebuffers.o $
+    obj/third_party/skia/src/core/skia.skfloat.o $
+    obj/third_party/skia/src/core/skia.skfloatbits.o $
+    obj/third_party/skia/src/core/skia.skfonthost.o $
+    obj/third_party/skia/src/core/skia.skgeometry.o $
+    obj/third_party/skia/src/core/skia.skglyphcache.o $
+    obj/third_party/skia/src/core/skia.skgraphics.o $
+    obj/third_party/skia/src/core/skia.skinstcnt.o $
+    obj/third_party/skia/src/core/skia.skimagefilter.o $
+    obj/third_party/skia/src/core/skia.sklineclipper.o $
+    obj/third_party/skia/src/core/skia.skmallocpixelref.o $
+    obj/third_party/skia/src/core/skia.skmask.o $
+    obj/third_party/skia/src/core/skia.skmaskfilter.o $
+    obj/third_party/skia/src/core/skia.skmaskgamma.o $
+    obj/third_party/skia/src/core/skia.skmath.o $
+    obj/third_party/skia/src/core/skia.skmatrix.o $
+    obj/third_party/skia/src/core/skia.skmetadata.o $
+    obj/third_party/skia/src/core/skia.skmmapstream.o $
+    obj/third_party/skia/src/core/skia.skorderedreadbuffer.o $
+    obj/third_party/skia/src/core/skia.skorderedwritebuffer.o $
+    obj/third_party/skia/src/core/skia.skpackbits.o $
+    obj/third_party/skia/src/core/skia.skpaint.o $
+    obj/third_party/skia/src/core/skia.skpath.o $
+    obj/third_party/skia/src/core/skia.skpatheffect.o $
+    obj/third_party/skia/src/core/skia.skpathheap.o $
+    obj/third_party/skia/src/core/skia.skpathmeasure.o $
+    obj/third_party/skia/src/core/skia.skpicture.o $
+    obj/third_party/skia/src/core/skia.skpictureflat.o $
+    obj/third_party/skia/src/core/skia.skpictureplayback.o $
+    obj/third_party/skia/src/core/skia.skpicturerecord.o $
+    obj/third_party/skia/src/core/skia.skpicturestatetree.o $
+    obj/third_party/skia/src/core/skia.skpixelref.o $
+    obj/third_party/skia/src/core/skia.skpoint.o $
+    obj/third_party/skia/src/core/skia.skprocspriteblitter.o $
+    obj/third_party/skia/src/core/skia.skptrrecorder.o $
+    obj/third_party/skia/src/core/skia.skquadclipper.o $
+    obj/third_party/skia/src/core/skia.skrasterclip.o $
+    obj/third_party/skia/src/core/skia.skrasterizer.o $
+    obj/third_party/skia/src/core/skia.skrect.o $
+    obj/third_party/skia/src/core/skia.skrefcnt.o $
+    obj/third_party/skia/src/core/skia.skrefdict.o $
+    obj/third_party/skia/src/core/skia.skregion.o $
+    obj/third_party/skia/src/core/skia.skregion_path.o $
+    obj/third_party/skia/src/core/skia.skrrect.o $
+    obj/third_party/skia/src/core/skia.skrtree.o $
+    obj/third_party/skia/src/core/skia.skscalar.o $
+    obj/third_party/skia/src/core/skia.skscalercontext.o $
+    obj/third_party/skia/src/core/skia.skscan.o $
+    obj/third_party/skia/src/core/skia.skscan_antipath.o $
+    obj/third_party/skia/src/core/skia.skscan_antihair.o $
+    obj/third_party/skia/src/core/skia.skscan_hairline.o $
+    obj/third_party/skia/src/core/skia.skscan_path.o $
+    obj/third_party/skia/src/core/skia.skshader.o $
+    obj/third_party/skia/src/core/skia.skspriteblitter_argb32.o $
+    obj/third_party/skia/src/core/skia.skspriteblitter_rgb16.o $
+    obj/third_party/skia/src/core/skia.skstream.o $
+    obj/third_party/skia/src/core/skia.skstring.o $
+    obj/third_party/skia/src/core/skia.skstroke.o $
+    obj/third_party/skia/src/core/skia.skstrokerec.o $
+    obj/third_party/skia/src/core/skia.skstrokerpriv.o $
+    obj/third_party/skia/src/core/skia.sktilegrid.o $
+    obj/third_party/skia/src/core/skia.sktilegridpicture.o $
+    obj/third_party/skia/src/core/skia.sktls.o $
+    obj/third_party/skia/src/core/skia.sktsearch.o $
+    obj/third_party/skia/src/core/skia.sktypeface.o $
+    obj/third_party/skia/src/core/skia.sktypefacecache.o $
+    obj/third_party/skia/src/core/skia.skunpremultiply.o $
+    obj/third_party/skia/src/core/skia.skutils.o $
+    obj/third_party/skia/src/core/skia.skwriter32.o $
+    obj/third_party/skia/src/core/skia.skxfermode.o $
+    obj/third_party/skia/src/image/skia.skdatapixelref.o $
+    obj/third_party/skia/src/image/skia.skimage.o $
+    obj/third_party/skia/src/image/skia.skimagepriv.o $
+    obj/third_party/skia/src/image/skia.skimage_codec.o $
+    obj/third_party/skia/src/image/skia.skimage_picture.o $
+    obj/third_party/skia/src/image/skia.skimage_raster.o $
+    obj/third_party/skia/src/image/skia.sksurface.o $
+    obj/third_party/skia/src/image/skia.sksurface_picture.o $
+    obj/third_party/skia/src/image/skia.sksurface_raster.o $
+    obj/third_party/skia/src/pipe/skia.skgpiperead.o $
+    obj/third_party/skia/src/pipe/skia.skgpipewrite.o $
+    obj/third_party/skia/src/effects/skia.sk1dpatheffect.o $
+    obj/third_party/skia/src/effects/skia.sk2dpatheffect.o $
+    obj/third_party/skia/src/effects/skia.skavoidxfermode.o $
+    obj/third_party/skia/src/effects/skia.skarithmeticmode.o $
+    obj/third_party/skia/src/effects/skia.skbitmapsource.o $
+    obj/third_party/skia/src/effects/skia.skblendimagefilter.o $
+    obj/third_party/skia/src/effects/skia.skblurdrawlooper.o $
+    obj/third_party/skia/src/effects/skia.skblurmask.o $
+    obj/third_party/skia/src/effects/skia.skblurimagefilter.o $
+    obj/third_party/skia/src/effects/skia.skblurmaskfilter.o $
+    obj/third_party/skia/src/effects/skia.skcolorfilters.o $
+    obj/third_party/skia/src/effects/skia.skcolorfilterimagefilter.o $
+    obj/third_party/skia/src/effects/skia.skcolormatrix.o $
+    obj/third_party/skia/src/effects/skia.skcolormatrixfilter.o $
+    obj/third_party/skia/src/effects/skia.skcornerpatheffect.o $
+    obj/third_party/skia/src/effects/skia.skdashpatheffect.o $
+    obj/third_party/skia/src/effects/skia.skdiscretepatheffect.o $
+    obj/third_party/skia/src/effects/skia.skembossmask.o $
+    obj/third_party/skia/src/effects/skia.skembossmaskfilter.o $
+    obj/third_party/skia/src/effects/skia.skkernel33maskfilter.o $
+    obj/third_party/skia/src/effects/skia.sklayerdrawlooper.o $
+    obj/third_party/skia/src/effects/skia.sklayerrasterizer.o $
+    obj/third_party/skia/src/effects/skia.sklightingimagefilter.o $
+    obj/third_party/skia/src/effects/skia.skmatrixconvolutionimagefilter.o $
+    obj/third_party/skia/src/effects/skia.skmergeimagefilter.o $
+    obj/third_party/skia/src/effects/skia.skmorphologyimagefilter.o $
+    obj/third_party/skia/src/effects/skia.skoffsetimagefilter.o $
+    obj/third_party/skia/src/effects/skia.skpaintflagsdrawfilter.o $
+    obj/third_party/skia/src/effects/skia.skpixelxorxfermode.o $
+    obj/third_party/skia/src/effects/skia.skporterduff.o $
+    obj/third_party/skia/src/effects/skia.sksingleinputimagefilter.o $
+    obj/third_party/skia/src/effects/skia.skstipplemaskfilter.o $
+    obj/third_party/skia/src/effects/skia.sktablecolorfilter.o $
+    obj/third_party/skia/src/effects/skia.sktablemaskfilter.o $
+    obj/third_party/skia/src/effects/skia.sktestimagefilters.o $
+    obj/third_party/skia/src/effects/skia.sktransparentshader.o $
+    obj/third_party/skia/src/effects/skia.skmagnifierimagefilter.o $
+    obj/third_party/skia/src/effects/gradients/skia.skbitmapcache.o $
+    obj/third_party/skia/src/effects/gradients/skia.skclamprange.o $
+    obj/third_party/skia/src/effects/gradients/skia.skgradientshader.o $
+    obj/third_party/skia/src/effects/gradients/skia.sklineargradient.o $
+    obj/third_party/skia/src/effects/gradients/skia.skradialgradient.o $
+    obj/third_party/skia/src/effects/gradients/skia.sktwopointradialgradient.o $
+    obj/third_party/skia/src/effects/gradients/skia.sktwopointconicalgradient.o $
+    obj/third_party/skia/src/effects/gradients/skia.sksweepgradient.o $
+    obj/third_party/skia/src/gpu/skia.graahairlinepathrenderer.o $
+    obj/third_party/skia/src/gpu/skia.graaconvexpathrenderer.o $
+    obj/third_party/skia/src/gpu/skia.graarectrenderer.o $
+    obj/third_party/skia/src/gpu/skia.graddpathrenderers_default.o $
+    obj/third_party/skia/src/gpu/skia.grallocpool.o $
+    obj/third_party/skia/src/gpu/skia.gratlas.o $
+    obj/third_party/skia/src/gpu/skia.grbufferallocpool.o $
+    obj/third_party/skia/src/gpu/skia.grcacheid.o $
+    obj/third_party/skia/src/gpu/skia.grclipdata.o $
+    obj/third_party/skia/src/gpu/skia.grcontext.o $
+    obj/third_party/skia/src/gpu/skia.grdefaultpathrenderer.o $
+    obj/third_party/skia/src/gpu/skia.grdrawstate.o $
+    obj/third_party/skia/src/gpu/skia.grdrawtarget.o $
+    obj/third_party/skia/src/gpu/skia.greffect.o $
+    obj/third_party/skia/src/gpu/skia.grgeometrybuffer.o $
+    obj/third_party/skia/src/gpu/skia.grclipmaskcache.o $
+    obj/third_party/skia/src/gpu/skia.grclipmaskmanager.o $
+    obj/third_party/skia/src/gpu/skia.grgpu.o $
+    obj/third_party/skia/src/gpu/skia.grgpufactory.o $
+    obj/third_party/skia/src/gpu/skia.grinorderdrawbuffer.o $
+    obj/third_party/skia/src/gpu/skia.grmemory.o $
+    obj/third_party/skia/src/gpu/skia.grmemorypool.o $
+    obj/third_party/skia/src/gpu/skia.grpath.o $
+    obj/third_party/skia/src/gpu/skia.grpathrendererchain.o $
+    obj/third_party/skia/src/gpu/skia.grpathrenderer.o $
+    obj/third_party/skia/src/gpu/skia.grpathutils.o $
+    obj/third_party/skia/src/gpu/skia.grrectanizer.o $
+    obj/third_party/skia/src/gpu/skia.grrendertarget.o $
+    obj/third_party/skia/src/gpu/skia.grreducedclip.o $
+    obj/third_party/skia/src/gpu/skia.grresource.o $
+    obj/third_party/skia/src/gpu/skia.grresourcecache.o $
+    obj/third_party/skia/src/gpu/skia.grstencil.o $
+    obj/third_party/skia/src/gpu/skia.grstencilandcoverpathrenderer.o $
+    obj/third_party/skia/src/gpu/skia.grstencilbuffer.o $
+    obj/third_party/skia/src/gpu/skia.grswmaskhelper.o $
+    obj/third_party/skia/src/gpu/skia.grsoftwarepathrenderer.o $
+    obj/third_party/skia/src/gpu/skia.grsurface.o $
+    obj/third_party/skia/src/gpu/skia.grtextcontext.o $
+    obj/third_party/skia/src/gpu/skia.grtextstrike.o $
+    obj/third_party/skia/src/gpu/skia.grtexture.o $
+    obj/third_party/skia/src/gpu/skia.grtextureaccess.o $
+    obj/third_party/skia/src/gpu/skia.gr_unittests.o $
+    obj/third_party/skia/src/gpu/effects/skia.grtexturestripatlas.o $
+    obj/third_party/skia/src/gpu/effects/skia.grconfigconversioneffect.o $
+    obj/third_party/skia/src/gpu/effects/skia.grconvolutioneffect.o $
+    obj/third_party/skia/src/gpu/effects/skia.grsingletextureeffect.o $
+    obj/third_party/skia/src/gpu/effects/skia.grtexturedomaineffect.o $
+    obj/third_party/skia/src/gpu/gl/skia.grglcaps.o $
+    obj/third_party/skia/src/gpu/gl/skia.grglcontextinfo.o $
+    obj/third_party/skia/src/gpu/gl/skia.grglcreatenativeinterface_none.o $
+    obj/third_party/skia/src/gpu/gl/skia.grgldefaultinterface_none.o $
+    obj/third_party/skia/src/gpu/gl/skia.grgleffect.o $
+    obj/third_party/skia/src/gpu/gl/skia.grgleffectmatrix.o $
+    obj/third_party/skia/src/gpu/gl/skia.grglindexbuffer.o $
+    obj/third_party/skia/src/gpu/gl/skia.grglinterface.o $
+    obj/third_party/skia/src/gpu/gl/skia.grglpath.o $
+    obj/third_party/skia/src/gpu/gl/skia.grglprogram.o $
+    obj/third_party/skia/src/gpu/gl/skia.grglrendertarget.o $
+    obj/third_party/skia/src/gpu/gl/skia.grglshaderbuilder.o $
+    obj/third_party/skia/src/gpu/gl/skia.grglsl.o $
+    obj/third_party/skia/src/gpu/gl/skia.grglstencilbuffer.o $
+    obj/third_party/skia/src/gpu/gl/skia.grgltexture.o $
+    obj/third_party/skia/src/gpu/gl/skia.grglutil.o $
+    obj/third_party/skia/src/gpu/gl/skia.grgluniformmanager.o $
+    obj/third_party/skia/src/gpu/gl/skia.grglvertexbuffer.o $
+    obj/third_party/skia/src/gpu/gl/skia.grgpugl.o $
+    obj/third_party/skia/src/gpu/gl/skia.grgpugl_program.o $
+    obj/third_party/skia/src/gpu/skia.skgpudevice.o $
+    obj/third_party/skia/src/gpu/skia.skgr.o $
+    obj/third_party/skia/src/gpu/skia.skgrfontscaler.o $
+    obj/third_party/skia/src/gpu/skia.skgrpixelref.o $
+    obj/third_party/skia/src/gpu/skia.skgrtexturepixelref.o $
+    obj/third_party/skia/src/image/skia.skimage_gpu.o $
+    obj/third_party/skia/src/image/skia.sksurface_gpu.o $
+    obj/third_party/skia/src/gpu/gl/skia.skglcontext.o $
+    obj/skia/ext/skia.skfonthost_fontconfig.o $
+    obj/skia/ext/skia.skfonthost_fontconfig_direct.o

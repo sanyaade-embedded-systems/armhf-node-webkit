@@ -1,0 +1,54 @@
+defines = -DANGLE_DISABLE_TRACE $
+    -DANGLE_COMPILE_OPTIMIZATION_LEVEL=D3DCOMPILE_OPTIMIZATION_LEVEL0 $
+    '-DANGLE_PRELOADED_D3DCOMPILER_MODULE_NAMES={ L"d3dcompiler_46.dll", $
+    L"d3dcompiler_43.dll" }' -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DCOMPILER_IMPLEMENTATION -DNDEBUG $
+    -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = -I../../third_party/angle/src -I../../third_party/angle/include
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -Wno-format -Wno-unused-result -march=armv7-a -mtune=cortex-a8 $
+    -mfloat-abi=hard -mfpu=neon -O2 -fno-ident -fdata-sections $
+    -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wno-deprecated -Wno-abi
+
+build obj/third_party/angle/src/compiler/translator_glsl.codegenglsl.o: cxx $
+    ../../third_party/angle/src/compiler/CodeGenGLSL.cpp
+build obj/third_party/angle/src/compiler/translator_glsl.outputessl.o: cxx $
+    ../../third_party/angle/src/compiler/OutputESSL.cpp
+build obj/third_party/angle/src/compiler/translator_glsl.outputglslbase.o: $
+    cxx ../../third_party/angle/src/compiler/OutputGLSLBase.cpp
+build obj/third_party/angle/src/compiler/translator_glsl.outputglsl.o: cxx $
+    ../../third_party/angle/src/compiler/OutputGLSL.cpp
+build obj/third_party/angle/src/compiler/translator_glsl.shaderlang.o: cxx $
+    ../../third_party/angle/src/compiler/ShaderLang.cpp
+build obj/third_party/angle/src/compiler/translator_glsl.translatoressl.o: $
+    cxx ../../third_party/angle/src/compiler/TranslatorESSL.cpp
+build obj/third_party/angle/src/compiler/translator_glsl.translatorglsl.o: $
+    cxx ../../third_party/angle/src/compiler/TranslatorGLSL.cpp
+build obj/third_party/angle/src/compiler/translator_glsl.versionglsl.o: cxx $
+    ../../third_party/angle/src/compiler/VersionGLSL.cpp
+
+build obj/third_party/angle/src/libtranslator_glsl.a: alink_thin $
+    obj/third_party/angle/src/compiler/translator_glsl.codegenglsl.o $
+    obj/third_party/angle/src/compiler/translator_glsl.outputessl.o $
+    obj/third_party/angle/src/compiler/translator_glsl.outputglslbase.o $
+    obj/third_party/angle/src/compiler/translator_glsl.outputglsl.o $
+    obj/third_party/angle/src/compiler/translator_glsl.shaderlang.o $
+    obj/third_party/angle/src/compiler/translator_glsl.translatoressl.o $
+    obj/third_party/angle/src/compiler/translator_glsl.translatorglsl.o $
+    obj/third_party/angle/src/compiler/translator_glsl.versionglsl.o

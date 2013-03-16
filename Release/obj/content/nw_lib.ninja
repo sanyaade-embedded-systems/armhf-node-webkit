@@ -1,0 +1,355 @@
+build obj/content/nw_lib.actions_depends.stamp: stamp content_resources.pak $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/ui/ui_resources.actions_rules_copies.stamp $
+    obj/v8/tools/gyp/v8.actions_depends.stamp nw_resources.pak
+
+build obj/content/nw_lib.compile_depends.stamp: stamp content_resources.pak $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/ui/ui_resources.actions_rules_copies.stamp $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc nw_resources.pak
+
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DGL_GLEXT_PROTOTYPES $
+    -DSK_BUILD_NO_IMAGE_ENCODE -DSK_DEFERRED_CANVAS_USES_GPIPE=1 $
+    '-DGR_GL_CUSTOM_SETUP_HEADER="GrGLConfig_chrome.h"' $
+    -DGR_AGGRESSIVE_SHADER_OPTS=1 -DSK_USE_POSIX_THREADS $
+    -DU_USING_ICU_NAMESPACE=0 -DU_STATIC_IMPLEMENTATION $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT -D_FORTIFY_SOURCE=2
+includes = -I../../third_party/icu/public/common $
+    -I../../third_party/icu/public/i18n -I../.. $
+    -I../../third_party/WebKit/Source/Platform/chromium $
+    -I../../third_party/khronos -I../../gpu -Igen/content -Igen/net $
+    -I../../skia/config -I../../third_party/skia/src/core $
+    -I../../third_party/skia/include/config $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/gpu/gl $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils -I../../skia/ext $
+    -I../../third_party/node/deps/uv/include -Igen/ui/ui_resources $
+    -I../../v8/include -I../../third_party/zlib $
+    -I../../third_party/WebKit/Source/Platform/chromium $
+    -Igen/webcore_headers -I../../third_party/npapi $
+    -I../../third_party/npapi/bindings
+cflags = -fstack-protector --param=ssp-buffer-size=4 -Werror -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wall -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gtk-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/gtk-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/atk-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gdk-pixbuf-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gio-unix-2.0/ $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 $
+    -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon -O2 $
+    -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wsign-compare -Wno-abi
+
+build obj/chrome/browser/nw_lib.platform_util_common_linux.o: cxx $
+    ../../chrome/browser/platform_util_common_linux.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/chrome/browser/nw_lib.platform_util_linux.o: cxx $
+    ../../chrome/browser/platform_util_linux.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/chrome/browser/nw_lib.process_singleton_linux.o: cxx $
+    ../../chrome/browser/process_singleton_linux.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/chrome/browser/status_icons/nw_lib.status_icon.o: cxx $
+    ../../chrome/browser/status_icons/status_icon.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/chrome/browser/status_icons/nw_lib.status_tray.o: cxx $
+    ../../chrome/browser/status_icons/status_tray.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/chrome/browser/ui/gtk/nw_lib.gtk_window_util.o: cxx $
+    ../../chrome/browser/ui/gtk/gtk_window_util.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/chrome/common/nw_lib.chrome_constants.o: cxx $
+    ../../chrome/common/chrome_constants.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/chrome/common/nw_lib.chrome_switches.o: cxx $
+    ../../chrome/common/chrome_switches.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/chrome/common/extensions/nw_lib.draggable_region.o: cxx $
+    ../../chrome/common/extensions/draggable_region.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/chrome/common/nw_lib.zip.o: cxx ../../chrome/common/zip.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/chrome/common/nw_lib.zip_reader.o: cxx $
+    ../../chrome/common/zip_reader.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/chrome/common/nw_lib.zip_internal.o: cxx $
+    ../../chrome/common/zip_internal.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/chrome/renderer/nw_lib.page_click_tracker.o: cxx $
+    ../../chrome/renderer/page_click_tracker.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/chrome/renderer/nw_lib.static_v8_external_string_resource.o: cxx $
+    ../../chrome/renderer/static_v8_external_string_resource.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/nw_lib.api_messages.o: cxx $
+    ../../content/nw/src/api/api_messages.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/app/nw_lib.app.o: cxx $
+    ../../content/nw/src/api/app/app.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/nw_lib.bindings_common.o: cxx $
+    ../../content/nw/src/api/bindings_common.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/base/nw_lib.base.o: cxx $
+    ../../content/nw/src/api/base/base.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/clipboard/nw_lib.clipboard.o: cxx $
+    ../../content/nw/src/api/clipboard/clipboard.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/nw_lib.dispatcher.o: cxx $
+    ../../content/nw/src/api/dispatcher.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/nw_lib.dispatcher_bindings.o: cxx $
+    ../../content/nw/src/api/dispatcher_bindings.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/nw_lib.dispatcher_host.o: cxx $
+    ../../content/nw/src/api/dispatcher_host.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/nw_lib.window_bindings.o: cxx $
+    ../../content/nw/src/api/window_bindings.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/menu/nw_lib.menu.o: cxx $
+    ../../content/nw/src/api/menu/menu.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/menu/nw_lib.menu_gtk.o: cxx $
+    ../../content/nw/src/api/menu/menu_gtk.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/menuitem/nw_lib.menuitem.o: cxx $
+    ../../content/nw/src/api/menuitem/menuitem.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/menuitem/nw_lib.menuitem_gtk.o: cxx $
+    ../../content/nw/src/api/menuitem/menuitem_gtk.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/shell/nw_lib.shell.o: cxx $
+    ../../content/nw/src/api/shell/shell.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/tray/nw_lib.tray.o: cxx $
+    ../../content/nw/src/api/tray/tray.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/tray/nw_lib.tray_gtk.o: cxx $
+    ../../content/nw/src/api/tray/tray_gtk.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/api/window/nw_lib.window.o: cxx $
+    ../../content/nw/src/api/window/window.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/browser/nw_lib.capture_page_helper.o: cxx $
+    ../../content/nw/src/browser/capture_page_helper.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/browser/nw_lib.file_select_helper.o: cxx $
+    ../../content/nw/src/browser/file_select_helper.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/browser/nw_lib.native_window.o: cxx $
+    ../../content/nw/src/browser/native_window.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/browser/nw_lib.native_window_gtk.o: cxx $
+    ../../content/nw/src/browser/native_window_gtk.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/browser/nw_lib.shell_devtools_delegate.o: cxx $
+    ../../content/nw/src/browser/shell_devtools_delegate.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/browser/nw_lib.shell_download_manager_delegate.o: $
+    cxx ../../content/nw/src/browser/shell_download_manager_delegate.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build $
+    obj/content/nw/src/browser/nw_lib.shell_download_manager_delegate_gtk.o: $
+    cxx ../../content/nw/src/browser/shell_download_manager_delegate_gtk.cc $
+    || obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/browser/nw_lib.shell_javascript_dialog_creator.o: $
+    cxx ../../content/nw/src/browser/shell_javascript_dialog_creator.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/browser/nw_lib.shell_javascript_dialog_gtk.o: cxx $
+    ../../content/nw/src/browser/shell_javascript_dialog_gtk.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/browser/nw_lib.shell_login_dialog_gtk.o: cxx $
+    ../../content/nw/src/browser/shell_login_dialog_gtk.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/browser/nw_lib.shell_login_dialog.o: cxx $
+    ../../content/nw/src/browser/shell_login_dialog.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/browser/nw_lib.shell_resource_context.o: cxx $
+    ../../content/nw/src/browser/shell_resource_context.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build $
+    obj/content/nw/src/browser/nw_lib.shell_resource_dispatcher_host_delegate.o: $
+    cxx $
+    ../../content/nw/src/browser/shell_resource_dispatcher_host_delegate.cc $
+    || obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/common/nw_lib.gpu_internals.o: cxx $
+    ../../content/nw/src/common/gpu_internals.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/common/nw_lib.shell_switches.o: cxx $
+    ../../content/nw/src/common/shell_switches.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/geolocation/nw_lib.shell_access_token_store.o: cxx $
+    ../../content/nw/src/geolocation/shell_access_token_store.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/media/nw_lib.media_internals.o: cxx $
+    ../../content/nw/src/media/media_internals.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/media/nw_lib.media_capture_devices_dispatcher.o: $
+    cxx ../../content/nw/src/media/media_capture_devices_dispatcher.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/media/nw_lib.media_stream_devices_controller.o: $
+    cxx ../../content/nw/src/media/media_stream_devices_controller.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/net/nw_lib.clear_on_exit_policy.o: cxx $
+    ../../content/nw/src/net/clear_on_exit_policy.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/net/nw_lib.resource_request_job.o: cxx $
+    ../../content/nw/src/net/resource_request_job.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/net/nw_lib.shell_network_delegate.o: cxx $
+    ../../content/nw/src/net/shell_network_delegate.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/net/nw_lib.shell_url_request_context_getter.o: cxx $
+    ../../content/nw/src/net/shell_url_request_context_getter.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/net/nw_lib.sqlite_persistent_cookie_store.o: cxx $
+    ../../content/nw/src/net/sqlite_persistent_cookie_store.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/nw_lib.nw_protocol_handler.o: cxx $
+    ../../content/nw/src/nw_protocol_handler.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/nw_lib.nw_package.o: cxx $
+    ../../content/nw/src/nw_package.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/renderer/nw_lib.autofill_agent.o: cxx $
+    ../../content/nw/src/renderer/autofill_agent.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/renderer/common/nw_lib.render_messages.o: cxx $
+    ../../content/nw/src/renderer/common/render_messages.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/renderer/prerenderer/nw_lib.prerenderer_client.o: $
+    cxx ../../content/nw/src/renderer/prerenderer/prerenderer_client.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/renderer/nw_lib.nw_render_view_observer.o: cxx $
+    ../../content/nw/src/renderer/nw_render_view_observer.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/renderer/nw_lib.shell_content_renderer_client.o: $
+    cxx ../../content/nw/src/renderer/shell_content_renderer_client.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/renderer/nw_lib.shell_render_process_observer.o: $
+    cxx ../../content/nw/src/renderer/shell_render_process_observer.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/nw_lib.nw_shell.o: cxx $
+    ../../content/nw/src/nw_shell.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/nw_lib.shell_browser_context.o: cxx $
+    ../../content/nw/src/shell_browser_context.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/nw_lib.shell_browser_main.o: cxx $
+    ../../content/nw/src/shell_browser_main.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/nw_lib.shell_browser_main_parts.o: cxx $
+    ../../content/nw/src/shell_browser_main_parts.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/nw_lib.shell_content_browser_client.o: cxx $
+    ../../content/nw/src/shell_content_browser_client.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/nw_lib.shell_content_client.o: cxx $
+    ../../content/nw/src/shell_content_client.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+build obj/content/nw/src/nw_lib.shell_main_delegate.o: cxx $
+    ../../content/nw/src/shell_main_delegate.cc || $
+    obj/content/nw_lib.compile_depends.stamp
+
+build obj/content/libnw_lib.a: alink_thin $
+    obj/chrome/browser/nw_lib.platform_util_common_linux.o $
+    obj/chrome/browser/nw_lib.platform_util_linux.o $
+    obj/chrome/browser/nw_lib.process_singleton_linux.o $
+    obj/chrome/browser/status_icons/nw_lib.status_icon.o $
+    obj/chrome/browser/status_icons/nw_lib.status_tray.o $
+    obj/chrome/browser/ui/gtk/nw_lib.gtk_window_util.o $
+    obj/chrome/common/nw_lib.chrome_constants.o $
+    obj/chrome/common/nw_lib.chrome_switches.o $
+    obj/chrome/common/extensions/nw_lib.draggable_region.o $
+    obj/chrome/common/nw_lib.zip.o obj/chrome/common/nw_lib.zip_reader.o $
+    obj/chrome/common/nw_lib.zip_internal.o $
+    obj/chrome/renderer/nw_lib.page_click_tracker.o $
+    obj/chrome/renderer/nw_lib.static_v8_external_string_resource.o $
+    obj/content/nw/src/api/nw_lib.api_messages.o $
+    obj/content/nw/src/api/app/nw_lib.app.o $
+    obj/content/nw/src/api/nw_lib.bindings_common.o $
+    obj/content/nw/src/api/base/nw_lib.base.o $
+    obj/content/nw/src/api/clipboard/nw_lib.clipboard.o $
+    obj/content/nw/src/api/nw_lib.dispatcher.o $
+    obj/content/nw/src/api/nw_lib.dispatcher_bindings.o $
+    obj/content/nw/src/api/nw_lib.dispatcher_host.o $
+    obj/content/nw/src/api/nw_lib.window_bindings.o $
+    obj/content/nw/src/api/menu/nw_lib.menu.o $
+    obj/content/nw/src/api/menu/nw_lib.menu_gtk.o $
+    obj/content/nw/src/api/menuitem/nw_lib.menuitem.o $
+    obj/content/nw/src/api/menuitem/nw_lib.menuitem_gtk.o $
+    obj/content/nw/src/api/shell/nw_lib.shell.o $
+    obj/content/nw/src/api/tray/nw_lib.tray.o $
+    obj/content/nw/src/api/tray/nw_lib.tray_gtk.o $
+    obj/content/nw/src/api/window/nw_lib.window.o $
+    obj/content/nw/src/browser/nw_lib.capture_page_helper.o $
+    obj/content/nw/src/browser/nw_lib.file_select_helper.o $
+    obj/content/nw/src/browser/nw_lib.native_window.o $
+    obj/content/nw/src/browser/nw_lib.native_window_gtk.o $
+    obj/content/nw/src/browser/nw_lib.shell_devtools_delegate.o $
+    obj/content/nw/src/browser/nw_lib.shell_download_manager_delegate.o $
+    obj/content/nw/src/browser/nw_lib.shell_download_manager_delegate_gtk.o $
+    obj/content/nw/src/browser/nw_lib.shell_javascript_dialog_creator.o $
+    obj/content/nw/src/browser/nw_lib.shell_javascript_dialog_gtk.o $
+    obj/content/nw/src/browser/nw_lib.shell_login_dialog_gtk.o $
+    obj/content/nw/src/browser/nw_lib.shell_login_dialog.o $
+    obj/content/nw/src/browser/nw_lib.shell_resource_context.o $
+    obj/content/nw/src/browser/nw_lib.shell_resource_dispatcher_host_delegate.o $
+    obj/content/nw/src/common/nw_lib.gpu_internals.o $
+    obj/content/nw/src/common/nw_lib.shell_switches.o $
+    obj/content/nw/src/geolocation/nw_lib.shell_access_token_store.o $
+    obj/content/nw/src/media/nw_lib.media_internals.o $
+    obj/content/nw/src/media/nw_lib.media_capture_devices_dispatcher.o $
+    obj/content/nw/src/media/nw_lib.media_stream_devices_controller.o $
+    obj/content/nw/src/net/nw_lib.clear_on_exit_policy.o $
+    obj/content/nw/src/net/nw_lib.resource_request_job.o $
+    obj/content/nw/src/net/nw_lib.shell_network_delegate.o $
+    obj/content/nw/src/net/nw_lib.shell_url_request_context_getter.o $
+    obj/content/nw/src/net/nw_lib.sqlite_persistent_cookie_store.o $
+    obj/content/nw/src/nw_lib.nw_protocol_handler.o $
+    obj/content/nw/src/nw_lib.nw_package.o $
+    obj/content/nw/src/renderer/nw_lib.autofill_agent.o $
+    obj/content/nw/src/renderer/common/nw_lib.render_messages.o $
+    obj/content/nw/src/renderer/prerenderer/nw_lib.prerenderer_client.o $
+    obj/content/nw/src/renderer/nw_lib.nw_render_view_observer.o $
+    obj/content/nw/src/renderer/nw_lib.shell_content_renderer_client.o $
+    obj/content/nw/src/renderer/nw_lib.shell_render_process_observer.o $
+    obj/content/nw/src/nw_lib.nw_shell.o $
+    obj/content/nw/src/nw_lib.shell_browser_context.o $
+    obj/content/nw/src/nw_lib.shell_browser_main.o $
+    obj/content/nw/src/nw_lib.shell_browser_main_parts.o $
+    obj/content/nw/src/nw_lib.shell_content_browser_client.o $
+    obj/content/nw/src/nw_lib.shell_content_client.o $
+    obj/content/nw/src/nw_lib.shell_main_delegate.o || $
+    obj/content/nw_lib.actions_depends.stamp

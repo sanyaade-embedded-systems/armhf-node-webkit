@@ -1,0 +1,1578 @@
+build obj/third_party/libvpx/libvpx.actions_depends.stamp: stamp $
+    obj/third_party/libvpx/gen_asm_offsets_vp8.actions_rules_copies.stamp $
+    obj/third_party/libvpx/gen_asm_offsets_vp9.actions_rules_copies.stamp $
+    obj/third_party/libvpx/gen_asm_offsets_vpx_scale.actions_rules_copies.stamp
+
+build obj/third_party/libvpx/libvpx.compile_depends.stamp: stamp $
+    obj/third_party/libvpx/gen_asm_offsets_vp8.actions_rules_copies.stamp $
+    obj/third_party/libvpx/gen_asm_offsets_vp9.actions_rules_copies.stamp $
+    obj/third_party/libvpx/gen_asm_offsets_vpx_scale.actions_rules_copies.stamp
+
+rule libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941
+  command = cd ../../third_party/libvpx; bash -c "cat ${source} | perl $
+      ../../out/Release/gen/third_party/libvpx/ads2gas.pl > $
+      ../../out/Release/gen/third_party/libvpx/${root}.S"
+  description = RULE Convert libvpx asm file for ARM ${source}.
+  restat = 1
+
+build gen/third_party/libvpx/bilinearfilter_v6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/bilinearfilter_v6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/bilinearfilter_v6.asm
+  root = bilinearfilter_v6
+  unique_name = fe31a9e718dd99d2f6a0a4e91c15a516
+build gen/third_party/libvpx/copymem16x16_v6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/copymem16x16_v6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/copymem16x16_v6.asm
+  root = copymem16x16_v6
+  unique_name = 4dbaa14255aa31bb387085bffa89e96d
+build gen/third_party/libvpx/copymem8x4_v6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/copymem8x4_v6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/copymem8x4_v6.asm
+  root = copymem8x4_v6
+  unique_name = e97e4c8c1642656abd38f5c0c853cdc3
+build gen/third_party/libvpx/copymem8x8_v6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/copymem8x8_v6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/copymem8x8_v6.asm
+  root = copymem8x8_v6
+  unique_name = 07d06dbc022e4de4181fb42d2653eb36
+build gen/third_party/libvpx/dc_only_idct_add_v6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/dc_only_idct_add_v6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/dc_only_idct_add_v6.asm
+  root = dc_only_idct_add_v6
+  unique_name = 1af63991edc047c9df83d6b208c15ddd
+build gen/third_party/libvpx/dequant_idct_v6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/dequant_idct_v6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/dequant_idct_v6.asm
+  root = dequant_idct_v6
+  unique_name = 9fe300b1cc8874446de2a621769bd826
+build gen/third_party/libvpx/dequantize_v6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/dequantize_v6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/dequantize_v6.asm
+  root = dequantize_v6
+  unique_name = 1c68a089222c6d42ec0051ac0d593af7
+build gen/third_party/libvpx/filter_v6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/filter_v6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/filter_v6.asm
+  root = filter_v6
+  unique_name = 93d111bed6d171737d76b3248ee1617a
+build gen/third_party/libvpx/idct_v6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/idct_v6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/idct_v6.asm
+  root = idct_v6
+  unique_name = eb4d9fcd883394d31f250d9f7fe21c95
+build gen/third_party/libvpx/intra4x4_predict_v6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/intra4x4_predict_v6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/intra4x4_predict_v6.asm
+  root = intra4x4_predict_v6
+  unique_name = c7466c0dc1c26aa86eb06edc35a2edf8
+build gen/third_party/libvpx/iwalsh_v6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/iwalsh_v6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/iwalsh_v6.asm
+  root = iwalsh_v6
+  unique_name = efe6fd5b65fdf22416e30d22f504672a
+build gen/third_party/libvpx/loopfilter_v6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/loopfilter_v6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/loopfilter_v6.asm
+  root = loopfilter_v6
+  unique_name = b2173a7a85d8fc305452a2729387bd74
+build gen/third_party/libvpx/simpleloopfilter_v6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/simpleloopfilter_v6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/simpleloopfilter_v6.asm
+  root = simpleloopfilter_v6
+  unique_name = 8d0362a708a98faa1dace8daae84c43a
+build gen/third_party/libvpx/sixtappredict8x4_v6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/sixtappredict8x4_v6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/sixtappredict8x4_v6.asm
+  root = sixtappredict8x4_v6
+  unique_name = 6baea8e873fa853d5789e83a7f67deec
+build gen/third_party/libvpx/vp8_sad16x16_armv6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/vp8_sad16x16_armv6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/vp8_sad16x16_armv6.asm
+  root = vp8_sad16x16_armv6
+  unique_name = a8fafc8def5956eebc85bf255cb756e2
+build gen/third_party/libvpx/vp8_variance16x16_armv6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/vp8_variance16x16_armv6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/vp8_variance16x16_armv6.asm
+  root = vp8_variance16x16_armv6
+  unique_name = 810ac6be73efc6d93041e2645f9cba82
+build gen/third_party/libvpx/vp8_variance8x8_armv6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/vp8_variance8x8_armv6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/armv6/vp8_variance8x8_armv6.asm
+  root = vp8_variance8x8_armv6
+  unique_name = 12a784d71e7415096358e80d1c2bd194
+build gen/third_party/libvpx/vp8_variance_halfpixvar16x16_h_armv6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/vp8_variance_halfpixvar16x16_h_armv6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = $
+      source/libvpx/vp8/common/arm/armv6/vp8_variance_halfpixvar16x16_h_armv6.asm
+  root = vp8_variance_halfpixvar16x16_h_armv6
+  unique_name = 34f8e17bf6e23a07cb6a8ca3e52a4aee
+build gen/third_party/libvpx/vp8_variance_halfpixvar16x16_hv_armv6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/vp8_variance_halfpixvar16x16_hv_armv6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = $
+      source/libvpx/vp8/common/arm/armv6/vp8_variance_halfpixvar16x16_hv_armv6.asm
+  root = vp8_variance_halfpixvar16x16_hv_armv6
+  unique_name = 70b3aa01140f59b9f6db328af3e398e0
+build gen/third_party/libvpx/vp8_variance_halfpixvar16x16_v_armv6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/vp8_variance_halfpixvar16x16_v_armv6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = $
+      source/libvpx/vp8/common/arm/armv6/vp8_variance_halfpixvar16x16_v_armv6.asm
+  root = vp8_variance_halfpixvar16x16_v_armv6
+  unique_name = 4a00cc3ba66cb7a3d0635502e55f2f5a
+build gen/third_party/libvpx/bilinearpredict16x16_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/bilinearpredict16x16_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/bilinearpredict16x16_neon.asm
+  root = bilinearpredict16x16_neon
+  unique_name = c539ca9149308cc3c87f9bb0f7d19ed8
+build gen/third_party/libvpx/bilinearpredict4x4_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/bilinearpredict4x4_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/bilinearpredict4x4_neon.asm
+  root = bilinearpredict4x4_neon
+  unique_name = 18f7c8df07a5e8f8e8fd5139df3bf2ce
+build gen/third_party/libvpx/bilinearpredict8x4_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/bilinearpredict8x4_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/bilinearpredict8x4_neon.asm
+  root = bilinearpredict8x4_neon
+  unique_name = 96c1726f44bf94ca5f1ee0bc0365f52e
+build gen/third_party/libvpx/bilinearpredict8x8_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/bilinearpredict8x8_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/bilinearpredict8x8_neon.asm
+  root = bilinearpredict8x8_neon
+  unique_name = 967c4f93ddcd16df61d28fa339fb7bcc
+build gen/third_party/libvpx/buildintrapredictorsmby_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/buildintrapredictorsmby_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/buildintrapredictorsmby_neon.asm
+  root = buildintrapredictorsmby_neon
+  unique_name = 4e18f3ac964a5691459c6d6bc93bd281
+build gen/third_party/libvpx/copymem16x16_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/copymem16x16_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/copymem16x16_neon.asm
+  root = copymem16x16_neon
+  unique_name = 901026f791118b0a4927aef85c3ffc38
+build gen/third_party/libvpx/copymem8x4_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/copymem8x4_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/copymem8x4_neon.asm
+  root = copymem8x4_neon
+  unique_name = a3169d3b8210fce728f95132e0c2ad36
+build gen/third_party/libvpx/copymem8x8_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/copymem8x8_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/copymem8x8_neon.asm
+  root = copymem8x8_neon
+  unique_name = b1434945fedb75af77ab0bb5332a1c6a
+build gen/third_party/libvpx/dc_only_idct_add_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/dc_only_idct_add_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/dc_only_idct_add_neon.asm
+  root = dc_only_idct_add_neon
+  unique_name = 5a894a4d768fd7f9b8831c12724acbc3
+build gen/third_party/libvpx/dequant_idct_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/dequant_idct_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/dequant_idct_neon.asm
+  root = dequant_idct_neon
+  unique_name = 53671c1da7ae06a5acea37cbf9f8f32e
+build gen/third_party/libvpx/dequantizeb_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/dequantizeb_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/dequantizeb_neon.asm
+  root = dequantizeb_neon
+  unique_name = ebf524fc120378bdabf26fb3c98d0c5f
+build gen/third_party/libvpx/idct_dequant_0_2x_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/idct_dequant_0_2x_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/idct_dequant_0_2x_neon.asm
+  root = idct_dequant_0_2x_neon
+  unique_name = 39080d2286036d9d88d8244cc2dafa24
+build gen/third_party/libvpx/idct_dequant_full_2x_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/idct_dequant_full_2x_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/idct_dequant_full_2x_neon.asm
+  root = idct_dequant_full_2x_neon
+  unique_name = 0524207fbd979a7ca9fd9863b5756b0c
+build gen/third_party/libvpx/iwalsh_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/iwalsh_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/iwalsh_neon.asm
+  root = iwalsh_neon
+  unique_name = c81f94ab8e068e1a37e69b47a440f870
+build gen/third_party/libvpx/loopfilter_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/loopfilter_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/loopfilter_neon.asm
+  root = loopfilter_neon
+  unique_name = 79085d1e25528be00e2386efac4d119d
+build gen/third_party/libvpx/loopfiltersimplehorizontaledge_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/loopfiltersimplehorizontaledge_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = $
+      source/libvpx/vp8/common/arm/neon/loopfiltersimplehorizontaledge_neon.asm
+  root = loopfiltersimplehorizontaledge_neon
+  unique_name = d675a9d9a5c5052ddd8e3c4a7a6b0626
+build gen/third_party/libvpx/loopfiltersimpleverticaledge_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/loopfiltersimpleverticaledge_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = $
+      source/libvpx/vp8/common/arm/neon/loopfiltersimpleverticaledge_neon.asm
+  root = loopfiltersimpleverticaledge_neon
+  unique_name = 41b32cb03c6f192534c5ed39804236f9
+build gen/third_party/libvpx/mbloopfilter_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/mbloopfilter_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/mbloopfilter_neon.asm
+  root = mbloopfilter_neon
+  unique_name = 5354d65b1c9dda3f78b68246a20a309f
+build gen/third_party/libvpx/sad16_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/sad16_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/sad16_neon.asm
+  root = sad16_neon
+  unique_name = cb1925e74bd362b8f7d707d1126db122
+build gen/third_party/libvpx/sad8_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/sad8_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/sad8_neon.asm
+  root = sad8_neon
+  unique_name = f5f004769d0f561faf2e6d313f0028ff
+build gen/third_party/libvpx/save_reg_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/save_reg_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/save_reg_neon.asm
+  root = save_reg_neon
+  unique_name = d559167e3549b9c9254b9bc9cd16711f
+build gen/third_party/libvpx/shortidct4x4llm_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/shortidct4x4llm_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/shortidct4x4llm_neon.asm
+  root = shortidct4x4llm_neon
+  unique_name = 51a8bd5dcbd92708fdf5abef602e3ada
+build gen/third_party/libvpx/sixtappredict16x16_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/sixtappredict16x16_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/sixtappredict16x16_neon.asm
+  root = sixtappredict16x16_neon
+  unique_name = fbf781f48c8aa37fc5c60d17ab9ea198
+build gen/third_party/libvpx/sixtappredict4x4_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/sixtappredict4x4_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/sixtappredict4x4_neon.asm
+  root = sixtappredict4x4_neon
+  unique_name = 0037386837414723cc3a86dd0996f166
+build gen/third_party/libvpx/sixtappredict8x4_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/sixtappredict8x4_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/sixtappredict8x4_neon.asm
+  root = sixtappredict8x4_neon
+  unique_name = 4dce4aa5421a48831d03af37ae8297e5
+build gen/third_party/libvpx/sixtappredict8x8_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/sixtappredict8x8_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/sixtappredict8x8_neon.asm
+  root = sixtappredict8x8_neon
+  unique_name = 11e8b8fdce60ac76fd045e64376de082
+build gen/third_party/libvpx/variance_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/variance_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/variance_neon.asm
+  root = variance_neon
+  unique_name = 9ed75687bee6fd90482faa50c2536625
+build gen/third_party/libvpx/vp8_subpixelvariance16x16_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/vp8_subpixelvariance16x16_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = $
+      source/libvpx/vp8/common/arm/neon/vp8_subpixelvariance16x16_neon.asm
+  root = vp8_subpixelvariance16x16_neon
+  unique_name = a28c52925899305a04775b8d8b3c3e0e
+build gen/third_party/libvpx/vp8_subpixelvariance16x16s_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/vp8_subpixelvariance16x16s_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = $
+      source/libvpx/vp8/common/arm/neon/vp8_subpixelvariance16x16s_neon.asm
+  root = vp8_subpixelvariance16x16s_neon
+  unique_name = 46d97e0f3decb519ef5f49639acc6e0e
+build gen/third_party/libvpx/vp8_subpixelvariance8x8_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/vp8_subpixelvariance8x8_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/common/arm/neon/vp8_subpixelvariance8x8_neon.asm
+  root = vp8_subpixelvariance8x8_neon
+  unique_name = d8ab5b99db007cbdef9623951fa4148c
+build gen/third_party/libvpx/boolhuff_armv5te.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/armv5te/boolhuff_armv5te.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/encoder/arm/armv5te/boolhuff_armv5te.asm
+  root = boolhuff_armv5te
+  unique_name = 3cd07a44aa7117f6a1641ce0c2918326
+build gen/third_party/libvpx/vp8_packtokens_armv5.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/armv5te/vp8_packtokens_armv5.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/encoder/arm/armv5te/vp8_packtokens_armv5.asm
+  root = vp8_packtokens_armv5
+  unique_name = ed6cf1686adcfc6babbde61c5029716e
+build gen/third_party/libvpx/vp8_packtokens_mbrow_armv5.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/armv5te/vp8_packtokens_mbrow_armv5.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = $
+      source/libvpx/vp8/encoder/arm/armv5te/vp8_packtokens_mbrow_armv5.asm
+  root = vp8_packtokens_mbrow_armv5
+  unique_name = f1a71b59a7f2d2826a37e033f5b59999
+build gen/third_party/libvpx/vp8_packtokens_partitions_armv5.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/armv5te/vp8_packtokens_partitions_armv5.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = $
+      source/libvpx/vp8/encoder/arm/armv5te/vp8_packtokens_partitions_armv5.asm
+  root = vp8_packtokens_partitions_armv5
+  unique_name = c47544800a24f53f49ac53310d0408d2
+build gen/third_party/libvpx/vp8_fast_quantize_b_armv6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/armv6/vp8_fast_quantize_b_armv6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/encoder/arm/armv6/vp8_fast_quantize_b_armv6.asm
+  root = vp8_fast_quantize_b_armv6
+  unique_name = 57230447a1c63e2d764005b5d726922e
+build gen/third_party/libvpx/vp8_mse16x16_armv6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/armv6/vp8_mse16x16_armv6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/encoder/arm/armv6/vp8_mse16x16_armv6.asm
+  root = vp8_mse16x16_armv6
+  unique_name = 058f971237c49adb32acddd56ef5917c
+build gen/third_party/libvpx/vp8_short_fdct4x4_armv6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/armv6/vp8_short_fdct4x4_armv6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/encoder/arm/armv6/vp8_short_fdct4x4_armv6.asm
+  root = vp8_short_fdct4x4_armv6
+  unique_name = c8b7f761b7aff5d20337abeb08277e3c
+build gen/third_party/libvpx/vp8_subtract_armv6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/armv6/vp8_subtract_armv6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/encoder/arm/armv6/vp8_subtract_armv6.asm
+  root = vp8_subtract_armv6
+  unique_name = d19303edccfd83a91941b35539f6c5a3
+build gen/third_party/libvpx/walsh_v6.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/armv6/walsh_v6.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/encoder/arm/armv6/walsh_v6.asm
+  root = walsh_v6
+  unique_name = a2a286c96a2128a1fa1c8e2d22676f85
+build gen/third_party/libvpx/fastquantizeb_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/neon/fastquantizeb_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/encoder/arm/neon/fastquantizeb_neon.asm
+  root = fastquantizeb_neon
+  unique_name = 78e019df030d576ce37ffbfe6362d3f7
+build gen/third_party/libvpx/shortfdct_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/neon/shortfdct_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/encoder/arm/neon/shortfdct_neon.asm
+  root = shortfdct_neon
+  unique_name = 5b1a70f54cff8e79e45f367252799248
+build gen/third_party/libvpx/subtract_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/neon/subtract_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/encoder/arm/neon/subtract_neon.asm
+  root = subtract_neon
+  unique_name = 39e16efd65ba99375d35a0b7f6b12dfe
+build gen/third_party/libvpx/vp8_memcpy_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/neon/vp8_memcpy_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/encoder/arm/neon/vp8_memcpy_neon.asm
+  root = vp8_memcpy_neon
+  unique_name = 21769566bae0ba1ee508d1fe19e2a030
+build gen/third_party/libvpx/vp8_mse16x16_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/neon/vp8_mse16x16_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/encoder/arm/neon/vp8_mse16x16_neon.asm
+  root = vp8_mse16x16_neon
+  unique_name = b6f693d57225506944da0b3993a429db
+build gen/third_party/libvpx/vp8_shortwalsh4x4_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/neon/vp8_shortwalsh4x4_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vp8/encoder/arm/neon/vp8_shortwalsh4x4_neon.asm
+  root = vp8_shortwalsh4x4_neon
+  unique_name = ad515f6c17ba9cfc852b7aead551e9a6
+build gen/third_party/libvpx/vp8_vpxyv12_copyframe_func_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vpx_scale/arm/neon/vp8_vpxyv12_copyframe_func_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = $
+      source/libvpx/vpx_scale/arm/neon/vp8_vpxyv12_copyframe_func_neon.asm
+  root = vp8_vpxyv12_copyframe_func_neon
+  unique_name = 11a5a641d93044d2a4286500175e8c64
+build gen/third_party/libvpx/vp8_vpxyv12_copysrcframe_func_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vpx_scale/arm/neon/vp8_vpxyv12_copysrcframe_func_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = $
+      source/libvpx/vpx_scale/arm/neon/vp8_vpxyv12_copysrcframe_func_neon.asm
+  root = vp8_vpxyv12_copysrcframe_func_neon
+  unique_name = c7f82b56ca32f920757d8945272b678d
+build gen/third_party/libvpx/vp8_vpxyv12_copy_y_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vpx_scale/arm/neon/vp8_vpxyv12_copy_y_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = source/libvpx/vpx_scale/arm/neon/vp8_vpxyv12_copy_y_neon.asm
+  root = vp8_vpxyv12_copy_y_neon
+  unique_name = 6b643465b1b978af5238b04d62c0d046
+build gen/third_party/libvpx/vp8_vpxyv12_extendframeborders_neon.S: $
+    libvpx_target_convert_asm_0981e7a7281ec58fbafe3bd5548d9941 $
+    ../../third_party/libvpx/source/libvpx/vpx_scale/arm/neon/vp8_vpxyv12_extendframeborders_neon.asm $
+    | gen/third_party/libvpx/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+  source = $
+      source/libvpx/vpx_scale/arm/neon/vp8_vpxyv12_extendframeborders_neon.asm
+  root = vp8_vpxyv12_extendframeborders_neon
+  unique_name = 0e7e5bbc68492bf091a7cea70ccd2776
+build gen/third_party/libvpx/ads2gas.pl: copy $
+    ../../third_party/libvpx/source/libvpx/build/make/ads2gas.pl || $
+    obj/third_party/libvpx/libvpx.actions_depends.stamp
+build obj/third_party/libvpx/libvpx.actions_rules_copies.stamp: stamp $
+    gen/third_party/libvpx/bilinearfilter_v6.S $
+    gen/third_party/libvpx/copymem16x16_v6.S $
+    gen/third_party/libvpx/copymem8x4_v6.S $
+    gen/third_party/libvpx/copymem8x8_v6.S $
+    gen/third_party/libvpx/dc_only_idct_add_v6.S $
+    gen/third_party/libvpx/dequant_idct_v6.S $
+    gen/third_party/libvpx/dequantize_v6.S $
+    gen/third_party/libvpx/filter_v6.S gen/third_party/libvpx/idct_v6.S $
+    gen/third_party/libvpx/intra4x4_predict_v6.S $
+    gen/third_party/libvpx/iwalsh_v6.S $
+    gen/third_party/libvpx/loopfilter_v6.S $
+    gen/third_party/libvpx/simpleloopfilter_v6.S $
+    gen/third_party/libvpx/sixtappredict8x4_v6.S $
+    gen/third_party/libvpx/vp8_sad16x16_armv6.S $
+    gen/third_party/libvpx/vp8_variance16x16_armv6.S $
+    gen/third_party/libvpx/vp8_variance8x8_armv6.S $
+    gen/third_party/libvpx/vp8_variance_halfpixvar16x16_h_armv6.S $
+    gen/third_party/libvpx/vp8_variance_halfpixvar16x16_hv_armv6.S $
+    gen/third_party/libvpx/vp8_variance_halfpixvar16x16_v_armv6.S $
+    gen/third_party/libvpx/bilinearpredict16x16_neon.S $
+    gen/third_party/libvpx/bilinearpredict4x4_neon.S $
+    gen/third_party/libvpx/bilinearpredict8x4_neon.S $
+    gen/third_party/libvpx/bilinearpredict8x8_neon.S $
+    gen/third_party/libvpx/buildintrapredictorsmby_neon.S $
+    gen/third_party/libvpx/copymem16x16_neon.S $
+    gen/third_party/libvpx/copymem8x4_neon.S $
+    gen/third_party/libvpx/copymem8x8_neon.S $
+    gen/third_party/libvpx/dc_only_idct_add_neon.S $
+    gen/third_party/libvpx/dequant_idct_neon.S $
+    gen/third_party/libvpx/dequantizeb_neon.S $
+    gen/third_party/libvpx/idct_dequant_0_2x_neon.S $
+    gen/third_party/libvpx/idct_dequant_full_2x_neon.S $
+    gen/third_party/libvpx/iwalsh_neon.S $
+    gen/third_party/libvpx/loopfilter_neon.S $
+    gen/third_party/libvpx/loopfiltersimplehorizontaledge_neon.S $
+    gen/third_party/libvpx/loopfiltersimpleverticaledge_neon.S $
+    gen/third_party/libvpx/mbloopfilter_neon.S $
+    gen/third_party/libvpx/sad16_neon.S gen/third_party/libvpx/sad8_neon.S $
+    gen/third_party/libvpx/save_reg_neon.S $
+    gen/third_party/libvpx/shortidct4x4llm_neon.S $
+    gen/third_party/libvpx/sixtappredict16x16_neon.S $
+    gen/third_party/libvpx/sixtappredict4x4_neon.S $
+    gen/third_party/libvpx/sixtappredict8x4_neon.S $
+    gen/third_party/libvpx/sixtappredict8x8_neon.S $
+    gen/third_party/libvpx/variance_neon.S $
+    gen/third_party/libvpx/vp8_subpixelvariance16x16_neon.S $
+    gen/third_party/libvpx/vp8_subpixelvariance16x16s_neon.S $
+    gen/third_party/libvpx/vp8_subpixelvariance8x8_neon.S $
+    gen/third_party/libvpx/boolhuff_armv5te.S $
+    gen/third_party/libvpx/vp8_packtokens_armv5.S $
+    gen/third_party/libvpx/vp8_packtokens_mbrow_armv5.S $
+    gen/third_party/libvpx/vp8_packtokens_partitions_armv5.S $
+    gen/third_party/libvpx/vp8_fast_quantize_b_armv6.S $
+    gen/third_party/libvpx/vp8_mse16x16_armv6.S $
+    gen/third_party/libvpx/vp8_short_fdct4x4_armv6.S $
+    gen/third_party/libvpx/vp8_subtract_armv6.S $
+    gen/third_party/libvpx/walsh_v6.S $
+    gen/third_party/libvpx/fastquantizeb_neon.S $
+    gen/third_party/libvpx/shortfdct_neon.S $
+    gen/third_party/libvpx/subtract_neon.S $
+    gen/third_party/libvpx/vp8_memcpy_neon.S $
+    gen/third_party/libvpx/vp8_mse16x16_neon.S $
+    gen/third_party/libvpx/vp8_shortwalsh4x4_neon.S $
+    gen/third_party/libvpx/vp8_vpxyv12_copyframe_func_neon.S $
+    gen/third_party/libvpx/vp8_vpxyv12_copysrcframe_func_neon.S $
+    gen/third_party/libvpx/vp8_vpxyv12_copy_y_neon.S $
+    gen/third_party/libvpx/vp8_vpxyv12_extendframeborders_neon.S $
+    gen/third_party/libvpx/ads2gas.pl
+
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = -I../../third_party/libvpx/source/config/linux/arm-neon $
+    -I../../third_party/libvpx/source/config $
+    -I../../third_party/libvpx/source/libvpx
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -Wa,-I,/mnt/webkit/node-webkit/src/third_party/libvpx/source/config/linux/arm-neon $
+    -Wa,-I,/mnt/webkit/node-webkit/src/third_party/libvpx/source/config $
+    -Wa,-I,gen/third_party/libvpx -Wno-format -Wno-unused-result $
+    -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon -O2 $
+    -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wno-deprecated -Wno-abi
+
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.alloccommon.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/alloccommon.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/armv6/libvpx.idct_blk_v6.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/armv6/idct_blk_v6.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/libvpx.bilinearfilter_arm.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/bilinearfilter_arm.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/libvpx.dequantize_arm.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/dequantize_arm.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/libvpx.filter_arm.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/arm/filter_arm.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/libvpx.loopfilter_arm.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/loopfilter_arm.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/neon/libvpx.idct_blk_neon.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/neon/idct_blk_neon.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/libvpx.reconintra_arm.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/arm/reconintra_arm.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/libvpx.variance_arm.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/arm/variance_arm.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.blockd.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/blockd.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.debugmodes.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/debugmodes.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.dequantize.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/dequantize.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.entropy.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/entropy.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.entropymode.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/entropymode.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.entropymv.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/entropymv.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.extend.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/extend.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.filter.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/filter.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.findnearmv.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/findnearmv.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/common/generic/libvpx.systemdependent.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/generic/systemdependent.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.idct_blk.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/idct_blk.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.idctllm.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/idctllm.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.loopfilter.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/loopfilter.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.loopfilter_filters.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/loopfilter_filters.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.mbpitch.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/mbpitch.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.mfqe.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/mfqe.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.modecont.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/modecont.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.postproc.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/postproc.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.quant_common.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/quant_common.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.reconinter.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/reconinter.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.reconintra4x4.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/reconintra4x4.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.reconintra.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/reconintra.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.rtcd.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/rtcd.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.sad_c.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/common/sad_c.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.setupintrarecon.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/setupintrarecon.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.swapyv12buffer.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/swapyv12buffer.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.treecoder.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/treecoder.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.variance_c.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/common/variance_c.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/decoder/libvpx.dboolhuff.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/decoder/dboolhuff.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/decoder/libvpx.decodemv.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/decoder/decodemv.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/decoder/libvpx.decodframe.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/decoder/decodframe.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/decoder/libvpx.detokenize.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/decoder/detokenize.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/decoder/libvpx.onyxd_if.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/decoder/onyxd_if.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/decoder/libvpx.threading.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/decoder/threading.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/arm/libvpx.boolhuff_arm.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/boolhuff_arm.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/arm/libvpx.dct_arm.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/dct_arm.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/arm/neon/libvpx.picklpf_arm.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/neon/picklpf_arm.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/arm/libvpx.quantize_arm.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/arm/quantize_arm.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.bitstream.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/bitstream.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.dct.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/dct.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.denoising.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/denoising.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.encodeframe.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/encodeframe.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.encodeintra.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/encodeintra.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.encodemb.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/encodemb.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.encodemv.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/encodemv.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.ethreading.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/ethreading.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.lookahead.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/lookahead.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.mcomp.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/mcomp.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.modecosts.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/modecosts.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.mr_dissim.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/mr_dissim.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.onyx_if.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/onyx_if.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.pickinter.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/pickinter.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.picklpf.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/picklpf.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.psnr.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/psnr.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.quantize.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/quantize.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.ratectrl.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/ratectrl.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.rdopt.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/encoder/rdopt.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.segmentation.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/segmentation.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.tokenize.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/tokenize.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.treewriter.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp8/encoder/treewriter.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/libvpx.vp8_cx_iface.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/vp8_cx_iface.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp8/libvpx.vp8_dx_iface.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp8/vp8_dx_iface.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/generic/libvpx.vp9_systemdependent.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp9/common/generic/vp9_systemdependent.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_alloccommon.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_alloccommon.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_blockd.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_blockd.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_debugmodes.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_debugmodes.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_entropy.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_entropy.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_entropymode.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_entropymode.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_entropymv.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_entropymv.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_extend.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_extend.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_filter.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_filter.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_findnearmv.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_findnearmv.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_idctllm.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_idctllm.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_invtrans.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_invtrans.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_loopfilter.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_loopfilter.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_loopfilter_filters.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp9/common/vp9_loopfilter_filters.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_mbpitch.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_mbpitch.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_modecont.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_modecont.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_modecontext.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_modecontext.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_mvref_common.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_mvref_common.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_postproc.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_postproc.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_pred_common.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_pred_common.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_quant_common.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_quant_common.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_recon.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_recon.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_reconinter.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_reconinter.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_reconintra4x4.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp9/common/vp9_reconintra4x4.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_reconintra.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_reconintra.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_rtcd.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp9/common/vp9_rtcd.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_seg_common.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_seg_common.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_setupintrarecon.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp9/common/vp9_setupintrarecon.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_swapyv12buffer.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vp9/common/vp9_swapyv12buffer.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_treecoder.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/common/vp9_treecoder.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/decoder/libvpx.vp9_dboolhuff.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/decoder/vp9_dboolhuff.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/decoder/libvpx.vp9_decodemv.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/decoder/vp9_decodemv.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/decoder/libvpx.vp9_decodframe.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/decoder/vp9_decodframe.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/decoder/libvpx.vp9_dequantize.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/decoder/vp9_dequantize.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/decoder/libvpx.vp9_detokenize.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/decoder/vp9_detokenize.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/decoder/libvpx.vp9_idct_blk.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/decoder/vp9_idct_blk.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vp9/decoder/libvpx.vp9_onyxd_if.o: $
+    cc ../../third_party/libvpx/source/libvpx/vp9/decoder/vp9_onyxd_if.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vp9/libvpx.vp9_dx_iface.o: cc $
+    ../../third_party/libvpx/source/libvpx/vp9/vp9_dx_iface.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vpx_mem/libvpx.vpx_mem.o: cc $
+    ../../third_party/libvpx/source/libvpx/vpx_mem/vpx_mem.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vpx_ports/libvpx.arm_cpudetect.o: $
+    cc ../../third_party/libvpx/source/libvpx/vpx_ports/arm_cpudetect.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vpx_scale/arm/neon/libvpx.yv12extend_arm.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vpx_scale/arm/neon/yv12extend_arm.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vpx_scale/generic/libvpx.gen_scalers.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vpx_scale/generic/gen_scalers.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vpx_scale/generic/libvpx.vpxscale.o: $
+    cc ../../third_party/libvpx/source/libvpx/vpx_scale/generic/vpxscale.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vpx_scale/generic/libvpx.yv12config.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vpx_scale/generic/yv12config.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vpx_scale/generic/libvpx.yv12extend.o: $
+    cc $
+    ../../third_party/libvpx/source/libvpx/vpx_scale/generic/yv12extend.c $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/source/libvpx/vpx_scale/libvpx.vpx_scale_rtcd.o: $
+    cc ../../third_party/libvpx/source/libvpx/vpx_scale/vpx_scale_rtcd.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vpx/src/libvpx.vpx_codec.o: cc $
+    ../../third_party/libvpx/source/libvpx/vpx/src/vpx_codec.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vpx/src/libvpx.vpx_decoder.o: cc $
+    ../../third_party/libvpx/source/libvpx/vpx/src/vpx_decoder.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vpx/src/libvpx.vpx_encoder.o: cc $
+    ../../third_party/libvpx/source/libvpx/vpx/src/vpx_encoder.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/source/libvpx/vpx/src/libvpx.vpx_image.o: cc $
+    ../../third_party/libvpx/source/libvpx/vpx/src/vpx_image.c || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.bilinearfilter_v6.o: $
+    cc gen/third_party/libvpx/bilinearfilter_v6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.copymem16x16_v6.o: $
+    cc gen/third_party/libvpx/copymem16x16_v6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/gen/third_party/libvpx/libvpx.copymem8x4_v6.o: $
+    cc gen/third_party/libvpx/copymem8x4_v6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/gen/third_party/libvpx/libvpx.copymem8x8_v6.o: $
+    cc gen/third_party/libvpx/copymem8x8_v6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.dc_only_idct_add_v6.o: $
+    cc gen/third_party/libvpx/dc_only_idct_add_v6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.dequant_idct_v6.o: $
+    cc gen/third_party/libvpx/dequant_idct_v6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/gen/third_party/libvpx/libvpx.dequantize_v6.o: $
+    cc gen/third_party/libvpx/dequantize_v6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/gen/third_party/libvpx/libvpx.filter_v6.o: cc $
+    gen/third_party/libvpx/filter_v6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/gen/third_party/libvpx/libvpx.idct_v6.o: cc $
+    gen/third_party/libvpx/idct_v6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.intra4x4_predict_v6.o: $
+    cc gen/third_party/libvpx/intra4x4_predict_v6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/gen/third_party/libvpx/libvpx.iwalsh_v6.o: cc $
+    gen/third_party/libvpx/iwalsh_v6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/gen/third_party/libvpx/libvpx.loopfilter_v6.o: $
+    cc gen/third_party/libvpx/loopfilter_v6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.simpleloopfilter_v6.o: $
+    cc gen/third_party/libvpx/simpleloopfilter_v6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.sixtappredict8x4_v6.o: $
+    cc gen/third_party/libvpx/sixtappredict8x4_v6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_sad16x16_armv6.o: $
+    cc gen/third_party/libvpx/vp8_sad16x16_armv6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_variance16x16_armv6.o: $
+    cc gen/third_party/libvpx/vp8_variance16x16_armv6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_variance8x8_armv6.o: $
+    cc gen/third_party/libvpx/vp8_variance8x8_armv6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_variance_halfpixvar16x16_h_armv6.o: $
+    cc gen/third_party/libvpx/vp8_variance_halfpixvar16x16_h_armv6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_variance_halfpixvar16x16_hv_armv6.o: $
+    cc gen/third_party/libvpx/vp8_variance_halfpixvar16x16_hv_armv6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_variance_halfpixvar16x16_v_armv6.o: $
+    cc gen/third_party/libvpx/vp8_variance_halfpixvar16x16_v_armv6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.bilinearpredict16x16_neon.o: $
+    cc gen/third_party/libvpx/bilinearpredict16x16_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.bilinearpredict4x4_neon.o: $
+    cc gen/third_party/libvpx/bilinearpredict4x4_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.bilinearpredict8x4_neon.o: $
+    cc gen/third_party/libvpx/bilinearpredict8x4_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.bilinearpredict8x8_neon.o: $
+    cc gen/third_party/libvpx/bilinearpredict8x8_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.buildintrapredictorsmby_neon.o: $
+    cc gen/third_party/libvpx/buildintrapredictorsmby_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.copymem16x16_neon.o: $
+    cc gen/third_party/libvpx/copymem16x16_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.copymem8x4_neon.o: $
+    cc gen/third_party/libvpx/copymem8x4_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.copymem8x8_neon.o: $
+    cc gen/third_party/libvpx/copymem8x8_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.dc_only_idct_add_neon.o: $
+    cc gen/third_party/libvpx/dc_only_idct_add_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.dequant_idct_neon.o: $
+    cc gen/third_party/libvpx/dequant_idct_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.dequantizeb_neon.o: $
+    cc gen/third_party/libvpx/dequantizeb_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.idct_dequant_0_2x_neon.o: $
+    cc gen/third_party/libvpx/idct_dequant_0_2x_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.idct_dequant_full_2x_neon.o: $
+    cc gen/third_party/libvpx/idct_dequant_full_2x_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/gen/third_party/libvpx/libvpx.iwalsh_neon.o: $
+    cc gen/third_party/libvpx/iwalsh_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.loopfilter_neon.o: $
+    cc gen/third_party/libvpx/loopfilter_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.loopfiltersimplehorizontaledge_neon.o: $
+    cc gen/third_party/libvpx/loopfiltersimplehorizontaledge_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.loopfiltersimpleverticaledge_neon.o: $
+    cc gen/third_party/libvpx/loopfiltersimpleverticaledge_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.mbloopfilter_neon.o: $
+    cc gen/third_party/libvpx/mbloopfilter_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/gen/third_party/libvpx/libvpx.sad16_neon.o: cc $
+    gen/third_party/libvpx/sad16_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/gen/third_party/libvpx/libvpx.sad8_neon.o: cc $
+    gen/third_party/libvpx/sad8_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/gen/third_party/libvpx/libvpx.save_reg_neon.o: $
+    cc gen/third_party/libvpx/save_reg_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.shortidct4x4llm_neon.o: $
+    cc gen/third_party/libvpx/shortidct4x4llm_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.sixtappredict16x16_neon.o: $
+    cc gen/third_party/libvpx/sixtappredict16x16_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.sixtappredict4x4_neon.o: $
+    cc gen/third_party/libvpx/sixtappredict4x4_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.sixtappredict8x4_neon.o: $
+    cc gen/third_party/libvpx/sixtappredict8x4_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.sixtappredict8x8_neon.o: $
+    cc gen/third_party/libvpx/sixtappredict8x8_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/gen/third_party/libvpx/libvpx.variance_neon.o: $
+    cc gen/third_party/libvpx/variance_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_subpixelvariance16x16_neon.o: $
+    cc gen/third_party/libvpx/vp8_subpixelvariance16x16_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_subpixelvariance16x16s_neon.o: $
+    cc gen/third_party/libvpx/vp8_subpixelvariance16x16s_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_subpixelvariance8x8_neon.o: $
+    cc gen/third_party/libvpx/vp8_subpixelvariance8x8_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.boolhuff_armv5te.o: $
+    cc gen/third_party/libvpx/boolhuff_armv5te.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_packtokens_armv5.o: $
+    cc gen/third_party/libvpx/vp8_packtokens_armv5.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_packtokens_mbrow_armv5.o: $
+    cc gen/third_party/libvpx/vp8_packtokens_mbrow_armv5.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_packtokens_partitions_armv5.o: $
+    cc gen/third_party/libvpx/vp8_packtokens_partitions_armv5.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_fast_quantize_b_armv6.o: $
+    cc gen/third_party/libvpx/vp8_fast_quantize_b_armv6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_mse16x16_armv6.o: $
+    cc gen/third_party/libvpx/vp8_mse16x16_armv6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_short_fdct4x4_armv6.o: $
+    cc gen/third_party/libvpx/vp8_short_fdct4x4_armv6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_subtract_armv6.o: $
+    cc gen/third_party/libvpx/vp8_subtract_armv6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/gen/third_party/libvpx/libvpx.walsh_v6.o: cc $
+    gen/third_party/libvpx/walsh_v6.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.fastquantizeb_neon.o: $
+    cc gen/third_party/libvpx/fastquantizeb_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.shortfdct_neon.o: $
+    cc gen/third_party/libvpx/shortfdct_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build obj/third_party/libvpx/gen/third_party/libvpx/libvpx.subtract_neon.o: $
+    cc gen/third_party/libvpx/subtract_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_memcpy_neon.o: $
+    cc gen/third_party/libvpx/vp8_memcpy_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_mse16x16_neon.o: $
+    cc gen/third_party/libvpx/vp8_mse16x16_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_shortwalsh4x4_neon.o: $
+    cc gen/third_party/libvpx/vp8_shortwalsh4x4_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_vpxyv12_copyframe_func_neon.o: $
+    cc gen/third_party/libvpx/vp8_vpxyv12_copyframe_func_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_vpxyv12_copysrcframe_func_neon.o: $
+    cc gen/third_party/libvpx/vp8_vpxyv12_copysrcframe_func_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_vpxyv12_copy_y_neon.o: $
+    cc gen/third_party/libvpx/vp8_vpxyv12_copy_y_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+build $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_vpxyv12_extendframeborders_neon.o: $
+    cc gen/third_party/libvpx/vp8_vpxyv12_extendframeborders_neon.S || $
+    obj/third_party/libvpx/libvpx.actions_rules_copies.stamp
+
+build obj/third_party/libvpx/libvpx.a: alink_thin $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.alloccommon.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/armv6/libvpx.idct_blk_v6.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/libvpx.bilinearfilter_arm.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/libvpx.dequantize_arm.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/libvpx.filter_arm.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/libvpx.loopfilter_arm.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/neon/libvpx.idct_blk_neon.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/libvpx.reconintra_arm.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/arm/libvpx.variance_arm.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.blockd.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.debugmodes.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.dequantize.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.entropy.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.entropymode.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.entropymv.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.extend.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.filter.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.findnearmv.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/generic/libvpx.systemdependent.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.idct_blk.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.idctllm.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.loopfilter.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.loopfilter_filters.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.mbpitch.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.mfqe.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.modecont.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.postproc.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.quant_common.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.reconinter.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.reconintra4x4.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.reconintra.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.rtcd.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.sad_c.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.setupintrarecon.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.swapyv12buffer.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.treecoder.o $
+    obj/third_party/libvpx/source/libvpx/vp8/common/libvpx.variance_c.o $
+    obj/third_party/libvpx/source/libvpx/vp8/decoder/libvpx.dboolhuff.o $
+    obj/third_party/libvpx/source/libvpx/vp8/decoder/libvpx.decodemv.o $
+    obj/third_party/libvpx/source/libvpx/vp8/decoder/libvpx.decodframe.o $
+    obj/third_party/libvpx/source/libvpx/vp8/decoder/libvpx.detokenize.o $
+    obj/third_party/libvpx/source/libvpx/vp8/decoder/libvpx.onyxd_if.o $
+    obj/third_party/libvpx/source/libvpx/vp8/decoder/libvpx.threading.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/arm/libvpx.boolhuff_arm.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/arm/libvpx.dct_arm.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/arm/neon/libvpx.picklpf_arm.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/arm/libvpx.quantize_arm.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.bitstream.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.dct.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.denoising.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.encodeframe.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.encodeintra.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.encodemb.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.encodemv.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.ethreading.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.lookahead.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.mcomp.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.modecosts.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.mr_dissim.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.onyx_if.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.pickinter.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.picklpf.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.psnr.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.quantize.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.ratectrl.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.rdopt.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.segmentation.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.tokenize.o $
+    obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.treewriter.o $
+    obj/third_party/libvpx/source/libvpx/vp8/libvpx.vp8_cx_iface.o $
+    obj/third_party/libvpx/source/libvpx/vp8/libvpx.vp8_dx_iface.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/generic/libvpx.vp9_systemdependent.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_alloccommon.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_blockd.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_debugmodes.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_entropy.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_entropymode.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_entropymv.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_extend.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_filter.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_findnearmv.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_idctllm.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_invtrans.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_loopfilter.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_loopfilter_filters.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_mbpitch.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_modecont.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_modecontext.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_mvref_common.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_postproc.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_pred_common.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_quant_common.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_recon.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_reconinter.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_reconintra4x4.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_reconintra.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_rtcd.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_seg_common.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_setupintrarecon.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_swapyv12buffer.o $
+    obj/third_party/libvpx/source/libvpx/vp9/common/libvpx.vp9_treecoder.o $
+    obj/third_party/libvpx/source/libvpx/vp9/decoder/libvpx.vp9_dboolhuff.o $
+    obj/third_party/libvpx/source/libvpx/vp9/decoder/libvpx.vp9_decodemv.o $
+    obj/third_party/libvpx/source/libvpx/vp9/decoder/libvpx.vp9_decodframe.o $
+    obj/third_party/libvpx/source/libvpx/vp9/decoder/libvpx.vp9_dequantize.o $
+    obj/third_party/libvpx/source/libvpx/vp9/decoder/libvpx.vp9_detokenize.o $
+    obj/third_party/libvpx/source/libvpx/vp9/decoder/libvpx.vp9_idct_blk.o $
+    obj/third_party/libvpx/source/libvpx/vp9/decoder/libvpx.vp9_onyxd_if.o $
+    obj/third_party/libvpx/source/libvpx/vp9/libvpx.vp9_dx_iface.o $
+    obj/third_party/libvpx/source/libvpx/vpx_mem/libvpx.vpx_mem.o $
+    obj/third_party/libvpx/source/libvpx/vpx_ports/libvpx.arm_cpudetect.o $
+    obj/third_party/libvpx/source/libvpx/vpx_scale/arm/neon/libvpx.yv12extend_arm.o $
+    obj/third_party/libvpx/source/libvpx/vpx_scale/generic/libvpx.gen_scalers.o $
+    obj/third_party/libvpx/source/libvpx/vpx_scale/generic/libvpx.vpxscale.o $
+    obj/third_party/libvpx/source/libvpx/vpx_scale/generic/libvpx.yv12config.o $
+    obj/third_party/libvpx/source/libvpx/vpx_scale/generic/libvpx.yv12extend.o $
+    obj/third_party/libvpx/source/libvpx/vpx_scale/libvpx.vpx_scale_rtcd.o $
+    obj/third_party/libvpx/source/libvpx/vpx/src/libvpx.vpx_codec.o $
+    obj/third_party/libvpx/source/libvpx/vpx/src/libvpx.vpx_decoder.o $
+    obj/third_party/libvpx/source/libvpx/vpx/src/libvpx.vpx_encoder.o $
+    obj/third_party/libvpx/source/libvpx/vpx/src/libvpx.vpx_image.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.bilinearfilter_v6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.copymem16x16_v6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.copymem8x4_v6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.copymem8x8_v6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.dc_only_idct_add_v6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.dequant_idct_v6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.dequantize_v6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.filter_v6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.idct_v6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.intra4x4_predict_v6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.iwalsh_v6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.loopfilter_v6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.simpleloopfilter_v6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.sixtappredict8x4_v6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_sad16x16_armv6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_variance16x16_armv6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_variance8x8_armv6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_variance_halfpixvar16x16_h_armv6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_variance_halfpixvar16x16_hv_armv6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_variance_halfpixvar16x16_v_armv6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.bilinearpredict16x16_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.bilinearpredict4x4_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.bilinearpredict8x4_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.bilinearpredict8x8_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.buildintrapredictorsmby_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.copymem16x16_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.copymem8x4_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.copymem8x8_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.dc_only_idct_add_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.dequant_idct_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.dequantizeb_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.idct_dequant_0_2x_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.idct_dequant_full_2x_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.iwalsh_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.loopfilter_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.loopfiltersimplehorizontaledge_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.loopfiltersimpleverticaledge_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.mbloopfilter_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.sad16_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.sad8_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.save_reg_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.shortidct4x4llm_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.sixtappredict16x16_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.sixtappredict4x4_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.sixtappredict8x4_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.sixtappredict8x8_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.variance_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_subpixelvariance16x16_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_subpixelvariance16x16s_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_subpixelvariance8x8_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.boolhuff_armv5te.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_packtokens_armv5.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_packtokens_mbrow_armv5.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_packtokens_partitions_armv5.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_fast_quantize_b_armv6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_mse16x16_armv6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_short_fdct4x4_armv6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_subtract_armv6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.walsh_v6.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.fastquantizeb_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.shortfdct_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.subtract_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_memcpy_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_mse16x16_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_shortwalsh4x4_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_vpxyv12_copyframe_func_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_vpxyv12_copysrcframe_func_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_vpxyv12_copy_y_neon.o $
+    obj/third_party/libvpx/gen/third_party/libvpx/libvpx.vp8_vpxyv12_extendframeborders_neon.o $
+    || obj/third_party/libvpx/libvpx.actions_rules_copies.stamp

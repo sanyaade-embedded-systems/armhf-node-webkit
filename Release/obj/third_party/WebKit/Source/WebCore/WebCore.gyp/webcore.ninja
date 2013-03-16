@@ -1,0 +1,31 @@
+build $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore.actions_depends.stamp: $
+    stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_dom.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_html.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_platform.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_platform_geometry.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_remaining.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_rendering.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_bindings.a $
+    obj/third_party/WebKit/Source/WTF/WTF.gyp/libwtf.a $
+    obj/build/temp_gyp/libgoogleurl.a obj/skia/libskia.a $
+    obj/third_party/qcms/libqcms.a $
+    obj/v8/tools/gyp/v8.actions_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_arm_neon.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_svg.a
+
+build $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore.compile_depends.stamp: $
+    stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_bindings.compile_depends.stamp $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp
+

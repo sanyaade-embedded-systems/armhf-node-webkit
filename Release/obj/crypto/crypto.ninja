@@ -1,0 +1,98 @@
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DCRYPTO_IMPLEMENTATION $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT -D_FORTIFY_SOURCE=2
+includes = -I../.. -I../../net/third_party/nss/ssl
+cflags = -fstack-protector --param=ssp-buffer-size=4 -Werror -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wall -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gtk-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/gtk-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/atk-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gdk-pixbuf-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gio-unix-2.0/ $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/nss $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/nspr $
+    -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon -O2 $
+    -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wsign-compare -Wno-abi
+
+build obj/crypto/crypto.hmac.o: cxx ../../crypto/hmac.cc
+build obj/crypto/crypto.secure_util.o: cxx ../../crypto/secure_util.cc
+build obj/crypto/third_party/nss/crypto.sha512.o: cxx $
+    ../../crypto/third_party/nss/sha512.cc
+build obj/crypto/crypto.ghash.o: cxx ../../crypto/ghash.cc
+build obj/crypto/crypto.ec_private_key_nss.o: cxx $
+    ../../crypto/ec_private_key_nss.cc
+build obj/crypto/crypto.ec_signature_creator.o: cxx $
+    ../../crypto/ec_signature_creator.cc
+build obj/crypto/crypto.ec_signature_creator_nss.o: cxx $
+    ../../crypto/ec_signature_creator_nss.cc
+build obj/crypto/crypto.encryptor.o: cxx ../../crypto/encryptor.cc
+build obj/crypto/crypto.encryptor_nss.o: cxx ../../crypto/encryptor_nss.cc
+build obj/crypto/crypto.hmac_nss.o: cxx ../../crypto/hmac_nss.cc
+build obj/crypto/crypto.p224_spake.o: cxx ../../crypto/p224_spake.cc
+build obj/crypto/crypto.nss_util.o: cxx ../../crypto/nss_util.cc
+build obj/crypto/crypto.openpgp_symmetric_encryption.o: cxx $
+    ../../crypto/openpgp_symmetric_encryption.cc
+build obj/crypto/crypto.p224.o: cxx ../../crypto/p224.cc
+build obj/crypto/crypto.random.o: cxx ../../crypto/random.cc
+build obj/crypto/crypto.rsa_private_key.o: cxx ../../crypto/rsa_private_key.cc
+build obj/crypto/crypto.rsa_private_key_nss.o: cxx $
+    ../../crypto/rsa_private_key_nss.cc
+build obj/crypto/crypto.secure_hash_default.o: cxx $
+    ../../crypto/secure_hash_default.cc
+build obj/crypto/crypto.sha2.o: cxx ../../crypto/sha2.cc
+build obj/crypto/crypto.signature_creator_nss.o: cxx $
+    ../../crypto/signature_creator_nss.cc
+build obj/crypto/crypto.signature_verifier_nss.o: cxx $
+    ../../crypto/signature_verifier_nss.cc
+build obj/crypto/crypto.symmetric_key_nss.o: cxx $
+    ../../crypto/symmetric_key_nss.cc
+build obj/crypto/third_party/nss/crypto.pk11akey.o: cxx $
+    ../../crypto/third_party/nss/pk11akey.cc
+build obj/crypto/third_party/nss/crypto.secsign.o: cxx $
+    ../../crypto/third_party/nss/secsign.cc
+
+build obj/crypto/libcrcrypto.a: alink_thin obj/crypto/crypto.hmac.o $
+    obj/crypto/crypto.secure_util.o $
+    obj/crypto/third_party/nss/crypto.sha512.o obj/crypto/crypto.ghash.o $
+    obj/crypto/crypto.ec_private_key_nss.o $
+    obj/crypto/crypto.ec_signature_creator.o $
+    obj/crypto/crypto.ec_signature_creator_nss.o $
+    obj/crypto/crypto.encryptor.o obj/crypto/crypto.encryptor_nss.o $
+    obj/crypto/crypto.hmac_nss.o obj/crypto/crypto.p224_spake.o $
+    obj/crypto/crypto.nss_util.o $
+    obj/crypto/crypto.openpgp_symmetric_encryption.o $
+    obj/crypto/crypto.p224.o obj/crypto/crypto.random.o $
+    obj/crypto/crypto.rsa_private_key.o $
+    obj/crypto/crypto.rsa_private_key_nss.o $
+    obj/crypto/crypto.secure_hash_default.o obj/crypto/crypto.sha2.o $
+    obj/crypto/crypto.signature_creator_nss.o $
+    obj/crypto/crypto.signature_verifier_nss.o $
+    obj/crypto/crypto.symmetric_key_nss.o $
+    obj/crypto/third_party/nss/crypto.pk11akey.o $
+    obj/crypto/third_party/nss/crypto.secsign.o || $
+    obj/build/linux/ssl.actions_depends.stamp

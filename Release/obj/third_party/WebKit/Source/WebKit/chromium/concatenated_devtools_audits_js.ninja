@@ -1,0 +1,21 @@
+rule $
+    concatenated_devtools_audits_js_target_concatenate_devtools_audits_js_36151b66e507d0cc5376b9c2c520d33e
+  command = cd ../../third_party/WebKit/Source/WebKit/chromium; python $
+      scripts/inline_js_imports.py $
+      ../../WebCore/inspector/front-end/AuditsPanel.js $
+      ../../WebCore/inspector/front-end $
+      ../../../../../out/Release/resources/inspector/AuditsPanel.js
+  description = ACTION concatenated_devtools_audits_js: $
+      concatenate_devtools_audits_js_36151b66e507d0cc5376b9c2c520d33e
+  restat = 1
+
+build resources/inspector/AuditsPanel.js: $
+    concatenated_devtools_audits_js_target_concatenate_devtools_audits_js_36151b66e507d0cc5376b9c2c520d33e $
+    ../../third_party/WebKit/Source/WebKit/chromium/scripts/inline_js_imports.py $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/AuditCategories.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/AuditFormatters.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/AuditLauncherView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/AuditResultView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/AuditRules.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/AuditsPanel.js
+

@@ -1,0 +1,516 @@
+build obj/webkit/support/glue.actions_depends.stamp: stamp $
+    obj/ui/gl/libgl_wrapper.a obj/v8/tools/gyp/v8.actions_depends.stamp $
+    obj/webkit/support/webkit_resources.actions_rules_copies.stamp $
+    obj/webkit/support/webkit_strings.actions_rules_copies.stamp
+
+build obj/webkit/support/glue.compile_depends.stamp: stamp $
+    obj/ui/gl/gl.actions_rules_copies.stamp $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc $
+    obj/webkit/support/webkit_resources.actions_rules_copies.stamp $
+    obj/webkit/support/webkit_strings.actions_rules_copies.stamp
+
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DWEBKIT_EXTENSIONS_IMPLEMENTATION $
+    -DWEBKIT_GLUE_IMPLEMENTATION -DWEBKIT_PLUGINS_IMPLEMENTATION $
+    -DGL_GLEXT_PROTOTYPES -DSK_BUILD_NO_IMAGE_ENCODE $
+    -DSK_DEFERRED_CANVAS_USES_GPIPE=1 $
+    '-DGR_GL_CUSTOM_SETUP_HEADER="GrGLConfig_chrome.h"' $
+    -DGR_AGGRESSIVE_SHADER_OPTS=1 -DSK_USE_POSIX_THREADS $
+    -DU_USING_ICU_NAMESPACE=0 -DU_STATIC_IMPLEMENTATION $
+    -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT -D_FORTIFY_SOURCE=2
+includes = -I../../third_party/icu/public/common $
+    -I../../third_party/icu/public/i18n -Iobj/webkit/support/glue.gen $
+    -Igen/webkit -I../../third_party/khronos -I../../gpu -I../.. $
+    -I../../third_party/WebKit/Source/Platform/chromium -I../../skia/config $
+    -I../../third_party/skia/src/core $
+    -I../../third_party/skia/include/config $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/gpu/gl $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils -I../../skia/ext $
+    -I../../third_party/npapi -I../../third_party/npapi/bindings $
+    -Igen/ui/gl -I../../third_party/mesa/MesaLib/include -I../../v8/include $
+    -I../../third_party/WebKit/Source/Platform/chromium -Igen/webcore_headers
+cflags = -Wno-narrowing -fstack-protector --param=ssp-buffer-size=4 -Werror $
+    -pthread -fno-exceptions -fno-strict-aliasing -Wall $
+    -Wno-unused-parameter -Wno-missing-field-initializers $
+    -fvisibility=hidden -pipe -fPIC -pthread $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gtk-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/gtk-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/atk-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gdk-pixbuf-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gio-unix-2.0/ $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 $
+    -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon -O2 $
+    -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -Wno-narrowing -fno-rtti -fno-threadsafe-statics $
+    -fvisibility-inlines-hidden -Wsign-compare -Wno-abi
+
+build obj/webkit/plugins/npapi/glue.gtk_plugin_container.o: cxx $
+    ../../webkit/plugins/npapi/gtk_plugin_container.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.gtk_plugin_container_manager.o: cxx $
+    ../../webkit/plugins/npapi/gtk_plugin_container_manager.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.plugin_host.o: cxx $
+    ../../webkit/plugins/npapi/plugin_host.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.plugin_instance.o: cxx $
+    ../../webkit/plugins/npapi/plugin_instance.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.plugin_lib.o: cxx $
+    ../../webkit/plugins/npapi/plugin_lib.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.plugin_lib_posix.o: cxx $
+    ../../webkit/plugins/npapi/plugin_lib_posix.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.plugin_list.o: cxx $
+    ../../webkit/plugins/npapi/plugin_list.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.plugin_list_posix.o: cxx $
+    ../../webkit/plugins/npapi/plugin_list_posix.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.plugin_stream.o: cxx $
+    ../../webkit/plugins/npapi/plugin_stream.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.plugin_stream_posix.o: cxx $
+    ../../webkit/plugins/npapi/plugin_stream_posix.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.plugin_stream_url.o: cxx $
+    ../../webkit/plugins/npapi/plugin_stream_url.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.plugin_string_stream.o: cxx $
+    ../../webkit/plugins/npapi/plugin_string_stream.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.plugin_utils.o: cxx $
+    ../../webkit/plugins/npapi/plugin_utils.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.webplugin.o: cxx $
+    ../../webkit/plugins/npapi/webplugin.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.webplugin_delegate_impl.o: cxx $
+    ../../webkit/plugins/npapi/webplugin_delegate_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.webplugin_delegate_impl_gtk.o: cxx $
+    ../../webkit/plugins/npapi/webplugin_delegate_impl_gtk.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/npapi/glue.webplugin_impl.o: cxx $
+    ../../webkit/plugins/npapi/webplugin_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/glue.plugin_constants.o: cxx $
+    ../../webkit/plugins/plugin_constants.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/glue.plugin_switches.o: cxx $
+    ../../webkit/plugins/plugin_switches.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.audio_helper.o: cxx $
+    ../../webkit/plugins/ppapi/audio_helper.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.content_decryptor_delegate.o: cxx $
+    ../../webkit/plugins/ppapi/content_decryptor_delegate.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.event_conversion.o: cxx $
+    ../../webkit/plugins/ppapi/event_conversion.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.file_callbacks.o: cxx $
+    ../../webkit/plugins/ppapi/file_callbacks.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.host_array_buffer_var.o: cxx $
+    ../../webkit/plugins/ppapi/host_array_buffer_var.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.host_globals.o: cxx $
+    ../../webkit/plugins/ppapi/host_globals.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.host_var_tracker.o: cxx $
+    ../../webkit/plugins/ppapi/host_var_tracker.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.message_channel.o: cxx $
+    ../../webkit/plugins/ppapi/message_channel.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.npapi_glue.o: cxx $
+    ../../webkit/plugins/ppapi/npapi_glue.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.npobject_var.o: cxx $
+    ../../webkit/plugins/ppapi/npobject_var.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.plugin_module.o: cxx $
+    ../../webkit/plugins/ppapi/plugin_module.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.plugin_object.o: cxx $
+    ../../webkit/plugins/ppapi/plugin_object.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppapi_interface_factory.o: cxx $
+    ../../webkit/plugins/ppapi/ppapi_interface_factory.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppapi_plugin_instance.o: cxx $
+    ../../webkit/plugins/ppapi/ppapi_plugin_instance.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppapi_webplugin_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppapi_webplugin_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_audio_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_audio_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_broker_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_broker_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_buffer_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_buffer_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_directory_reader_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_directory_reader_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_file_io_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_file_io_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_file_ref_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_file_ref_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_file_system_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_file_system_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_flash_message_loop_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_flash_message_loop_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_gpu_blacklist_private_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_gpu_blacklist_private_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_graphics_2d_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_graphics_2d_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_graphics_3d_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_graphics_3d_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_host_resolver_private_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_host_resolver_private_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_image_data_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_image_data_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_network_monitor_private_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_network_monitor_private_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_proxy_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_proxy_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_scrollbar_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_scrollbar_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_tcp_server_socket_private_impl.o: $
+    cxx ../../webkit/plugins/ppapi/ppb_tcp_server_socket_private_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_tcp_socket_private_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_tcp_socket_private_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_udp_socket_private_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_udp_socket_private_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_uma_private_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_uma_private_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_url_loader_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_url_loader_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_var_deprecated_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_var_deprecated_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_video_decoder_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_video_decoder_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_widget_impl.o: cxx $
+    ../../webkit/plugins/ppapi/ppb_widget_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.ppb_x509_certificate_private_impl.o: $
+    cxx ../../webkit/plugins/ppapi/ppb_x509_certificate_private_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.quota_file_io.o: cxx $
+    ../../webkit/plugins/ppapi/quota_file_io.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.resource_creation_impl.o: cxx $
+    ../../webkit/plugins/ppapi/resource_creation_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.resource_helper.o: cxx $
+    ../../webkit/plugins/ppapi/resource_helper.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.string.o: cxx $
+    ../../webkit/plugins/ppapi/string.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.url_response_info_util.o: cxx $
+    ../../webkit/plugins/ppapi/url_response_info_util.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.url_request_info_util.o: cxx $
+    ../../webkit/plugins/ppapi/url_request_info_util.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.usb_key_code_conversion.o: cxx $
+    ../../webkit/plugins/ppapi/usb_key_code_conversion.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/ppapi/glue.usb_key_code_conversion_linux.o: cxx $
+    ../../webkit/plugins/ppapi/usb_key_code_conversion_linux.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/glue.sad_plugin.o: cxx $
+    ../../webkit/plugins/sad_plugin.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/glue.webplugininfo.o: cxx $
+    ../../webkit/plugins/webplugininfo.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/plugins/glue.webview_plugin.o: cxx $
+    ../../webkit/plugins/webview_plugin.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.alt_error_page_resource_fetcher.o: cxx $
+    ../../webkit/glue/alt_error_page_resource_fetcher.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.cpp_binding_example.o: cxx $
+    ../../webkit/glue/cpp_binding_example.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.cpp_bound_class.o: cxx $
+    ../../webkit/glue/cpp_bound_class.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.cpp_variant.o: cxx $
+    ../../webkit/glue/cpp_variant.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.dom_operations.o: cxx $
+    ../../webkit/glue/dom_operations.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.ftp_directory_listing_response_delegate.o: cxx $
+    ../../webkit/glue/ftp_directory_listing_response_delegate.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.glue_serialize.o: cxx $
+    ../../webkit/glue/glue_serialize.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.image_decoder.o: cxx $
+    ../../webkit/glue/image_decoder.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.image_resource_fetcher.o: cxx $
+    ../../webkit/glue/image_resource_fetcher.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.multi_resolution_image_resource_fetcher.o: cxx $
+    ../../webkit/glue/multi_resolution_image_resource_fetcher.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.multipart_response_delegate.o: cxx $
+    ../../webkit/glue/multipart_response_delegate.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.npruntime_util.o: cxx $
+    ../../webkit/glue/npruntime_util.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.resource_fetcher.o: cxx $
+    ../../webkit/glue/resource_fetcher.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.resource_loader_bridge.o: cxx $
+    ../../webkit/glue/resource_loader_bridge.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.resource_request_body.o: cxx $
+    ../../webkit/glue/resource_request_body.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.resource_type.o: cxx $
+    ../../webkit/glue/resource_type.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.scoped_clipboard_writer_glue.o: cxx $
+    ../../webkit/glue/scoped_clipboard_writer_glue.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.simple_webmimeregistry_impl.o: cxx $
+    ../../webkit/glue/simple_webmimeregistry_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.touch_fling_gesture_curve.o: cxx $
+    ../../webkit/glue/touch_fling_gesture_curve.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.webclipboard_impl.o: cxx $
+    ../../webkit/glue/webclipboard_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.webcookie.o: cxx ../../webkit/glue/webcookie.cc $
+    || obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.webcursor.o: cxx ../../webkit/glue/webcursor.cc $
+    || obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.webcursor_gtk.o: cxx $
+    ../../webkit/glue/webcursor_gtk.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.webdropdata.o: cxx $
+    ../../webkit/glue/webdropdata.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.webfileutilities_impl.o: cxx $
+    ../../webkit/glue/webfileutilities_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.webkit_glue.o: cxx $
+    ../../webkit/glue/webkit_glue.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.webkitplatformsupport_impl.o: cxx $
+    ../../webkit/glue/webkitplatformsupport_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.webmenuitem.o: cxx $
+    ../../webkit/glue/webmenuitem.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.webpreferences.o: cxx $
+    ../../webkit/glue/webpreferences.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.websocketstreamhandle_impl.o: cxx $
+    ../../webkit/glue/websocketstreamhandle_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.webthemeengine_impl_default.o: cxx $
+    ../../webkit/glue/webthemeengine_impl_default.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.webthread_impl.o: cxx $
+    ../../webkit/glue/webthread_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.weburlloader_impl.o: cxx $
+    ../../webkit/glue/weburlloader_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.weburlrequest_extradata_impl.o: cxx $
+    ../../webkit/glue/weburlrequest_extradata_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.weburlresponse_extradata_impl.o: cxx $
+    ../../webkit/glue/weburlresponse_extradata_impl.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.web_intent_data.o: cxx $
+    ../../webkit/glue/web_intent_data.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.web_intent_reply_data.o: cxx $
+    ../../webkit/glue/web_intent_reply_data.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.web_intent_service_data.o: cxx $
+    ../../webkit/glue/web_intent_service_data.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.web_io_operators.o: cxx $
+    ../../webkit/glue/web_io_operators.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.window_open_disposition.o: cxx $
+    ../../webkit/glue/window_open_disposition.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+build obj/webkit/glue/glue.worker_task_runner.o: cxx $
+    ../../webkit/glue/worker_task_runner.cc || $
+    obj/webkit/support/glue.compile_depends.stamp
+
+build obj/webkit/support/libglue.a: alink_thin $
+    obj/webkit/plugins/npapi/glue.gtk_plugin_container.o $
+    obj/webkit/plugins/npapi/glue.gtk_plugin_container_manager.o $
+    obj/webkit/plugins/npapi/glue.plugin_host.o $
+    obj/webkit/plugins/npapi/glue.plugin_instance.o $
+    obj/webkit/plugins/npapi/glue.plugin_lib.o $
+    obj/webkit/plugins/npapi/glue.plugin_lib_posix.o $
+    obj/webkit/plugins/npapi/glue.plugin_list.o $
+    obj/webkit/plugins/npapi/glue.plugin_list_posix.o $
+    obj/webkit/plugins/npapi/glue.plugin_stream.o $
+    obj/webkit/plugins/npapi/glue.plugin_stream_posix.o $
+    obj/webkit/plugins/npapi/glue.plugin_stream_url.o $
+    obj/webkit/plugins/npapi/glue.plugin_string_stream.o $
+    obj/webkit/plugins/npapi/glue.plugin_utils.o $
+    obj/webkit/plugins/npapi/glue.webplugin.o $
+    obj/webkit/plugins/npapi/glue.webplugin_delegate_impl.o $
+    obj/webkit/plugins/npapi/glue.webplugin_delegate_impl_gtk.o $
+    obj/webkit/plugins/npapi/glue.webplugin_impl.o $
+    obj/webkit/plugins/glue.plugin_constants.o $
+    obj/webkit/plugins/glue.plugin_switches.o $
+    obj/webkit/plugins/ppapi/glue.audio_helper.o $
+    obj/webkit/plugins/ppapi/glue.content_decryptor_delegate.o $
+    obj/webkit/plugins/ppapi/glue.event_conversion.o $
+    obj/webkit/plugins/ppapi/glue.file_callbacks.o $
+    obj/webkit/plugins/ppapi/glue.host_array_buffer_var.o $
+    obj/webkit/plugins/ppapi/glue.host_globals.o $
+    obj/webkit/plugins/ppapi/glue.host_var_tracker.o $
+    obj/webkit/plugins/ppapi/glue.message_channel.o $
+    obj/webkit/plugins/ppapi/glue.npapi_glue.o $
+    obj/webkit/plugins/ppapi/glue.npobject_var.o $
+    obj/webkit/plugins/ppapi/glue.plugin_module.o $
+    obj/webkit/plugins/ppapi/glue.plugin_object.o $
+    obj/webkit/plugins/ppapi/glue.ppapi_interface_factory.o $
+    obj/webkit/plugins/ppapi/glue.ppapi_plugin_instance.o $
+    obj/webkit/plugins/ppapi/glue.ppapi_webplugin_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_audio_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_broker_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_buffer_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_directory_reader_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_file_io_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_file_ref_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_file_system_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_flash_message_loop_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_gpu_blacklist_private_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_graphics_2d_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_graphics_3d_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_host_resolver_private_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_image_data_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_network_monitor_private_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_proxy_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_scrollbar_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_tcp_server_socket_private_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_tcp_socket_private_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_udp_socket_private_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_uma_private_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_url_loader_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_var_deprecated_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_video_decoder_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_widget_impl.o $
+    obj/webkit/plugins/ppapi/glue.ppb_x509_certificate_private_impl.o $
+    obj/webkit/plugins/ppapi/glue.quota_file_io.o $
+    obj/webkit/plugins/ppapi/glue.resource_creation_impl.o $
+    obj/webkit/plugins/ppapi/glue.resource_helper.o $
+    obj/webkit/plugins/ppapi/glue.string.o $
+    obj/webkit/plugins/ppapi/glue.url_response_info_util.o $
+    obj/webkit/plugins/ppapi/glue.url_request_info_util.o $
+    obj/webkit/plugins/ppapi/glue.usb_key_code_conversion.o $
+    obj/webkit/plugins/ppapi/glue.usb_key_code_conversion_linux.o $
+    obj/webkit/plugins/glue.sad_plugin.o $
+    obj/webkit/plugins/glue.webplugininfo.o $
+    obj/webkit/plugins/glue.webview_plugin.o $
+    obj/webkit/glue/glue.alt_error_page_resource_fetcher.o $
+    obj/webkit/glue/glue.cpp_binding_example.o $
+    obj/webkit/glue/glue.cpp_bound_class.o $
+    obj/webkit/glue/glue.cpp_variant.o $
+    obj/webkit/glue/glue.dom_operations.o $
+    obj/webkit/glue/glue.ftp_directory_listing_response_delegate.o $
+    obj/webkit/glue/glue.glue_serialize.o $
+    obj/webkit/glue/glue.image_decoder.o $
+    obj/webkit/glue/glue.image_resource_fetcher.o $
+    obj/webkit/glue/glue.multi_resolution_image_resource_fetcher.o $
+    obj/webkit/glue/glue.multipart_response_delegate.o $
+    obj/webkit/glue/glue.npruntime_util.o $
+    obj/webkit/glue/glue.resource_fetcher.o $
+    obj/webkit/glue/glue.resource_loader_bridge.o $
+    obj/webkit/glue/glue.resource_request_body.o $
+    obj/webkit/glue/glue.resource_type.o $
+    obj/webkit/glue/glue.scoped_clipboard_writer_glue.o $
+    obj/webkit/glue/glue.simple_webmimeregistry_impl.o $
+    obj/webkit/glue/glue.touch_fling_gesture_curve.o $
+    obj/webkit/glue/glue.webclipboard_impl.o $
+    obj/webkit/glue/glue.webcookie.o obj/webkit/glue/glue.webcursor.o $
+    obj/webkit/glue/glue.webcursor_gtk.o obj/webkit/glue/glue.webdropdata.o $
+    obj/webkit/glue/glue.webfileutilities_impl.o $
+    obj/webkit/glue/glue.webkit_glue.o $
+    obj/webkit/glue/glue.webkitplatformsupport_impl.o $
+    obj/webkit/glue/glue.webmenuitem.o $
+    obj/webkit/glue/glue.webpreferences.o $
+    obj/webkit/glue/glue.websocketstreamhandle_impl.o $
+    obj/webkit/glue/glue.webthemeengine_impl_default.o $
+    obj/webkit/glue/glue.webthread_impl.o $
+    obj/webkit/glue/glue.weburlloader_impl.o $
+    obj/webkit/glue/glue.weburlrequest_extradata_impl.o $
+    obj/webkit/glue/glue.weburlresponse_extradata_impl.o $
+    obj/webkit/glue/glue.web_intent_data.o $
+    obj/webkit/glue/glue.web_intent_reply_data.o $
+    obj/webkit/glue/glue.web_intent_service_data.o $
+    obj/webkit/glue/glue.web_io_operators.o $
+    obj/webkit/glue/glue.window_open_disposition.o $
+    obj/webkit/glue/glue.worker_task_runner.o || $
+    obj/webkit/support/glue.actions_depends.stamp

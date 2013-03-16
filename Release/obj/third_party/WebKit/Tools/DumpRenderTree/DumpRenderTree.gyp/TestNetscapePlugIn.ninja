@@ -1,0 +1,136 @@
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = -I../.. $
+    -I../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn $
+    -I../../third_party/WebKit/Tools/DumpRenderTree/chromium/TestNetscapePlugIn/ForwardingHeaders $
+    -I../../third_party/npapi -I../../third_party/npapi/bindings
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -fvisibility=default -Wno-format -Wno-unused-result -march=armv7-a $
+    -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon -O2 -fno-ident $
+    -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -Wno-c++0x-compat -fno-rtti -fno-threadsafe-statics $
+    -fvisibility-inlines-hidden -Wno-deprecated -Wno-abi
+
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/testnetscapeplugin.pluginobject.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/PluginObject.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/testnetscapeplugin.plugintest.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/PluginTest.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/testnetscapeplugin.testobject.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/TestObject.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.documentopenindestroystream.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/DocumentOpenInDestroyStream.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.evaluatejsafterremovingpluginelement.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/EvaluateJSAfterRemovingPluginElement.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.formvalue.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/FormValue.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.geturlnotifywithurlthatfailstoload.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/GetURLNotifyWithURLThatFailsToLoad.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.geturlwithjavascripturl.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/GetURLWithJavaScriptURL.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.geturlwithjavascripturldestroyingplugin.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/GetURLWithJavaScriptURLDestroyingPlugin.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.getuseragentwithnullnppfromnppnew.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/GetUserAgentWithNullNPPFromNPPNew.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.nppnewfails.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/NPPNewFails.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.npruntimecallswithnullnpp.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/NPRuntimeCallsWithNullNPP.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.npruntimeobjectfromdestroyedplugin.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/NPRuntimeObjectFromDestroyedPlugin.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.npruntimeremoveproperty.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/NPRuntimeRemoveProperty.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.nullnppgetvaluepointer.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/NullNPPGetValuePointer.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.passdifferentnppstruct.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/PassDifferentNPPStruct.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.pluginscriptablenpobjectinvokedefault.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/PluginScriptableNPObjectInvokeDefault.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.pluginscriptableobjectoverridesallproperties.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/PluginScriptableObjectOverridesAllProperties.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.privatebrowsing.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/Tests/PrivateBrowsing.cpp
+build $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/testnetscapeplugin.main.o: $
+    cxx $
+    ../../third_party/WebKit/Tools/DumpRenderTree/TestNetscapePlugIn/main.cpp
+
+ldflags = -Wl,-z,now -Wl,-z,relro -pthread -Wl,-z,noexecstack -fPIC $
+    -B../../third_party/gold -rdynamic -Wl,-O1 -Wl,--as-needed
+libs = 
+build libTestNetscapePlugIn.so libTestNetscapePlugIn.so.TOC: solink_module $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/testnetscapeplugin.pluginobject.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/testnetscapeplugin.plugintest.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/testnetscapeplugin.testobject.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.documentopenindestroystream.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.evaluatejsafterremovingpluginelement.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.formvalue.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.geturlnotifywithurlthatfailstoload.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.geturlwithjavascripturl.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.geturlwithjavascripturldestroyingplugin.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.getuseragentwithnullnppfromnppnew.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.nppnewfails.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.npruntimecallswithnullnpp.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.npruntimeobjectfromdestroyedplugin.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.npruntimeremoveproperty.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.nullnppgetvaluepointer.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.passdifferentnppstruct.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.pluginscriptablenpobjectinvokedefault.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.pluginscriptableobjectoverridesallproperties.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/tests/testnetscapeplugin.privatebrowsing.o $
+    obj/third_party/webkit/tools/dumprendertree/testnetscapeplugin/testnetscapeplugin.main.o
+  postbuilds = 
+  soname = libTestNetscapePlugIn.so
+  lib = libTestNetscapePlugIn.so

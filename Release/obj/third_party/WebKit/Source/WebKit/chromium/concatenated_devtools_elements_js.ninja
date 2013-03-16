@@ -1,0 +1,22 @@
+rule $
+    concatenated_devtools_elements_js_target_concatenate_devtools_elements_js_c663473c074df1b3480e68bfe3334801
+  command = cd ../../third_party/WebKit/Source/WebKit/chromium; python $
+      scripts/inline_js_imports.py $
+      ../../WebCore/inspector/front-end/ElementsPanel.js $
+      ../../WebCore/inspector/front-end $
+      ../../../../../out/Release/resources/inspector/ElementsPanel.js
+  description = ACTION concatenated_devtools_elements_js: $
+      concatenate_devtools_elements_js_c663473c074df1b3480e68bfe3334801
+  restat = 1
+
+build resources/inspector/ElementsPanel.js: $
+    concatenated_devtools_elements_js_target_concatenate_devtools_elements_js_c663473c074df1b3480e68bfe3334801 $
+    ../../third_party/WebKit/Source/WebKit/chromium/scripts/inline_js_imports.py $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/CSSNamedFlowCollectionsView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/CSSNamedFlowView.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/ElementsPanel.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/EventListenersSidebarPane.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/MetricsSidebarPane.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/PropertiesSidebarPane.js $
+    ../../third_party/WebKit/Source/WebCore/inspector/front-end/StylesSidebarPane.js
+

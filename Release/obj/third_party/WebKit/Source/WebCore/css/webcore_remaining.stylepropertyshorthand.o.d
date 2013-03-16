@@ -1,0 +1,24 @@
+obj/third_party/webkit/source/webcore/css/webcore_remaining.stylepropertyshorthand.o: \
+ ../../third_party/WebKit/Source/WebCore/css/StylePropertyShorthand.cpp \
+ ../../third_party/WebKit/Source/WebCore/config.h \
+ ../../third_party/WebKit/Source/WTF/wtf/Platform.h \
+ ../../third_party/WebKit/Source/WTF/wtf/Compiler.h \
+ ../../third_party/WebKit/Source/WTF/wtf/ExportMacros.h \
+ ../../third_party/WebKit/Source/WebCore/platform/PlatformExportMacros.h \
+ ../../third_party/WebKit/Source/JavaScriptCore/runtime/JSExportMacros.h \
+ ../../third_party/WebKit/Source/WTF/wtf/FastMalloc.h \
+ ../../third_party/WebKit/Source/WTF/wtf/PossiblyNull.h \
+ ../../third_party/WebKit/Source/WTF/wtf/Assertions.h \
+ ../../third_party/WebKit/Source/WTF/wtf/DisallowCType.h \
+ ../../third_party/WebKit/Source/WebCore/css/StylePropertyShorthand.h \
+ gen/webkit/CSSPropertyNames.h \
+ ../../third_party/WebKit/Source/WTF/wtf/HashFunctions.h \
+ ../../third_party/WebKit/Source/WTF/wtf/RefPtr.h \
+ ../../third_party/WebKit/Source/WTF/wtf/FastAllocBase.h \
+ ../../third_party/WebKit/Source/WTF/wtf/StdLibExtras.h \
+ ../../third_party/WebKit/Source/WTF/wtf/CheckedArithmetic.h \
+ ../../third_party/WebKit/Source/WTF/wtf/TypeTraits.h \
+ ../../third_party/WebKit/Source/WTF/wtf/PassRefPtr.h \
+ ../../third_party/WebKit/Source/WTF/wtf/AlwaysInline.h \
+ ../../third_party/WebKit/Source/WTF/wtf/NullPtr.h \
+ ../../third_party/WebKit/Source/WTF/wtf/HashTraits.h

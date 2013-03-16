@@ -1,0 +1,49 @@
+build obj/v8/tools/gyp/v8_shell.actions_depends.stamp: stamp $
+    obj/v8/tools/gyp/v8.actions_depends.stamp obj/v8/tools/gyp/libv8_base.a $
+    obj/v8/tools/gyp/libv8_snapshot.a $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp
+
+build obj/v8/tools/gyp/v8_shell.compile_depends.stamp: stamp $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp
+
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DENABLE_DEBUGGER_SUPPORT $
+    -DV8_TARGET_ARCH_ARM -DCAN_USE_ARMV7_INSTRUCTIONS=1 $
+    -DCAN_USE_VFP2_INSTRUCTIONS -DCAN_USE_VFP3_INSTRUCTIONS $
+    -DUSE_EABI_HARDFLOAT=0 -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = -I../../v8/include
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -Wno-format -Wno-unused-result -march=armv7-a -mtune=cortex-a8 $
+    -mfloat-abi=hard -mfpu=neon  -fno-ident -fdata-sections $
+    -ffunction-sections -fdata-sections -ffunction-sections -O3
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wno-deprecated -Wno-abi
+
+build obj/v8/samples/v8_shell.shell.o: cxx ../../v8/samples/shell.cc || $
+    obj/v8/tools/gyp/v8_shell.compile_depends.stamp
+
+ldflags = -Wl,-z,now -Wl,-z,relro -pthread -Wl,-z,noexecstack -fPIC $
+    -B../../third_party/gold -rdynamic  -Wl,-O1 -Wl,--as-needed
+libs = 
+build v8_shell: link obj/v8/samples/v8_shell.shell.o $
+    obj/v8/tools/gyp/libv8_base.a obj/v8/tools/gyp/libv8_snapshot.a | $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    obj/v8/tools/gyp/v8.actions_depends.stamp
+  postbuilds = 

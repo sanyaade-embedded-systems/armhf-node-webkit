@@ -1,0 +1,28 @@
+rule $
+    inspector_protocol_sources_target_generateInspectorProtocolSources_8b2b8f5d40518d7a8d7950c3fcda0a76
+  command = cd ../../third_party/WebKit/Source/WebCore/WebCore.gyp; python $
+      ../inspector/CodeGeneratorInspector.py ../inspector/Inspector.json $
+      --output_h_dir ../../../../../out/Release/gen/webkit --output_cpp_dir $
+      ../../../../../out/Release/gen/webcore
+  description = ACTION Generating Inspector protocol sources from $
+      Inspector.json
+  restat = 1
+
+build gen/webcore/InspectorBackendDispatcher.cpp $
+    gen/webkit/InspectorBackendDispatcher.h $
+    gen/webcore/InspectorFrontend.cpp gen/webkit/InspectorFrontend.h $
+    gen/webcore/InspectorTypeBuilder.cpp gen/webkit/InspectorTypeBuilder.h $
+    gen/webcore/InspectorBackendCommands.js: $
+    inspector_protocol_sources_target_generateInspectorProtocolSources_8b2b8f5d40518d7a8d7950c3fcda0a76 $
+    ../../third_party/WebKit/Source/WebCore/inspector/CodeGeneratorInspector.py $
+    ../../third_party/WebKit/Source/WebCore/inspector/Inspector.json || $
+    gen/webkit/InspectorProtocolVersion.h
+
+build $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/inspector_protocol_sources.actions_rules_copies.stamp: $
+    stamp gen/webcore/InspectorBackendDispatcher.cpp $
+    gen/webkit/InspectorBackendDispatcher.h $
+    gen/webcore/InspectorFrontend.cpp gen/webkit/InspectorFrontend.h $
+    gen/webcore/InspectorTypeBuilder.cpp gen/webkit/InspectorTypeBuilder.h $
+    gen/webcore/InspectorBackendCommands.js
+

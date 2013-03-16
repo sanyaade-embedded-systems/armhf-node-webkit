@@ -1,0 +1,4 @@
+build $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_arm_neon.a: $
+    alink_thin || $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.actions_depends.stamp

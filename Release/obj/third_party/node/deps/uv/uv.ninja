@@ -1,0 +1,237 @@
+defines = -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE $
+    -DEIO_STACKSIZE=262144 -DCHROMIUM_BUILD -DUSE_DEFAULT_RENDER_THEME=1 $
+    -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 -DENABLE_ONE_CLICK_SIGNIN $
+    -DGTK_DISABLE_SINGLE_INCLUDES=1 -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 $
+    -DUSE_PROPRIETARY_CODECS -DENABLE_PEPPER_THREADING $
+    -DENABLE_CONFIGURATION_POLICY -DENABLE_INPUT_SPEECH $
+    -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 $
+    -DENABLE_TASK_MANAGER=1 -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DHAVE_CONFIG_H $
+    '-DEV_CONFIG_H="config_linux.h"' '-DEIO_CONFIG_H="config_linux.h"' $
+    -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = -I../../third_party/node/deps/uv/include $
+    -I../../third_party/node/deps/uv/include/uv-private $
+    -I../../third_party/node/deps/uv/src $
+    -I../../third_party/node/deps/uv/src/unix/ev $
+    -I../../third_party/node/deps/uv/src/ares/config_linux
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -pipe -fPIC -pthread -g --std=gnu89 $
+    -pedantic -Wno-unused-parameter -Wno-format -Wno-unused-result $
+    -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon -O2 -fno-ident
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -Wno-deprecated -Wno-abi
+
+build obj/third_party/node/deps/uv/src/uv.cares.o: cc $
+    ../../third_party/node/deps/uv/src/cares.c
+build obj/third_party/node/deps/uv/src/uv.fs-poll.o: cc $
+    ../../third_party/node/deps/uv/src/fs-poll.c
+build obj/third_party/node/deps/uv/src/uv.uv-common.o: cc $
+    ../../third_party/node/deps/uv/src/uv-common.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_cancel.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_cancel.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares__close_sockets.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares__close_sockets.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_data.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_data.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_destroy.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_destroy.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_expand_name.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_expand_name.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_expand_string.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_expand_string.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_fds.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_fds.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_free_hostent.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_free_hostent.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_free_string.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_free_string.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_gethostbyaddr.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_gethostbyaddr.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_gethostbyname.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_gethostbyname.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares__get_hostent.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares__get_hostent.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_getnameinfo.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_getnameinfo.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_getopt.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_getopt.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_getsock.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_getsock.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_init.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_init.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_library_init.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_library_init.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_llist.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_llist.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_mkquery.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_mkquery.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_nowarn.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_nowarn.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_options.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_options.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_parse_aaaa_reply.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_parse_aaaa_reply.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_parse_a_reply.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_parse_a_reply.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_parse_mx_reply.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_parse_mx_reply.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_parse_ns_reply.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_parse_ns_reply.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_parse_ptr_reply.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_parse_ptr_reply.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_parse_srv_reply.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_parse_srv_reply.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_parse_txt_reply.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_parse_txt_reply.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_process.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_process.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_query.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_query.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares__read_line.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares__read_line.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_search.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_search.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_send.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_send.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_strcasecmp.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_strcasecmp.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_strdup.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_strdup.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_strerror.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_strerror.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_timeout.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_timeout.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares__timeval.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares__timeval.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_version.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_version.c
+build obj/third_party/node/deps/uv/src/ares/uv.ares_writev.o: cc $
+    ../../third_party/node/deps/uv/src/ares/ares_writev.c
+build obj/third_party/node/deps/uv/src/ares/uv.bitncmp.o: cc $
+    ../../third_party/node/deps/uv/src/ares/bitncmp.c
+build obj/third_party/node/deps/uv/src/ares/uv.inet_net_pton.o: cc $
+    ../../third_party/node/deps/uv/src/ares/inet_net_pton.c
+build obj/third_party/node/deps/uv/src/ares/uv.inet_ntop.o: cc $
+    ../../third_party/node/deps/uv/src/ares/inet_ntop.c
+build obj/third_party/node/deps/uv/src/ares/uv.windows_port.o: cc $
+    ../../third_party/node/deps/uv/src/ares/windows_port.c
+build obj/third_party/node/deps/uv/src/unix/uv.async.o: cc $
+    ../../third_party/node/deps/uv/src/unix/async.c
+build obj/third_party/node/deps/uv/src/unix/uv.core.o: cc $
+    ../../third_party/node/deps/uv/src/unix/core.c
+build obj/third_party/node/deps/uv/src/unix/uv.dl.o: cc $
+    ../../third_party/node/deps/uv/src/unix/dl.c
+build obj/third_party/node/deps/uv/src/unix/eio/uv.eio.o: cc $
+    ../../third_party/node/deps/uv/src/unix/eio/eio.c
+build obj/third_party/node/deps/uv/src/unix/uv.error.o: cc $
+    ../../third_party/node/deps/uv/src/unix/error.c
+build obj/third_party/node/deps/uv/src/unix/ev/uv.ev.o: cc $
+    ../../third_party/node/deps/uv/src/unix/ev/ev.c
+build obj/third_party/node/deps/uv/src/unix/uv.fs.o: cc $
+    ../../third_party/node/deps/uv/src/unix/fs.c
+build obj/third_party/node/deps/uv/src/unix/uv.loop.o: cc $
+    ../../third_party/node/deps/uv/src/unix/loop.c
+build obj/third_party/node/deps/uv/src/unix/uv.loop-watcher.o: cc $
+    ../../third_party/node/deps/uv/src/unix/loop-watcher.c
+build obj/third_party/node/deps/uv/src/unix/uv.pipe.o: cc $
+    ../../third_party/node/deps/uv/src/unix/pipe.c
+build obj/third_party/node/deps/uv/src/unix/uv.poll.o: cc $
+    ../../third_party/node/deps/uv/src/unix/poll.c
+build obj/third_party/node/deps/uv/src/unix/uv.process.o: cc $
+    ../../third_party/node/deps/uv/src/unix/process.c
+build obj/third_party/node/deps/uv/src/unix/uv.stream.o: cc $
+    ../../third_party/node/deps/uv/src/unix/stream.c
+build obj/third_party/node/deps/uv/src/unix/uv.tcp.o: cc $
+    ../../third_party/node/deps/uv/src/unix/tcp.c
+build obj/third_party/node/deps/uv/src/unix/uv.thread.o: cc $
+    ../../third_party/node/deps/uv/src/unix/thread.c
+build obj/third_party/node/deps/uv/src/unix/uv.timer.o: cc $
+    ../../third_party/node/deps/uv/src/unix/timer.c
+build obj/third_party/node/deps/uv/src/unix/uv.tty.o: cc $
+    ../../third_party/node/deps/uv/src/unix/tty.c
+build obj/third_party/node/deps/uv/src/unix/uv.udp.o: cc $
+    ../../third_party/node/deps/uv/src/unix/udp.c
+build obj/third_party/node/deps/uv/src/unix/uv.uv-eio.o: cc $
+    ../../third_party/node/deps/uv/src/unix/uv-eio.c
+build obj/third_party/node/deps/uv/src/unix/linux/uv.linux-core.o: cc $
+    ../../third_party/node/deps/uv/src/unix/linux/linux-core.c
+build obj/third_party/node/deps/uv/src/unix/linux/uv.inotify.o: cc $
+    ../../third_party/node/deps/uv/src/unix/linux/inotify.c
+build obj/third_party/node/deps/uv/src/unix/linux/uv.syscalls.o: cc $
+    ../../third_party/node/deps/uv/src/unix/linux/syscalls.c
+
+build obj/third_party/node/deps/uv/libuv.a: alink_thin $
+    obj/third_party/node/deps/uv/src/uv.cares.o $
+    obj/third_party/node/deps/uv/src/uv.fs-poll.o $
+    obj/third_party/node/deps/uv/src/uv.uv-common.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_cancel.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares__close_sockets.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_data.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_destroy.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_expand_name.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_expand_string.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_fds.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_free_hostent.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_free_string.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_gethostbyaddr.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_gethostbyname.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares__get_hostent.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_getnameinfo.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_getopt.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_getsock.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_init.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_library_init.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_llist.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_mkquery.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_nowarn.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_options.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_parse_aaaa_reply.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_parse_a_reply.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_parse_mx_reply.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_parse_ns_reply.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_parse_ptr_reply.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_parse_srv_reply.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_parse_txt_reply.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_process.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_query.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares__read_line.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_search.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_send.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_strcasecmp.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_strdup.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_strerror.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_timeout.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares__timeval.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_version.o $
+    obj/third_party/node/deps/uv/src/ares/uv.ares_writev.o $
+    obj/third_party/node/deps/uv/src/ares/uv.bitncmp.o $
+    obj/third_party/node/deps/uv/src/ares/uv.inet_net_pton.o $
+    obj/third_party/node/deps/uv/src/ares/uv.inet_ntop.o $
+    obj/third_party/node/deps/uv/src/ares/uv.windows_port.o $
+    obj/third_party/node/deps/uv/src/unix/uv.async.o $
+    obj/third_party/node/deps/uv/src/unix/uv.core.o $
+    obj/third_party/node/deps/uv/src/unix/uv.dl.o $
+    obj/third_party/node/deps/uv/src/unix/eio/uv.eio.o $
+    obj/third_party/node/deps/uv/src/unix/uv.error.o $
+    obj/third_party/node/deps/uv/src/unix/ev/uv.ev.o $
+    obj/third_party/node/deps/uv/src/unix/uv.fs.o $
+    obj/third_party/node/deps/uv/src/unix/uv.loop.o $
+    obj/third_party/node/deps/uv/src/unix/uv.loop-watcher.o $
+    obj/third_party/node/deps/uv/src/unix/uv.pipe.o $
+    obj/third_party/node/deps/uv/src/unix/uv.poll.o $
+    obj/third_party/node/deps/uv/src/unix/uv.process.o $
+    obj/third_party/node/deps/uv/src/unix/uv.stream.o $
+    obj/third_party/node/deps/uv/src/unix/uv.tcp.o $
+    obj/third_party/node/deps/uv/src/unix/uv.thread.o $
+    obj/third_party/node/deps/uv/src/unix/uv.timer.o $
+    obj/third_party/node/deps/uv/src/unix/uv.tty.o $
+    obj/third_party/node/deps/uv/src/unix/uv.udp.o $
+    obj/third_party/node/deps/uv/src/unix/uv.uv-eio.o $
+    obj/third_party/node/deps/uv/src/unix/linux/uv.linux-core.o $
+    obj/third_party/node/deps/uv/src/unix/linux/uv.inotify.o $
+    obj/third_party/node/deps/uv/src/unix/linux/uv.syscalls.o

@@ -1,0 +1,948 @@
+build $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.actions_depends.stamp: $
+    stamp obj/third_party/WebKit/Source/WebKit/chromium/libwebkit.a $
+    obj/build/temp_gyp/libgoogleurl.a $
+    obj/v8/tools/gyp/v8.actions_depends.stamp obj/testing/libgtest.a $
+    obj/testing/libgmock.a obj/base/libbase.a obj/base/libbase_i18n.a $
+    obj/base/libtest_support_base.a obj/third_party/zlib/libchrome_zlib.a $
+    obj/webkit/support/libwebkit_support.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore.actions_depends.stamp $
+    obj/third_party/WebKit/Source/Platform/Platform.gyp/libwebkit_platform.a $
+    obj/third_party/WebKit/Source/WTF/WTF.gyp/libwtf.a $
+    obj/third_party/icu/libicui18n.a obj/third_party/icu/libicuuc.a $
+    obj/third_party/icu/libicudata.a obj/skia/libskia.a $
+    obj/skia/libskia_opts.a $
+    obj/base/third_party/dynamic_annotations/libdynamic_annotations.a $
+    obj/third_party/sfntly/libsfntly.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_dom.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.actions_depends.stamp $
+    gen/webkit/DebuggerScriptSource.h $
+    gen/webkit/InjectedScriptCanvasModuleSource.h $
+    gen/webkit/InjectedScriptSource.h gen/webkit/InspectorOverlayPage.h $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/inspector_protocol_sources.actions_rules_copies.stamp $
+    gen/webkit/InspectorProtocolVersion.h $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_bindings_sources.actions_rules_copies.stamp $
+    gen/supplemental_dependency.tmp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/generate_settings.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/ThirdParty/glu/libtess.a $
+    obj/third_party/WebKit/Source/JavaScriptCore/JavaScriptCore.gyp/libyarr.a $
+    obj/base/libbase_static.a $
+    obj/base/allocator/liballocator_extension_thunks.a $
+    obj/third_party/modp_b64/libmodp_b64.a obj/third_party/node/libnode.a $
+    obj/third_party/node/deps/http_parser/libhttp_parser.a $
+    obj/third_party/node/deps/uv/libuv.a gen/node_natives.h $
+    obj/third_party/node/deps/openssl/libopenssl.a $
+    obj/v8/tools/gyp/libv8_base.a obj/v8/tools/gyp/libv8_snapshot.a $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    obj/base/libsymbolize.a obj/base/libxdg_mime.a $
+    obj/third_party/libevent/libevent.a $
+    obj/third_party/iccjpeg/libiccjpeg.a $
+    obj/third_party/libjpeg_turbo/libjpeg_turbo.a $
+    obj/third_party/libwebp/libwebp.actions_depends.stamp $
+    obj/third_party/libwebp/libwebp_dec.a $
+    obj/third_party/libwebp/libwebp_dsp.a $
+    obj/third_party/libwebp/libwebp_dsp_neon.a $
+    obj/third_party/libwebp/libwebp_enc.a $
+    obj/third_party/libwebp/libwebp_utils.a obj/third_party/libpng/libpng.a $
+    obj/third_party/libxml/libxml2.a obj/third_party/libxslt/libxslt.a $
+    obj/third_party/ots/libots.a obj/third_party/qcms/libqcms.a $
+    obj/third_party/sqlite/libsqlite3.a $
+    obj/third_party/angle/src/libtranslator_glsl.a $
+    obj/third_party/angle/src/libtranslator_common.a $
+    obj/third_party/angle/src/libpreprocessor.a obj/gpu/libgles2_c_lib.a $
+    obj/gpu/command_buffer/libgles2_utils.a $
+    obj/gpu/libcommand_buffer_client.a obj/gpu/libcommand_buffer_common.a $
+    obj/gpu/libgles2_implementation.a obj/ui/gl/libgl_wrapper.a $
+    obj/ui/libui.a obj/net/libnet.a obj/crypto/libcrcrypto.a $
+    obj/build/linux/ssl.actions_depends.stamp $
+    obj/net/third_party/nss/libssl.a obj/sdch/libsdch.a $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/build/linux/libgio.a obj/dbus/libdbus.a $
+    obj/third_party/protobuf/libprotobuf_lite.a $
+    obj/ui/base/strings/ui_strings.actions_rules_copies.stamp $
+    obj/ui/ui_resources.actions_rules_copies.stamp $
+    obj/gpu/libgles2_cmd_helper.a obj/third_party/ffmpeg/libffmpeg.a $
+    obj/third_party/leveldatabase/libleveldatabase.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_html.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_platform.a $
+    obj/third_party/harfbuzz-ng/libharfbuzz-ng.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_platform_geometry.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_remaining.a $
+    obj/third_party/v8-i18n/build/libv8-i18n.a $
+    obj/third_party/v8-i18n/build/api2c.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_rendering.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_bindings.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_arm_neon.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_svg.a $
+    obj/third_party/WebKit/Source/WebKit/chromium/libwebkit_wtf_support.a $
+    obj/media/libmedia.a obj/third_party/opus/libopus.a $
+    obj/media/libshared_memory_support.a obj/media/libyuv_convert.a $
+    obj/media/libyuv_convert_simd_c.a obj/third_party/hyphen/libhyphen.a $
+    obj/webkit/support/libglue.a obj/ppapi/libppapi_shared.a $
+    obj/ui/surface/libsurface.a obj/printing/libprinting.a $
+    obj/ui/native_theme/libnative_theme.a $
+    obj/webkit/compositor_bindings/libwebkit_compositor_support.a $
+    obj/cc/libcc.a $
+    obj/webkit/compositor_bindings/libwebkit_compositor_bindings.a $
+    obj/webkit/support/libuser_agent.a gen/webkit_version.h $
+    obj/webkit/support/libwebkit_base.a $
+    obj/webkit/support/libwebkit_media.a gen/widevine_cdm_version.h $
+    obj/webkit/support/webkit_resources.actions_rules_copies.stamp $
+    obj/webkit/support/libwebkit_storage.a obj/sql/libsql.a $
+    obj/webkit/support/webkit_strings.actions_rules_copies.stamp $
+    obj/base/allocator/liballocator.a obj/webkit/support/libwebkit_gpu.a $
+    obj/gpu/libcommand_buffer_service.a $
+    obj/third_party/smhasher/libcityhash.a $
+    obj/webkit/support/libwebkit_support_common.a $
+    obj/webkit/support/libwebkit_support_gfx.a
+
+build $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp: $
+    stamp $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit.compile_depends.stamp $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc $
+    obj/webkit/support/webkit_support.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore.compile_depends.stamp $
+    obj/third_party/WebKit/Source/Platform/Platform.gyp/webkit_platform.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    gen/webkit/DebuggerScriptSource.h $
+    gen/webkit/InjectedScriptCanvasModuleSource.h $
+    gen/webkit/InjectedScriptSource.h gen/webkit/InspectorOverlayPage.h $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/inspector_protocol_sources.actions_rules_copies.stamp $
+    gen/webkit/InspectorProtocolVersion.h $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_bindings_sources.actions_rules_copies.stamp $
+    gen/supplemental_dependency.tmp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/generate_settings.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/JavaScriptCore/JavaScriptCore.gyp/yarr.gen/RegExpJitTables.h $
+    obj/third_party/node/node.compile_depends.stamp gen/node_natives.h $
+    obj/v8/tools/gyp/v8_snapshot.gen/snapshot.cc $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp $
+    obj/third_party/yasm/yasm.actions_rules_copies.stamp $
+    obj/ui/gl/gl.actions_rules_copies.stamp $
+    obj/ui/gl/gl.actions_rules_copies.stamp obj/ui/ui.compile_depends.stamp $
+    obj/net/net.compile_depends.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/build/linux/gio.actions_rules_copies.stamp $
+    obj/ui/base/strings/ui_strings.actions_rules_copies.stamp $
+    obj/ui/ui_resources.actions_rules_copies.stamp $
+    obj/third_party/ffmpeg/ffmpeg.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/v8-i18n/build/v8-i18n.compile_depends.stamp $
+    obj/third_party/v8-i18n/build/api2c.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_bindings.compile_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.compile_depends.stamp $
+    obj/third_party/ffmpeg/ffmpeg.actions_rules_copies.stamp $
+    obj/webkit/support/glue.compile_depends.stamp $
+    obj/ui/gl/gl.actions_rules_copies.stamp $
+    obj/ui/ui_resources.actions_rules_copies.stamp $
+    obj/ui/gl/gl.actions_rules_copies.stamp gen/webkit_version.h $
+    gen/webkit_version.h gen/widevine_cdm_version.h $
+    gen/widevine_cdm_version.h $
+    obj/webkit/support/webkit_resources.actions_rules_copies.stamp $
+    obj/webkit/support/webkit_strings.actions_rules_copies.stamp $
+    obj/ui/gl/gl.actions_rules_copies.stamp $
+    obj/ui/gl/gl.actions_rules_copies.stamp $
+    obj/webkit/support/glue.compile_depends.stamp
+
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DWEBKIT_IMPLEMENTATION=1 $
+    -DGL_GLEXT_PROTOTYPES -DSK_BUILD_NO_IMAGE_ENCODE $
+    -DSK_DEFERRED_CANVAS_USES_GPIPE=1 $
+    '-DGR_GL_CUSTOM_SETUP_HEADER="GrGLConfig_chrome.h"' $
+    -DGR_AGGRESSIVE_SHADER_OPTS=1 -DSK_USE_POSIX_THREADS $
+    -DU_USING_ICU_NAMESPACE=0 -DU_STATIC_IMPLEMENTATION -DUNIT_TEST $
+    -DGTEST_HAS_RTTI=0 -DENABLE_3D_PLUGIN=1 -DENABLE_BATTERY_STATUS=0 $
+    -DENABLE_BLOB=1 -DENABLE_BLOB_SLICE=1 -DENABLE_CHANNEL_MESSAGING=1 $
+    -DENABLE_CSP_NEXT=1 -DENABLE_CSS3_CONDITIONAL_RULES=0 $
+    -DENABLE_CSS3_TEXT=0 -DENABLE_CSS_BOX_DECORATION_BREAK=1 $
+    -DENABLE_CSS_COMPOSITING=0 -DENABLE_CSS_DEVICE_ADAPTATION=0 $
+    -DENABLE_CSS_EXCLUSIONS=1 -DENABLE_CSS_FILTERS=1 $
+    -DENABLE_CSS_IMAGE_SET=1 -DENABLE_CSS_IMAGE_RESOLUTION=0 $
+    -DENABLE_CSS_REGIONS=1 -DENABLE_CSS_SHADERS=1 $
+    -DENABLE_CSS_TRANSFORMS_ANIMATIONS_TRANSITIONS_UNPREFIXED=0 $
+    -DENABLE_CSS_VARIABLES=1 -DENABLE_CSS_STICKY_POSITION=1 $
+    -DENABLE_CUSTOM_SCHEME_HANDLER=0 -DENABLE_DASHBOARD_SUPPORT=0 $
+    -DENABLE_DATA_TRANSFER_ITEMS=1 -DENABLE_DETAILS_ELEMENT=1 $
+    -DENABLE_DEVICE_ORIENTATION=1 -DENABLE_DIALOG_ELEMENT=1 $
+    -DENABLE_DIRECTORY_UPLOAD=1 -DENABLE_DOWNLOAD_ATTRIBUTE=1 $
+    -DENABLE_DRAGGABLE_REGION=1 -DENABLE_ENCRYPTED_MEDIA=1 $
+    -DENABLE_FILE_SYSTEM=1 -DENABLE_FILTERS=1 -DENABLE_FULLSCREEN_API=1 $
+    -DENABLE_GAMEPAD=1 -DENABLE_GEOLOCATION=1 -DENABLE_GESTURE_EVENTS=1 $
+    -DENABLE_ICONDATABASE=0 -DENABLE_IFRAME_SEAMLESS=1 $
+    -DENABLE_INDEXED_DATABASE=1 -DENABLE_INPUT_TYPE_DATE=1 $
+    -DENABLE_INPUT_TYPE_DATETIME=1 -DENABLE_INPUT_TYPE_DATETIMELOCAL=1 $
+    -DENABLE_INPUT_TYPE_MONTH=1 -DENABLE_INPUT_TYPE_TIME=1 $
+    -DENABLE_JAVASCRIPT_DEBUGGER=1 -DENABLE_JAVASCRIPT_I18N_API=1 $
+    -DENABLE_LEGACY_CSS_VENDOR_PREFIXES=0 $
+    -DENABLE_LEGACY_VIEWPORT_ADAPTION=1 -DENABLE_LEGACY_VENDOR_PREFIXES=0 $
+    -DENABLE_LEGACY_WEB_AUDIO=1 -DENABLE_LINK_PREFETCH=1 $
+    -DENABLE_LINK_PRERENDER=1 -DENABLE_MATHML=1 -DENABLE_MEDIA_SOURCE=1 $
+    -DENABLE_MEDIA_STATISTICS=1 -DENABLE_MEDIA_STREAM=1 $
+    -DENABLE_METER_ELEMENT=1 -DENABLE_MHTML=1 -DENABLE_MICRODATA=0 $
+    -DENABLE_MOUSE_CURSOR_SCALE=1 -DENABLE_NAVIGATOR_CONTENT_UTILS=1 $
+    -DENABLE_PAGE_VISIBILITY_API=1 -DENABLE_PERFORMANCE_TIMELINE=1 $
+    -DENABLE_POINTER_LOCK=1 -DENABLE_PROGRESS_ELEMENT=1 $
+    -DENABLE_PROXIMITY_EVENTS=0 -DENABLE_QUOTA=1 $
+    -DENABLE_REQUEST_ANIMATION_FRAME=1 -DENABLE_REQUEST_AUTOCOMPLETE=1 $
+    -DENABLE_RESOLUTION_MEDIA_QUERY=0 -DENABLE_RESOURCE_TIMING=1 $
+    -DENABLE_RUBY=1 -DENABLE_SANDBOX=1 -DENABLE_SCRIPTED_SPEECH=1 $
+    -DENABLE_SHADOW_DOM=1 -DENABLE_SMOOTH_SCROLLING=1 $
+    -DENABLE_SQL_DATABASE=1 -DENABLE_STYLE_SCOPED=1 -DENABLE_SVG=1 $
+    -DENABLE_SVG_FONTS=1 -DENABLE_TEMPLATE_ELEMENT=1 $
+    -DENABLE_TEXT_AUTOSIZING=1 -DENABLE_TOUCH_ADJUSTMENT=1 $
+    -DENABLE_TOUCH_EVENTS=1 -DENABLE_TOUCH_ICON_LOADING=0 $
+    -DENABLE_TOUCH_EVENT_TRACKING=1 -DENABLE_TOUCH_SLIDER=1 $
+    -DENABLE_USER_TIMING=1 -DENABLE_V8_SCRIPT_DEBUG_SERVER=1 $
+    -DENABLE_VIDEO=1 -DENABLE_VIDEO_TRACK=1 -DENABLE_VIEWPORT=1 $
+    -DENABLE_WEBGL=1 -DENABLE_WEB_SOCKETS=1 -DENABLE_WEB_TIMING=1 $
+    -DENABLE_WORKERS=1 -DENABLE_XHR_RESPONSE_BLOB=1 -DENABLE_XHR_TIMEOUT=0 $
+    -DENABLE_XSLT=1 -DWTF_USE_LEVELDB=1 -DWTF_USE_BUILTIN_UTF8_CODEC=1 $
+    -DWTF_USE_OPENTYPE_SANITIZER=1 -DWTF_USE_RTL_SCROLLBAR=1 $
+    -DWTF_USE_SKIA_TEXT=1 -DWTF_USE_WEBP=1 $
+    -DWTF_USE_WEBKIT_IMAGE_DECODERS=1 $
+    -DENABLE_ACCELERATED_OVERFLOW_SCROLLING=0 -DENABLE_CALENDAR_PICKER=1 $
+    -DENABLE_DATALIST_ELEMENT=1 -DENABLE_INPUT_SPEECH=1 $
+    -DENABLE_INPUT_TYPE_COLOR=1 -DENABLE_INPUT_TYPE_WEEK=1 $
+    -DENABLE_INPUT_MULTIPLE_FIELDS_UI=1 -DENABLE_LEGACY_NOTIFICATIONS=1 $
+    -DENABLE_MEDIA_CAPTURE=0 -DENABLE_NOTIFICATIONS=1 $
+    -DENABLE_ORIENTATION_EVENTS=0 -DENABLE_PAGE_POPUP=1 $
+    -DENABLE_SHARED_WORKERS=1 -DENABLE_WEB_AUDIO=1 -DENABLE_3D_RENDERING=1 $
+    -DENABLE_ACCELERATED_2D_CANVAS=1 -DWTF_USE_ACCELERATED_COMPOSITING=1 $
+    -DWTF_USE_WEBAUDIO_FFMPEG=1 -DENABLE_OPENTYPE_VERTICAL=1 $
+    -DWTF_USE_HARFBUZZ_NG=1 -DENABLE_DEFAULT_RENDER_THEME=1 $
+    -DBUILDING_CHROMIUM__=1 -DWTF_USE_PTHREADS=1 -D__STDC_CONSTANT_MACROS $
+    -D__STDC_FORMAT_MACROS -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = -I../../third_party/icu/public/i18n $
+    -I../../third_party/icu/public/common $
+    -I../../third_party/WebKit/Source/WebKit/chromium/public $
+    -I../../third_party/WebKit/Source/WebKit/chromium/src $
+    -I../../third_party/WebKit/Source/Platform/chromium $
+    -I../../third_party/WebKit/Source/WebKit/chromium/public/gtk $
+    -I../../third_party/khronos -I../../gpu -I../.. $
+    -I../../third_party/WebKit/Source/Platform/chromium $
+    -I../../third_party/WebKit/Source/Platform/chromium $
+    -Igen/webcore_headers -I../../skia/config $
+    -I../../third_party/skia/src/core $
+    -I../../third_party/skia/include/config $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/pdf $
+    -I../../third_party/skia/include/gpu $
+    -I../../third_party/skia/include/gpu/gl $
+    -I../../third_party/skia/include/pipe $
+    -I../../third_party/skia/include/ports $
+    -I../../third_party/skia/include/utils -I../../skia/ext $
+    -I../../third_party/npapi -I../../third_party/npapi/bindings $
+    -I../../v8/include -I../../testing/gtest/include $
+    -I../../testing/gmock/include -I../../third_party/zlib $
+    -I../../third_party/WebKit/Source/WebCore $
+    -I../../third_party/WebKit/Source $
+    -I../../third_party/WebKit/Source/WebCore/Modules/battery $
+    -I../../third_party/WebKit/Source/WebCore/Modules/filesystem $
+    -I../../third_party/WebKit/Source/WebCore/Modules/filesystem/chromium $
+    -I../../third_party/WebKit/Source/WebCore/Modules/gamepad $
+    -I../../third_party/WebKit/Source/WebCore/Modules/geolocation $
+    -I../../third_party/WebKit/Source/WebCore/Modules/intents $
+    -I../../third_party/WebKit/Source/WebCore/Modules/indexeddb $
+    -I../../third_party/WebKit/Source/WebCore/Modules/mediasource $
+    -I../../third_party/WebKit/Source/WebCore/Modules/mediastream $
+    -I../../third_party/WebKit/Source/WebCore/Modules/navigatorcontentutils $
+    -I../../third_party/WebKit/Source/WebCore/Modules/notifications $
+    -I../../third_party/WebKit/Source/WebCore/Modules/quota $
+    -I../../third_party/WebKit/Source/WebCore/Modules/speech $
+    -I../../third_party/WebKit/Source/WebCore/Modules/webaudio $
+    -I../../third_party/WebKit/Source/WebCore/Modules/webdatabase $
+    -I../../third_party/WebKit/Source/WebCore/Modules/webdatabase/chromium $
+    -I../../third_party/WebKit/Source/WebCore/Modules/websockets $
+    -I../../third_party/WebKit/Source/WebCore/accessibility $
+    -I../../third_party/WebKit/Source/WebCore/accessibility/chromium $
+    -I../../third_party/WebKit/Source/WebCore/bindings $
+    -I../../third_party/WebKit/Source/WebCore/bindings/generic $
+    -I../../third_party/WebKit/Source/WebCore/bindings/v8 $
+    -I../../third_party/WebKit/Source/WebCore/bindings/v8/custom $
+    -I../../third_party/WebKit/Source/WebCore/bridge $
+    -I../../third_party/WebKit/Source/WebCore/bridge/jni $
+    -I../../third_party/WebKit/Source/WebCore/bridge/jni/v8 $
+    -I../../third_party/WebKit/Source/WebCore/css $
+    -I../../third_party/WebKit/Source/WebCore/dom $
+    -I../../third_party/WebKit/Source/WebCore/dom/default $
+    -I../../third_party/WebKit/Source/WebCore/editing $
+    -I../../third_party/WebKit/Source/WebCore/fileapi $
+    -I../../third_party/WebKit/Source/WebCore/history $
+    -I../../third_party/WebKit/Source/WebCore/html $
+    -I../../third_party/WebKit/Source/WebCore/html/canvas $
+    -I../../third_party/WebKit/Source/WebCore/html/parser $
+    -I../../third_party/WebKit/Source/WebCore/html/shadow $
+    -I../../third_party/WebKit/Source/WebCore/html/track $
+    -I../../third_party/WebKit/Source/WebCore/inspector $
+    -I../../third_party/WebKit/Source/WebCore/loader $
+    -I../../third_party/WebKit/Source/WebCore/loader/appcache $
+    -I../../third_party/WebKit/Source/WebCore/loader/archive $
+    -I../../third_party/WebKit/Source/WebCore/loader/archive/cf $
+    -I../../third_party/WebKit/Source/WebCore/loader/archive/mhtml $
+    -I../../third_party/WebKit/Source/WebCore/loader/cache $
+    -I../../third_party/WebKit/Source/WebCore/loader/icon $
+    -I../../third_party/WebKit/Source/WebCore/mathml $
+    -I../../third_party/WebKit/Source/WebCore/page $
+    -I../../third_party/WebKit/Source/WebCore/page/animation $
+    -I../../third_party/WebKit/Source/WebCore/page/chromium $
+    -I../../third_party/WebKit/Source/WebCore/page/scrolling $
+    -I../../third_party/WebKit/Source/WebCore/page/scrolling/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform $
+    -I../../third_party/WebKit/Source/WebCore/platform/animation $
+    -I../../third_party/WebKit/Source/WebCore/platform/audio $
+    -I../../third_party/WebKit/Source/WebCore/platform/audio/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform/chromium/support $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/chromium/cc $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/cpu/arm $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/cpu/arm/filters $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/filters $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/filters/skia $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/gpu $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/opentype $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/skia $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/transforms $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/bmp $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/gif $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/ico $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/jpeg $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/png $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/skia $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-decoders/webp $
+    -I../../third_party/WebKit/Source/WebCore/platform/image-encoders/skia $
+    -I../../third_party/WebKit/Source/WebCore/platform/leveldb $
+    -I../../third_party/WebKit/Source/WebCore/platform/mediastream $
+    -I../../third_party/WebKit/Source/WebCore/platform/mediastream/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform/mock $
+    -I../../third_party/WebKit/Source/WebCore/platform/network $
+    -I../../third_party/WebKit/Source/WebCore/platform/network/chromium $
+    -I../../third_party/WebKit/Source/WebCore/platform/sql $
+    -I../../third_party/WebKit/Source/WebCore/platform/text $
+    -I../../third_party/WebKit/Source/WebCore/platform/text/transcoder $
+    -I../../third_party/WebKit/Source/WebCore/plugins $
+    -I../../third_party/WebKit/Source/WebCore/plugins/chromium $
+    -I../../third_party/WebKit/Source/WebCore/rendering $
+    -I../../third_party/WebKit/Source/WebCore/rendering/mathml $
+    -I../../third_party/WebKit/Source/WebCore/rendering/style $
+    -I../../third_party/WebKit/Source/WebCore/rendering/svg $
+    -I../../third_party/WebKit/Source/WebCore/storage $
+    -I../../third_party/WebKit/Source/WebCore/svg $
+    -I../../third_party/WebKit/Source/WebCore/svg/animation $
+    -I../../third_party/WebKit/Source/WebCore/svg/graphics $
+    -I../../third_party/WebKit/Source/WebCore/svg/graphics/filters $
+    -I../../third_party/WebKit/Source/WebCore/svg/properties $
+    -I../../third_party/WebKit/Source/ThirdParty/glu $
+    -I../../third_party/WebKit/Source/WebCore/workers $
+    -I../../third_party/WebKit/Source/WebCore/xml $
+    -I../../third_party/WebKit/Source/WebCore/xml/parser $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/harfbuzz $
+    -I../../third_party/WebKit/Source/WebCore/platform/graphics/harfbuzz/ng $
+    -Igen/webkit -Igen/webkit/bindings $
+    -I../../third_party/WebKit/Source/WTF $
+    -I../../third_party/WebKit/Source/JavaScriptCore $
+    -I../../third_party/qcms/src
+cflags = -fstack-protector --param=ssp-buffer-size=4 -Werror -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wall -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -pthread -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/glib-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/glib-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gtk-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/lib/arm-linux-gnueabihf/gtk-2.0/include $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/atk-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/cairo $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gdk-pixbuf-2.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pango-1.0 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/gio-unix-2.0/ $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/pixman-1 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/freetype2 $
+    -I/mnt/webkit/node-webkit/src/arm-sysroot/usr/include/libpng12 $
+    -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard -mfpu=neon -O2 $
+    -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -Wno-c++0x-compat -fno-rtti -fno-threadsafe-statics $
+    -fvisibility-inlines-hidden -Wsign-compare -Wno-abi
+
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.runalltests.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/RunAllTests.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.animationtranslationutiltest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/AnimationTranslationUtilTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.associatedurlloadertest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/AssociatedURLLoaderTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.canvas2dlayerbridgetest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/Canvas2DLayerBridgeTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.canvas2dlayermanagertest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/Canvas2DLayerManagerTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.chromeclientimpltest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/ChromeClientImplTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.clipboardchromiumtest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/ClipboardChromiumTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.datetimeformattest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/DateTimeFormatTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.decimaltest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/DecimalTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.deferredimagedecodertest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/DeferredImageDecoderTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.dragimagetest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/DragImageTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.eventlistenertest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/EventListenerTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.fakewebplugin.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/FakeWebPlugin.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.filteroperationstest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/FilterOperationsTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.frameloaderclientimpltest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/FrameLoaderClientImplTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.frametesthelpers.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/FrameTestHelpers.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.graphicslayerchromiumtest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/GraphicsLayerChromiumTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.idbabortoncorrupttest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/IDBAbortOnCorruptTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.idbbindingutilitiestest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/IDBBindingUtilitiesTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.idbdatabasebackendtest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/IDBDatabaseBackendTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.idbkeypathtest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/IDBKeyPathTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.idbleveldbcodingtest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/IDBLevelDBCodingTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.idbrequesttest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/IDBRequestTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.imagedecodingstoretest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/ImageDecodingStoreTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.imageframegeneratortest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/ImageFrameGeneratorTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.imagelayerchromiumtest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/ImageLayerChromiumTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.keyboardtest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/KeyboardTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.kurltest.o: $
+    cxx ../../third_party/WebKit/Source/WebKit/chromium/tests/KURLTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.leveldbtest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/LevelDBTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.linkhighlighttest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/LinkHighlightTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.listenerleaktest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/ListenerLeakTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.memoryinfo.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/MemoryInfo.cpp || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.opaquerecttrackingcontentlayerdelegatetest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/OpaqueRectTrackingContentLayerDelegateTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.opentypeverticaldatatest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/OpenTypeVerticalDataTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.podarenatest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/PODArenaTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.podintervaltreetest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/PODIntervalTreeTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.podredblacktreetest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/PODRedBlackTreeTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.paintaggregatortest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/PaintAggregatorTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.platformcontextskiatest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/PlatformContextSkiaTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.popupcontainertest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/PopupContainerTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.prerenderingtest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/PrerenderingTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.regiontest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/RegionTest.cpp || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.rendertablecelltest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/RenderTableCellTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.rendertablerowtest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/RenderTableRowTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.scrollingcoordinatorchromiumtest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/ScrollingCoordinatorChromiumTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.threadsafedatatransporttest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/ThreadSafeDataTransportTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.tilingdatatest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/TilingDataTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.treetesthelpers.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/TreeTestHelpers.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.urltesthelpers.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/URLTestHelpers.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webcompositorinputhandlerimpltest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/WebCompositorInputHandlerImplTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webframetest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/WebFrameTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webimagetest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/WebImageTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webinputeventconversiontest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/WebInputEventConversionTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webmediaplayerclientimpltest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/WebMediaPlayerClientImplTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webpagenewserializertest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/WebPageNewSerializerTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webpageserializertest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/WebPageSerializerTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webplugincontainertest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/WebPluginContainerTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.websocketdeflatertest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/WebSocketDeflaterTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.websocketextensiondispatchertest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/WebSocketExtensionDispatcherTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.weburlrequesttest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/WebURLRequestTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.weburlresponsetest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/WebURLResponseTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webviewtest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/WebViewTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.scrollanimatornonetest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/ScrollAnimatorNoneTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.localeicutest.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/LocaleICUTest.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+build $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webinputeventfactorytestgtk.o: $
+    cxx $
+    ../../third_party/WebKit/Source/WebKit/chromium/tests/WebInputEventFactoryTestGtk.cpp $
+    || $
+    obj/third_party/WebKit/Source/WebKit/chromium/webkit_unit_tests.compile_depends.stamp
+
+ldflags = -Wl,-z,now -Wl,-z,relro -pthread -Wl,-z,noexecstack -fPIC $
+    -B../../third_party/gold -L. $
+    -Wl,-uIsHeapProfilerRunning,-uProfilerStart $
+    -Wl,-u_Z21InitialMallocHook_NewPKvj,-u_Z22InitialMallocHook_MMapPKvS0_jiiix,-u_Z22InitialMallocHook_SbrkPKvi $
+    -Wl,-u_Z21InitialMallocHook_NewPKvm,-u_Z22InitialMallocHook_MMapPKvS0_miiil,-u_Z22InitialMallocHook_SbrkPKvl $
+    -Wl,-u_ZN15HeapLeakChecker12IgnoreObjectEPKv,-u_ZN15HeapLeakChecker14UnIgnoreObjectEPKv $
+    -rdynamic -Wl,-O1 -Wl,--as-needed
+libs =  -lX11 -lXcursor -lXrandr -lfontconfig -lfreetype -lpangocairo-1.0 $
+    -lpango-1.0 -lcairo -lgobject-2.0 -lglib-2.0 -lgdk-x11-2.0 $
+    -lgdk_pixbuf-2.0 -lrt -ldl -lm -lgmodule-2.0 -lgthread-2.0 -lXi $
+    -lgtk-x11-2.0 -latk-1.0 -lgio-2.0 -lpangoft2-1.0 -lXcomposite -lXrender $
+    -lnss3 -lnssutil3 -lsmime3 -lplds4 -lplc4 -lnspr4 -lgconf-2 -lresolv $
+    -ldbus-1 -lpthread -lXext -lXfixes -lasound -lcups -lgssapi_krb5 -lkrb5 $
+    -lk5crypto -lcom_err -lgnutls -lgcrypt -lz -lcrypt $
+    -L/lib/arm-linux-gnueabihf
+build webkit_unit_tests: link $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.runalltests.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.animationtranslationutiltest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.associatedurlloadertest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.canvas2dlayerbridgetest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.canvas2dlayermanagertest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.chromeclientimpltest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.clipboardchromiumtest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.datetimeformattest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.decimaltest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.deferredimagedecodertest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.dragimagetest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.eventlistenertest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.fakewebplugin.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.filteroperationstest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.frameloaderclientimpltest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.frametesthelpers.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.graphicslayerchromiumtest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.idbabortoncorrupttest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.idbbindingutilitiestest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.idbdatabasebackendtest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.idbkeypathtest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.idbleveldbcodingtest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.idbrequesttest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.imagedecodingstoretest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.imageframegeneratortest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.imagelayerchromiumtest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.keyboardtest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.kurltest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.leveldbtest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.linkhighlighttest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.listenerleaktest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.memoryinfo.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.opaquerecttrackingcontentlayerdelegatetest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.opentypeverticaldatatest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.podarenatest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.podintervaltreetest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.podredblacktreetest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.paintaggregatortest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.platformcontextskiatest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.popupcontainertest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.prerenderingtest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.regiontest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.rendertablecelltest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.rendertablerowtest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.scrollingcoordinatorchromiumtest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.threadsafedatatransporttest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.tilingdatatest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.treetesthelpers.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.urltesthelpers.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webcompositorinputhandlerimpltest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webframetest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webimagetest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webinputeventconversiontest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webmediaplayerclientimpltest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webpagenewserializertest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webpageserializertest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webplugincontainertest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.websocketdeflatertest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.websocketextensiondispatchertest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.weburlrequesttest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.weburlresponsetest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webviewtest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.scrollanimatornonetest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.localeicutest.o $
+    obj/third_party/webkit/source/webkit/chromium/tests/webkit_unit_tests.webinputeventfactorytestgtk.o $
+    obj/third_party/libwebp/libwebp_dsp_neon.a $
+    obj/third_party/icu/libicuuc.a obj/skia/libskia_opts.a $
+    obj/webkit/support/libwebkit_gpu.a obj/third_party/icu/libicudata.a $
+    obj/third_party/node/libnode.a obj/webkit/support/libglue.a $
+    obj/net/third_party/nss/libssl.a $
+    obj/third_party/WebKit/Source/WTF/WTF.gyp/libwtf.a obj/cc/libcc.a $
+    obj/third_party/leveldatabase/libleveldatabase.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_rendering.a $
+    obj/gpu/libgles2_cmd_helper.a obj/third_party/smhasher/libcityhash.a $
+    obj/third_party/libxslt/libxslt.a obj/third_party/hyphen/libhyphen.a $
+    obj/third_party/ots/libots.a obj/base/libsymbolize.a $
+    obj/third_party/node/deps/http_parser/libhttp_parser.a $
+    obj/third_party/protobuf/libprotobuf_lite.a obj/ui/surface/libsurface.a $
+    obj/third_party/WebKit/Source/WebKit/chromium/libwebkit.a $
+    obj/third_party/WebKit/Source/WebKit/chromium/libwebkit_wtf_support.a $
+    obj/v8/tools/gyp/libv8_snapshot.a obj/ui/native_theme/libnative_theme.a $
+    obj/base/libbase_static.a $
+    obj/webkit/compositor_bindings/libwebkit_compositor_support.a $
+    obj/third_party/libevent/libevent.a obj/ui/gl/libgl_wrapper.a $
+    obj/third_party/angle/src/libtranslator_common.a $
+    obj/third_party/libwebp/libwebp_utils.a obj/third_party/libpng/libpng.a $
+    obj/third_party/opus/libopus.a obj/webkit/support/libwebkit_media.a $
+    obj/third_party/libwebp/libwebp_dsp.a $
+    obj/third_party/harfbuzz-ng/libharfbuzz-ng.a $
+    obj/base/allocator/liballocator_extension_thunks.a $
+    obj/base/libtest_support_base.a obj/base/libbase.a $
+    obj/third_party/angle/src/libpreprocessor.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_remaining.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_arm_neon.a $
+    obj/third_party/WebKit/Source/ThirdParty/glu/libtess.a $
+    obj/dbus/libdbus.a obj/webkit/support/libwebkit_base.a $
+    obj/gpu/libcommand_buffer_client.a obj/gpu/libcommand_buffer_common.a $
+    obj/third_party/libwebp/libwebp_enc.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_html.a $
+    obj/sdch/libsdch.a obj/third_party/angle/src/libtranslator_glsl.a $
+    obj/media/libshared_memory_support.a obj/media/libyuv_convert_simd_c.a $
+    obj/gpu/libgles2_implementation.a $
+    obj/third_party/WebKit/Source/JavaScriptCore/JavaScriptCore.gyp/libyarr.a $
+    obj/build/temp_gyp/libgoogleurl.a obj/webkit/support/libuser_agent.a $
+    obj/net/libnet.a obj/testing/libgtest.a obj/base/libxdg_mime.a $
+    obj/base/third_party/dynamic_annotations/libdynamic_annotations.a $
+    obj/third_party/sfntly/libsfntly.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_svg.a $
+    obj/crypto/libcrcrypto.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_dom.a $
+    obj/ppapi/libppapi_shared.a obj/third_party/node/deps/uv/libuv.a $
+    obj/third_party/qcms/libqcms.a obj/third_party/sqlite/libsqlite3.a $
+    obj/third_party/libjpeg_turbo/libjpeg_turbo.a $
+    obj/third_party/modp_b64/libmodp_b64.a obj/build/linux/libgio.a $
+    obj/base/libbase_i18n.a obj/third_party/libxml/libxml2.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_bindings.a $
+    obj/third_party/libwebp/libwebp_dec.a obj/gpu/libgles2_c_lib.a $
+    obj/webkit/support/libwebkit_support_common.a $
+    obj/printing/libprinting.a obj/third_party/iccjpeg/libiccjpeg.a $
+    obj/third_party/icu/libicui18n.a obj/webkit/support/libwebkit_support.a $
+    obj/third_party/WebKit/Source/Platform/Platform.gyp/libwebkit_platform.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_platform_geometry.a $
+    obj/skia/libskia.a obj/webkit/support/libwebkit_storage.a $
+    obj/webkit/compositor_bindings/libwebkit_compositor_bindings.a $
+    obj/sql/libsql.a obj/base/allocator/liballocator.a $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/libwebcore_platform.a $
+    obj/gpu/command_buffer/libgles2_utils.a obj/ui/libui.a $
+    obj/v8/tools/gyp/libv8_base.a $
+    obj/third_party/node/deps/openssl/libopenssl.a $
+    obj/webkit/support/libwebkit_support_gfx.a $
+    obj/third_party/ffmpeg/libffmpeg.a obj/gpu/libcommand_buffer_service.a $
+    obj/third_party/v8-i18n/build/libv8-i18n.a obj/testing/libgmock.a $
+    obj/media/libmedia.a obj/third_party/zlib/libchrome_zlib.a $
+    obj/media/libyuv_convert.a | gen/webkit/DebuggerScriptSource.h $
+    obj/build/linux/ssl.actions_depends.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore.actions_depends.stamp $
+    gen/widevine_cdm_version.h gen/webkit/InjectedScriptSource.h $
+    obj/webkit/support/webkit_resources.actions_rules_copies.stamp $
+    gen/supplemental_dependency.tmp gen/webkit/InspectorOverlayPage.h $
+    gen/webkit/InspectorProtocolVersion.h $
+    gen/webkit/InjectedScriptCanvasModuleSource.h $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_bindings_sources.actions_rules_copies.stamp $
+    gen/node_natives.h $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/generate_settings.actions_rules_copies.stamp $
+    obj/v8/tools/gyp/v8.actions_depends.stamp $
+    obj/net/net_resources.actions_rules_copies.stamp $
+    obj/third_party/v8-i18n/build/api2c.actions_rules_copies.stamp $
+    obj/ui/ui_resources.actions_rules_copies.stamp $
+    obj/ui/base/strings/ui_strings.actions_rules_copies.stamp $
+    obj/webkit/support/webkit_strings.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/inspector_protocol_sources.actions_rules_copies.stamp $
+    obj/third_party/WebKit/Source/WebCore/WebCore.gyp/webcore_prerequisites.actions_depends.stamp $
+    obj/v8/tools/gyp/js2c.actions_rules_copies.stamp gen/webkit_version.h $
+    obj/third_party/libwebp/libwebp.actions_depends.stamp
+  postbuilds = 

@@ -1,0 +1,42 @@
+defines = -DHAVE_STDLIB_H -DHAVE_STRING_H -D_FILE_OFFSET_BITS=64 -DCPU_CISC $
+    -DHAVE_INT16_T -DHAVE_INT32_T -DHAVE_INT8_T -DHAVE_UINT16_T $
+    -DHAVE_UINT32_T -DHAVE_UINT64_T -DHAVE_UINT8_T -DSIZEOF_UNSIGNED_LONG=4 $
+    -DSIZEOF_UNSIGNED_LONG_LONG=8 -DHAVE_STDINT_H -DHAVE_INTTYPES_H $
+    -DHAVE_NETINET_IN_H -DINLINE=inline -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -DNDEBUG -DNVALGRIND $
+    -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = -I../../third_party/libsrtp/config $
+    -I../../third_party/libsrtp/srtp/include $
+    -I../../third_party/libsrtp/srtp/crypto/include
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -Wno-format -Wno-unused-result -march=armv7-a -mtune=cortex-a8 $
+    -mfloat-abi=hard -mfpu=neon -O2 -fno-ident -fdata-sections $
+    -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wno-deprecated -Wno-abi
+
+build $
+    obj/third_party/libsrtp/srtp/crypto/test/srtp_test_rand_gen.rand_gen.o: $
+    cc ../../third_party/libsrtp/srtp/crypto/test/rand_gen.c
+
+ldflags = -Wl,-z,now -Wl,-z,relro -pthread -Wl,-z,noexecstack -fPIC $
+    -B../../third_party/gold -rdynamic -Wl,-O1 -Wl,--as-needed
+libs = 
+build srtp_test_rand_gen: link $
+    obj/third_party/libsrtp/srtp/crypto/test/srtp_test_rand_gen.rand_gen.o $
+    obj/third_party/libsrtp/libsrtp.a
+  postbuilds = 

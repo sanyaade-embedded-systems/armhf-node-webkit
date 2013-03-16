@@ -1,0 +1,57 @@
+defines = -D_FILE_OFFSET_BITS=64 -DCHROMIUM_BUILD $
+    -DUSE_DEFAULT_RENDER_THEME=1 -DUSE_LIBJPEG_TURBO=1 -DUSE_NSS=1 $
+    -DENABLE_ONE_CLICK_SIGNIN -DGTK_DISABLE_SINGLE_INCLUDES=1 $
+    -DENABLE_REMOTING=1 -DENABLE_WEBRTC=1 -DUSE_PROPRIETARY_CODECS $
+    -DENABLE_PEPPER_THREADING -DENABLE_CONFIGURATION_POLICY $
+    -DENABLE_INPUT_SPEECH -DENABLE_NOTIFICATIONS -DENABLE_GPU=1 $
+    -DENABLE_EGLIMAGE=1 -DUSE_SKIA=1 -DENABLE_TASK_MANAGER=1 $
+    -DENABLE_WEB_INTENTS=1 -DENABLE_EXTENSIONS=1 $
+    -DENABLE_PLUGIN_INSTALLATION=1 -DENABLE_PLUGINS=1 $
+    -DENABLE_SESSION_SERVICE=1 -DENABLE_THEMES=1 -DENABLE_BACKGROUND=1 $
+    -DENABLE_AUTOMATION=1 -DENABLE_GOOGLE_NOW=1 $
+    -DENABLE_LANGUAGE_DETECTION=1 -DENABLE_PRINTING=1 $
+    -DENABLE_CAPTIVE_PORTAL_DETECTION=1 -D__ARM_ARCH__=7 -D__ARM_HAVE_NEON $
+    -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0 -DUSE_EABI_HARDFLOAT
+includes = -I../.. -I../../skia/config $
+    -I../../third_party/skia/include/config $
+    -I../../third_party/skia/include/core $
+    -I../../third_party/skia/include/effects $
+    -I../../third_party/skia/include/images $
+    -I../../third_party/skia/include/utils -I../../third_party/skia/src/core
+cflags = -fstack-protector --param=ssp-buffer-size=4 -pthread $
+    -fno-exceptions -fno-strict-aliasing -Wno-unused-parameter $
+    -Wno-missing-field-initializers -fvisibility=hidden -pipe -fPIC $
+    -fomit-frame-pointer -Wa,-mimplicit-it=always -Wno-format $
+    -Wno-unused-result -march=armv7-a -mtune=cortex-a8 -mfloat-abi=hard $
+    -mfpu=neon -O2 -fno-ident -fdata-sections -ffunction-sections
+cflags_c = 
+cflags_cc = -fno-rtti -fno-threadsafe-statics -fvisibility-inlines-hidden $
+    -Wno-deprecated -Wno-abi
+
+build obj/third_party/skia/src/opts/skia_opts.skbitmapprocstate_opts_arm.o: $
+    cxx ../../third_party/skia/src/opts/SkBitmapProcState_opts_arm.cpp
+build obj/third_party/skia/src/opts/skia_opts.memset16_neon.o: cc $
+    ../../third_party/skia/src/opts/memset16_neon.S
+build obj/third_party/skia/src/opts/skia_opts.memset32_neon.o: cc $
+    ../../third_party/skia/src/opts/memset32_neon.S
+build obj/third_party/skia/src/opts/skia_opts.skbitmapprocstate_arm_neon.o: $
+    cxx ../../third_party/skia/src/opts/SkBitmapProcState_arm_neon.cpp
+build $
+    obj/third_party/skia/src/opts/skia_opts.skbitmapprocstate_matrixprocs_neon.o: $
+    cxx ../../third_party/skia/src/opts/SkBitmapProcState_matrixProcs_neon.cpp
+build obj/third_party/skia/src/opts/skia_opts.skblitrow_opts_arm_neon.o: $
+    cxx ../../third_party/skia/src/opts/SkBlitRow_opts_arm_neon.cpp
+build obj/third_party/skia/src/opts/skia_opts.skblitrow_opts_arm.o: cxx $
+    ../../third_party/skia/src/opts/SkBlitRow_opts_arm.cpp
+build obj/third_party/skia/src/opts/skia_opts.opts_check_arm.o: cxx $
+    ../../third_party/skia/src/opts/opts_check_arm.cpp
+
+build obj/skia/libskia_opts.a: alink_thin $
+    obj/third_party/skia/src/opts/skia_opts.skbitmapprocstate_opts_arm.o $
+    obj/third_party/skia/src/opts/skia_opts.memset16_neon.o $
+    obj/third_party/skia/src/opts/skia_opts.memset32_neon.o $
+    obj/third_party/skia/src/opts/skia_opts.skbitmapprocstate_arm_neon.o $
+    obj/third_party/skia/src/opts/skia_opts.skbitmapprocstate_matrixprocs_neon.o $
+    obj/third_party/skia/src/opts/skia_opts.skblitrow_opts_arm_neon.o $
+    obj/third_party/skia/src/opts/skia_opts.skblitrow_opts_arm.o $
+    obj/third_party/skia/src/opts/skia_opts.opts_check_arm.o

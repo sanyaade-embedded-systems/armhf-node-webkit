@@ -1,0 +1,31 @@
+obj/third_party/libvpx/source/libvpx/vp8/encoder/libvpx.denoising.o: \
+ ../../third_party/libvpx/source/libvpx/vp8/encoder/denoising.c \
+ ../../third_party/libvpx/source/libvpx/vp8/encoder/denoising.h \
+ ../../third_party/libvpx/source/libvpx/vp8/encoder/block.h \
+ ../../third_party/libvpx/source/libvpx/vp8/common/onyx.h \
+ ../../third_party/libvpx/source/config/linux/arm-neon/vpx_config.h \
+ ../../third_party/libvpx/source/libvpx/vpx/internal/vpx_codec_internal.h \
+ ../../third_party/libvpx/source/libvpx/vpx/internal/../vpx_decoder.h \
+ ../../third_party/libvpx/source/libvpx/vpx/internal/../vpx_codec.h \
+ ../../third_party/libvpx/source/libvpx/vpx/internal/../vpx_integer.h \
+ ../../third_party/libvpx/source/libvpx/vpx/internal/../vpx_image.h \
+ ../../third_party/libvpx/source/libvpx/vpx/internal/../vpx_encoder.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vp8cx.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vp8.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vpx_codec_impl_top.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vpx_codec_impl_bottom.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vpx_encoder.h \
+ ../../third_party/libvpx/source/libvpx/vpx_scale/yv12config.h \
+ ../../third_party/libvpx/source/libvpx/vp8/common/ppflags.h \
+ ../../third_party/libvpx/source/libvpx/vp8/common/blockd.h \
+ ../../third_party/libvpx/source/libvpx/vp8/common/mv.h \
+ ../../third_party/libvpx/source/libvpx/vpx/vpx_integer.h \
+ ../../third_party/libvpx/source/libvpx/vp8/common/treecoder.h \
+ ../../third_party/libvpx/source/libvpx/vpx_ports/mem.h \
+ ../../third_party/libvpx/source/libvpx/vp8/common/entropymv.h \
+ ../../third_party/libvpx/source/libvpx/vp8/common/entropy.h \
+ ../../third_party/libvpx/source/libvpx/vp8/common/blockd.h \
+ ../../third_party/libvpx/source/libvpx/vp8/common/reconinter.h \
+ ../../third_party/libvpx/source/libvpx/vpx_mem/vpx_mem.h \
+ ../../third_party/libvpx/source/config/linux/arm-neon/vp8_rtcd.h \
+ ../../third_party/libvpx/source/config/linux/arm-neon/vpx_config.h

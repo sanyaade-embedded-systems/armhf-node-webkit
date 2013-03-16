@@ -1,0 +1,14 @@
+rule $
+    inspector_overlay_page_target_generateInspectorOverlayPage_36750237eec9d6fe6f31162190606d9e
+  command = cd ../../third_party/WebKit/Source/WebCore/WebCore.gyp; perl $
+      ../inspector/xxd.pl InspectorOverlayPage_html $
+      ../inspector/InspectorOverlayPage.html $
+      ../../../../../out/Release/gen/webkit/InspectorOverlayPage.h
+  description = ACTION Generating InspectorOverlayPage.h from $
+      InspectorOverlayPage.html
+  restat = 1
+
+build gen/webkit/InspectorOverlayPage.h: $
+    inspector_overlay_page_target_generateInspectorOverlayPage_36750237eec9d6fe6f31162190606d9e $
+    ../../third_party/WebKit/Source/WebCore/inspector/InspectorOverlayPage.html
+
